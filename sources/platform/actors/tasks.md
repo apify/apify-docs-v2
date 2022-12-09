@@ -47,5 +47,5 @@ You can also run tasks using:
 
 - [Schedules](../schedules.md).
 - Directly via the [Apify API](/api/v2#/reference/actor-tasks/run-collection/run-task).
-- The [JavaScript API client](../apify_client_js.md).
-- The [Python API client](../apify_client_python.md).
+- The [JavaScript API client]({{@link apify_client_js.md#taskclient}}).
+- The [Python API client]({{@link apify_client_python.md#taskclient}}).

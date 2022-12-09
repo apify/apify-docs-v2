@@ -161,7 +161,7 @@ Once again, the final response will be the **run info object**; however, now its
 
 #### [](#webhooks) Webhooks
 
-If you have a server, [webhooks](../integrations/webhooks.md) has occurred.
+If you have a server, [webhooks]({{@link integrations/webhooks.md}}) are the most elegant and flexible solution for integrations with Apify. You can simply set up a webhook for any actor or task, and that webhook will send a POST request to your server after an [event]({{@link integrations/webhooks/events.md}}) has occurred.
 
 Usually, this event is a successfully finished run, but you can also set a different webhook for failed runs, etc.
 

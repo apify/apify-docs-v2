@@ -66,12 +66,13 @@ Currently, there are 3 separate projects outside of this repo, having `docs-v2` 
 
 Clone those, checkout the `docs-v2` branch first. Then we can start the docusaurus instances in them.
 
-| repo            | branch  | port |
-|-----------------|---------|------|
-| apify-docs-v2   | main    | 3000 |
-| apify-client-js | docs-v2 | 3001 |
-| apify-sdk-js    | docs-v2 | 3002 |
-| apify-cli       | docs-v2 | 3003 |
+| repo             | branch  | port |
+|------------------|---------|------|
+| apify-docs-v2    | master  | 3000 |
+| apify-client-js  | docs-v2 | 3001 |
+| apify-sdk-js-v2  | master  | 3002 |
+| apify-sdk-python | docs-v2 | 3002 |
+| apify-cli        | docs-v2 | 3003 |
 
 > To run docusaurus on a specific port, use `npm start -- --port XXXX`.
 

@@ -1,7 +1,7 @@
 /* eslint-disable global-require,import/no-extraneous-dependencies */
 const { externalLinkProcessor } = require('./tools/utils/externalLink');
 
-const absoluteUrl = 'http://docs-v2.apify.com:8080';
+const absoluteUrl = 'http://docs-v2.apify.com';
 /** @type {Partial<import('@docusaurus/types').DocusaurusConfig>} */
 module.exports = {
     title: 'Apify Docs v2',
@@ -25,8 +25,8 @@ module.exports = {
                 docs: {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
-                    path: './sources/docs',
-                    routeBasePath: 'docs',
+                    path: './sources/platform',
+                    routeBasePath: 'platform',
                     // sidebarPath: require.resolve('./sources/docs/sidebars.js'),
                     rehypePlugins: [externalLinkProcessor],
                 },
@@ -97,7 +97,7 @@ module.exports = {
                 },
                 {
                     label: 'Platform',
-                    href: `${absoluteUrl}/docs`,
+                    href: `${absoluteUrl}/platform`,
                     className: 'navbar__active',
                     activeBasePath: 'platform',
                     position: 'left',

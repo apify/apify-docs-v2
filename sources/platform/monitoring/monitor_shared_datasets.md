@@ -28,7 +28,7 @@ You created two tasks from **Web Scraper** ([apify/web-scraper](https://apify.co
 
 ![Joke tasks](./images/joke-scraper-tasks.webp)
 
-Each of the above tasks handles a different website. After the tasks finish successfully, they call the monitoring actor using a [webhook](../integrations/webhooks.md) that handles the data aggregation.
+Each of the above tasks handles a different website. After the tasks finish successfully, they call the monitoring actor using a [webhook]({{@link integrations/webhooks.md}}) that handles the data aggregation.
 
 ![Joke schedule](./images/joke-schedule.webp)
 
