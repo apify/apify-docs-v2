@@ -31,10 +31,6 @@ jobs:
                 run: |
                     # install project deps
                     npm ci --force
-                    # go to website dir
-                    cd website
-                    # install website deps
-                    npm ci --force
                     # build and deploy the docs
                     npm run deploy
                 env:
