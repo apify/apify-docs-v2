@@ -1,0 +1,22 @@
+module.exports = {
+    docs: [
+        'about',
+        'access_rights',
+        'actors',
+        'api',
+        'apify_client_js',
+        'apify_client_python',
+        'cli',
+        'index',
+        'integrations',
+        'monitoring',
+        'proxy',
+        'robotic_process_automation',
+        'schedules',
+        'sdk',
+        'sidebars',
+        'storage',
+        'tutorials',
+        'web_scraping_101',
+    ],
+};
