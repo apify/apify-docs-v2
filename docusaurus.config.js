@@ -171,7 +171,7 @@ module.exports = {
                             href: 'https://github.com/apify/got-scraping',
                         },
                         {
-                            label: 'Got Scraping',
+                            label: 'Fingerprint Suite',
                             href: 'https://github.com/apify/fingerprint-suite',
                         },
                         {
