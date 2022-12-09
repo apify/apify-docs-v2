@@ -90,6 +90,10 @@ html[data-theme='dark'] {
     width: 100%;
 }
 
+.navbar__item.dropdown {
+    padding: 0;
+}
+
 .DocSearch-Button-Placeholder {
     font-size: 14px !important;
 }
