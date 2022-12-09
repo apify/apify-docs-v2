@@ -117,13 +117,13 @@ module.exports = {
                         },
                         {
                             label: 'Client for JavaScript',
-                            href: `${absoluteUrl}/apify-client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                            href: `${absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
                             target: '_self',
                             rel: 'dofollow',
                         },
                         {
                             label: 'Client for Python',
-                            href: `${absoluteUrl}/apify-client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                            href: `${absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
                             target: '_self',
                             rel: 'dofollow',
                         },
@@ -137,13 +137,13 @@ module.exports = {
                     items: [
                         {
                             label: 'SDK for JavaScript',
-                            href: `${absoluteUrl}/apify-sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                            href: `${absoluteUrl}/sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
                             target: '_self',
                             rel: 'dofollow',
                         },
                         {
                             label: 'SDK for Python',
-                            href: `${absoluteUrl}/apify-sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                            href: `${absoluteUrl}/sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
                             target: '_self',
                             rel: 'dofollow',
                         },
@@ -151,7 +151,7 @@ module.exports = {
                 },
                 {
                     label: 'CLI',
-                    href: `${absoluteUrl}/apify-cli/`, // we need a trailing slash here, we'd get redirected there anyway
+                    href: `${absoluteUrl}/cli/`, // we need a trailing slash here, we'd get redirected there anyway
                     position: 'left',
                     target: '_self',
                     rel: 'dofollow',

@@ -62,17 +62,18 @@ Currently, there are 3 separate projects outside of this repo, having `docs-v2` 
 
 - apify-client-js
 - apify-sdk-js
-- apify-sdk-js
+- apify-cli
 
 Clone those, checkout the `docs-v2` branch first. Then we can start the docusaurus instances in them.
 
-| repo             | branch  | port |
-|------------------|---------|------|
-| apify-docs-v2    | master  | 3000 |
-| apify-client-js  | docs-v2 | 3001 |
-| apify-sdk-js-v2  | master  | 3002 |
-| apify-sdk-python | docs-v2 | 3002 |
-| apify-cli        | docs-v2 | 3003 |
+| repo                | branch  | port |
+|---------------------|---------|------|
+| apify-docs-v2       | master  | 3000 |
+| apify-client-js     | docs-v2 | 3001 |
+| apify-client-python | docs-v2 | 3002 |
+| apify-sdk-js-v2     | docs-v2 | 3003 |
+| apify-sdk-python    | docs-v2 | 3004 |
+| apify-cli           | docs-v2 | 3005 |
 
 > To run docusaurus on a specific port, use `npm start -- --port XXXX`.
 
@@ -80,19 +81,25 @@ To route them, you will need nginx server with following config:
 
 ```nginx
 server {
-  listen       docs-v2.apify.com:8080;
+  listen       80;
   server_name  docs-v2.apify.com;
   location / {
     proxy_pass http://localhost:3000;
   }
-  location /apify-client-js {
+  location /client-js {
     proxy_pass http://localhost:3001;
   }
-  location /apify-sdk-js {
+  location /client-python {
     proxy_pass http://localhost:3002;
   }
-  location /apify-cli {
+  location /sdk-js {
     proxy_pass http://localhost:3003;
+  }
+  location /sdk-python {
+    proxy_pass http://localhost:3004;
+  }
+  location /cli {
+    proxy_pass http://localhost:3005;
   }
 }
 ```
@@ -101,6 +108,37 @@ And add a record to `/etc/hosts` to map the docs-v2.apify.com hostname to localh
 
 ```
 127.0.0.1 docs-v2.apify.com
+```
+
+### Deployment
+
+Current nginx deployment config:
+
+> python projects are not yet setup
+
+```nginx
+server {
+  listen       80;
+  server_name  docs-v2.apify.com;
+  location / {
+    proxy_pass https://apify.github.io/apify-docs-v2/;
+  }
+  location /client-js {
+    proxy_pass https://apify.github.io/apify-client-js/;
+  }
+  location /client-python {
+    proxy_pass https://apify.github.io/apify-client-python/;
+  }
+  location /sdk-js {
+    proxy_pass https://apify.github.io/apify-sdk-js-v2/;
+  }
+  location /sdk-python {
+    proxy_pass https://apify.github.io/apify-sdk-python/;
+  }
+  location /cli {
+    proxy_pass https://apify.github.io/apify-cli/;
+  }
+}
 ```
 
 ### Interesting links
