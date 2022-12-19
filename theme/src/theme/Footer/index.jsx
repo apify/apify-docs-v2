@@ -54,7 +54,7 @@ function Footer() {
                     <div className="col padding-vert--md col--6">
                         <div className={styles.freeAndOpenSource}>
                             <OpenSourceIcon className={styles.alignMiddle} />
-                            <span className={styles.alignMiddle}>Blablabla, bla bla bla. This component is from the common theme!</span>
+                            <span className={styles.alignMiddle}>Apify SDK is free and open source</span>
                         </div>
                     </div>
                     <div className="col padding-vert--md col--6 text--right">
