@@ -26,8 +26,8 @@ function Footer() {
         return null;
     }
     const { links, style } = footer;
-    const OpenSourceIcon = require('../../../static/img/footer-open-source.svg').default;
-    const ApifyLogo = require('../../../static/img/footer-apify-logo.svg').default;
+    const OpenSourceIcon = require('../../img/footer-open-source.svg').default;
+    const ApifyLogo = require('../../img/footer-apify-logo.svg').default;
     return (
         <footer className={clsx(styles.footer, style)}>
             <div className="container padding-horiz--lg">
@@ -54,7 +54,7 @@ function Footer() {
                     <div className="col padding-vert--md col--6">
                         <div className={styles.freeAndOpenSource}>
                             <OpenSourceIcon className={styles.alignMiddle} />
-                            <span className={styles.alignMiddle}>Apify SDK is free and open source</span>
+                            <span className={styles.alignMiddle}>Blablabla, bla bla bla. This component is from the common theme!</span>
                         </div>
                     </div>
                     <div className="col padding-vert--md col--6 text--right">

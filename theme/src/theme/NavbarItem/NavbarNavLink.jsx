@@ -4,7 +4,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { useLocation } from '@docusaurus/router';
 import { isRegexpStringMatch } from '@docusaurus/theme-common';
-import IconExternalLink from '@theme/Icon/ExternalLink';
 
 export default function NavbarNavLink({
     activeBasePath,

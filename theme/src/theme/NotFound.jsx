@@ -2,8 +2,8 @@ import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { PageMetadata } from '@docusaurus/theme-common';
-import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import Layout from '@theme/Layout';
 
 export default function NotFound() {
     const redirectedV2Url = useBaseUrl('/docs/api');
