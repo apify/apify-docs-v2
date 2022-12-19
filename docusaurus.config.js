@@ -1,7 +1,9 @@
 /* eslint-disable global-require,import/no-extraneous-dependencies */
 const { externalLinkProcessor } = require('./tools/utils/externalLink');
 
-const absoluteUrl = 'http://docs-v2.apify.com';
+const absoluteUrl = process.env.LOCAL
+    ? 'http://docs-v2.apify.loc'
+    : 'https://docs-v2.apify.com';
 /** @type {Partial<import('@docusaurus/types').DocusaurusConfig>} */
 module.exports = {
     title: 'Apify Docs v2',

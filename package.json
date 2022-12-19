@@ -2,7 +2,7 @@
     "name": "apify-docs-v2",
     "scripts": {
         "examples": "docusaurus-examples",
-        "start": "rimraf .docusaurus && docusaurus start",
+        "start": "rimraf .docusaurus && LOCAL=1 docusaurus start",
         "build": "rimraf .docusaurus && docusaurus build",
         "publish-gh-pages": "docusaurus-publish",
         "write-translations": "docusaurus write-translations",

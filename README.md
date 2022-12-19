@@ -82,7 +82,7 @@ To route them, you will need nginx server with following config:
 ```nginx
 server {
   listen       80;
-  server_name  docs-v2.apify.com;
+  server_name  docs-v2.apify.loc;
   location / {
     proxy_pass http://localhost:3000;
   }
@@ -104,17 +104,15 @@ server {
 }
 ```
 
-And add a record to `/etc/hosts` to map the docs-v2.apify.com hostname to localhost:
+And add a record to `/etc/hosts` to map the docs-v2.apify.loc hostname to localhost:
 
 ```
-127.0.0.1 docs-v2.apify.com
+127.0.0.1 docs-v2.apify.loc
 ```
 
 ### Deployment
 
 Current nginx deployment config:
-
-> python projects are not yet setup
 
 ```nginx
 server {

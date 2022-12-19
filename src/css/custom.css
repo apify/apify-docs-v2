@@ -229,6 +229,7 @@ nav.navbar .dropdown__menu {
 }
 
 .navbar__logo {
+    width: 11rem;
     height: 3rem;
     padding: 10px 0;
 }
