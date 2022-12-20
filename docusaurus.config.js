@@ -19,6 +19,27 @@ module.exports = {
     /** @type {import('@docusaurus/types').ReportingSeverity} */ ('warn'),
     onBrokenMarkdownLinks:
     /** @type {import('@docusaurus/types').ReportingSeverity} */ ('warn'),
+    themes: [
+        [
+            require.resolve('./theme/'),
+            /** @type {import('@apify/docs-theme').Options} */ {
+            // subNavbar: [
+            //     {
+            //         label: 'Subnav 1',
+            //         href: `${absoluteUrl}/platform`,
+            //     },
+            //     {
+            //         label: 'Subnav 2',
+            //         href: `${absoluteUrl}/academy`,
+            //     },
+            //     {
+            //         label: 'Subnav 3',
+            //         href: `${absoluteUrl}/api`,
+            //     },
+            // ],
+            },
+        ],
+    ],
     presets: /** @type {import('@docusaurus/types').PresetConfig[]} */ ([
         [
             '@docusaurus/preset-classic',
