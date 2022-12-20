@@ -31,6 +31,8 @@ jobs:
                 run: |
                     # install project deps
                     npm ci --force
+                    # build @apify/docs-theme
+                    npm run buildTheme
                     # build and deploy the docs
                     npm run deploy
                 env:
