@@ -2,7 +2,7 @@
     "name": "apify-docs-v2",
     "scripts": {
         "examples": "docusaurus-examples",
-        "start": "rimraf .docusaurus && LOCAL=1 docusaurus start",
+        "start": "npm run buildTheme && rimraf .docusaurus && LOCAL=1 docusaurus start",
         "buildTheme": "cd ./theme && npm i && npm run build && cd ../",
         "build": "npm run buildTheme && rimraf .docusaurus && docusaurus build",
         "publish-gh-pages": "docusaurus-publish",
