@@ -22,7 +22,7 @@ module.exports = {
     themes: [
         [
             require.resolve('./theme/'),
-            /** @type {import('@apify/docs-theme').Options} */ {
+            {
             // subNavbar: [
             //     {
             //         label: 'Subnav 1',
@@ -52,9 +52,6 @@ module.exports = {
                     routeBasePath: 'platform',
                     // sidebarPath: require.resolve('./sources/docs/sidebars.js'),
                     rehypePlugins: [externalLinkProcessor],
-                },
-                theme: {
-                    customCss: '/src/css/custom.css',
                 },
             }),
         ],
