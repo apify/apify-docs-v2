@@ -21,7 +21,7 @@ Once an actor has been pushed to the Apify platform, they can be shared to the w
 
 For a super quick and dirty understanding of what a published actor looks like, and how it works, let's run an SEO audit of **apify.com** using the [SEO audit actor](https://apify.com/drobnikj/seo-audit-tool).
 
-On the front page of the actor, click the green **Try for free** button. If you're logged into your Apify account which you created during the [**Getting started**](../../platform/tutorials/apify_scrapers/getting_started.md) lesson, you'll be taken to the Apify Console and greeted with a page that looks like this:
+On the front page of the actor, click the green **Try for free** button. If you're logged into your Apify account which you created during the [**Getting started**](./index.md) lesson, you'll be taken to the Apify Console and greeted with a page that looks like this:
 
 ![Actor configuration](./images/seo-actor-config.webp)
 

@@ -7,13 +7,13 @@ slug: /proxy/datacenter-proxy/examples
 
 # Connect to datacenter proxies
 
-This page contains code examples for connecting to [datacenter proxies]({{@link proxy/datacenter_proxy.md}}) using [Apify Proxy](https://apify.com/proxy).
+This page contains code examples for connecting to [datacenter proxies](./index.md) using [Apify Proxy](https://apify.com/proxy).
 
 See the [connection settings](../connection_settings.md) page for connection parameters.
 
 ## [](#using-the-apify-sdk-and-crawlee) Using the Apify SDK and Crawlee
 
-If you are developing your own Apify [actor](../../../academy/getting_started/actors.md) using the [Apify SDK](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/), you can use Apify Proxy in:
+If you are developing your own Apify [actor](../../actors/index.md) using the [Apify SDK](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/), you can use Apify Proxy in:
 
 * [`CheerioCrawler`](https://crawlee.dev/api/cheerio-crawler/class/CheerioCrawler) by using the [`Actor.createProxyConfiguration()`](https://sdk.apify.com/api/apify/class/Actor#createProxyConfiguration) function.
 * [`PlaywrightCrawler`](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler) by using the [`Actor.createProxyConfiguration()`](https://sdk.apify.com/api/apify/class/Actor#createProxyConfiguration) function.

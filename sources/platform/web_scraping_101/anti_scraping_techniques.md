@@ -24,7 +24,7 @@ This method's effectiveness depends on various factors, such as the number of we
 
 Our research determined that, for successful large-scale scraping activities, it is essential to have a sufficient pool of proxies and to time the workload to maximize the scraping throughput while burning proxies.
 
-[Apify Proxy]({{@link proxy.md}}) enables you to enhance your data throughput and access websites from any geographical location by using an extensive pool of datacenter and residential proxies.
+[Apify Proxy](../proxy/index.md) enables you to enhance your data throughput and access websites from any geographical location by using an extensive pool of datacenter and residential proxies.
 
 ## [](#ip-rate-limiting) IP rate limiting
 
@@ -81,7 +81,7 @@ For example, requests from mobile devices are usually only routed through a hand
 
 To make it work, a single user session has to always be routed via the same IP address. A website can identify such user sessions based on cookies, authentication tokens or a browser HTTP signature/fingerprint.
 
-Our research into this was assisted by the [Crawlee](https://sdk.apify.com)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../../academy/getting_started/actors.md), but it also works outside the Apify ecosystem.
+Our research into this was assisted by the [Crawlee](https://sdk.apify.com)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../actors/index.md), but it also works outside the Apify ecosystem.
 
 ## [](#comparing-ways-of-bypassing-scraping-protection) Comparing ways of bypassing scraping protection
 

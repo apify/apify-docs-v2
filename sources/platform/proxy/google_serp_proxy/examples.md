@@ -7,13 +7,13 @@ slug: /proxy/google-serp-proxy/examples
 
 # Connect to Google SERP proxies
 
-This page contains code examples for connecting to [Google SERP proxies]({{@link proxy/google_serp_proxy.md}}) using [Apify Proxy](https://apify.com/proxy).
+This page contains code examples for connecting to [Google SERP proxies](./index.md) using [Apify Proxy](https://apify.com/proxy).
 
 See the [connection settings](../connection_settings.md) page for connection parameters.
 
 ## [](#using-the-apify-sdk) Using the Apify SDK
 
-If you are developing your own Apify [actor](../../../academy/getting_started/actors.md). Alternatively, you can use the [got-scraping](https://github.com/apify/got-scraping) [NPM package](https://www.npmjs.com/package/got-scraping) by specifying proxy URL in the options.
+If you are developing your own Apify [actor](../../actors/index.md). Alternatively, you can use the [got-scraping](https://github.com/apify/got-scraping) [NPM package](https://www.npmjs.com/package/got-scraping) by specifying proxy URL in the options.
 
 Apify Proxy also works with [PuppeteerCrawler](https://crawlee.dev/api/puppeteer-crawler/class/PuppeteerCrawler), [launchPuppeteer()](https://crawlee.dev/api/puppeteer-crawler/function/launchPuppeteer), [PlaywrightCrawler](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler), [launchPlaywright()](https://crawlee.dev/api/playwright-crawler/function/launchPlaywright) and [JSDOMCrawler](https://crawlee.dev/api/jsdom-crawler/class/JSDOMCrawler). However, `CheerioCrawler` is simply the most efficient solution for this use case.
 

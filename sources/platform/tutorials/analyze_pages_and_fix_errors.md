@@ -7,7 +7,7 @@ slug: /tutorials/analyze-pages-and-fix-errors
 
 # How to analyze pages and fix errors
 
-Debugging is essential in programming. Even if you would not call yourself a programmer, having basic debugging skills will make building and maintaining [scrapers](./apify_scrapers.md) on Apify easier. It will help you avoid hiring an expensive developer and solve your issues faster.
+Debugging is essential in programming. Even if you would not call yourself a programmer, having basic debugging skills will make building and maintaining [scrapers](./apify_scrapers/index.md) on Apify easier. It will help you avoid hiring an expensive developer and solve your issues faster.
 
 This article covers the absolute basics. It discusses the most common problems and the simplest tools for analyzing the issue.
 
@@ -31,7 +31,7 @@ Here are the most common reasons your working solution may break.
 
 - The code worked locally but not on the [Apify platform](https://console.apify.com).
 
-- You have lost access to [Apify proxy]({{@link proxy.md}}) (your proxy trial is over).
+- You have lost access to [Apify proxy](../proxy/index.md) (your proxy trial is over).
 
 - You have upgraded your [dependencies](https://www.quora.com/What-is-a-dependency-in-coding) (other software that you rely upon) and the new versions no longer work (this is harder to debug).
 
@@ -39,7 +39,7 @@ This is a long list, and it is by no means complete. However, if you use the rig
 
 ## [](#analysis) Analysis
 
-[Web scraping]({{@link web_scraping_101.md}}) and [automation]({{@link robotic_process_automation.md}}) are very specific types of programming. It is not possible to rely on specialized debugging tools, since the code does not output the same results every time.
+[Web scraping](../web_scraping_101/index.md) are very specific types of programming. It is not possible to rely on specialized debugging tools, since the code does not output the same results every time.
 
 Many issues are edge cases, which occur in just one of a thousand pages or are time-dependent. Because of this, you cannot rely only on [determinism](https://en.wikipedia.org/wiki/Deterministic_algorithm).
 
@@ -165,7 +165,7 @@ To make the error snapshot descriptive, we name it `ERROR-LOGIN`. We add a rando
 
 Logging and snapshotting are great tools but once you reach a certain run size, it may be hard to read through them all. For a large project, it is handy to create a more sophisticated reporting system. For example, let's just look at simple **dataset** reporting.
 
-This example extends our [previous snapshot solution](#when-to-save-snapshots) by creating a [named dataset]({{@link storage.md#named-and-unnamed-storages}}) (named datasets have infinite retention), where we will accumulate error reports. Those reports will explain what happened and will link to a saved snapshot, so we can do a quick visual check.
+This example extends our [previous snapshot solution](#when-to-save-snapshots) by creating a [named dataset](../storage/index.md) (named datasets have infinite retention), where we will accumulate error reports. Those reports will explain what happened and will link to a saved snapshot, so we can do a quick visual check.
 
 ```js
 import { Actor } from 'apify';

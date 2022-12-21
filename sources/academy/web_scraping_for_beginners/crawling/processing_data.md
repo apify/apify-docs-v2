@@ -143,4 +143,4 @@ It doesn't even have to be a dataset created by Crawlee. You can use this method
 
 ## [](#next) Next up
 
-And this is it for the [**Basics of crawling**]({{@link web_scraping_for_beginners/crawling.md}}) section of the [**Web scraping for beginners**]({{@link web_scraping_for_beginners.md}}) course. But that's not all! If you're feeling up for it, test your knowledge of the methods and concepts you learned in this course by moving forward with the [**challenge**]({{@link web_scraping_for_beginners/challenge.md}})!
+And this is it for the [**Basics of crawling**](./index.md)!

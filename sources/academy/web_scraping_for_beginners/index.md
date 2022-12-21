@@ -26,9 +26,9 @@ When we set out to create the Academy, we wanted to build a complete guide to mo
 
 This is what you'll learn in the **Web scraping for beginners** course:
 
-* [Web scraping for beginners]({{@link web_scraping_for_beginners.md}})
-  * [Basics of data collection](./data_collection.md)
-  * [Basics of crawling](./crawling.md)
+* [Web scraping for beginners](./index.md)
+  * [Basics of data collection](./data_collection/index.md)
+  * [Basics of crawling](./crawling/index.md)
   * [Best practices](./best_practices.md)
 
 > We release course content as soon as we write it instead of launching it all at the same time much later. If you want to get notified about new lessons in the academy, [sign up for a free Apify account](https://console.apify.com/sign-up?asrc=developers_portal) to get our newsletters.
@@ -67,4 +67,4 @@ We'll be using the [**Cheerio**](https://www.npmjs.com/package/cheerio) package 
 
 The course begins with a small bit of theory and moves into some realistic and practical examples of collecting data from the most popular websites on the internet using your browser console. So [let's get to it!](./introduction.md)
 
-> If you already have experience with HTML, CSS, and browser DevTools, feel free to skip to the [Basics of crawling](./crawling.md) section.
+> If you already have experience with HTML, CSS, and browser DevTools, feel free to skip to the [Basics of crawling](./crawling/index.md) section.

@@ -120,4 +120,4 @@ This marks the end of the **Basics of data collection** section of Web scraping 
 
 ## [](#next) Next up
 
-Next up are the [**Basics of crawling**]({{@link web_scraping_for_beginners/crawling.md}}), where we will learn how to move between web pages and scrape data from all of them. We will build a scraper that first collects all the products on [Fakestore](https://demo-webstore.apify.org/), and then crawls each of them to scrape the data for each product separately.
+Next up are the [**Basics of crawling**](../crawling/index.md), where we will learn how to move between web pages and scrape data from all of them. We will build a scraper that first collects all the products on [Fakestore](https://demo-webstore.apify.org/), and then crawls each of them to scrape the data for each product separately.

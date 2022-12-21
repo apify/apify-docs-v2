@@ -28,7 +28,7 @@ Each schedule can be associated with a maximum of 10 actors and 10 actor tasks.
 
 ## Setting up a new schedule
 
-Before setting up a new schedule, you should have the [actor](../academy/getting_started/actors.md) whose run you want to schedule prepared and tested.
+Before setting up a new schedule, you should have the [actor](./actors/index.md) whose run you want to schedule prepared and tested.
 
 If you are planning to schedule an actor run, you need to use the actor before you can schedule any runs. Navigate to the actor's page in [Apify Store](https://apify.com/store), click the **Try for free** button, then **Start** it with your preferred settings.
 
@@ -70,7 +70,7 @@ For integrations, you can also add a [webhook](https://docs.apify.com/webhooks) 
 
 To create a new [schedule](https://docs.apify.com/api/v2#/reference/schedules) using the [Apify API](https://docs.apify.com/api/v2#), send a [POST request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) to the [create schedule](https://docs.apify.com/api/v2#/reference/schedules/schedules-collection/create-schedule) endpoint.
 
-You can find your [secret API token]({{@link integrations.md#api-token}}) in your Apify account's [Integrations](https://console.apify.com/account?tab=integrations) tab. When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](/api/v2#/introduction/authentication)).
+You can find your [secret API token](./integrations/index.md) in your Apify account's [Integrations](https://console.apify.com/account?tab=integrations) tab. When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](/api/v2#/introduction/authentication)).
 
 In the POST request's payload should be a JSON object specifying the schedule's name, your [user ID](https://console.apify.com/account#/integrations), and the schedule's **actions**.
 
@@ -147,4 +147,4 @@ Additionally, you can use the following shortcut expressions:
 
 ## Sharing
 
-You can invite other Apify users to view or modify your schedules using the [access rights]({{@link access_rights.md}}) system. See the [full list of permissions]({{@link access_rights/list_of_permissions.md#schedules}}).
+You can invite other Apify users to view or modify your schedules using the [access rights](./access_rights/index.md).

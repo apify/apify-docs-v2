@@ -8,13 +8,13 @@ slug: /web-scraping-for-beginners/crawling
 
 # [](#basics) Basics of crawling
 
-Welcome to the second section of our **Web scraping for beginners** course. In the [Basics of data collection](../data_collection.md) section, we learned how to extract data from a web page. Specifically, our demo e-commerce site, which we'll call [Fake Webstore](https://demo-webstore.apify.org).
+Welcome to the second section of our **Web scraping for beginners** course. In the [Basics of data collection](../data_collection/index.md) section, we learned how to extract data from a web page. Specifically, our demo e-commerce site, which we'll call [Fake Webstore](https://demo-webstore.apify.org).
 
 In this section, we will take a look at moving between web pages, which we call **crawling**. We will collect data about all of the on-sale products on [Fake Webstore](https://demo-webstore.apify.org/search/on-sale). To do that, we will need to crawl the individual product pages.
 
 ## [](#how-to-crawl) How do you crawl?
 
-Crawling websites is a fairly straightforward process. We'll start by opening the first web page and collecting all the links (URLs) that lead to the other pages we want to visit. To do that, we'll use the skills learned in the [Basics of data collection](../data_collection.md) course. We'll add some extra filtering to make sure we only get the correct URLs. Then, we'll save those URLs, so in case something happens to our scraper, we won't have to collect them again. And, finally, we will visit those URLs one by one.
+Crawling websites is a fairly straightforward process. We'll start by opening the first web page and collecting all the links (URLs) that lead to the other pages we want to visit. To do that, we'll use the skills learned in the [Basics of data collection](../data_collection/index.md) course. We'll add some extra filtering to make sure we only get the correct URLs. Then, we'll save those URLs, so in case something happens to our scraper, we won't have to collect them again. And, finally, we will visit those URLs one by one.
 
 At any point, we can collect URLs, data, or both. Crawling can be separate from data collection but it's not a requirement and, in most projects, it's actually easier and faster to do both at the same time. To summarize, it goes like this:
 

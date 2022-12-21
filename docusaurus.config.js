@@ -23,20 +23,20 @@ module.exports = {
         [
             require.resolve('./theme/'),
             {
-            // subNavbar: [
-            //     {
-            //         label: 'Subnav 1',
-            //         href: `${absoluteUrl}/platform`,
-            //     },
-            //     {
-            //         label: 'Subnav 2',
-            //         href: `${absoluteUrl}/academy`,
-            //     },
-            //     {
-            //         label: 'Subnav 3',
-            //         href: `${absoluteUrl}/api`,
-            //     },
-            // ],
+                // subNavbar: [
+                //     {
+                //         label: 'Subnav 1',
+                //         href: `${absoluteUrl}/platform`,
+                //     },
+                //     {
+                //         label: 'Subnav 2',
+                //         href: `${absoluteUrl}/academy`,
+                //     },
+                //     {
+                //         label: 'Subnav 3',
+                //         href: `${absoluteUrl}/api`,
+                //     },
+                // ],
             },
         ],
     ],
@@ -50,7 +50,7 @@ module.exports = {
                     showLastUpdateTime: true,
                     path: './sources/platform',
                     routeBasePath: 'platform',
-                    // sidebarPath: require.resolve('./sources/docs/sidebars.js'),
+                    sidebarPath: require.resolve('./sources/platform/sidebars.js'),
                     rehypePlugins: [externalLinkProcessor],
                 },
             }),

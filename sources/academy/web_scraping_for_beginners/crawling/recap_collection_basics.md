@@ -7,7 +7,7 @@ slug: /web-scraping-for-beginners/crawling/recap-collection-basics
 
 # [](#quick-recap) Recap of data collection basics
 
-We finished off the [first section]({{@link web_scraping_for_beginners/data_collection.md}}) of the _Web Scraping for Beginners_ course by creating a simple web scraper in Node.js. The scraper collected all of the on-sale products from [our demo webstore](https://demo-webstore.apify.org/search/on-sale). Let's see the code with some comments added.
+We finished off the [first section](../data_collection/index.md) of the _Web Scraping for Beginners_ course by creating a simple web scraper in Node.js. The scraper collected all of the on-sale products from [our demo webstore](https://demo-webstore.apify.org/search/on-sale). Let's see the code with some comments added.
 
 ```js
 // First, we imported all the libraries we needed to
@@ -59,7 +59,7 @@ const csv = parse(results);
 writeFileSync('products.csv', csv)
 ```
 
-> If some of the code is hard for you to understand, please review the [Basics of data collection]({{@link web_scraping_for_beginners/data_collection.md}}) section. We will not go through the details again in this section about crawling.
+> If some of the code is hard for you to understand, please review the [Basics of data collection](../data_collection/index.md) section. We will not go through the details again in this section about crawling.
 
 ## [](#next) Next up
 

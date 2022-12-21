@@ -8,7 +8,7 @@ slug: /tutorials/integrations
 
 # Integrations
 
-You can connect Apify with practically any cloud service or web app. They allow you to pass your [actor](../../academy/getting_started/actors.md) run results to other services, process them, and receive notifications on important events.
+You can connect Apify with practically any cloud service or web app. They allow you to pass your [actor](../actors/index.md) run results to other services, process them, and receive notifications on important events.
 
 ## What is software integration?
 
@@ -16,7 +16,7 @@ Integration allows you to combine separate applications and take advantage of th
 
 ## How does integration work?
 
-Integrations use [APIs](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) and [webhooks](./webhooks.md) to transfer data between applications.
+Integrations use [APIs](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) and [webhooks](./webhooks/index.md) to transfer data between applications.
 Our [RESTful API](/api/v2#) allows you to control the Apify platform from any application.
 You can create [actors](/api/v2#/reference/actors/actor-collection/create-actor) and [tasks](/api/v2#/reference/actor-tasks/task-collection/create-task),
 [start and stop your runs](/api/v2#/reference/actor-tasks/run-task-synchronously/run-task-synchronously-(post)),
@@ -31,7 +31,7 @@ Services you can connect to to extend the functionality of your actors:
 
 - [Slack](https://help.apify.com/en/articles/6454058-apify-integration-for-slack).
 
-- [Webhooks](./webhooks.md).
+- [Webhooks](./webhooks/index.md).
 
 Other platforms you can connect to Apify:
 

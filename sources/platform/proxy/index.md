@@ -10,17 +10,17 @@ slug: /proxy
 
 [Apify Proxy](https://apify.com/proxy) allows you to change your IP address when web scraping to reduce the chance of being [blocked](../web_scraping_101/anti_scraping_techniques.md) because of your geographical location.
 
-You can use proxies in your [actors](../../academy/getting_started/actors.md) or any other application that supports HTTP, HTTPS, and FTP protocols. Apify Proxy monitors the health of your IP pool and intelligently [rotates addresses](#ip-address-rotation) to prevent IP address-based blocking.
+You can use proxies in your [actors](../actors/index.md) or any other application that supports HTTP, HTTPS, and FTP protocols. Apify Proxy monitors the health of your IP pool and intelligently [rotates addresses](#ip-address-rotation) to prevent IP address-based blocking.
 
 **You can view your proxy settings and password on the [Proxy](https://console.apify.com/proxy) page in the Apify Console.**
 
 ## [](#our-proxies) Our proxies
 
-[Datacenter proxy](./datacenter_proxy.md)]
+[Datacenter proxy](./datacenter_proxy/index.md)]
 
-[Residential proxy](./residential_proxy.md)]
+[Residential proxy](./residential_proxy/index.md)]
 
-[Google SERP proxy](./google_serp_proxy.md)]
+[Google SERP proxy](./google_serp_proxy/index.md)]
 
 **For pricing information, visit [apify.com/proxy](https://apify.com/proxy).**
 
@@ -59,7 +59,7 @@ To set a new session, pass the [`session`](./connection_settings.md), pass that 
 
 The created session will store information such as cookies and can be used to generate [browser fingerprints](https://pixelprivacy.com/resources/browser-fingerprinting/). You can also assign custom user data such as authorization tokens and specific headers.
 
-Sessions are available for [datacenter](./datacenter_proxy.md) proxies.
+Sessions are available for [datacenter](./datacenter_proxy/index.md) proxies.
 
 **This parameter is optional**. By default, each proxied request is assigned a randomly picked least used IP address.
 
@@ -69,7 +69,7 @@ You can persist your sessions (use the same IP address) by setting the `session`
 
 **Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** In cases where you need to keep the same session (e.g. when you need to log in to a website), it is best to keep the same proxy. By assigning an IP address to a **session ID**, you can use that IP for every request you make.
 
-For datacenter proxies, a session persists for **26 hours** ([more info](./datacenter_proxy.md)). Using a session resets its expiry timer.
+For datacenter proxies, a session persists for **26 hours** ([more info](./datacenter_proxy/index.md)). Using a session resets its expiry timer.
 
 Google SERP proxies do not support sessions.
 

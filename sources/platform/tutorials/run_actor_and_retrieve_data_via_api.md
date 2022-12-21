@@ -7,7 +7,7 @@ slug: /tutorials/integrations/run-actor-and-retrieve-data-via-api
 
 # Run an actor or task and retrieve data via API
 
-The most popular way of [integrating](https://help.apify.com/en/collections/1669767-integrating-with-apify) the Apify platform with an external project/application is by programmatically running an [actor](../../academy/getting_started/actors.md), waiting for it to complete its run, then collecting its data and using it within the project. Though this process sounds somewhat complicated, it's actually quite easy to do; however, due to the plethora of features offered on the Apify platform, new users may not be sure how exactly to implement this type of integration. So, let's dive in and see how you can do it.
+The most popular way of [integrating](https://help.apify.com/en/collections/1669767-integrating-with-apify) the Apify platform with an external project/application is by programmatically running an [actor](../actors/index.md), waiting for it to complete its run, then collecting its data and using it within the project. Though this process sounds somewhat complicated, it's actually quite easy to do; however, due to the plethora of features offered on the Apify platform, new users may not be sure how exactly to implement this type of integration. So, let's dive in and see how you can do it.
 
 > Remember to check out our [API documentation](../api.md) with examples in different languages and a live API console. We also recommend testing the API with a nice desktop client like [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest).
 
@@ -28,7 +28,7 @@ To run, or **call**, an actor/task, you will need a few things:
 
 - The name or ID of the actor/task. The name looks like `username~actorName` or `username~taskName`. The ID can be retrieved on the **Settings** page of the actor/task.
 
-- Your [API token]({{@link integrations.md#api-token}}), which you can find on the **Integrations** page in the [Apify Console](https://console.apify.com/account?tab=integrations) (make sure it does not get leaked anywhere!).
+- Your [API token](../integrations/index.md), which you can find on the **Integrations** page in the [Apify Console](https://console.apify.com/account?tab=integrations) (make sure it does not get leaked anywhere!).
 
 - Possibly an input, which is passed in JSON format as the request's **body**.
 
@@ -161,7 +161,7 @@ Once again, the final response will be the **run info object**; however, now its
 
 #### [](#webhooks) Webhooks
 
-If you have a server, [webhooks]({{@link integrations/webhooks.md}}) are the most elegant and flexible solution for integrations with Apify. You can simply set up a webhook for any actor or task, and that webhook will send a POST request to your server after an [event]({{@link integrations/webhooks/events.md}}) has occurred.
+If you have a server, [webhooks](../integrations/webhooks/index.md) has occurred.
 
 Usually, this event is a successfully finished run, but you can also set a different webhook for failed runs, etc.
 

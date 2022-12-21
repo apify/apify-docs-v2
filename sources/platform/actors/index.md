@@ -18,12 +18,12 @@ A single isolated actor consists of source code and various settings. You can th
 
 ## Section overview
 
-* [Running](./running.md)
+* [Running](./running/index.md)
   * [Input](./running/input.md)
   * [Memory and CPU](./running/memory_and_cpu.md)
   * [Compute units and consumption](./running/compute_units.md)
 * [Tasks](./tasks.md)
-* [Development](./development.md)
+* [Development](./development/index.md)
   * [Base Docker images](./development/base_docker_images.md)
   * [Builds](./development/builds.md)
   * [Continuous integration](./development/continuous_integration.md)

@@ -84,7 +84,7 @@ await browser.close();
 
 ## [](#next) Next up
 
-Now that we can open a browser, let's move onto the [next lesson](./page.md) where we will learn how to create pages and visit websites programmatically.
+Now that we can open a browser, let's move onto the [next lesson](./page/index.md) where we will learn how to create pages and visit websites programmatically.
 
 <!-- Talk about browser context later, it doesn't make sense to show it until we're actually creating pages -->
 

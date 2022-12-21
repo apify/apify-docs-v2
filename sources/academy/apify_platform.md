@@ -16,4 +16,4 @@ In this category, you'll learn how to become an Apify platform developer from th
 
 ## [](#first) First up
 
-We'll start off this category light, by showing you how to create an Apify account and get everything ready for development with the platform. [Let's go!](./getting_started.md)
+We'll start off this category light, by showing you how to create an Apify account and get everything ready for development with the platform. [Let's go!](./getting_started/index.md)

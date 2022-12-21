@@ -10,7 +10,7 @@ Before the actor can be run, it first needs to be built. The build effectively c
 
 Each build is assigned a unique build number of the form **MAJOR\.MINOR\.BUILD** (e.g. **1\.2\.345**), where **MAJOR\.MINOR** corresponds to the actor version number (see [Versioning](./source_code.md)) and **BUILD** is an automatically-incremented number starting at **1**.
 
-By default, the build has a timeout of 300 seconds and consumes 2048 MB of memory from the user's memory limit. See the [Resource limits]({{@link actors/running.md#resource-limits}}) section for more details.
+By default, the build has a timeout of 300 seconds and consumes 2048 MB of memory from the user's memory limit. See the [Resource limits](../running/index.md) section for more details.
 
 ## [](#tags)Tags
 
@@ -39,4 +39,4 @@ Each build starts with the initial status **READY** and goes through one or more
 
 ## [](#sharing) Sharing
 
-You can allow other Apify users to view your actor builds using the [access rights]({{@link access_rights.md}}) system. [See the full list of permissions]({{@link access_rights/list_of_permissions.md}}).
+You can allow other Apify users to view your actor builds using the [access rights](../../access_rights/index.md).

@@ -13,13 +13,13 @@ This example walks you through setting up [monitoring](https://apify.com/apify/m
 
 ## [](#use-case) Use case
 
-You have two or more [actors](../../academy/getting_started/actors.md).
+You have two or more [actors](../actors/index.md).
 
 You need:
 
 - Data to always be in the [correct format](#validate-data).
 - Alerts if items are [duplicated](#check-for-duplicates).
-- [Notification]({{@link monitoring.md#notifications}}) when your scheduled run finishes successfully.
+- [Notification](./index.md) when your scheduled run finishes successfully.
 - [Data visualization](#set-up-data-visualization) on a simple dashboard.
 
 For this use case, we will imagine you want to scrape fresh jokes from two websites and [store them in a single named dataset](../storage/dataset.md) daily.
@@ -28,7 +28,7 @@ You created two tasks from **Web Scraper** ([apify/web-scraper](https://apify.co
 
 ![Joke tasks](./images/joke-scraper-tasks.webp)
 
-Each of the above tasks handles a different website. After the tasks finish successfully, they call the monitoring actor using a [webhook]({{@link integrations/webhooks.md}}) that handles the data aggregation.
+Each of the above tasks handles a different website. After the tasks finish successfully, they call the monitoring actor using a [webhook](../integrations/webhooks/index.md) that handles the data aggregation.
 
 ![Joke schedule](./images/joke-schedule.webp)
 
@@ -40,7 +40,7 @@ Now, to the monitoring part. For this tutorial, let's skip the monitoring of the
 
 ## [](#create-a-new-monitoring-task) Create a new monitoring task
 
-If you haven't already, [add the monitoring suite to your account]({{@link monitoring.md#add-the-monitoring-suite-to-your-account}}).
+If you haven't already, [add the monitoring suite to your account](./index.md).
 
 If you have already added the task, under its **Settings** tab, give it a name. For example, **monitoring-jokes**.
 

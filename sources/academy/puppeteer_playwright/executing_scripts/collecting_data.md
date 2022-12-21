@@ -7,7 +7,7 @@ slug: /puppeteer-playwright/executing-scripts/collecting-data
 
 # [](#collecting-data) Collecting data
 
-Now that we know how to execute scripts on a page, we're ready to learn a bit about [data collection]({{@link web_scraping_for_beginners/data_collection.md}}). In this lesson, we'll be scraping all of the on-sale products from our [Fakestore](https://demo-webstore.apify.org/search/on-sale) website.
+Now that we know how to execute scripts on a page, we're ready to learn a bit about [data collection](../../web_scraping_for_beginners/data_collection/index.md). In this lesson, we'll be scraping all of the on-sale products from our [Fakestore](https://demo-webstore.apify.org/search/on-sale) website.
 
 > Most data collection cases involve looping through a list of items of some sort.
 

@@ -6,7 +6,7 @@ slug: /robotic-process-automation/tips-and-tricks
 
 # [](./tips-and-tricks) RPA tips and tricks
 
-This collection of [robotic process automation]({{@link robotic_process_automation.md}}) (RPA) tips and tricks aims to help you make your automations work smoother and produce fewer errors.
+This collection of [robotic process automation](./index.md) (RPA) tips and tricks aims to help you make your automations work smoother and produce fewer errors.
 
 ## [](#event-bound-flows) Event-bound flows
 

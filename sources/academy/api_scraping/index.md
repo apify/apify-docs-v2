@@ -95,4 +95,4 @@ console.log(decoded)
 
 ## [](#first) First up
 
-Get started with this course by learning some general knowledge about API scraping in the [General API Scraping](./general_api_scraping.md) section! This section will teach you everything you need to know about scraping APIs before moving into more complex sections.
+Get started with this course by learning some general knowledge about API scraping in the [General API Scraping](./general_api_scraping/index.md) section! This section will teach you everything you need to know about scraping APIs before moving into more complex sections.

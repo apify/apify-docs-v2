@@ -17,7 +17,7 @@ You want to monitor multiple actors or tasks at once.
 You need:
 
 - To [validate](#validate-data) the default dataset (check structure, item count).
-- [Notification]({{@link monitoring.md#notifications}}) of run failure.
+- [Notification](./index.md) of run failure.
 - Statistics presented on a [dashboard](#set-up-data-visualization).
 
 In this scenario we'll imagine you want to scrape [COVID-19 data](https://apify.com/covid-19) for [several countries](https://apify.com/store?search=covid):
@@ -31,7 +31,7 @@ You have created a task from each of the actors tracking those countries.
 
 ## [](#create-a-new-monitoring-task) Create a new monitoring task
 
-If you haven't already, [add the monitoring suite to your account]({{@link monitoring.md#add-the-monitoring-suite-to-your-account}}).
+If you haven't already, [add the monitoring suite to your account](./index.md).
 
 If you have already added the task, under its **Settings** tab, give it a name. For example, `monitoring-covid-tasks`.
 

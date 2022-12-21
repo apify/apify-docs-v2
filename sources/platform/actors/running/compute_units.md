@@ -7,7 +7,7 @@ slug: /actors/running/compute-units
 
 # What is a compute unit?
 
-**TL;DR: An [actor](../../../academy/getting_started/actors.md) for one hour consumes 1 compute unit.**
+**TL;DR: An [actor](../index.md) for one hour consumes 1 compute unit.**
 
 A compute unit (CU) is the unit of measurement for the resources consumed by actor runs and builds. We charge you for using actors based on CU consumption.
 

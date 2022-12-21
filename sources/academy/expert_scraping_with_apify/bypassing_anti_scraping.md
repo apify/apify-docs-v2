@@ -7,7 +7,7 @@ slug: /expert-scraping-with-apify/bypassing-anti-scraping
 
 # [](#bypassing-anti-scraping-methods) Bypassing anti-scraping methods
 
-Effectively bypassing anti-scraping software is one of the most crucial, but also one of the most difficult skills to master. The different types of [anti-scraping protections]({{@link anti_scraping.md}}) can vary a lot on the web. Some websites aren't even protected at all, some require only moderate IP rotation, and some cannot even be scraped without using advanced techniques and workarounds. Additionally, because the web is evolving, anti-scraping techniques are also evolving and becoming more advanced.
+Effectively bypassing anti-scraping software is one of the most crucial, but also one of the most difficult skills to master. The different types of [anti-scraping protections](../anti_scraping/index.md) can vary a lot on the web. Some websites aren't even protected at all, some require only moderate IP rotation, and some cannot even be scraped without using advanced techniques and workarounds. Additionally, because the web is evolving, anti-scraping techniques are also evolving and becoming more advanced.
 
 It is generally quite difficult to recognize the anti-scraping protections a page may have when first inspecting a it, so it is important to thoroughly investigate a site prior to writing any lines of code, as anti-scraping measures can significantly change your approach as well as complicate the development process of an actor. As your skills expand, you will be able to spot anti-scraping measures quicker, and better evaluate the complexity of a new project.
 

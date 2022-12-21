@@ -9,7 +9,7 @@ slug: /tutorials/building-public-actors
 
 There are four main stages of building a public actor:
 
-1. [Development]({{@link actors/development.md}}).
+1. [Development](../actors/development/index.md).
 2. [Publication](../actors/publishing.md).
 3. [Testing and maintenance](../actors/development/testing_and_maintenance.md).
 4. [Promotion](https://developers.apify.com/academy/apify-platform/get-most-of-actors/seo-and-promotion).
