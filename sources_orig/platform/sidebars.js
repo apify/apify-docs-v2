@@ -11,22 +11,27 @@ module.exports = {
         {
             type: 'link',
             label: 'JavaScript API client',
-            href: `${absoluteUrl}/sdk-js`,
+            href: `${absoluteUrl}/client-js`,
         },
         {
             type: 'link',
             label: 'Python API client',
+            href: `${absoluteUrl}/client-python`,
+        },
+        {
+            type: 'link',
+            label: 'JavaScript SDK',
+            href: `${absoluteUrl}/sdk-js`,
+        },
+        {
+            type: 'link',
+            label: 'Python SDK',
             href: `${absoluteUrl}/sdk-python`,
         },
         {
             type: 'link',
             label: 'Command-line interface',
             href: `${absoluteUrl}/cli`,
-        },
-        {
-            type: 'link',
-            label: 'Apify SDK',
-            href: `${absoluteUrl}/sdk-js`,
         },
     ],
 };
