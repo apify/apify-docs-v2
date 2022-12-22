@@ -40,15 +40,12 @@ function SubNavbar() {
     const pageTitle = useDocusaurusContext().siteConfig.title;
     return (
         subNavbar ? (
-            <div className="navbar__inner">
+            <div className="navbar__inner navbar__sub">
                 <div className="navbar__items">
-                    <NavbarItems items={[
-                        {
-                            label: pageTitle,
-                            to: '/',
-                        },
-                        ...subNavbar,
-                    ]}/>
+                    <div className="navbar__sub--title">
+                        <NavbarItem label={pageTitle} to="/"/>
+                    </div>
+                    <NavbarItems items={subNavbar}/>
                 </div>
             </div>
         ) : null

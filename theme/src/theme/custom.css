@@ -16,6 +16,10 @@ html[data-theme='dark'] {
 
     --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
     --docsearch-text-color: #8d92af;
+
+    --color-Neutral_Background: #1A1B21;
+    --color-Neutral_BackgroundMuted: #252832;
+    --color-Neutral_SeparatorSubtle: #343847;
 }
 
 :root {
@@ -56,6 +60,11 @@ html[data-theme='dark'] {
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
     --ifm-heading-color: #242736;
+
+    --color-Neutral_Background: #ffffff;
+    --color-Neutral_BackgroundMuted: #f8f9fc;
+    --color-Neutral_SeparatorSubtle: #e0e3f2;
+
 }
 
 @font-face {
@@ -86,8 +95,9 @@ html[data-theme='dark'] {
 .navbar__inner {
     /* .container */
     max-width: calc(var(--max-layout-width) - 32px);
-    padding: 0 var(--ifm-spacing-horizontal);
+    padding: 10px 48px;
     width: 100%;
+    background: var(--color-Neutral_Background);
 }
 
 .navbar__item.dropdown {
@@ -124,6 +134,10 @@ html[data-theme="dark"] .DocSearch-Button .DocSearch-Search-Icon {
 
 .DocSearch-Button:hover {
     box-shadow: none !important;
+}
+
+.navbar {
+    padding: 0;
 }
 
 .navbar, .main-wrapper {
@@ -195,6 +209,39 @@ html[data-theme="dark"] .navbar .navbar__link[href*=discord]:before {
 .navbar svg[class*=iconExternalLink],
 aside svg[class*=iconExternalLink] {
     display: none;
+}
+
+.navbar__link--active {
+
+}
+
+.navbar__sub {
+    background-color: var(--color-Neutral_BackgroundMuted);
+    border: 1px solid var(--color-Neutral_SeparatorSubtle);
+}
+
+.navbar__sub--title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(184px + 1rem); /* To ensure that the submenu items are aligned with top level menu. 184px is the width of the logo and 1rem is margin of the logo */
+}
+
+.navbar__sub--title .navbar__item {
+    padding-left: 0;
+}
+
+.navbar__sub .navbar__item.dropdown {
+    padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
+
+.navbar__sub--title::after {
+    content: "";
+    height: 20px;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    background-color: var(--color-Neutral_SeparatorSubtle);
 }
 
 header.hero div[class^=heroButtons] {

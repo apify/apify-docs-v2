@@ -23,20 +23,39 @@ module.exports = {
         [
             require.resolve('./theme/'),
             {
-                // subNavbar: [
-                //     {
-                //         label: 'Subnav 1',
-                //         href: `${absoluteUrl}/platform`,
-                //     },
-                //     {
-                //         label: 'Subnav 2',
-                //         href: `${absoluteUrl}/academy`,
-                //     },
-                //     {
-                //         label: 'Subnav 3',
-                //         href: `${absoluteUrl}/api`,
-                //     },
-                // ],
+                subNavbar: [
+                    {
+                        label: 'Subnav 1',
+                        href: `${absoluteUrl}/platform`,
+                    },
+                    {
+                        label: 'Subnav 2',
+                        href: `${absoluteUrl}/academy`,
+                    },
+                    {
+                        label: 'Subnav 3',
+                        type: 'dropdown',
+                        items: [
+                            {
+                                label: 'Reference',
+                                // TODO
+                                href: 'https://docs.apify.com/api/v2',
+                            },
+                            {
+                                label: 'Client for JavaScript',
+                                href: `${absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                                target: '_self',
+                                rel: 'dofollow',
+                            },
+                            {
+                                label: 'Client for Python',
+                                href: `${absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                                target: '_self',
+                                rel: 'dofollow',
+                            },
+                        ],
+                    },
+                ],
             },
         ],
     ],
