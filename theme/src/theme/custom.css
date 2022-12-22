@@ -181,6 +181,13 @@ aside > div > a > b {
     width: 0.4em;
     top: 7px;
     transform: rotate(135deg);
+    transition: all ease-in 0.2s;
+    margin-right: 6px;
+}
+
+.dropdown:hover .navbar__link::after {
+    transform: rotate(-45deg);
+    top: 10px;
 }
 
 .navbar .icon {
@@ -229,6 +236,7 @@ aside svg[class*=iconExternalLink] {
     padding: 4px 8px;
     font-size: 14px;
     line-height: 24.4px;
+    transition: all ease-in 0.2s;
 }
 
 .navbar__link:hover {
