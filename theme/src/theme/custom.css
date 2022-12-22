@@ -20,6 +20,10 @@ html[data-theme='dark'] {
     --color-Neutral_Background: #1A1B21;
     --color-Neutral_BackgroundMuted: #252832;
     --color-Neutral_SeparatorSubtle: #343847;
+    --color-Neutral_ChipBackgroundActive: #8C93A8;
+    --color-Neutral_Text: #F3F4FA;
+    --color-Neutral_TextMuted: #B2B8CC;
+    --color-Neutral_Hover: #2A2D39;
 }
 
 :root {
@@ -64,7 +68,10 @@ html[data-theme='dark'] {
     --color-Neutral_Background: #ffffff;
     --color-Neutral_BackgroundMuted: #f8f9fc;
     --color-Neutral_SeparatorSubtle: #e0e3f2;
-
+    --color-Neutral_ChipBackgroundActive: #C1C6DD;
+    --color-Neutral_Text: #242836;
+    --color-Neutral_TextMuted: #41465D;
+    --color-Neutral_Hover: #F2F3FB;
 }
 
 @font-face {
@@ -102,6 +109,7 @@ html[data-theme='dark'] {
 
 .navbar__item.dropdown {
     padding: 0;
+    display: flex;
 }
 
 .DocSearch-Button-Placeholder {
@@ -171,7 +179,7 @@ aside > div > a > b {
     position: relative;
     vertical-align: top;
     width: 0.4em;
-    top: 9px;
+    top: 7px;
     transform: rotate(135deg);
 }
 
@@ -211,8 +219,27 @@ aside svg[class*=iconExternalLink] {
     display: none;
 }
 
-.navbar__link--active {
+.navbar__items {
+    gap: 24px;
+}
 
+.navbar__link {
+    border-radius: 8px;
+    color: var(--color-Neutral_TextMuted);
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 24.4px;
+}
+
+.navbar__link:hover {
+    background: var(--color-Neutral_Hover);
+    color: unset;
+}
+
+.navbar__link--active {
+    color: var(--color-Neutral_Text);
+    background: var(--color-Neutral_ChipBackgroundActive);
+    pointer-events: none;
 }
 
 .navbar__sub {
@@ -228,11 +255,6 @@ aside svg[class*=iconExternalLink] {
 }
 
 .navbar__sub--title .navbar__item {
-    padding-left: 0;
-}
-
-.navbar__sub .navbar__item.dropdown {
-    padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
 }
 
 .navbar__sub--title::after {
