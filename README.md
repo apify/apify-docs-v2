@@ -6,7 +6,6 @@ This is the base repository for next version of https://docs.apify.com.
 
 - robots.txt for root of apify.github.io
 - versioning of api docs broken (at least the switcher and versioned navbar links)
-- search in API docs generates junk (e.g. keywords like `const` or `external` or `readonly`)
 - API docs versioning either broken or links are broken
 - API docs navbar versioned link broken
 - rendering changelog in non-TS projects (CLI)
