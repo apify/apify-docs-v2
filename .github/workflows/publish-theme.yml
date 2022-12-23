@@ -21,15 +21,7 @@ jobs:
 
             -   name: Deploy theme to npm
                 run: |
-                  VERSION_CHANGE=$(git diff HEAD HEAD^ -- $GITHUB_WORKSPACE/theme/package.json | grep \"version\");
-                  if [[ -z $VERSION_CHANGE ]]; 
-                    then
-                        echo "No theme version updates found, closing!";
-                    else
-                        echo "Theme version updated!";
-                        echo "$VERSION_CHANGE";
-                        cd $GITHUB_WORKSPACE/theme && npm publish --access=public;
-                    fi;
+                    npx -y publish-if-not-exists
                 env:
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
                     GIT_USER: "barjin:${{ secrets.GH_TOKEN }}"
