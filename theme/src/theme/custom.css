@@ -70,7 +70,7 @@ html[data-theme='dark'] {
     --color-Neutral_SeparatorSubtle: #e0e3f2;
     --color-Neutral_ChipBackgroundActive: #C1C6DD;
     --color-Neutral_Text: #242836;
-    --color-Neutral_TextMuted: #41465D;
+    --color-Neutral_TextMuted: #3F475D;
     --color-Neutral_Hover: #F2F3FB;
 }
 
@@ -102,7 +102,7 @@ html[data-theme='dark'] {
 .navbar__inner {
     /* .container */
     max-width: calc(var(--max-layout-width) - 32px);
-    padding: 10px 48px;
+    padding: 10px 40px;
     width: 100%;
     background: var(--color-Neutral_Background);
 }
@@ -239,15 +239,17 @@ aside svg[class*=iconExternalLink] {
     transition: all ease-in 0.2s;
 }
 
-.navbar__link:hover {
-    background: var(--color-Neutral_Hover);
-    color: unset;
-}
-
 .navbar__link--active {
     color: var(--color-Neutral_Text);
     background: var(--color-Neutral_ChipBackgroundActive);
-    pointer-events: none;
+}
+
+.navbar__link:not(.navbar__link--active):hover {
+    background: var(--color-Neutral_Hover);
+}
+
+.navbar__link:hover, .navbar__link--active:hover {
+    color: unset;
 }
 
 .navbar__sub {
@@ -256,22 +258,20 @@ aside svg[class*=iconExternalLink] {
 }
 
 .navbar__sub--title {
-    position: relative;
     display: flex;
     align-items: center;
-    width: calc(184px + 1rem); /* To ensure that the submenu items are aligned with top level menu. 184px is the width of the logo and 1rem is margin of the logo */
-}
-
-.navbar__sub--title .navbar__item {
+    width: 160px;
+    justify-content: flex-end;
+    margin-right: 40px;
+    position: relative;
 }
 
 .navbar__sub--title::after {
     content: "";
     height: 20px;
-    width: 1px;
+    border-right: 1px solid var(--color-Neutral_SeparatorSubtle);
     position: absolute;
-    right: 0;
-    background-color: var(--color-Neutral_SeparatorSubtle);
+    right: -32px;
 }
 
 header.hero div[class^=heroButtons] {
