@@ -21,7 +21,7 @@ module.exports = {
     /** @type {import('@docusaurus/types').ReportingSeverity} */ ('warn'),
     themes: [
         [
-            require.resolve('./theme/'),
+            require.resolve('./apify-docs-theme/'),
             {
                 // subNavbar: [
                 //     {

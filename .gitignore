@@ -23,4 +23,4 @@ sources/typedefs
 .docusaurus
 tsconfig.tsbuildinfo
 .turbo
-theme/package-lock.json
+apify-docs-theme/package-lock.json
