@@ -11,14 +11,15 @@ import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarSearch from '@theme/Navbar/Search';
 import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import styles from './styles.module.css';
 
 function NavbarItems({ items }) {
+    const isBrowser = useIsBrowser();
+
     return (
         <>
-            {items.map((item, i) => (
-                <NavbarItem {...item} key={i}/>
-            ))}
+            {items.map((item, i) => <NavbarItem {...item} key={i}/>)}
         </>
     );
 }

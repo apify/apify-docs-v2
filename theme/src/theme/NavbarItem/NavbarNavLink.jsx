@@ -3,7 +3,8 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { useLocation } from '@docusaurus/router';
-import { isRegexpStringMatch } from '@docusaurus/theme-common';
+import { isRegexpStringMatch, useThemeConfig } from '@docusaurus/theme-common';
+import { usePluginData } from '@docusaurus/useGlobalData';
 
 export default function NavbarNavLink({
     activeBasePath,
@@ -16,6 +17,9 @@ export default function NavbarNavLink({
     prependBaseUrlToHref,
     ...props
 }) {
+    const { navbar: { items = [] } } = useThemeConfig();
+    const { options: { subNavbar = [] } } = usePluginData('@apify/docs-theme');
+    const allItems = [...items, ...subNavbar];
     const location = useLocation();
     // TODO all this seems hacky
     // {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
@@ -39,13 +43,19 @@ export default function NavbarNavLink({
                 </>
             ),
         };
+
+    // If the item is a dropdown, look for any of its children that match the current path
+    const dropDownHasActiveItem = allItems
+        .find((item) => item.type === 'dropdown' && item.label === label)
+        ?.items?.some((item) => (item.to || item.href).endsWith(location.pathname));
+
     if (href) {
         return (
             <Link
                 href={prependBaseUrlToHref ? normalizedHref : href}
                 {...props}
                 {...(activeBaseUrl && {
-                    className: location.pathname.startsWith(`/${activeBasePath}`)
+                    className: location.pathname.startsWith(`/${activeBasePath}`) || dropDownHasActiveItem
                         ? 'navbar__item navbar__link navbar__link--active'
                         : 'navbar__item navbar__link',
                 })}
@@ -53,17 +63,19 @@ export default function NavbarNavLink({
             />
         );
     }
+
     return (
         <Link
             to={toUrl}
             isNavLink
             {...((activeBasePath || activeBaseRegex) && {
                 isActive: (_match, location) => (activeBaseRegex
-                    ? isRegexpStringMatch(activeBaseRegex, location.pathname)
+                    ? isRegexpStringMatch(activeBaseRegex, location.pathname) || dropDownHasActiveItem
                     : location.pathname.startsWith(activeBaseUrl)),
             })}
             {...props}
             {...linkContentProps}
+            isActive={() => true}
         />
     );
 }
