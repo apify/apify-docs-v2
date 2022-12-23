@@ -24,13 +24,13 @@ jobs:
                     git config --global user.name "Apify Release Bot"
                     git config --global user.email "noreply@apify.com"
                     
-                    cd $GITHUB_WORKSPACE/theme
+                    cd $GITHUB_WORKSPACE/apify-docs-theme
                     echo "access=public" > .npmrc
                     echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
 
             -   name: Deploy theme to npm
                 run: |
-                    cd $GITHUB_WORKSPACE/theme
+                    cd $GITHUB_WORKSPACE/apify-docs-theme
                     npx -y publish-if-not-exists
                 env:
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
