@@ -19,6 +19,14 @@ jobs:
                 with:
                     node-version: 16
 
+            -   name: Setup git user and npm
+                run: |
+                    git config --global user.name "Apify Release Bot"
+                    git config --global user.email "noreply@apify.com"
+                    
+                    echo "access=public" > .npmrc
+                    echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+
             -   name: Deploy theme to npm
                 run: |
                     npx -y publish-if-not-exists
