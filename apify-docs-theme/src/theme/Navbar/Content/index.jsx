@@ -37,17 +37,16 @@ function NavbarContentLayout({
 
 function SubNavbar() {
     const { options: { subNavbar } } = usePluginData('@apify/docs-theme');
-    const pageTitle = useDocusaurusContext().siteConfig.title;
     return (
         subNavbar ? (
             <div className="navbar__inner">
                 <div className="navbar__items">
                     <NavbarItems items={[
                         {
-                            label: pageTitle,
+                            label: subNavbar.title,
                             to: '/',
                         },
-                        ...subNavbar,
+                        ...subNavbar.items,
                     ]}/>
                 </div>
             </div>
