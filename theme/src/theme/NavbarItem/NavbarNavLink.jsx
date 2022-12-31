@@ -45,9 +45,11 @@ export default function NavbarNavLink({
         };
 
     // If the item is a dropdown, look for any of its children that match the current path
-    const dropDownHasActiveItem = allItems
-        .find((item) => item.type === 'dropdown' && item.label === label)
-        ?.items?.some((item) => (item.to || item.href).endsWith(location.pathname));
+    const dropDownHasActiveItem = location.pathname !== '/' && allItems
+        .filter((item) => item.type === 'dropdown')
+        .filter((item) => item.label === label)
+        .reduce((nestedItems, item) => [...nestedItems, ...item.items], [])
+        .some((item) => (item.to || item.href).endsWith(location.pathname));
 
     if (href) {
         return (
