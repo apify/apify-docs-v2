@@ -11,7 +11,6 @@ import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarSearch from '@theme/Navbar/Search';
 import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
-import useIsBrowser from '@docusaurus/useIsBrowser';
 import styles from './styles.module.css';
 
 function NavbarItems({ items }) {
@@ -59,7 +58,7 @@ export default function NavbarContent() {
         <div
             style={{
                 width: '100%',
-                height: '100%',
+                height: 'fit-content',
                 alignItems: 'center',
                 display: 'flex',
                 flexDirection: 'column',

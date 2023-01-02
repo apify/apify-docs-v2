@@ -109,7 +109,7 @@ html[data-theme='dark'] {
 
 .navbar__item.dropdown {
     padding: 0;
-    display: flex;
+    display: none;
 }
 
 .DocSearch-Button-Placeholder {
@@ -146,6 +146,7 @@ html[data-theme="dark"] .DocSearch-Button .DocSearch-Search-Icon {
 
 .navbar {
     padding: 0;
+    height: fit-content;
 }
 
 .navbar, .main-wrapper {
@@ -227,7 +228,7 @@ aside svg[class*=iconExternalLink] {
 }
 
 .navbar__items {
-    gap: 24px;
+    gap: 7px;
 }
 
 .navbar__link {
@@ -430,6 +431,16 @@ nav.navbar[class*="navbarHidden"]{
 @media (min-width: 997px) {
     .navbar__sub {
         display: block;
+    }
+
+    .navbar__item.dropdown {
+        display: flex;
+    }
+}
+
+@media (min-width: 1130px) {
+    .navbar__items {
+        gap: 20px;
     }
 }
 
