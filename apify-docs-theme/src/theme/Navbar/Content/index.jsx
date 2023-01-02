@@ -41,7 +41,7 @@ function SubNavbar() {
                     <div className="navbar__sub--title">
                         <NavbarItem label={subNavbar.title} to="/"/>
                     </div>
-                    <NavbarItems items={subNavbar}/>
+                    <NavbarItems items={subNavbar.items}/>
                 </div>
             </div>
         ) : null
