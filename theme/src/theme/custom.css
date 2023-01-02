@@ -253,6 +253,7 @@ aside svg[class*=iconExternalLink] {
 }
 
 .navbar__sub {
+    display: none;
     background-color: var(--color-Neutral_BackgroundMuted);
     border: 1px solid var(--color-Neutral_SeparatorSubtle);
 }
@@ -416,6 +417,20 @@ html[data-theme='dark'] .theme-doc-toc-desktop .table-of-contents .table-of-cont
 
 .apiItemContainer .tsd-readme h1:first-child {
     display: none;
+}
+
+nav.navbar {
+    transition: transform var(--ifm-transition-slow) ease;
+}
+
+nav.navbar[class*="navbarHidden"]{
+    transform: translate3d(0, calc(-210%), 0);
+}
+
+@media (min-width: 997px) {
+    .navbar__sub {
+        display: block;
+    }
 }
 
 @media (min-width: 997px) and (max-width: 1250px) {

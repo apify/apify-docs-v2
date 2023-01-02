@@ -15,8 +15,6 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import styles from './styles.module.css';
 
 function NavbarItems({ items }) {
-    const isBrowser = useIsBrowser();
-
     return (
         <>
             {items.map((item, i) => <NavbarItem {...item} key={i}/>)}
