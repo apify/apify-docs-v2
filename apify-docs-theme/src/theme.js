@@ -26,9 +26,10 @@ function theme(
                 module: {
                     rules: [
                         {
-                            test: /\.(js|jsx)$/,
-                            exclude: /node_modules/,
-                            use: { loader: 'babel-loader' },
+                            test: /(@apify\/|apify-)docs-theme\/src\/theme\/.*?\.jsx?$/,
+                            use: {
+                                loader: 'babel-loader',
+                            },
                         },
                     ],
                 },
@@ -37,4 +38,6 @@ function theme(
     };
 }
 
-exports.default = theme;
+module.exports = {
+    theme,
+};

@@ -1,0 +1,38 @@
+name: publish-theme
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v3
+                with:
+                    fetch-depth: 0
+
+            -   name: Use Node.js 16
+                uses: actions/setup-node@v2-beta
+                with:
+                    node-version: 16
+
+            -   name: Setup git user and npm
+                run: |
+                    git config --global user.name "Apify Release Bot"
+                    git config --global user.email "noreply@apify.com"
+                    
+                    cd $GITHUB_WORKSPACE/apify-docs-theme
+                    echo "access=public" > .npmrc
+                    echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+
+            -   name: Deploy theme to npm
+                run: |
+                    cd $GITHUB_WORKSPACE/apify-docs-theme
+                    npx -y publish-if-not-exists
+                env:
+                    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                    GIT_USER: "barjin:${{ secrets.GH_TOKEN }}"
+                    GH_TOKEN: ${{ secrets.GH_TOKEN }}

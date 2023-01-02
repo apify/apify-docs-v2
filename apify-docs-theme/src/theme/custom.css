@@ -146,7 +146,8 @@ html[data-theme="dark"] .DocSearch-Button .DocSearch-Search-Icon {
 
 .navbar {
     padding: 0;
-    height: fit-content;
+    /* height: fit-content; */
+    height: auto;
 }
 
 .navbar, .main-wrapper {
