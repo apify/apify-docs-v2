@@ -126,6 +126,10 @@ html[data-theme="dark"] .DocSearch-Button .DocSearch-Search-Icon {
     box-shadow: none !important;
 }
 
+.navbar {
+    height: auto;
+}
+
 .navbar, .main-wrapper {
     justify-content: center;
 }

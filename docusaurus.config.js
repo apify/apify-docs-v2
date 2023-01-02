@@ -19,23 +19,27 @@ module.exports = {
     /** @type {import('@docusaurus/types').ReportingSeverity} */ ('warn'),
     themes: [
         [
-            require.resolve('./apify-docs-theme/'),
-            {
-                // subNavbar: [
-                //     {
-                //         label: 'Subnav 1',
-                //         href: `${absoluteUrl}/platform`,
-                //     },
-                //     {
-                //         label: 'Subnav 2',
-                //         href: `${absoluteUrl}/academy`,
-                //     },
-                //     {
-                //         label: 'Subnav 3',
-                //         href: `${absoluteUrl}/api`,
-                //     },
-                // ],
-            },
+            require.resolve('./apify-docs-theme'),
+            /** @type {import('./apify-docs-theme/types').ThemeOptions} */
+            ({
+                // subNavbar: {
+                //     title: 'Apify Docs v2',
+                //     items: [
+                //         {
+                //             label: 'Subnav 1',
+                //             href: `${config.absoluteUrl}/platform`,
+                //         },
+                //         {
+                //             label: 'Subnav 2',
+                //             href: `${config.absoluteUrl}/academy`,
+                //         },
+                //         {
+                //             label: 'Subnav 3',
+                //             href: `${config.absoluteUrl}/api`,
+                //         },
+                //     ],
+                // },
+            }),
         ],
     ],
     presets: /** @type {import('@docusaurus/types').PresetConfig[]} */ ([
