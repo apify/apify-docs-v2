@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import styles from './Cards.module.css';
 // eslint-disable-next-line import/no-extraneosus-dependencies
 
-const Link = ({ cardItem, href, isExternalLink }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+const PlatformLink = ({ cardItem, href, isExternalLink }) => (
+    <Link to={href}>
         <span style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}>
             <span>🗒️</span>
             <span style={{ marginLeft: '0.5rem', marginRight: '0.3rem' }}>{cardItem}</span>
@@ -16,7 +17,7 @@ const Link = ({ cardItem, href, isExternalLink }) => (
                 )
             }
         </span>
-    </a>
+    </Link>
 );
 
 const PlaftormCard = ({ title, items }) => {
@@ -26,7 +27,7 @@ const PlaftormCard = ({ title, items }) => {
             <ul className={styles['card-links']}>
                 {items.map((props, i) => (
                     <li key={i}>
-                        <Link {...props} />
+                        <PlatformLink {...props} />
                     </li>
                 ))}
             </ul>
