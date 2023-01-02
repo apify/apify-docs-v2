@@ -194,7 +194,6 @@ aside > div > a > b {
 .navbar .icon {
     font-size: 0;
     padding: 4px;
-    margin-left: 20px;
     line-height: 0;
 }
 
@@ -228,7 +227,7 @@ aside svg[class*=iconExternalLink] {
 }
 
 .navbar__items {
-    gap: 7px;
+    gap: 6px;
 }
 
 .navbar__link {
@@ -301,9 +300,18 @@ nav.navbar .dropdown__menu {
 }
 
 .navbar__logo {
+    display: none;
     width: 11rem;
     height: 3rem;
     padding: 10px 0;
+}
+
+.navbar-sidebar .navbar__logo {
+    display: initial;
+}
+
+.navbar-sidebar .toggle_theme-src-theme-ColorModeToggle-styles-module {
+    display: none;
 }
 
 .navbar__link.subnav {
@@ -358,6 +366,10 @@ html.plugin-docs .theme-doc-markdown h3 {
 .theme-doc-toc-desktop .table-of-contents {
     font-size: 16px;
     line-height: 24px;
+}
+
+.navbar-sidebar .menu__link.icon {
+    display: none;
 }
 
 .theme-doc-sidebar-menu .menu__link,
@@ -432,6 +444,24 @@ nav.navbar[class*="navbarHidden"]{
     transform: translate3d(0, calc(-210%), 0);
 }
 
+.navbar__items--right a.icon,
+div[class*="colorModeToggle"]
+{
+    display: initial;
+}
+
+div[class*="searchBox"] {
+    padding-left: 0;
+    position: unset;
+}
+
+@media (min-width: 480px) { 
+    .navbar__logo {
+        display: initial;
+    }
+}
+
+
 @media (min-width: 997px) {
     .navbar__sub {
         display: block;
@@ -448,11 +478,11 @@ nav.navbar[class*="navbarHidden"]{
     }
 }
 
-@media (min-width: 997px) and (max-width: 1250px) {
+/* @media (min-width: 997px) and (max-width: 1250px) {
     .navbar__items--right a.icon {
         display: none;
     }
-}
+} */
 
 @media (min-width: 997px) and (max-width: 1130px) {
     .navbar__link.changelog {
