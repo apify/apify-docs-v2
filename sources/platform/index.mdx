@@ -4,6 +4,25 @@ description: Mold our tools any way you want to scrape websites or automate repe
 sidebar_position: 1
 slug: /
 ---
+import PlatformCard from "@site/src/components/PlatformCard";
+import CardGrid from "@site/src/components/CardGrid";
+import homepageContent from "./homepage_content.json";
+
+Mold our tools any way you want to scrape websites or automate repetitive tasks. Find the solution to your task here or use the Search box above.
+
+<CardGrid>
+    {
+        Object.entries(homepageContent).map(([title, items]) => (
+            <PlatformCard
+                title={title}
+                items={items}
+            />)
+        )
+    }
+</CardGrid>
+
+
+
 <!-- The homepage menu card items are in the homepage_content.json file.
     
     Each item has its own JSON object, in which "cardItem" is the title and "href" is the link. If the link leads to outside the Apify Docs site, add the `"isExternalLink" : true` property. For local links, just use the article's path. E.g. `"/tutorials/apify-scrapers/web-scraper"`.
