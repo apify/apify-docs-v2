@@ -48,7 +48,7 @@ jobs:
     
     rebuild-docs:
         needs: publish
-        # if: needs.publish.outputs.theme_changed == 'true'
+        if: needs.publish.outputs.theme_changed == 'true'
         strategy:
             matrix:
                 include:
