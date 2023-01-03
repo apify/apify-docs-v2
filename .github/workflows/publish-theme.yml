@@ -8,6 +8,8 @@ on:
 jobs:
     publish:
         runs-on: ubuntu-latest
+        outputs:
+            theme_changed: ${{ steps.changed-theme-files.outputs.any_changed }}
 
         steps:
             -   uses: actions/checkout@v3
@@ -36,3 +38,25 @@ jobs:
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
                     GIT_USER: "barjin:${{ secrets.GH_TOKEN }}"
                     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+            
+            - name: Get changed files in the docs folder
+              id: changed-theme-files
+              uses: tj-actions/changed-files@v35
+              with:
+                files: |
+                    apify-docs-theme/**
+    
+    rebuild-docs:
+        needs: publish
+        if: needs.publish.outputs.theme_changed == 'true'
+        strategy:
+            matrix:
+                repo: ['apify/apify-sdk-js-v2']
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Repository Dispatch
+              uses: peter-evans/repository-dispatch@v2
+              with:
+                token: ${{ secrets.GH_TOKEN }}
+                repository: ${{ matrix.repo }}
+                event-type: rebuild-docs
