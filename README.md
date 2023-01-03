@@ -11,6 +11,14 @@ This is the base repository for next version of https://docs.apify.com.
 - rendering changelog in non-TS projects (CLI)
 - shared theme package
 
+### Content migration
+
+- run `node tools/convert.mjs`
+- some pages need to be manually updated:
+  - sidebars might need adjustments
+  - some pages should be removed/redirected (e.g. the dev tools like client or SDK are now part of the docs but on different links, before it was just embedded readme)
+  - meta description should be sometimes rendered as part of content, we should fix this manually, the tag in frontmatter should stay as the meta description only (e.g. https://docs-v2.apify.com/platform/actors/development/output-schema)
+
 ### RFC
 
 - projects without index pages? just redirect? having api docs on `/` is problematic
