@@ -54,14 +54,14 @@ jobs:
                 include:
                     - repo: 'apify/apify-sdk-js-v2'
                       branch: 'docs-v2'
-                    # - repo: 'apify/apify-sdk-python'
-                    #   branch: 'docs-v2'
-                    # - repo: 'apify/apify-cli'
-                    #   branch: 'docs-v2'
-                    # - repo: 'apify/apify-client-js'
-                    #   branch: 'docs-v2'
-                    # - repo: 'apify/apify-client-python'
-                    #   branch: 'docs-v2'
+                    - repo: 'apify/apify-sdk-python'
+                      branch: 'docs-v2'
+                    - repo: 'apify/apify-cli'
+                      branch: 'docs-v2'
+                    - repo: 'apify/apify-client-js'
+                      branch: 'docs-v2'
+                    - repo: 'apify/apify-client-python'
+                      branch: 'docs-v2'
 
         runs-on: ubuntu-latest
         steps:
