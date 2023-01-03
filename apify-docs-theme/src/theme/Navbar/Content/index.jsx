@@ -26,8 +26,10 @@ function NavbarContentLayout({
 }) {
     return (
         <div className="navbar__inner">
-            <div className="navbar__items">{left}</div>
-            <div className="navbar__items navbar__items--right">{right}</div>
+            <div className="navbar__container">
+                <div className="navbar__items">{left}</div>
+                <div className="navbar__items navbar__items--right">{right}</div>
+            </div>
         </div>
     );
 }
@@ -37,11 +39,13 @@ function SubNavbar() {
     return (
         subNavbar ? (
             <div className="navbar__inner navbar__sub">
-                <div className="navbar__items">
-                    <div className="navbar__sub--title">
-                        <NavbarItem label={subNavbar.title} to="/"/>
+                <div className="navbar__container">
+                    <div className="navbar__items">
+                        <div className="navbar__sub--title">
+                            <NavbarItem label={subNavbar.title} to="/"/>
+                        </div>
+                        <NavbarItems items={subNavbar.items}/>
                     </div>
-                    <NavbarItems items={subNavbar.items}/>
                 </div>
             </div>
         ) : null

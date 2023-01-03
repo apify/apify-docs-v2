@@ -18,8 +18,8 @@ export default function NavbarNavLink({
     ...props
 }) {
     const { navbar: { items = [] } } = useThemeConfig();
-    const { options: { subNavbar = [] } } = usePluginData('@apify/docs-theme');
-    const allItems = [...items, ...subNavbar];
+    const { options: { subNavbar } } = usePluginData('@apify/docs-theme');
+    const allItems = [...items, ...(subNavbar?.items || [])];
     const location = useLocation();
     // TODO all this seems hacky
     // {to: 'version'} should probably be forbidden, in favor of {to: '/version'}
