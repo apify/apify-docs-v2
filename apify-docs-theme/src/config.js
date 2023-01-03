@@ -139,7 +139,7 @@ const themeConfig = ({
         additionalLanguages: ['docker', 'log'],
     },
     metadata: [],
-    image: 'img/apify_og_SDK.png',
+    image: 'https://apify.com/img/og/docs.png',
     footer: {
         links: [
             {
