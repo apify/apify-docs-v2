@@ -136,6 +136,18 @@ server {
 }
 ```
 
+### @apify/docs-theme
+
+The `@apify/docs-theme` is a Docusaurus theme package with custom components and styles to be used in all the Apify Docuaurus instances. 
+Aside from the regular Docusaurus theme interface, it also exports the common parts of the Docusaurus config, such as the navbar contents, url, `og:image`, etc.
+
+The theme is available on npm as `@apify/docs-theme` and can be installed in any Docusaurus instance by running `npm install @apify/docs-theme`.
+
+#### Publishing the theme
+There is a GitHub Action that automatically publishes the theme to npm whenever any changes are pushed to the `master` branch. However, this only happens if you update the version in the `package.json` file manually - if the current version already exists on npm, the publish will be skipped.
+
+Additionally, if there are any changes to the `apify-docs-theme` folder detected, the GitHub action will invoke docs builds in all the subprojects to make sure that all the pages are using the latest theme version. This is done in the `rebuild-docs` job. This job utilizes a matrix strategy to run the builds in parallel. The actual rebuild is initiated by the `workflow_dispatch` event in the respective repositories. Because of this, the `GITHUB_TOKEN` envvar has to be replaced by the PAT token stored in the `GH_TOKEN` secret - the original token does not have the necessary permissions to trigger the workflows in other repositories.
+
 ### Interesting links
 
 - https://github.com/facebook/docusaurus/discussions/6086
