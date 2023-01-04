@@ -79,7 +79,7 @@ export default function Home() {
                         icon={<RectangleJavaScriptIcon />}
                         title="SDK for JavaScript"
                         description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
-                        to="/cli"
+                        to="/sdk-js/"
                         width="calc(50% - 12px)"
                     />
                      <CardWithIcon
