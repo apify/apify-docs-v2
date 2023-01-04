@@ -1,7 +1,6 @@
 import Link from "@docusaurus/Link";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import moment from "moment";
 
 const NUMBER_OF_CHANGELOG_ITEMS = 5;
 const CHANGE_LOG_API_URL = "https://cms.apify.com/api/change-log-items";
@@ -28,6 +27,15 @@ interface ChangeLogItem {
     };
   };
 }
+
+const humanizeDate = (date: string) => {
+  const dateObj = new Date(date);
+  const month = dateObj.toLocaleString("en-us" ,{ month: "long" });
+  const day = dateObj.getDate();
+  const year = dateObj.getFullYear();
+  
+  return `${month} ${day}, ${year}`;
+};
 
 export default function ChangeLog() {
   const [isLoading, setIsLoading] = useState(false);
@@ -74,7 +82,7 @@ export default function ChangeLog() {
           {changeLogData.map((changeLog: ChangeLogItem) => (
             <div key={changeLog.attributes.path} className={styles.changeLogItem}>
               <div className={styles.changeLogDate}>
-                {moment(changeLog.attributes.publishedAt).format("MMMM D, YYYY")}
+                {humanizeDate(changeLog.attributes.publishedAt)}
               </div>
               <Link to={`${CHANGE_LOG_WEB_URL}/${changeLog.attributes.path}`}>
                 <h3>{changeLog.attributes.title}</h3>
