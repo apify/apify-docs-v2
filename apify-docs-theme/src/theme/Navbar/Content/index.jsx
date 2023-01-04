@@ -1,7 +1,6 @@
 import React from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { usePluginData } from '@docusaurus/useGlobalData';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
     splitNavbarItems,
 } from '@docusaurus/theme-common/internal';
@@ -16,9 +15,7 @@ import styles from './styles.module.css';
 function NavbarItems({ items }) {
     return (
         <>
-            {items.map((item, i) => (
-                <NavbarItem {...item} key={i}/>
-            ))}
+            {items.map((item, i) => <NavbarItem {...item} key={i}/>)}
         </>
     );
 }
@@ -29,8 +26,10 @@ function NavbarContentLayout({
 }) {
     return (
         <div className="navbar__inner">
-            <div className="navbar__items">{left}</div>
-            <div className="navbar__items navbar__items--right">{right}</div>
+            <div className="navbar__container">
+                <div className="navbar__items">{left}</div>
+                <div className="navbar__items navbar__items--right">{right}</div>
+            </div>
         </div>
     );
 }
@@ -39,15 +38,14 @@ function SubNavbar() {
     const { options: { subNavbar } } = usePluginData('@apify/docs-theme');
     return (
         subNavbar ? (
-            <div className="navbar__inner">
-                <div className="navbar__items">
-                    <NavbarItems items={[
-                        {
-                            label: subNavbar.title,
-                            to: '/',
-                        },
-                        ...subNavbar.items,
-                    ]}/>
+            <div className="navbar__inner navbar__sub">
+                <div className="navbar__container">
+                    <div className="navbar__items">
+                        <div className="navbar__sub--title">
+                            <NavbarItem label={subNavbar.title} to="/"/>
+                        </div>
+                        <NavbarItems items={subNavbar.items}/>
+                    </div>
                 </div>
             </div>
         ) : null
@@ -62,7 +60,7 @@ export default function NavbarContent() {
         <div
             style={{
                 width: '100%',
-                height: '100%',
+                height: 'fit-content',
                 alignItems: 'center',
                 display: 'flex',
                 flexDirection: 'column',
