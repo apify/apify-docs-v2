@@ -462,6 +462,10 @@ div[class*="searchBox"] {
     position: unset;
 }
 
+.menu__link.navbar__item {
+    padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
+
 @media (min-width: 480px) { 
     .navbar__logo {
         display: initial;
