@@ -22,43 +22,43 @@ module.exports = {
             require.resolve('./apify-docs-theme'),
             /** @type {import('./apify-docs-theme/types').ThemeOptions} */
             ({
-                subNavbar: {
-                    title: 'Apify Docs v2',
+                // subNavbar: {
+                //     title: 'Apify Docs v2',
 
-                    items: [
-                        {
-                            label: 'Subnav 1',
-                            href: `${config.absoluteUrl}/platform`,
-                        },
-                        {
-                            label: 'Subnav 2',
-                            href: `${config.absoluteUrl}/academy`,
-                        },
-                        {
-                            label: 'Subnav 3',
-                            type: 'dropdown',
-                            items: [
-                                {
-                                    label: 'Reference',
-                                    // TODO
-                                    href: 'https://docs.apify.com/api/v2',
-                                },
-                                {
-                                    label: 'Client for JavaScript',
-                                    href: `${config.absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
-                                    target: '_self',
-                                    rel: 'dofollow',
-                                },
-                                {
-                                    label: 'Client for Python',
-                                    href: `${config.absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
-                                    target: '_self',
-                                    rel: 'dofollow',
-                                },
-                            ],
-                        },
-                    ],
-                },
+                //     items: [
+                //         {
+                //             label: 'Subnav 1',
+                //             href: `${config.absoluteUrl}/platform`,
+                //         },
+                //         {
+                //             label: 'Subnav 2',
+                //             href: `${config.absoluteUrl}/academy`,
+                //         },
+                //         {
+                //             label: 'Subnav 3',
+                //             type: 'dropdown',
+                //             items: [
+                //                 {
+                //                     label: 'Reference',
+                //                     // TODO
+                //                     href: 'https://docs.apify.com/api/v2',
+                //                 },
+                //                 {
+                //                     label: 'Client for JavaScript',
+                //                     href: `${config.absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                //                     target: '_self',
+                //                     rel: 'dofollow',
+                //                 },
+                //                 {
+                //                     label: 'Client for Python',
+                //                     href: `${config.absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                //                     target: '_self',
+                //                     rel: 'dofollow',
+                //                 },
+                //             ],
+                //         },
+                //     ],
+                // },
             }),
         ],
     ],
