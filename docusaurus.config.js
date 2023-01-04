@@ -24,15 +24,18 @@ module.exports = {
             ({
                 // subNavbar: {
                 //     title: 'Apify Docs v2',
-
                 //     items: [
                 //         {
                 //             label: 'Subnav 1',
                 //             href: `${config.absoluteUrl}/platform`,
+                //             target: '_self',
+                //             rel: 'dofollow',
                 //         },
                 //         {
                 //             label: 'Subnav 2',
                 //             href: `${config.absoluteUrl}/academy`,
+                //             target: '_self',
+                //             rel: 'dofollow',
                 //         },
                 //         {
                 //             label: 'Subnav 3',
