@@ -24,6 +24,7 @@ module.exports = {
             ({
                 // subNavbar: {
                 //     title: 'Apify Docs v2',
+
                 //     items: [
                 //         {
                 //             label: 'Subnav 1',
@@ -35,7 +36,26 @@ module.exports = {
                 //         },
                 //         {
                 //             label: 'Subnav 3',
-                //             href: `${config.absoluteUrl}/api`,
+                //             type: 'dropdown',
+                //             items: [
+                //                 {
+                //                     label: 'Reference',
+                //                     // TODO
+                //                     href: 'https://docs.apify.com/api/v2',
+                //                 },
+                //                 {
+                //                     label: 'Client for JavaScript',
+                //                     href: `${config.absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                //                     target: '_self',
+                //                     rel: 'dofollow',
+                //                 },
+                //                 {
+                //                     label: 'Client for Python',
+                //                     href: `${config.absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                //                     target: '_self',
+                //                     rel: 'dofollow',
+                //                 },
+                //             ],
                 //         },
                 //     ],
                 // },
