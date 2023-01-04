@@ -3,6 +3,7 @@ title: Home
 description: Learn everything about web scraping and automation with our free courses that will turn you into an expert scraper developer.
 sidebar_position: 0
 slug: /
+hide_table_of_contents: true
 ---
 import AcademyCard from "@site/src/components/AcademyCard";
 import CardGrid from "@site/src/components/CardGrid";
@@ -12,12 +13,12 @@ Learn everything about web scraping and automation with our free courses that wi
 
 <>
 {
-    Object.entries(homepageContent).map(([categoryName, sections]) => 
+    Object.entries(homepageContent).map(([categoryName, sections]) =>
         <>
             <h2>{categoryName}</h2>
             <CardGrid>
-                { 
-                    sections.map((section) => 
+                {
+                    sections.map((section) =>
                     <AcademyCard
                         title={section.title}
                         desc={section.description}
