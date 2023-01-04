@@ -41,14 +41,14 @@ export default function Home() {
                     <CardWithIcon
                         icon={<LearnIcon />}
                         title="Web scraping academy"
-                        description="Learn everything about extraction of data from the web."
+                        description="Go from novice to expert web scraper developer with our free web scraping and automation courses."
                         to="/academy/web-scraping-for-beginners"
                         width="calc(50% - 24px)"
                     />
                     <CardWithIcon
                         icon={<BookCodeIcon />}
                         title="Platform academy"
-                        description="Learn all about the Apify platform, all of the tools it offers and improve your developer experience."
+                        description="Learn all about the Apify platform and its tools to improve your overall development experience."
                         to="/academy/apify-platform"
                         width="calc(50% - 24px)"
                     />
@@ -59,14 +59,14 @@ export default function Home() {
                     <CardWithIcon
                         icon={<BookIcon />}
                         title="Platform docs"
-                        description="Learn everything about extraction of data from the web."
+                        description="Our documentation will help you master our tools to scrape websites or automate repetitive tasks."
                         to="/platform"
                         width="calc(50% - 24px)"
                     />
                     <CardWithIcon
                         icon={<FileCodeIcon />}
                         title="API reference"
-                        description="Learn everything about extraction of data from the web."
+                        description="Get programmatic access to the Apify Platform with the Apify API."
                         to="/api/v2"
                         width="calc(50% - 24px)"
                     />
@@ -77,21 +77,21 @@ export default function Home() {
                     <CardWithIcon
                         icon={<FileJavaScriptIcon />}
                         title="Client for JavaScript"
-                        description="Learn everything about extraction of data from the web."
+                        description="The official library to access the Apify API from your JavaScript applications."
                         to="/client-js"
                         width="calc(33.3% - 24px)"
                     />
                     <CardWithIcon
                         icon={<FilePythonIcon />}
                         title="Client for Python"
-                        description="Learn everything about extraction of data from the web."
+                        description="The official library to access the Apify API from your Python applications."
                         to="/client-python"
                         width="calc(33.3% - 24px)"
                     />
                     <CardWithIcon
                         icon={<CliIcon />}
                         title="Apify CLI"
-                        description="Learn everything about extraction of data from the web."
+                        description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
                         to="/cli"
                         width="calc(33.3% - 24px)"
                     />
@@ -102,21 +102,21 @@ export default function Home() {
                     <CardWithIcon
                         icon={<GitHubIcon />}
                         title="GitHub"
-                        description="Learn everything about extraction of data from the web."
+                        description="Check out our repositories on GitHub, or contribute to a project through forking."
                         to="https://github.com/apify"
                         width="calc(50% - 24px)"
                     />
                     <CardWithIcon
                         icon={<DiscordIcon />}
                         title="Discord"
-                        description="Learn everything about extraction of data from the web."
+                        description="Join our Discord community to get the latest news and find plenty of people happy to help you."
                         to="https://discord.com/invite/jyEM2PRvMU"
                         width="calc(50% - 24px)"
                     />
                     {/* <CardWithIcon
                         icon={<FileCodeWithStarIcon />}
                         title="Open source"
-                        description="Learn everything about extraction of data from the web."
+                        description="We ❤️ open source and contribute to it. See all our projects."
                         to="/learn"
                         width="calc(33.3% - 24px)"
                     /> */}
