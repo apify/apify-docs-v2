@@ -2,29 +2,6 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
- header {
-    background-image: url('/src/pages/img/hero-background-gradient.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-html[data-theme='dark'] header::after {
-    background: linear-gradient(180deg, #1A1B21 0%, rgba(26, 27, 33, 0) 100%);
-    transform: matrix(1, 0, 0, -1, 0, 0);
-
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 56px;
-    width: 100%;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
 h1 {
     overflow-wrap: break-word;
 }
@@ -63,6 +40,27 @@ h1 {
     padding-top: 80px;
     padding-bottom: 56px;
     text-align: center;
+    background-image: url('/src/pages/img/hero-background-gradient.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroBanner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 56px;
+    width: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    pointer-events: none;
+}
+
+html[data-theme='dark'] .heroBanner::after {
+    background: linear-gradient(180deg, #1A1B21 0%, rgba(26, 27, 33, 0) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+
 }
 
 .heroBanner .heroDescription {
