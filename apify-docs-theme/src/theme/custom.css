@@ -249,7 +249,7 @@ aside svg[class*=iconExternalLink] {
     gap: 6px;
 }
 
-.navbar__item, .menu__link {
+.navbar__item, .menu__link, .navbar__link {
     border-radius: 8px;
     color: var(--color-Neutral_TextMuted);
     padding: 4px 8px;
