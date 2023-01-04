@@ -77,7 +77,6 @@ export default function NavbarNavLink({
             })}
             {...props}
             {...linkContentProps}
-            isActive={() => true}
         />
     );
 }
