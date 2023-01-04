@@ -8,13 +8,13 @@ slug: /monitoring/actor-or-task-run-failure
 
 # [](#monitor-actor-or-task-runs-for-failure) Monitor actor or task runs for failure
 
-This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../../academy/getting_started/actors.md). The monitoring suite will send you notifications when the actor or task fails or returns too few results.
+This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md). The monitoring suite will send you notifications when the actor or task fails or returns too few results.
 
 ## [](#use-case) Use case
 
 You want to be notified when an actor / task **does not** finish successfully.
 
-This means the [notification]({{@link monitoring.md#notifications}}) will be sent whenever the actor or task:
+This means the [notification](./index.md) will be sent whenever the actor or task:
 
 - Fails (finishes with the status **FAILED**).
 - Times out (finishes with status **TIMED OUT**).
@@ -28,7 +28,7 @@ Let us say you have created a task named **puppies-from-instagram** and run it r
 
 ## [](#create-a-new-monitoring-task) Create a new monitoring task
 
-If you haven't already, [add the monitoring suite to your account]({{@link monitoring.md#add-the-monitoring-suite-to-your-account}}).
+If you haven't already, [add the monitoring suite to your account](./index.md).
 
 If you have already added the task, under its **Settings** tab, give it a name. For example, **monitoring-puppies-are-ok**, since we're monitoring the **puppies-from-instagram** task.
 
@@ -66,7 +66,7 @@ Let's say you need a minimum number of 100 results.
 
 Finally, click the **Save & Run** button, and you're done.
 
-From now on, you will get a [notification]({{@link monitoring.md#example-of-a-failed-run}}) to your account's email every time your `puppies-from-instagram` task doesn't succeed or returns fewer than 100 items.
+From now on, you will get a [notification](./index.md) to your account's email every time your `puppies-from-instagram` task doesn't succeed or returns fewer than 100 items.
 
 ![Failed run example](./images/puppies-failed-run.webp)
 

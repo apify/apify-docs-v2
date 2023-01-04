@@ -14,8 +14,8 @@ Below are the HTTP proxy connection settings for Apify Proxy.
 | Proxy type          | `HTTP`                                                                                                                                                                                                                                                                                                                                                     |
 | Hostname            | `proxy.apify.com`                                                                                                                                                                                                                                                                                                                                          |
 | Port                | `8000`                                                                                                                                                                                                                                                                                                                                                     |
-| Username            | Specifies the proxy parameters such as groups, [session]({{@link proxy.md#sessions}}) and location. <br/>See [username parameters](#username-parameters) below for details. <br/>**Note**: this is not your Apify username.                                                                                                                                |
-| Password            | Proxy password. Your password is displayed on the [Proxy](https://console.apify.com/proxy) page in the Apify Console. <br/>In Apify [actors](../../academy/getting_started/actors.md) for more details. |
+| Username            | Specifies the proxy parameters such as groups, [session](./index.md) and location. <br/>See [username parameters](#username-parameters) below for details. <br/>**Note**: this is not your Apify username.                                                                                                                                |
+| Password            | Proxy password. Your password is displayed on the [Proxy](https://console.apify.com/proxy) page in the Apify Console. <br/>In Apify [actors](../actors/index.md) for more details. |
 | Connection URL      | `http://<username>:<password>@proxy.apify.com:8000`                                                                                                                                                                                                                                                                                                        |
 | Static IP Addresses | `18.208.102.16`, `35.171.134.41` Static IP addresses, <br/>that can be used as alternatives to `Hostname`.                                                                                                                                                                                                                                                 |
 
@@ -24,9 +24,9 @@ Below are the HTTP proxy connection settings for Apify Proxy.
 
 ## Username parameters
 
-The `username` field enables you to pass parameters like **[groups](#proxy-groups)**, **[session]({{@link proxy.md#sessions}}) ID** and **country** for your proxy connection.
+The `username` field enables you to pass parameters like **[groups](#proxy-groups)**, **[session](./index.md) ID** and **country** for your proxy connection.
 
-For example, if you're using [datacenter proxies](./datacenter_proxy.md) and want to use the `new_job_123` session using the `SHADER` group, the username will be:
+For example, if you're using [datacenter proxies](./datacenter_proxy/index.md) and want to use the `new_job_123` session using the `SHADER` group, the username will be:
 
 ```text
 groups-SHADER,session-new_job_123
@@ -76,14 +76,14 @@ The table below describes the available parameters.
 
 If you want to specify one parameter and not the others, just provide that parameter and omit the others. To use the default behavior (not specifying either `groups`, `session`, or `country`), set the username to **auto**. **auto** serves as a placeholder because the username can't be empty.
 
-To learn more about [sessions]({{@link proxy.md#sessions}}) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the [proxy overview page]({{@link proxy.md}}).
+To learn more about [sessions](./index.md).
 
 ## Code examples
 
 We have code examples for connecting to our proxy using the [Apify SDK](https://sdk.apify.com) and [Cralwee](https://crawlee.dev/) and other JavaScript libraries (**axios** and **got-scraping**), as well as examples in Python and PHP.
 
 * [Datacenter proxy](./datacenter_proxy/examples.md)
-* [Residential proxy](./residential_proxy.md)
+* [Residential proxy](./residential_proxy/index.md)
 * [Google SERP proxy](./google_serp_proxy/examples.md)
 
 ## Proxy groups

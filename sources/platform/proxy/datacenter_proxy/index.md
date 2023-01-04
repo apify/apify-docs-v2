@@ -9,7 +9,7 @@ slug: /proxy/datacenter-proxy
 
 Datacenter proxies are a cheap, fast and stable way to mask your identity online. When you access a website using a datacenter proxy, the site can only see the proxy center's credentials, not yours.
 
-Datacenter proxies allow you to mask and [rotate]({{@link proxy.md#ip-address-rotation}}) your IP address during web scraping and automation jobs, reducing the possibility of them being [blocked]({{@link web_scraping_101/anti_scraping_techniques.md#ip-address-based-blocking}}). For each [HTTP/S request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), the proxy takes the list of all available IP addresses and selects the one used the longest time ago for the specific hostname.
+Datacenter proxies allow you to mask and [rotate](../index.md). For each [HTTP/S request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), the proxy takes the list of all available IP addresses and selects the one used the longest time ago for the specific hostname.
 
 [Apify Proxy](https://apify.com/proxy) currently offers two types of datacenter proxy:
 
@@ -18,7 +18,7 @@ Datacenter proxies allow you to mask and [rotate]({{@link proxy.md#ip-address-ro
 
 ## [](#features) Features
 
-* Periodic health checks of proxies in the pool so requests are not forwarded via [dead]({{@link proxy.md#dead-proxies}}) proxies.
+* Periodic health checks of proxies in the pool so requests are not forwarded via [dead](../index.md) proxies.
 * Intelligent rotation of IP addresses so target hosts are accessed via proxies that have accessed them the longest time ago, to reduce the chance of blocking.
 * Periodically checks whether proxies are banned by selected target websites. If they are, stops forwarding traffic to them to get the proxies unbanned as soon as possible.
 * Ensures proxies are located in specific countries using IP geolocation.
@@ -41,7 +41,7 @@ To access more servers or to use Apify Proxy without other parts of the Apify pl
 
 When you purchase access to dedicated proxy groups, they are assigned to you, and only you can use them. You gain access to a range of static IP addresses from these groups.
 
-This feature is useful if you have your own pool of proxy servers and still want to benefit from the features of Apify Proxy (like [IP address rotation]({{@link proxy.md#ip-address-rotation}}), [persistent sessions](#session-persistence), and health checking).
+This feature is useful if you have your own pool of proxy servers and still want to benefit from the features of Apify Proxy (like [IP address rotation](../index.md), [persistent sessions](#session-persistence), and health checking).
 
 If you do not have your own pool, the [customer support](https://apify.com/contact) team can set up a dedicated group for you based on your needs and requirements.
 
@@ -53,7 +53,7 @@ Prices for dedicated proxy servers are mainly based on the number of proxy serve
 
 By default, each proxied HTTP request is potentially sent via a different target proxy server, which adds overhead and could be potentially problematic for websites which save cookies based on IP address.
 
-If you want to pick an IP address and pass all subsequent connections via that same IP address, you can use the `session` [parameter]({{@link proxy.md#sessions}}).
+If you want to pick an IP address and pass all subsequent connections via that same IP address, you can use the `session` [parameter](../index.md).
 
 For code examples on how to connect to datacenter proxies, see the [examples](./examples.md) page.
 
@@ -67,18 +67,18 @@ If you do not want to specify either `groups` or `session` parameters and theref
 
 ## [](#session-persistence) Session persistence
 
-When you use datacenter proxy with the `session` [parameter]({{@link proxy.md#sessions}}) set in the `username` [field](#username-parameters), a single IP is assigned to the `session ID` provided after you make the first request.
+When you use datacenter proxy with the `session` [parameter](../index.md) set in the `username` [field](#username-parameters), a single IP is assigned to the `session ID` provided after you make the first request.
 
-**Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** [[More info]({{@link proxy.md#sessions}})]
+**Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** [[More info](../index.md)]
 
 This IP/session ID combination is persisted and expires 26 hours later. Each additional request resets the expiration time to 26 hours.
 
 So, if you use the session at least once a day, it will never expire, with two possible exceptions:
 
-* The proxy server stops responding and is marked as [dead]({{@link proxy.md#dead-proxies}}) during a health check.
+* The proxy server stops responding and is marked as [dead](../index.md) during a health check.
 * If the proxy server is part of a proxy group that is refreshed monthly and is rotated out.
 
 If the session is discarded due to the reasons above, it is assigned a new IP address.
 
-To learn more about [sessions]({{@link proxy.md#sessions}}) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the [proxy overview page]({{@link proxy.md}}).
+To learn more about [sessions](../index.md).
 

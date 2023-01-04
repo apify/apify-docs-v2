@@ -14,7 +14,7 @@ This course will teach you the nitty gritty of what it takes to build pro-level 
 
 Before developing a pro-level Apify scraper, there are some important things you should have at least a bit of knowledge about (knowing the basics of each is enough to continue through this section), as well as some things that you should have installed on your system.
 
-> If you've already gone through the [Web scraping for beginners course](../web_scraping_for_beginners.md), you will be more than well equipped to continue on with the lessons in this course.
+> If you've already gone through the [Web scraping for beginners course](../web_scraping_for_beginners/index.md), you will be more than well equipped to continue on with the lessons in this course.
 
 <!-- ### [](#puppeteer-playwright) Puppeteer/Playwright
 

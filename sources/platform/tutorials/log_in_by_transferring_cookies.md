@@ -7,7 +7,7 @@ slug: /tutorials/log-in-by-transferring-cookies
 
 # Log in by transferring cookies
 
-To crawl websites that require a login, you can transfer cookies from your web browser directly into [Apify actors](../../academy/getting_started/actors.md) such as **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)), **Puppeteer Scraper** ([apify/puppeteer-scraper](https://apify.com/apify/puppeteer-scraper)) and **Instagram Scraper** ([jaroslavhejlek/instagram-scraper](https://apify.com/jaroslavhejlek/instagram-scraper)).
+To crawl websites that require a login, you can transfer cookies from your web browser directly into [Apify actors](../actors/index.md) such as **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)), **Puppeteer Scraper** ([apify/puppeteer-scraper](https://apify.com/apify/puppeteer-scraper)) and **Instagram Scraper** ([jaroslavhejlek/instagram-scraper](https://apify.com/jaroslavhejlek/instagram-scraper)).
 
 This is the quickest and simplest solution, however there are others that may be more reliable. For example, you can also [fill in the login form directly in the code](./log_into_a_website_using_puppeteer.md).
 

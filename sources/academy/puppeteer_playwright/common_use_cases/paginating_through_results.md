@@ -363,7 +363,7 @@ If we remember correctly, Facebook has 115 Github repositories (at the time of w
 
 Though page number-based pagination is quite straightforward to automate the pagination process with, and though it is still an extremely common implementation, [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) is becoming extremely popular on the modern web, which makes it an important and relevant topic to discuss.
 
-> Note that on websites with lazy-loading pagination, [API scraping]({{@link api_scraping.md}}) is usually a viable option, and a much better one due to reliability and performance.
+> Note that on websites with lazy-loading pagination, [API scraping](../../api_scraping/index.md) is usually a viable option, and a much better one due to reliability and performance.
 
 Take a moment to look at and scroll through the women's clothing section [on About You's website](https://www.aboutyou.com/c/women/clothing-20204). Notice that the items are loaded as you scroll, and that there are no page numbers. Because of how drastically different this pagination implementation is from the previous one, it also requires a different workflow to scrape.
 

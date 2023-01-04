@@ -22,7 +22,7 @@ And if the scraping job fails, you will receive a notification, so there will be
 
 ## [](#what-is-the-apify-monitoring-suite) What is the Apify monitoring suite?
 
-The [monitoring suite](https://apify.com/apify/monitoring) is a collection of [Apify actors](../../academy/getting_started/actors.md) that allows you to automate the monitoring of jobs you have running on the [Apify platform](https://apify.com).
+The [monitoring suite](https://apify.com/apify/monitoring) is a collection of [Apify actors](../actors/index.md) that allows you to automate the monitoring of jobs you have running on the [Apify platform](https://apify.com).
 
 You can use it to monitor anything from a single actor to complex projects spanning multiple actors, [tasks](../actors/tasks.md).
 

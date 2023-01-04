@@ -2,19 +2,19 @@
     "Get started": [
         {
             "cardItem": "What is Apify?",
-            "href": "/about"
+            "href": "/platform/about"
         },
         {
             "cardItem": "Quick start",
-            "href": "/tutorials/quick-start"
+            "href": "/platform/tutorials/quick-start"
         },
         {
             "cardItem": "Start using Apify scrapers",
-            "href": "/tutorials/apify-scrapers/getting-started"
+            "href": "/platform/tutorials/apify-scrapers/getting-started"
         },
         {
             "cardItem": "Learn to use Web Scraper",
-            "href": "/tutorials/apify-scrapers/web-scraper"
+            "href": "/platform/tutorials/apify-scrapers/web-scraper"
         },
         {
             "cardItem": "Take a video tour of the platform",
@@ -28,41 +28,41 @@
         },
         {
             "cardItem": "What is an actor?",
-            "href": "/actors"
+            "href": "/platform/actors"
         },
         {
             "cardItem": "What is web scraping?",
-            "href": "/web-scraping-101"
+            "href": "/platform/web-scraping-101"
         }
     ],
     "Guides": [
         {
             "cardItem": "Actor tasks",
-            "href": "/actors/tasks"
+            "href": "/platform/actors/tasks"
         },
         {
             "cardItem": "Run an actor and retrieve data via API",
-            "href": "/tutorials/integrations/run-actor-and-retrieve-data-via-api"
+            "href": "/platform/tutorials/integrations/run-actor-and-retrieve-data-via-api"
         },
         {
             "cardItem": "Log into a website",
-            "href": "/tutorials/log-into-a-website-using-puppeteer"
+            "href": "/platform/tutorials/log-into-a-website-using-puppeteer"
         },
         {
             "cardItem": "Integrations",
-            "href": "/tutorials/integrations"
+            "href": "/platform/tutorials/integrations"
         },
         {
             "cardItem": "Use Apify from PHP",
-            "href": "/tutorials/use-apify-from-php"
+            "href": "/platform/tutorials/use-apify-from-php"
         },
         {
             "cardItem": "Automate repetitive tasks",
-            "href": "/robotic-process-automation"
+            "href": "/platform/robotic-process-automation"
         },
         {
             "cardItem": "Process data in Python with Pandas",
-            "href": "/tutorials/process-data-using-python"
+            "href": "/platform/tutorials/process-data-using-python"
         }
     ],
     "Web scraping": [
@@ -93,51 +93,51 @@
         },
         {
             "cardItem": "Analyze page content before scraping",
-            "href": "/web-scraping-101/web-scraping-techniques"
+            "href": "/platform/web-scraping-101/web-scraping-techniques"
         },
         {
             "cardItem": "Analyze pages and fix errors",
-            "href": "/tutorials/analyze-pages-and-fix-errors"
+            "href": "/platform/tutorials/analyze-pages-and-fix-errors"
         },
         {
             "cardItem": "Scrape data in Python with Beautiful Soup",
-            "href": "/tutorials/scrape-data-using-python"
+            "href": "/platform/tutorials/scrape-data-using-python"
         }
     ],
     "Platform features": [
         {
             "cardItem": "Proxy",
-            "href": "/proxy"
+            "href": "/platform/proxy"
         },
         {
             "cardItem": "API Docs",
-            "href": "/api/v2"
+            "href": "/platform/api/v2"
         },
         {
             "cardItem": "Integrate with the Apify platform",
-            "href": "/tutorials/integrations"
+            "href": "/platform/tutorials/integrations"
         },
         {
             "cardItem": "Manage data",
-            "href": "/storage"
+            "href": "/platform/storage"
         },
         {
             "cardItem": "Schedule actor runs",
-            "href": "/schedules"
+            "href": "/platform/schedules"
         },
         {
             "cardItem": "Monitor actor and task runs",
-            "href": "/monitoring"
+            "href": "/platform/monitoring"
         }
     ],
     "Reduce blocking": [
         {
             "cardItem": "Connect to Apify Proxy",
-            "href": "/proxy/connection-settings"
+            "href": "/platform/proxy/connection-settings"
         },
         {
             "cardItem": "Bypass anti-scraping techniques",
-            "href": "/web-scraping-101/anti-scraping-techniques"
+            "href": "/platform/web-scraping-101/anti-scraping-techniques"
         },
         {
             "cardItem": "Use a proxy in your browser",

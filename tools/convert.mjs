@@ -1,4 +1,4 @@
-import { dirname, parse, relative } from 'path';
+import { dirname, parse, relative, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs-extra';
 import { globby } from 'globby';
@@ -9,6 +9,8 @@ import { request } from 'undici';
 //   - no index in SDK
 
 const rootPath = dirname(fileURLToPath(import.meta.url)) + '/../';
+const sources = ['academy', 'platform'];
+const links = {};
 
 async function transformFrontmatter(lines, paths, output) {
     let line;
@@ -40,19 +42,25 @@ async function transformFrontmatter(lines, paths, output) {
         output.push(text);
     }
 
+    let slug;
+
     if (paths.length > 0) {
         if (paths.find(p => p.trim().endsWith('index'))) {
-            lines.push('slug: /');
+            slug = '/';
         } else {
             const path = paths.pop().replace('- ', '').trim();
-            lines.push('slug: /' + path);
+            slug = '/' + path;
         }
+
+        lines.push('slug: ' + slug);
     }
 
     lines.unshift('---');
     lines.push('---');
 
     output.unshift(...lines);
+
+    return slug;
 }
 
 async function transformLine(line, cwd) {
@@ -83,16 +91,28 @@ async function transformLine(line, cwd) {
         }
     }
 
-    if (line.match(/\{\{@link .*}}/i)) {
-        let mdPath = line.match(/\{\{@link (.*?)(#.+)?}}/i)[1];
-        const files = await globby('sources/**/' + mdPath);
+    return line;
+}
 
-        if (files.length > 0) {
-            let path = relative(cwd, files[0]);
-            path = path.startsWith('.') ? path : './' + path;
-            line = line.replace(/\{\{@link (.*)}}/i, path);
-        }
+async function transformLinksOnLine(line, cwd, source) {
+    if (!line.match(/\{\{@link .*}}/i)) {
+        return line;
     }
+
+    const mdPath = (line.match(/\{\{@link (.*?)(#.+)?}}/i))[1];
+    const files = await globby([
+        `sources/${source}/**/${mdPath}`,
+        `sources/${source}/**/${mdPath.replace(/\.mdx?$/, '')}/index.md`,
+    ]);
+
+    if (files.length !== 1) {
+        console.error('link not matched to source file', mdPath, source, files);
+        return line;
+    }
+
+    let path = relative(cwd, files[0]);
+    path = path.startsWith('.') ? path : './' + path;
+    line = line.replace(/\{\{@link (.*)}}/i, path);
 
     return line;
 }
@@ -100,58 +120,78 @@ async function transformLine(line, cwd) {
 // copy everything first
 await fs.remove('sources');
 await fs.copy('sources_orig', 'sources');
-const files = await globby(rootPath + 'sources/*/**/*.{md,mdx}');
+const processed = [];
 
-// transformLine copied the files
-for (const filepath of files) {
-    const input = (await fs.readFile(filepath, { encoding: 'utf8' })).split('\n');
-    const output = [];
-    let path = filepath.replace('sources_orig/', 'sources/');
-    let parentFolder = path.replace(new RegExp(parse(path).ext + '$'), '');
+for (const source of sources) {
+    const files = await globby(`${rootPath}sources/${source}/**/*.{md,mdx}`);
 
-    // move the file to the folder with the same name
-    if (fs.pathExistsSync(parentFolder)) {
-        await fs.remove(path);
-        path = parentFolder + '/index' + parse(path).ext;
-    } else {
-        parentFolder = parentFolder + '/..';
+    // transformLine copied the files
+    for (const filepath of files) {
+        const input = (await fs.readFile(filepath, { encoding: 'utf8' })).split('\n');
+        const output = [];
+        let path = resolve(filepath.replace('sources_orig/', 'sources/'));
+        let parentFolder = resolve(path.replace(new RegExp(parse(path).ext + '$'), ''));
+
+        // move the file to the folder with the same name
+        if (fs.pathExistsSync(parentFolder)) {
+            await fs.remove(path);
+            path = parentFolder + '/index' + parse(path).ext;
+        } else {
+            parentFolder = resolve(parentFolder + '/..');
+        }
+
+        // process front matter separately
+        let insideFrontmatter = false;
+        let inPaths = false;
+        const frontmatter = [];
+        const paths = [];
+
+        for (const line of input) {
+            if (line.trim() === '---') {
+                insideFrontmatter = !insideFrontmatter;
+                continue;
+            }
+
+            if (insideFrontmatter) {
+                if (line.trim().startsWith('#')) {
+                    continue;
+                }
+
+                if (line.includes('paths:')) {
+                    inPaths = !inPaths;
+                    continue;
+                }
+
+                if (inPaths) {
+                    paths.push(line.trim());
+                    continue;
+                }
+
+                frontmatter.push(line);
+                continue;
+            }
+
+            output.push(await transformLine(line, parentFolder));
+        }
+
+        let slug = await transformFrontmatter(frontmatter, paths, output);
+
+        if (slug) {
+            slug = links[path] = `/${source}${slug}`;
+        }
+
+        processed.push({ path, output, frontmatter, slug, source, parentFolder });
+        await fs.writeFile(path, output.join('\n'));
     }
+}
 
-    // process front matter separately
-    let insideFrontmatter = false;
-    let inPaths = false;
-    const frontmatter = [];
-    const paths = [];
+// iterate once again to fix absolute links between sources
+for (const { path, output: input, slug, source, parentFolder } of processed) {
+    const output = [];
 
     for (const line of input) {
-        if (line.trim() === '---') {
-            insideFrontmatter = !insideFrontmatter;
-            continue;
-        }
-
-        if (insideFrontmatter) {
-            if (line.trim().startsWith('#')) {
-                continue;
-            }
-
-            if (line.includes('paths:')) {
-                inPaths = !inPaths;
-                continue;
-            }
-
-            if (inPaths) {
-                paths.push(line.trim());
-                continue;
-            }
-
-            frontmatter.push(line);
-            continue;
-        }
-
-        output.push(await transformLine(line, parentFolder));
+        output.push(await transformLinksOnLine(line, parentFolder, source));
     }
-
-    await transformFrontmatter(frontmatter, paths, output);
 
     await fs.writeFile(path, output.join('\n'));
 }

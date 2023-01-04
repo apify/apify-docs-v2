@@ -117,4 +117,4 @@ Additionally, you should see a new image named **screenshot.png** in your projec
 
 ## [](#next) Next up
 
-In the [next exciting lesson]({{@link puppeteer_playwright/executing_scripts.md}}), we'll gain a solid understanding of the two different contexts we can run our code in when using Puppeteer and Playwright, as well as how to run code in the context of the browser.
+In the [next exciting lesson](../executing_scripts/index.md), we'll gain a solid understanding of the two different contexts we can run our code in when using Puppeteer and Playwright, as well as how to run code in the context of the browser.

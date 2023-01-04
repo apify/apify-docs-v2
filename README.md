@@ -5,11 +5,7 @@ This is the base repository for next version of https://docs.apify.com.
 ## TODO
 
 - robots.txt for root of apify.github.io
-- links in docs/academy
-  - do we want to have some magic links between them as we have now? yes, lets remove magic
-  - better to replace links outside the scope with absolute links probably
 - versioning of api docs broken (at least the switcher and versioned navbar links)
-- search in API docs generates junk (e.g. keywords like `const` or `external` or `readonly`)
 - API docs versioning either broken or links are broken
 - API docs navbar versioned link broken
 - rendering changelog in non-TS projects (CLI)

@@ -8,7 +8,7 @@ slug: /deploying-your-code
 
 # [](#deploying) Deploying your code to Apify
 
-This section will discuss how to use your newfound knowledge of the Apify platform and actors from the [**Getting started**](../getting_started.md) section to deploy your existing project's code to the Apify platform as an actor.
+This section will discuss how to use your newfound knowledge of the Apify platform and actors from the [**Getting started**](../getting_started/index.md) section to deploy your existing project's code to the Apify platform as an actor.
 
 Because actors are basically just chunks of code running in Docker containers, you're able to **_Actorify_** just about anything!
 

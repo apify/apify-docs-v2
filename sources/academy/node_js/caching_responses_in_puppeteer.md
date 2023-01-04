@@ -87,7 +87,7 @@ page.on('response', async(response) => {
 });
 ```
 
-> If the code above looks completely foreign to you, we recommending going through our free [Puppeteer/Playwright course]({{@link puppeteer_playwright.md}}).
+> If the code above looks completely foreign to you, we recommending going through our free [Puppeteer/Playwright course](../puppeteer_playwright/index.md).
 
 After implementing this code, we can run the scraper again.
 

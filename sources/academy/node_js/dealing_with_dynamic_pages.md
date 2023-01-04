@@ -41,7 +41,7 @@ If you're in a brand new project, don't forget to initialize your project, then 
 npm init -y && npm i crawlee
 ```
 
-Now, let's write some data collection code to collect each product's data. This should look familiar if you went through the [Data Collection](../web_scraping_for_beginners/data_collection.md) lessons:
+Now, let's write some data collection code to collect each product's data. This should look familiar if you went through the [Data Collection](../web_scraping_for_beginners/data_collection/index.md) lessons:
 
 ```js
 import { CheerioCrawler } from 'crawlee';
@@ -189,4 +189,4 @@ Each product looks like this, and each image is a valid link that can be visited
 
 ## [](#small-recap) Small Recap
 
-Making static HTTP requests only downloads the HTML content from the `DOMContentLoaded` event. We must use a browser to allow dynamic code to load, or find different means altogether of scraping the data (see [API Scraping]({{@link api_scraping.md}}))
+Making static HTTP requests only downloads the HTML content from the `DOMContentLoaded` event. We must use a browser to allow dynamic code to load, or find different means altogether of scraping the data (see [API Scraping](../api_scraping/index.md))

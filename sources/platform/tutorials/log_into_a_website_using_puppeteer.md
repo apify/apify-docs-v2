@@ -7,7 +7,7 @@ slug: /tutorials/log-into-a-website-using-puppeteer
 
 # Log into a website using Puppeteer
 
-In this article, we demonstrate how you can easily scrape data from a page behind a login using an [Apify actor](../../academy/getting_started/actors.md) with [Puppeteer](https://pptr.dev/). For this example, we will use [https://facebook.com](https://www.facebook.com/).
+In this article, we demonstrate how you can easily scrape data from a page behind a login using an [Apify actor](../actors/index.md) with [Puppeteer](https://pptr.dev/). For this example, we will use [https://facebook.com](https://www.facebook.com/).
 
 ## [](#find-the-login-form) Find the login form
 
@@ -69,7 +69,7 @@ Now, you can run the actor and pass the login credentials as an [input JSON obje
 
 For most pages, you need to save cookies and reuse then in following runs. You can avoid logging in for each run with the code below.
 
-The example below uses a [named key-value store]({{@link storage.md#named-and-unnamed-storages}}) to save cookies for upcoming runs.
+The example below uses a [named key-value store](../storage/index.md) to save cookies for upcoming runs.
 
 ```js
 import { Actor } from 'apify';

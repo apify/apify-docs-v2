@@ -6,7 +6,7 @@ slug: /actors/development/state-persistence
 
 # [](#state-persistence)State persistence
 
-Long-running [actor](../../../academy/getting_started/actors.md) jobs may need to migrate from one server to another. Unless you save your job's progress, it will be lost during the migration. The actor will re-start from scratch on the new server, which can be costly.
+Long-running [actor](../index.md) jobs may need to migrate from one server to another. Unless you save your job's progress, it will be lost during the migration. The actor will re-start from scratch on the new server, which can be costly.
 
 To avoid this, long-running actors should save (persist) their state periodically and listen for [migration events](https://sdk.apify.com/api/apify/class/PlatformEventManager). On start, these actors should [check for persisted state](#code-examples), so they can continue where they left off.
 
@@ -30,7 +30,7 @@ There is no specified interval at which migrations happen. They are caused by th
 
 ## [](#why-is-state-lost-during-migration)Why is state lost during migration?
 
-Unless instructed to save its output or state to a [storage]({{@link storage.md}}), an actor keeps them in the server's memory. So, when it switches servers, the run loses access to the previous server's memory. Even if data were saved on the server's disk, we would also lose access to that.
+Unless instructed to save its output or state to a [storage](../../storage/index.md), an actor keeps them in the server's memory. So, when it switches servers, the run loses access to the previous server's memory. Even if data were saved on the server's disk, we would also lose access to that.
 
 ## [](#how-to-persist-state)How to persist state
 

@@ -30,4 +30,4 @@ We use web scraping as a general term for crawling, collection and all other act
 
 ## [](#next) Next up
 
-In the [next lesson]({{@link web_scraping_for_beginners/data_collection.md}}), you will learn about the basic building blocks of each web page. HTML, CSS and JavaScript.
+In the [next lesson](./data_collection/index.md), you will learn about the basic building blocks of each web page. HTML, CSS and JavaScript.

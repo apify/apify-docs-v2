@@ -7,7 +7,7 @@ slug: /web-scraping-for-beginners/crawling/scraping-the-data
 
 # [](#scraping-data) Scraping data
 
-At the [very beginning of the course]({{@link web_scraping_for_beginners.md}}), we learned that the term web scraping usually means a combined process of data collection and crawling. And this is exactly what we'll do in this lesson. We will take the code we built in the previous lesson and in the [Basics of data collection]({{@link web_scraping_for_beginners/data_collection/node_continued.md}}) section, and we will combine that into a web scraper.
+At the [very beginning of the course](../index.md) section, and we will combine that into a web scraper.
 
 ## [](#review-code) Quick review of earlier's code
 
@@ -76,7 +76,7 @@ for (const link of productsToScrape) {
 }
 ```
 
-We can see that the code is extremely similar. Both scripts download HTML and then process the HTML. To get an idea how to put them together, we'll go back to the [original process of crawling]({{@link web_scraping_for_beginners/crawling.md}}).
+We can see that the code is extremely similar. Both scripts download HTML and then process the HTML. To get an idea how to put them together, we'll go back to the [original process of crawling](./index.md).
 
 1. Visit the start URL.
 2. Collect next URLs (and data) and save them.

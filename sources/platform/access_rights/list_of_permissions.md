@@ -11,7 +11,7 @@ This document contains all the access options that can be granted to resources o
 
 ## [](#actors) Actors
 
-Click [here](../../academy/getting_started/actors.md) to learn about Apify actors.
+Click [here](../actors/index.md) to learn about Apify actors.
 
 ### [](#actor) Actor
 
@@ -38,7 +38,7 @@ To learn about actor tasks, see the [documentation](../actors/tasks.md).
 
 ## [](#storage) Storage
 
-For more information about Storage, see its [documentation]({{@link storage.md}}).
+For more information about Storage, see its [documentation](../storage/index.md).
 
 ### [](#dataset) Dataset
 
@@ -89,11 +89,11 @@ To learn about schedules, see the [documentation](../schedules.md).
 |------------|---------------------------|
 | Proxy      | Allow to use Apify Proxy. |
 
-To learn about Apify Proxy, see its [documentation]({{@link proxy.md}}).
+To learn about Apify Proxy, see its [documentation](../proxy/index.md).
 
 ## [](#user-permissions) User permissions
 
-Permissions that can be granted to members of organizations. To learn about the organization account, see its [documentation](./organization_account.md).
+Permissions that can be granted to members of organizations. To learn about the organization account, see its [documentation](./organization_account/index.md).
 
 | Permission          | Description                                                           |
 |---------------------|-----------------------------------------------------------------------|

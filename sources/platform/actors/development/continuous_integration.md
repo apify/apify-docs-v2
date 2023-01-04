@@ -120,7 +120,7 @@ In brief, you need to write your tests using your tool of choice, add a script t
 
 For most ongoing monitoring scenarios, we recommend using the [Apify monitoring suite](https://apify.com/apify/monitoring). It allows you to check your actor's run statuses, validate your results, and [receive notifications via email or Slack](https://apify.com/apify/monitoring#notifications).
 
-[Check out our text and video tutorials]({{@link monitoring.md#how-can-i-set-up-monitoring}}) for various monitoring use cases.
+[Check out our text and video tutorials](../../monitoring/index.md) for various monitoring use cases.
 
 ### Ongoing testing
 

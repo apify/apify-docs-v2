@@ -8,7 +8,7 @@ slug: /monitoring/check-data-quality
 
 # [](#check-product-based-data-for-correct-format-and-duplicates) Check product-based data for correct format and duplicates
 
-This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../../academy/getting_started/actors.md).
+This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md).
 
 ## [](#use-case) Use case
 
@@ -18,7 +18,7 @@ You need:
 
 - Data to always be in the [correct format](#validate-data).
 - Alerts if items are [duplicated](#check-for-duplicates).
-- [Notification]({{@link monitoring.md#notifications}}) when your scheduled run times out or fails.
+- [Notification](./index.md) when your scheduled run times out or fails.
 - [Data visualization](#set-up-data-visualization) on a simple dashboard.
 
 Let's say you're using the **Amazon Crawler** ([vaclavrut/amazon-crawler](https://apify.com/vaclavrut/amazon-crawler)) from [Apify Store](https://apify.com/store) to get daily **iPhone X** offers.
@@ -27,7 +27,7 @@ You have set up a task named `amazon-iphone-offers` and set up a [schedule](../s
 
 ## [](#create-a-new-monitoring-task) Create a new monitoring task
 
-If you haven't already, [add the monitoring suite to your account]({{@link monitoring.md#add-the-monitoring-suite-to-your-account}}).
+If you haven't already, [add the monitoring suite to your account](./index.md).
 
 If you have already added the task, under its **Settings** tab, give it a name. For example, `monitoring-iphone-offers`, since we're monitoring the `amazon-iphone-offers` task.
 

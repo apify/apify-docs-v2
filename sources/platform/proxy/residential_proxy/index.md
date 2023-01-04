@@ -7,11 +7,11 @@ slug: /proxy/residential-proxy
 
 # [](#residential-proxy) Residential proxy
 
-Residential proxies use IP addresses assigned by Internet Service Providers to the homes and offices of actual users. Unlike [datacenter proxies]({{@link proxy/datacenter_proxy.md}}), traffic from residential proxies is indistinguishable from that of legitimate users.
+Residential proxies use IP addresses assigned by Internet Service Providers to the homes and offices of actual users. Unlike [datacenter proxies](../datacenter_proxy/index.md), traffic from residential proxies is indistinguishable from that of legitimate users.
 
 This solution allows you to access a larger pool of servers than datacenter proxy. This makes it a better option in cases when you need a large number of different IP addresses.
 
-Residential proxies support [IP address rotation]({{@link proxy.md#ip-address-rotation}}) and [sessions](#session-persistence).
+Residential proxies support [IP address rotation](../index.md) and [sessions](#session-persistence).
 
 **Pricing is based on data traffic**. It is measured for each connection made and displayed on your [dashboard](https://console.apify.com) in the Apify Console.
 
@@ -29,7 +29,7 @@ Apify provides 2 levels of residential proxy:
 Restricted residential proxy is available for all the users with some conditions.
 
 Firstly, restricted residential proxy supports only certain domains and paths. The pool of 500 domains is increased every month and covers the most frequent use cases.
-Any traffic outside this pool of domains will go through [datacenter proxy]({{@link proxy/datacenter_proxy.md}}).
+Any traffic outside this pool of domains will go through [datacenter proxy](../datacenter_proxy/index.md).
 
 The second limitation is that restricted residential proxy uses the man-in-the-middle system to monitor traffic
 and activities and so requires acceptance of an [SSL certificate](https://apify.com/restricted-residential-proxy-cert.crt).
@@ -122,9 +122,9 @@ groups-RESIDENTIAL,session-my_session_1,country-US
 
 ## [](#session-persistence) Session persistence
 
-When using residential proxy with the `session` [parameter]({{@link proxy.md#sessions}}) set in the [username]({{@link proxy/connection_settings.md#username-parameters}}), a single IP address is assigned to the **session ID** provided after you make the first request.
+When using residential proxy with the `session` [parameter](../index.md), a single IP address is assigned to the **session ID** provided after you make the first request.
 
-**Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** [[More info]({{@link proxy.md#sessions}})]
+**Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** [[More info](../index.md)]
 
 This IP/session ID combination is persisted for 1 minute. Each subsequent request resets the expiration time to 1 minute.
 
@@ -133,4 +133,4 @@ If the proxy server becomes unresponsive or the session expires, a new IP addres
 > If you really need to persist the same session, you can try sending some data using that session (e.g. every 20 seconds) to keep it alive.<br/>
 > Providing the connection is not interrupted, this will let you keep the IP address for longer.
 
-To learn more about [sessions]({{@link proxy.md#sessions}}) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the proxy [overview page]({{@link proxy.md}}).
+To learn more about [sessions](../index.md).

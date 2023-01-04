@@ -22,8 +22,5 @@ sources/typedefs
 .history
 .docusaurus
 tsconfig.tsbuildinfo
-apify_storage
-crawlee_storage
-storage
 .turbo
-theme/package-lock.json
+apify-docs-theme/package-lock.json

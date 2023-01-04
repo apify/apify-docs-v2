@@ -15,7 +15,7 @@ This quick lesson covers the absolute basics by discussing some of the most comm
 
 It is often tricky to see the full scope of what can go wrong. We assume once the code is set up correctly, it will keep working. Unfortunately, that is rarely true in the realm of web scraping and automation.
 
-Websites change, they introduce new [anti-scraping technologies]({{@link anti_scraping.md}}), programming tools change and, in addition, people make mistakes.
+Websites change, they introduce new [anti-scraping technologies](../anti_scraping/index.md), programming tools change and, in addition, people make mistakes.
 
 Here are the most common reasons your working solution may break.
 
@@ -71,7 +71,7 @@ Read more information about logging and error handling in our developer [best pr
 
 ### [](#saving-snapshots) Saving snapshots
 
-By snapshots, we mean **screenshots** if you use a [browser with Puppeteer/Playwright]({{@link puppeteer_playwright.md}}) and HTML saved into a [key-value store](https://crawlee.dev/api/core/class/KeyValueStore) that you can easily display in your own browser. Snapshots are useful throughout your code but especially important in error handling.
+By snapshots, we mean **screenshots** if you use a [browser with Puppeteer/Playwright](../puppeteer_playwright/index.md) and HTML saved into a [key-value store](https://crawlee.dev/api/core/class/KeyValueStore) that you can easily display in your own browser. Snapshots are useful throughout your code but especially important in error handling.
 
 Note that an error can happen only in a few pages out of a thousand and look completely random. There is not much you can do other than save and analyze a snapshot.
 

@@ -12,10 +12,10 @@ By default, each system resource (actor, key-value store, run, ...) you create i
 
 ## [](#granting-access-rights) Granting access rights
 
-You can easily and securely share your own resources - actors, tasks, key-value stores, datasets and request queues using a [granular](https://www.google.com/search?client=firefox-b-d&q=define+granular+permissions) permissions system. This enables you to, for example, allow your colleague to run an [actor](../actors.md), but not to modify them.
+You can easily and securely share your own resources - actors, tasks, key-value stores, datasets and request queues using a [granular](https://www.google.com/search?client=firefox-b-d&q=define+granular+permissions) permissions system. This enables you to, for example, allow your colleague to run an [actor](../actors/index.md), but not to modify them.
 
 You can also grant permission to update an actor and build a new version.
-[Storages](../storage.md) (key-value stores, request queues and datasets) are sharable the same way with, for example, just **read** permission, or a combination of both **read** and **write** permissions.
+[Storages](../storage/index.md) (key-value stores, request queues and datasets) are sharable the same way with, for example, just **read** permission, or a combination of both **read** and **write** permissions.
 
 > To be able to grant access rights to another user you must have a **username** set in [account settings](https://console.apify.com/account?tab=settings).
 
@@ -25,7 +25,7 @@ To share an actor, task, key-value store, request queue or dataset, open its **S
 
 ## [](#organization-account) Organization account
 
-Apify's organization account allows you to grant role-specific access permissions to members of your team. For more details, see the organization account [documentation](./organization_account.md).
+Apify's organization account allows you to grant role-specific access permissions to members of your team. For more details, see the organization account [documentation](./organization_account/index.md).
 
 ## [](#publishing-in-apify-store) Publishing in Apify Store
 
@@ -43,7 +43,7 @@ To publish an actor, open it in the [Apify Console](https://console.apify.com), 
 
 ## [](#permissions) Permissions
 
-Below are the permissions you can grant via the [access rights](#granting-access-rights) system, [organization account](./organization_account.md).
+Below are the permissions you can grant via the [access rights](#granting-access-rights) system, [organization account](./organization_account/index.md).
 
 * The access rights system allows you to manage a **specific** user's permissions for a **specific** resource.
 * The organization account allows you to manage **each** member's permissions for **all** of an organization's resources.

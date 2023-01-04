@@ -8,7 +8,7 @@ slug: /about
 
 # [](#what-is-apify) What is Apify?
 
-Apify is an online platform specializing in [web scraping](./web_scraping_101.md).
+Apify is an online platform specializing in [web scraping](./web_scraping_101/index.md).
 
 [Apify Store](https://apify.com/store) includes a range of ready-made tools such as **Booking Scraper** ([dtrungtin/booking-scraper](https://apify.com/dtrungtin/booking-scraper)), **SEO Audit Tool** ([drobnikj/seo-audit-tool](https://apify.com/drobnikj/seo-audit-tool)), or the **Google Sheets Import & Export** ([lukaskrivka/google-sheets](https://apify.com/lukaskrivka/google-sheets)) tool. You can try all of these for free right now.
 
@@ -22,10 +22,10 @@ For an overview of all of Apify's features, take a [tour of the platform](https:
 
 ### [](#tutorials) Tutorials
 
-When you're ready to go more in depth, visit our [tutorials](../academy/tutorials.md) page, which guides you through using our ready-made scrapers.
+When you're ready to go more in depth, visit our [tutorials](./tutorials/index.md) page, which guides you through using our ready-made scrapers.
 
 ## [](#how-does-apify-work) How does Apify work?
 
-Almost everything we do is centered around [actors](./actors.md). Actors are cloud programs that can scrape web pages, process data, automate workflows or anything else you can imagine.
+Almost everything we do is centered around [actors](./actors/index.md). Actors are cloud programs that can scrape web pages, process data, automate workflows or anything else you can imagine.
 
-You can learn more about actors from their [documentation](./actors.md).
+You can learn more about actors from their [documentation](./actors/index.md).

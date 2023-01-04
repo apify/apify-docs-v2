@@ -47,17 +47,17 @@ npm install puppeteer
 ## [](#course-overview) Course overview
 
 1. [Launching a browser](./browser.md)
-2. [Opening a page](./page.md)
+2. [Opening a page](./page/index.md)
     - [Interacting with a page](./page/interacting_with_a_page.md)
     - [Waiting for content & events](./page/waiting.md)
     - [Page methods](./page/page_methods.md)
-3. [Executing scripts](./executing_scripts.md)
+3. [Executing scripts](./executing_scripts/index.md)
     - [Injecting code](./executing_scripts/injecting_code.md)
     - [Collecting data](./executing_scripts/collecting_data.md)
 4. [Reading & intercepting requests](./reading_intercepting_requests.md)
 5. [Using proxies](./proxies.md)
 6. [Creating multiple browser contexts](./browser_contexts.md)
-7. [Common use cases](./common_use_cases.md)
+7. [Common use cases](./common_use_cases/index.md)
 
 ## [](#next) First up
 

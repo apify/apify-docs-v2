@@ -28,8 +28,8 @@ Aside from [custom environment variables](./source_code.md), the actor's process
 | `APIFY_TIMEOUT_AT`                 | Date when the actor will time out.                                                                                                                                                                                         |
 | `APIFY_TOKEN`                      | The API token of the user <br/>who started the actor.                                                                                                                                                                      |
 | `APIFY_USER_ID`                    | ID of the user who started the actor. <br/>Note that it might be different <br/>than the owner of the actor.                                                                                                               |
-| `APIFY_CONTAINER_PORT`             | TCP port on which the actor can <br/>start a HTTP server to receive <br/>messages from the outside world. <br/>See [Container web server]({{@link actors/running.md#container-web-server}}) section <br/>for more details. |
-| `APIFY_CONTAINER_URL`              | A unique public URL under which <br/>the actor run web server is accessible <br/>from the outside world. <br/>See [Container web server]({{@link actors/running.md#container-web-server}}) section <br/>for more details.  |
+| `APIFY_CONTAINER_PORT`             | TCP port on which the actor can <br/>start a HTTP server to receive <br/>messages from the outside world. <br/>See [Container web server](../running/index.md) section <br/>for more details. |
+| `APIFY_CONTAINER_URL`              | A unique public URL under which <br/>the actor run web server is accessible <br/>from the outside world. <br/>See [Container web server](../running/index.md) section <br/>for more details.  |
 
 
 Dates are always in the UTC timezone and are represented in simplified extended ISO format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)), e.g. **2022-07-13T14:23:37.281Z**.

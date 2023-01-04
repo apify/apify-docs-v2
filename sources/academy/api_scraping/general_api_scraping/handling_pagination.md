@@ -209,4 +209,4 @@ This is the last lesson in the API scraping tutorial for now, but be on the look
 6. Use paginated APIs
 <!-- 7. Utilize API filters to narrow down results -->
 
-If you'd still like to read more API scraping, check out the [**GraphQL scraping**]({{@link api_scraping/graphql_scraping.md}}) course! GraphQL is the king of API scraping.
+If you'd still like to read more API scraping, check out the [**GraphQL scraping**](../graphql_scraping/index.md) course! GraphQL is the king of API scraping.
