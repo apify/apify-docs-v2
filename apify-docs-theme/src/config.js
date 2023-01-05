@@ -42,8 +42,7 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'Reference',
-                        // TODO
-                        href: 'https://docs.apify.com/api/v2',
+                        href: `${absoluteUrl}/api/v2/`,
                     },
                     {
                         label: 'Client for JavaScript',
