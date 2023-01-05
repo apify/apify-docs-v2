@@ -7,6 +7,10 @@ slug: /proxy/google-serp-proxy
 
 # [](#google-serp-proxy) Google SERP proxy
 
+**Learn how to collect search results from Google Search-powered tools. Get search results from localized domains in multiple countries, e.g. the US and Germany.**
+
+---
+
 Google SERP proxy allows you to extract search results from Google Search-powered services. It allows searching in [various countries](#country-selection) and to dynamically switch between country domains.
 
 Our Google SERP proxy currently supports the below services.

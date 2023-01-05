@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/relative-urls
 
 # [](#filtering-links) Relative URLs
 
+**Learn about absolute and relative URLs used on web pages and how to work with them when parsing HTML with Cheerio in your scraper.**
+
+---
+
 You might have noticed in the previous lesson that while printing URLs to the DevTools console, they would always show in full length, like this:
 
 ```text

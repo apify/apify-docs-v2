@@ -8,6 +8,10 @@ slug: /access-rights
 
 # [](./access_rights)Access rights
 
+**Manage permissions for organizations or private resources such as actors, actor runs and storages. Allow other users to read, run, modify or build new versions.**
+
+---
+
 By default, each system resource (actor, key-value store, run, ...) you create is only available to you, the owner. There are three ways you can grant access to your resources: the [access rights](#granting-access-rights) system, using the [organization account](#organization-account) or by [publishing your actor](#publishing-in-apify-store) in [Apify Store](https://apify.com/store).
 
 ## [](#granting-access-rights) Granting access rights

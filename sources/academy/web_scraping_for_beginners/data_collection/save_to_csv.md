@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/save-to-csv
 
 # [](#saving-to-csv) Saving results to CSV
 
+**Learn how to save the results of your scraper's collected data to a CSV file that can be opened in Excel, Google Sheets, or any other spreadsheets program.**
+
+---
+
 In the last lesson, we were able collect data about all the on-sale products from [our tutorial **Fakestore** website](https://demo-webstore.apify.org/). That's great. But we ended up with results printed to the terminal, which is not very useful for further processing. In this lesson, we'll learn how to save that data into a CSV file that you can then open in Excel or Google Sheets.
 
 ## [](#converting-to-csv) Converting to CSV

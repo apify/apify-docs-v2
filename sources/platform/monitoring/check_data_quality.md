@@ -8,6 +8,10 @@ slug: /monitoring/check-data-quality
 
 # [](#check-product-based-data-for-correct-format-and-duplicates) Check product-based data for correct format and duplicates
 
+**A step-by-step monitoring tutorial that shows you how to ensure your data is correctly formatted and unique. Visualize your data using the monitoring dashboard.**
+
+---
+
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md).
 
 ## [](#use-case) Use case

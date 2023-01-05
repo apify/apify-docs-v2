@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/challenge/initializing-and-setting-up
 
 # Initialization & setting up
 
+**When you collect links from a web page, you often end up with a lot of irrelevant URLs. Learn how to filter the links to only keep the ones you need.**
+
+---
+
 The Crawlee CLI makes it extremely easy for us to set up a project in Crawlee and hit the ground running. Navigate to the directory you'd like your project's folder to live, then open up a terminal instance and run the following command:
 
 ```shell

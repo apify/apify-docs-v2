@@ -7,6 +7,10 @@ slug: /actors/tasks
 
 # Actor tasks
 
+**Set up configurations of your Apify actors for simplified usage. Create multiple configurations of the same actor tailored to various use cases.**
+
+---
+
 Tasks let you create multiple re-usable configurations of a single actor that are adapted for specific use cases. For example, you can create one **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)) configuration (task) that scrapes the latest reviews from imdb.com, another that scrapes nike.com for the latest sneakers, and a third that scrapes your competitor's e-shop. You can then use and reuse these configurations directly from [Apify Console](https://console.apify.com/actors/tasks), [schedules](../schedules.md), or [API](/api/v2#/reference/actor-tasks/run-collection/run-task).
 
 All your tasks are listed at [https://console.apify.com/actors/tasks](https://console.apify.com/actors/tasks).

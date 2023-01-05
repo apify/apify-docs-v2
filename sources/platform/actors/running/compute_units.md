@@ -7,6 +7,10 @@ slug: /actors/running/compute-units
 
 # What is a compute unit?
 
+**Apify actors' platform resource usage is calculated in compute units. Find out what they are, how they work, and how you are charged for running actors.**
+
+---
+
 **TL;DR: An [actor](../index.md) for one hour consumes 1 compute unit.**
 
 A compute unit (CU) is the unit of measurement for the resources consumed by actor runs and builds. We charge you for using actors based on CU consumption.

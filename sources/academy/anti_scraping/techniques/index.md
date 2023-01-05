@@ -7,6 +7,10 @@ slug: /anti-scraping/techniques
 
 # [](#anti-scraping-techniques) Anti-scraping techniques
 
+**Understand the various common (and obscure) anti-scraping techniques used by websites to prevent bots from accessing their content.**
+
+---
+
 In this section, we'll be discussing some of the most common (as well as some obscure) anti-scraping techniques used by websites to detect and block/limit bots from accessing their content.
 
 When a scraper is detected, a website can respond in a variety of ways:

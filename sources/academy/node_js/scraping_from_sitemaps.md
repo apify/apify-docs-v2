@@ -7,6 +7,10 @@ slug: /node-js/scraping-from-sitemaps
 
 # [](#scraping-with-sitemaps) How to scrape from sitemaps
 
+**The sitemap.xml file is a jackpot for every web scraper developer. Take advantage of this and learn an easier way to extract data from websites using Crawlee.**
+
+---
+
 Let's say we want to scrape a database of craft beers ([brewbound.com](https://brewbound.com)) before summer starts. If we are lucky, the website will contain a sitemap at [https://www.brewbound.com/sitemap.xml](https://www.brewbound.com/sitemap.xml).
 
 > Check out [Sitemap Sniffer](https://apify.com/vaclavrut/sitemap-sniffer), which can discover sitemaps in hidden locations!

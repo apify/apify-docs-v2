@@ -8,6 +8,10 @@ slug: /storage
 
 # [](#storage) Storage
 
+**Store anything from images and key-value pairs to structured output data. Learn how to access and manage your stored data from the Apify platform or via API.**
+
+---
+
 The Apify platform includes three types of storage you can use both in your [actors](../actors/index.md) and outside the Apify platform via [API](/api/v2#/), the [Apify SDK](https://sdk.apify.com) and Apify's [JavaScript API client](/apify-client-js) and [Python API client](/apify-client-python).
 
 This page contains a brief introduction of the three types of Apify Storage.

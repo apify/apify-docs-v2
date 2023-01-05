@@ -8,6 +8,10 @@ slug: /monitoring
 
 # [](#what-is-monitoring) What is monitoring?
 
+**Learn how to check the performance of your actors, tasks and storages. Validate your data and receive notifications when your jobs succeed or fail.**
+
+---
+
 Monitoring allows you to track and observe how software works. It enables you to measure and compare your programs' performance over time, and to be notified when something goes wrong.
 
 You can use data you gain from monitoring to optimize your software and maximize its potential.

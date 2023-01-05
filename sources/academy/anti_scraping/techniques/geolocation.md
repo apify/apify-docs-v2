@@ -7,6 +7,10 @@ slug: /anti-scraping/techniques/geolocation
 
 # [](#geolocation) Geolocation
 
+**Learn about the geolocation techniques to determine where requests are coming from, and a bit about how to avoid being blocked based on geolocation.**
+
+---
+
 Geolocation is yet another way websites can detect and block access or show limited data. Other than by using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) (which requires user permission in order to receive location data), there two main ways that websites geolocate a user (or bot) visiting it.
 
 ## [](#cookies-headers) Cookies & headers

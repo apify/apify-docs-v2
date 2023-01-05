@@ -7,6 +7,10 @@ slug: /tutorials/scraping-dynamic-content
 
 # Scraping dynamic content
 
+**Wait for dynamically loaded content when web scraping. See code examples and a detailed breakdown for setting timeouts and custom wait functions.**
+
+---
+
 Many websites load data in the background via [XHR requests](../web_scraping_101/web_scraping_techniques.md). These are usually tracking data, ads and other content that may not be essential for the website to load or is useful to collect periodically. Sometimes though, it may contain actual core page data that you need.
 
 ## [](#quick-summary) Quick summary

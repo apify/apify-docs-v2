@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/actors-webhooks
 
 # [](#webhooks-and-advanced-actors) Webhooks & advanced actor overview
 
+**Learn more advanced details about actors, how they work, and the default configurations they can take. Also learn how to integrate your actor with webhooks.**
+
+---
+
 Thus far, you've run actors on the platform and written an actor of your own, which you published to the platform yourself using the Apify CLI; therefore, it's fair to say that you are becoming more familiar and comfortable with the concept of **actors**. Within this lesson, we'll take a more in-depth look at actors and what they can do.
 
 ## [](#advanced-actors) Advanced actor overview

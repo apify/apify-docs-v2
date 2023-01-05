@@ -7,6 +7,10 @@ slug: /getting-started/inputs-outputs
 
 # [](#inputs-outputs) Inputs & outputs
 
+**Create an actor from scratch which takes an input, processes that input, then outputs a result that can be used elsewhere.**
+
+---
+
 Most of the time, when you are writing any sort of software, it will generally expect some sort of input and generate some sort of output. It is the same exact story when it comes to actors, which is why we at Apify have made it so easy to accept input into an actor and store its results somewhere.
 
 In this lesson, we'll be demonstrating inputs and outputs by building an actor which takes two numbers as input, adds them up, then outputs the result.

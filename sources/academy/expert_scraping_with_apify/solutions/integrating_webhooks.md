@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/solutions/integrating-webhooks
 
 # [](#integrating-webhooks) Integrating webhooks
 
+**Learn how to integrate webhooks into your actors. Webhooks are a super powerful tool, and can be used to do almost anything!**
+
+---
+
 In this lesson we'll be writing a new actor and integrating it with our beloved Amazon scraping actor. First, we'll navigate to the same directory our **demo-actor** folder lives, and run `apify create filter-actor` _(once again, you can name the actor whatever you want, but for this lesson, we'll be calling the new actor **filter-actor**)_. When prompted for which type of boilerplate to start out with, select **Empty**.
 
 ![Selecting an empty template to start with](./images/select-empty.webp)

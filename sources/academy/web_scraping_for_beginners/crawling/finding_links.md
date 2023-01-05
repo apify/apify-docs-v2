@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/finding-links
 
 # [](#finding-links) Finding links
 
+**Learn what a link looks like in HTML and how to find and collect their URLs when web scraping using both DevTools and Node.js.**
+
+---
+
 There are many kinds of links on the internet, which we'll cover in the advanced Academy courses. For now, let's think of links as [HTML anchor elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) with `<a>` tags. A typical link looks like this:
 
 ```HTML

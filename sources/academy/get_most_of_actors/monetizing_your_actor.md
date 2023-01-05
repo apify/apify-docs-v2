@@ -7,6 +7,10 @@ slug: /get-most-of-actors/monetizing-your-actor
 
 # [](#monetizing-your-actor) Monetizing your actor
 
+**Learn how you can monetize your web scraping and automation projects by publishing and renting actors to users in Apify Store.**
+
+---
+
 When publishing your actor on the Apify platform you have the choice to make it a **Paid actor** and get paid by the users benefiting from your tool.
 
 ![Paid actor example](./images/scraper-example.webp)

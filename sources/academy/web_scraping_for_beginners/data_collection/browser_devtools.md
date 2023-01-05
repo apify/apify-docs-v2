@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/browser-devtools
 
 # [](#devtools) Browser DevTools
 
+**Learn about browser DevTools, a valuable tool in the world of web scraping , and how you can use them to collect data from a website.**
+
+---
+
 Even though DevTools stands for developer tools, everyone can use them to inspect a website. Each major browser has their own DevTools. We will use Chrome DevTools as an example, but the advice is applicable to any browser, as the tools are extremely similar. To open Chrome DevTools, press **F12** or right-click anywhere in the page and choose **Inspect**.
 
 ## [](#elements-tab) Elements tab

@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/recap-collection-basics
 
 # [](#quick-recap) Recap of data collection basics
 
+**Review our e-commerce website scraper and refresh our memory about its code and the programming techniques we used to collect and save the data.**
+
+---
+
 We finished off the [first section](../data_collection/index.md) of the _Web Scraping for Beginners_ course by creating a simple web scraper in Node.js. The scraper collected all of the on-sale products from [our demo webstore](https://demo-webstore.apify.org/search/on-sale). Let's see the code with some comments added.
 
 ```js

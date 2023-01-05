@@ -7,6 +7,10 @@ slug: /actors/examples
 
 # Examples
 
+**Find out what you can do with the Apify platform. See code examples for a variety of use cases and learn about programming language support.**
+
+---
+
 This section provides examples of actors to illustrate what you can do with the Apify platform.
 
 ## Use cases

@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/using-devtools
 
 # [](#devtools-data-collection) Data collection with DevTools
 
+**Learn how to use browser DevTools, CSS selectors, and JavaScript via the DevTools console to collect data from a website.**
+
+---
+
 We know the basics of HTML, CSS, JavaScript and DevTools and we can finally try doing something more practical - collecting data from a website. Let's try collecting the on-sale products from [this fake e-commerce website](https://demo-webstore.apify.org/). We will use CSS selectors, JavaScript, and DevTools to achieve this task.
 
 ## [](#getting-structured-data) Getting structured data from HTML

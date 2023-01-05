@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/scraping-the-data
 
 # [](#scraping-data) Scraping data
 
+**Learn how to add data collection logic to your crawler, which will allow you to extract data from all the websites you crawled.**
+
+---
+
 At the [very beginning of the course](../index.md) section, and we will combine that into a web scraper.
 
 ## [](#review-code) Quick review of earlier's code

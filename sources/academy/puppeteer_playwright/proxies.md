@@ -7,6 +7,10 @@ slug: /puppeteer-playwright/proxies
 
 # [](#using-proxies) Using proxies
 
+**Understand how to use proxies in your Puppeteer and Playwright requests, as well as a couple of the most common use cases for proxies.**
+
+---
+
 [Proxies](../anti_scraping/mitigation/proxies.md) restrictions. For example your favorite TV show might not be available on Netflix in your country, but it might be available for Vietnamese Netflix watchers.
 
 In this lesson, we'll be learning how to use proxies with Playwright and Puppeteer. This will be demonstrated with a Vietnamese proxy that we got by running [this](https://apify.com/mstephen190/proxy-scraper) proxy-scraping actor on the Apify platform.

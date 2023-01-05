@@ -7,6 +7,10 @@ slug: /puppeteer-playwright/common-use-cases/downloading-files
 
 # Downloading files
 
+**Learn how to automatically download and save files to the disk using two of the most popular web automation libraries, Puppeteer and Playwright.**
+
+---
+
 Downloading a file using Puppeteer can be tricky. On some systems, there can be issues with the usual file saving process that prevent you from doing it the easy way. However, there are different techniques that work (most of the time).
 
 These techniques are only necessary when we don't have a direct file link, which is usually the case when the file being downloaded is based on more complicated data export.

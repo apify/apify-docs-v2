@@ -7,6 +7,10 @@ slug: /storage/dataset
 
 # [](#dataset) Dataset
 
+**Store and export web scraping, crawling or data processing job results. Learn how to access and manage datasets in Apify Console or via API.**
+
+---
+
 Dataset storage enables you to sequentially save and retrieve data. Each actor run is assigned its own dataset, which is created when the first item is stored to it.
 
 Datasets usually contain results from web scraping, crawling or data processing jobs. The data can be visualized as a table where each object is a row and its attributes are the columns. The data can be exported in JSON, CSV, XML, RSS, Excel or HTML formats.

@@ -8,6 +8,10 @@ slug: /monitoring/actor-or-task-run-failure
 
 # [](#monitor-actor-or-task-runs-for-failure) Monitor actor or task runs for failure
 
+**A step-by-step monitoring tutorial that shows how you can receive notifications when an actor or task run fails or does not return enough results.**
+
+---
+
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md). The monitoring suite will send you notifications when the actor or task fails or returns too few results.
 
 ## [](#use-case) Use case

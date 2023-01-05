@@ -7,6 +7,10 @@ slug: /tutorials/building-public-actors
 
 # Building public actors
 
+**Learn about the flow for building, publishing, and maintaining public actors that on the Apify platform. Also learn about how to monetize your actors.**
+
+---
+
 There are four main stages of building a public actor:
 
 1. [Development](../actors/development/index.md).

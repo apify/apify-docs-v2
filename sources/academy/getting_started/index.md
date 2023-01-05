@@ -8,6 +8,10 @@ slug: /getting-started
 
 # [](#getting-started) Getting started
 
+**Get started with the Apify platform by creating an account and learning about the Apify Console, which is where all Apify actors are born!**
+
+---
+
 Your gateway into the Apify platform is your Apify account. The great thing about creating an account is that we support integration with both Google and Github, and that it takes only about 30 seconds!
 
 1. Create your account on the [sign up](https://console.apify.com/sign-up?asrc=developers_portal) page.

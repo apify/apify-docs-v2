@@ -8,6 +8,10 @@ slug: /web-scraping-101
 
 # [](#web-scraping-101) Web scraping 101
 
+**All you need to know about extracting structured data from web pages, the protections websites employ to prevent it, and how to bypass them.**
+
+---
+
 Web scraping is the process of extracting structured information from a web page. In essence, web scraping automates the process of manually finding and copy/pasting the information on a website you find useful.
 
 In other words, instead of manually visiting each of the 1000 listings for white T-shirts on an e-commerce site and copy-pasting each listing's price, description and seller information, you can create a bot that does it for you. You can then make your bot return the data in a handy format like JSON, HTML or Excel, so you could process and use it.

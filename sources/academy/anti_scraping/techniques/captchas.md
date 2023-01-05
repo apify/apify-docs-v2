@@ -7,6 +7,10 @@ slug: /anti-scraping/techniques/captchas
 
 # [](#captchas) Captchas
 
+**Learn about the reasons a bot might be presented a captcha, the best ways to avoid captchas in the first place, and how to programmatically solve them.**
+
+---
+
 In general, a website will present a user (or scraper) a captcha for 2 main reasons:
 
 1. The website always does captcha checks to access the desired content.

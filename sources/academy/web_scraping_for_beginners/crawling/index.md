@@ -8,6 +8,10 @@ slug: /web-scraping-for-beginners/crawling
 
 # [](#basics) Basics of crawling
 
+**Learn how to crawl the web with your scraper. How to extract links and URLs from web pages and how to manage the collected links to crawl the web.**
+
+---
+
 Welcome to the second section of our **Web scraping for beginners** course. In the [Basics of data collection](../data_collection/index.md) section, we learned how to extract data from a web page. Specifically, our demo e-commerce site, which we'll call [Fake Webstore](https://demo-webstore.apify.org).
 
 In this section, we will take a look at moving between web pages, which we call **crawling**. We will collect data about all of the on-sale products on [Fake Webstore](https://demo-webstore.apify.org/search/on-sale). To do that, we will need to crawl the individual product pages.

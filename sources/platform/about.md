@@ -8,6 +8,10 @@ slug: /about
 
 # [](#what-is-apify) What is Apify?
 
+**Learn about what Apify is and how it can help you. Get familiar with the platform and take you first steps in using actors.**
+
+---
+
 Apify is an online platform specializing in [web scraping](./web_scraping_101/index.md).
 
 [Apify Store](https://apify.com/store) includes a range of ready-made tools such as **Booking Scraper** ([dtrungtin/booking-scraper](https://apify.com/dtrungtin/booking-scraper)), **SEO Audit Tool** ([drobnikj/seo-audit-tool](https://apify.com/drobnikj/seo-audit-tool)), or the **Google Sheets Import & Export** ([lukaskrivka/google-sheets](https://apify.com/lukaskrivka/google-sheets)) tool. You can try all of these for free right now.

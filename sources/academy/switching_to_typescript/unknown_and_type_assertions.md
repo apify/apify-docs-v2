@@ -7,6 +7,10 @@ slug: /switching-to-typescript/unknown-and-type-assertions
 
 # [](#unknown-and-type-assertions) Unknown & type assertions
 
+**Understand the "unknown" and "any" types, as well as using type guards to make your code safer and type assertions to avoid common TypeScript compiler errors.**
+
+---
+
 There are two types we haven't discussed yet - `any` and `unknown`.
 
 ## [](#the-any-type) Let's talk about "any"

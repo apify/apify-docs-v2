@@ -7,6 +7,10 @@ slug: /actors/limits
 
 # [](#limits) Limits
 
+**Learn the Apify platform's resource capability and limitations such as max memory, disk size and number of actors/tasks per user or schedule.**
+
+---
+
 The tables below demonstrate the Apify platform's default resource limits.
 
 If needed, the limits shown below can be increased on paid accounts. For details, contact us on **hello@apify.com** or using the chat icon in the bottom-right corner.

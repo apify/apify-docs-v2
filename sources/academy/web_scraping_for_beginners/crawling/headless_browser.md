@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/headless-browser
 
 # [](#headless-browser) Headless browsers
 
+**Learn how to scrape the web with a headless browser using only a few lines of code. Chrome, Firefox, Safari, Edge - all are supported.**
+
+---
+
 A headless browser is simply a browser that runs without a user interface (UI). This means that it's normally controlled by automated scripts. Headless browsers are very popular in scraping because they can help you render JavaScript or programmatically behave like a human user to prevent blocking. The two most popular libraries for controlling headless browsers are [Puppeteer](https://pptr.dev/) and [Playwright](https://playwright.dev/). **Crawlee** supports both.
 
 ## [](#playwright-scraper) Building a Playwright scraper

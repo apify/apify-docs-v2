@@ -8,6 +8,10 @@ slug: /switching-to-typescript
 
 # [](#switching-to-typescript) Switching to TypeScript
 
+**In this course, learn what TypeScript is, why you should use it instead of vanilla JavaScript, and how to start using it in your own projects.**
+
+---
+
 As the world of JavaScript moves forward, [TypeScript](https://www.typescriptlang.org/) continues to become more popular. More companies than ever before are using TypeScript in their codebases, and are heavily preferring it over vanilla JavaScript. But why? What is TypeScript, and why is is so great for developers?
 
 ![TypeScript logo](./images/typescript-logo.webp)

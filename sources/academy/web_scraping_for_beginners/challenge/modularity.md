@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/challenge/modularity
 
 # Modularity
 
+**Before you build your first web scraper with Crawlee, it is important to understand the concept of modularity in programming.**
+
+---
+
 Now that we've gotten our first request going, the first challenge is going to be selecting all of the resulting products on the page. Back in the browser, we'll use the DevTools hover tool to inspect a product.
 
 ![Result products](../../expert_scraping_with_apify/solutions/images/result-items.webp)

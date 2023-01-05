@@ -186,11 +186,21 @@ for (const source of sources) {
 }
 
 // iterate once again to fix absolute links between sources
-for (const { path, output: input, slug, source, parentFolder } of processed) {
+for (const { path, output: input, slug, source, parentFolder, frontmatter } of processed) {
     const output = [];
+    const description = frontmatter.find(row => row.startsWith('description: '))?.match(/description: (.*)/)[1].trim();
+    let descriptionAdded = false;
 
     for (const line of input) {
         output.push(await transformLinksOnLine(line, parentFolder, source));
+
+        if (line.startsWith('# ') && !descriptionAdded) {
+            output.push('');
+            output.push(`**${description}**`);
+            output.push('');
+            output.push('---');
+            descriptionAdded = true;
+        }
     }
 
     await fs.writeFile(path, output.join('\n'));

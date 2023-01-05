@@ -7,6 +7,10 @@ slug: /node-js/optimizing-scrapers
 
 # [](#optimizing-scrapers) How to optimize and speed up your web scraper
 
+**We all want our scrapers to run as cost-effective as possible. Learn how to think about performance in the context of web scraping and automation.**
+
+---
+
 Especially if you are running your scrapers on [Apify](https://apify.com), performance is directly related to your wallet (or rather bank account). The slower and heavier your program is, the more proxy bandwidth, storage, [compute units](https://help.apify.com/en/articles/3490384-what-is-a-compute-unit) and higher [subscription plan](https://apify.com/pricing) you'll need.
 
 The goal of optimization is simple: Make the code run as fast possible and use the least resources possible. On Apify, the resources are memory and CPU usage (don't forget that the more memory you allocate to a run, the bigger share of CPU you get - proportionally). Memory alone should never be a bottleneck though. If it is, that means either a bug (memory leak) or bad architecture of the program (you need to split the computation to smaller parts). So in the rest of this article, we will focus only on optimizing CPU usage. You allocate more memory only to get more power from the CPU.

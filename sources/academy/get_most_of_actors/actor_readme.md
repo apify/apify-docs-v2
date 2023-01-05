@@ -7,6 +7,10 @@ slug: /get-most-of-actors/actor-readme
 
 # Actor README
 
+**Learn how to write a comprehensive README to help users better navigate, understand and run public actors in Apify Store.**
+
+---
+
 - It should also be a "template" for developers developing new public actors so that they have a structure and guidance for writing the readmes.
 - The goal is to ensure that more people will understand and run their actors.
 - Whenever you build an actor, think of the original request/idea and the "use case" = "user need" it should solve, please take notes and share them with Apify, so we can help you write a blog post supporting your actor with more information, more detailed explanation, better SEO.

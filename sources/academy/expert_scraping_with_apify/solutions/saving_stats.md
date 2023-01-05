@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/solutions/saving-stats
 
 # [](#saving-stats) Saving run stats
 
+**Implement the saving of general statistics about an actor's run, as well as adding request-specific statistics to dataset items.**
+
+---
+
 The code in this solution will be similar to what we already did in the **Handling migrations** solution; however, we'll be storing and logging different data. First, let's create a new file called **Stats.js** and write a utility class for storing our run stats:
 
 ```js

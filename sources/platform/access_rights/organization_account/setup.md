@@ -7,6 +7,10 @@ slug: /access-rights/organization-account/setup
 
 # Setup
 
+**Configure your organization account by inviting new members and assigning their roles. Manage team members' access permissions to the organization's resources.**
+
+---
+
 Once you have created your organization, you can customize it. Under the **Settings** tab, you can set the organization's email address, owner, or delete the account. The **Profile** tab allows you to update your organization's name or set a custom profile image.
 
 **[See our video tutorial](https://www.youtube.com/watch?v=BIL6HqtnvKk) on organization accounts.**

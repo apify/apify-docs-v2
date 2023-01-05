@@ -8,6 +8,10 @@ slug: /tutorials/integrations
 
 # Integrations
 
+**Learn how to connect the Apify platform with your projects. You can use our tools in cloud services like Zapier, Make (formerly Integromat), Keboola, and more.**
+
+---
+
 You can connect Apify with practically any cloud service or web app. They allow you to pass your [actor](../actors/index.md) run results to other services, process them, and receive notifications on important events.
 
 ## What is software integration?

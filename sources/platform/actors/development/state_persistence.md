@@ -6,6 +6,10 @@ slug: /actors/development/state-persistence
 
 # [](#state-persistence)State persistence
 
+**Maintain a long-running actor's state to protect from unexpected restarts. See a code example on how to protect your run in case of server shutdown.**
+
+---
+
 Long-running [actor](../index.md) jobs may need to migrate from one server to another. Unless you save your job's progress, it will be lost during the migration. The actor will re-start from scratch on the new server, which can be costly.
 
 To avoid this, long-running actors should save (persist) their state periodically and listen for [migration events](https://sdk.apify.com/api/apify/class/PlatformEventManager). On start, these actors should [check for persisted state](#code-examples), so they can continue where they left off.

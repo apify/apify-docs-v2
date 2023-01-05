@@ -7,6 +7,10 @@ slug: /deploying-your-code/inputs-outputs
 
 # [](#inputs-outputs) Inputs & outputs
 
+**Learn to accept input into your actor, do something with it, then return output. Actors can be written in any language, so this concept is language agnostic.**
+
+---
+
 Most of the time when you're creating a project, you are expecting some sort of input off of which your software will run off of. Often times as well, you want to provide some sort of output once your software has completed running. With Apify, it is extremely easy to take in inputs and deliver outputs.
 
 An important thing to understand regarding inputs and outputs is that they are read/written differently depending on where the actor is running:

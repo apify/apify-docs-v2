@@ -7,6 +7,10 @@ slug: /tools/insomnia
 
 # [](#what-is-insomnia) What is Insomnia?
 
+**Learn about Insomnia, a simple yet super valuable tool for testing requests and proxies when building scalable web scrapers.**
+
+---
+
 Despite its name, the [Insomnia](https://insomnia.rest/download) desktop application has absolutely nothing to do with having a lack of sleep. Rather, it is a tool to build and test APIs. If you've already read about [Postman](./postman.md), you already know what Insomnia can be used for, as they both do practically the same exact things. There are some small differences between them, though. Like Postman, Insomnia allows you to send requests with specific headers and cookies, to add a request payload, etc. One difference is that Insomnia also allows you to see the whole timeline of the request.
 
 Insomnia can be downloaded from its [official website](https://insomnia.rest/download), and its features can be read about in the [official documentation](https://docs.insomnia.rest/).

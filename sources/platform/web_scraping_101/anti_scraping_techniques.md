@@ -8,6 +8,10 @@ slug: /web-scraping-101/anti-scraping-techniques
 
 # [](#anti-scraping-techniques-and-how-to-bypass-them) Anti-scraping techniques
 
+**Explore anti web scraping, and methods used to bypass blocking, such as IP address rotation and proxies, emulated browser signatures, shared sessions, etc.**
+
+---
+
 Many websites use anti-scraping techniques to block web scraping bots. Our research shows that there are a number of methods deployed in the field to bypass these defenses.
 
 In many cases, we found that very simple changes in approach are commonly used. For example, if a site is blocking based on IP address, switching between different addresses is effective. If a website is analyzing behavior, making that behavior as human-like as possible will confuse the anti-scraping system. If these simpler options fail, there are more complex methods available, such as [shared IP address emulation](https://dev.to/apify/bypassing-web-scraping-protection-get-the-most-out-of-your-proxies-with-shared-ip-address-emulation-291c) (also known as [session multiplexing](https://en.wikipedia.org/wiki/Session_multiplexing)).

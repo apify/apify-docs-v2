@@ -7,6 +7,10 @@ slug: /switching-to-typescript/installation
 
 # [](#installation-getting-started) Installation & getting started
 
+**Install TypeScript and the TS compiler on your machine, then write your very first lines of TypeScript code by fixing a logical bug in a vanilla JS snippet.**
+
+---
+
 > In order to install and use TypeScript, you'll first need to make sure you've installed [Node.js](https://nodejs.org). Node.js comes with a package manager called [NPM](https://npmjs.com), through which TypeScript can be installed.
 
 To install TypeScript globally on your machine, run the following command in your terminal:

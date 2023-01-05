@@ -6,6 +6,10 @@ slug: /actors/development/environment-variables
 
 # [](#environment-variables) Environment variables
 
+**Learn how to provide your actor with context that determines its behavior through a plethora of pre-defined environment variables offered by the Apify SDK.**
+
+---
+
 Aside from [custom environment variables](./source_code.md), the actor's process has several environment variables set to provide it with context:
 
 | Environment Variable               | Description                                                                                                                                                                                                                |

@@ -7,6 +7,10 @@ slug: /proxy/google-serp-proxy/examples
 
 # Connect to Google SERP proxies
 
+**Learn how to connect to Google SERP proxies from your applications with Node.js (axios and got-scraping), Python 2 and 3 and PHP using code examples.**
+
+---
+
 This page contains code examples for connecting to [Google SERP proxies](./index.md) using [Apify Proxy](https://apify.com/proxy).
 
 See the [connection settings](../connection_settings.md) page for connection parameters.

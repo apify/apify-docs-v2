@@ -7,6 +7,10 @@ slug: /concepts/http-cookies
 
 # [](#cookies) HTTP cookies
 
+**Learn a bit about what cookies are, and how they are utilized in scrapers to appear logged-in, view specific data, or even avoid blocking.**
+
+---
+
 HTTP cookies are small pieces of data sent by the server to the user's web browser, which are typically stored by the browser and used to send later requests to the same server. Cookies are usually represented as a string (if used together with a plain HTTP request) and sent with the request under the **Cookie** [header](./http_headers.md).
 
 ## [](#uses-in-crawlers) Most common uses of cookies in crawlers

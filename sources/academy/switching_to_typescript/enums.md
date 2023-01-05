@@ -7,6 +7,10 @@ slug: /switching-to-typescript/enums
 
 # [](#enums) Enums!
 
+**Learn how to easily define, use, and manage constant values using a cool feature called "enums" that TypeScript brings to the table.**
+
+---
+
 Enums are a nice feature offered by TypeScript that can be used to create automatically enumerated global constant identifiers that can also be used as custom types. We've dedicated an entire lesson to enums because they're a new feature brought into JavaScript by TypeScript, and because they can be quite useful in certain projects.
 
 ## [](#lets-talk-about-constants) Let's talk about constants

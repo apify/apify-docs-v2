@@ -7,6 +7,10 @@ slug: /getting-started/creating-actors
 
 # [](#creating-actors) Creating actors
 
+**Build and run your very first actor right on the Apify platform from a template. This lesson provides a hands-on experience with building and running an actor.**
+
+---
+
 Creating an actor is so easy to do, we'll show you right in this lesson how to get one up and running in 5 minutes or less. There is no need to install any special software, as everything can be done right on the Apify platform with an Apify account!
 
 ## [](#choose-your-template) Choose your template

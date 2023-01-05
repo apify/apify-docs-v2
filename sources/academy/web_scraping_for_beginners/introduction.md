@@ -8,6 +8,10 @@ slug: /web-scraping-for-beginners/introduction
 
 # [](#introduction) Introduction
 
+**Start learning about web scraping, web crawling, data collection, and popular tools to start developing your own scraper.**
+
+---
+
 Web scraping or crawling? Data collection, mining, or extraction? You can find various definitions on the web. Let's agree on simple explanations that we will use throughout this beginner course on web scraping.
 
 ## [](#what-is-data-collection) What is data collection?

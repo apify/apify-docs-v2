@@ -7,6 +7,10 @@ slug: /concepts/dynamic-pages
 
 # [](#dynamic-pages) Dynamic pages and single-page applications (SPAs)
 
+**Understand what makes a page dynamic, and how a page being dynamic might change your approach when writing a scraper for it.**
+
+---
+
 In the modern web, single-page applications (SPAs) are becoming increasingly popular, especially due to JavaScript libraries like [React.js](https://reactjs.org/) and [Vue.js](https://vuejs.org/) pushing their development to the mainstream. Often times, single-page applications (and loads of non-SPAs too) have dynamic content.
 
 As you progress in your scraping journey, you'll quickly realize that different websites load their content and populate their pages with data in different ways. Some pages are rendered entirely on the server, some retrieve the data dynamically, and some use a combination of both those methods.

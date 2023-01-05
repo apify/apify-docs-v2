@@ -7,6 +7,10 @@ slug: /integrations/slack
 
 # Slack integration
 
+**Learn how to integrate your Apify actors with Slack. This article guides you from installation through to automating your whole workflow in Slack.**
+
+---
+
 [Slack](https://slack.com/) allows you to install various services in your workspace in order to automate and centralize jobs. Apify is one of these services, and it allows you to run your Apify actors, be notified about their run status, and get your results, all without opening your browser.
 
 ## Get started

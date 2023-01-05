@@ -7,6 +7,10 @@ slug: /storage/key-value-store
 
 # Key-value store
 
+**Store anything from actor or task run results JSON documents or images. Learn how to access and manage key-value stores from Apify Console or via API.**
+
+---
+
 The key-value store is simple storage that can be used for storing any kind of data. It can be JSON or HTML documents, zip files, images, or simply strings. The data are stored along with their [MIME content type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 Each actor run is assigned its own key-value store when it is created. The store contains the actor's input, and, if necessary, other data such as its output.

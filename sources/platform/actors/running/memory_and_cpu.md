@@ -7,6 +7,10 @@ slug: /actors/running/memory-and-cpu
 
 # Memory and CPU
 
+**Learn about your actors' memory and processing power requirements, their relationship with Docker resources, and minimum requirements for different use cases.**
+
+---
+
 [Actors](../index.md) run in
 [Docker containers](https://www.docker.com/resources/what-container),
 which have a [limited amount of resources](https://phoenixnap.com/kb/docker-memory-and-cpu-limit). When starting, the actor needs to be allocated a certain share of those resources, such as how much CPU "horsepower" it will be able to use.

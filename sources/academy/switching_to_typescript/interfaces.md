@@ -7,6 +7,10 @@ slug: /switching-to-typescript/interfaces
 
 # [](#interfaces) Interfaces
 
+**Understand how to declare object types with the "interface" keyword, and the subtle difference interfaces have with regular type aliases.**
+
+---
+
 In the [**Using types - II**](./using_types_continued.md) lesson, you learned about object types and how to create them. Let's create a new custom object type using the `type` keyword that we're already familiar with.
 
 ```ts

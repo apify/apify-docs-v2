@@ -7,6 +7,10 @@ slug: /switching-to-typescript/using-types
 
 # [](#using-types) Using types
 
+**Dip your toes into using types with TypeScript by learning about the core types offered by the language, and how to define variables and functions with them.**
+
+---
+
 In the previous lesson, we got a rough idea of how types are used by utilizing the `number` type in a function's parameters. The `number` type is one of TypeScript's three core types.
 
 ## Core types

@@ -6,6 +6,10 @@ slug: /actors/development/output-schema
 
 # Actor output schema
 
+**Output schema is designed to help actor developers present the results to actor users in an attractive and comprehensive output UI.**
+
+---
+
  It is recommended to show the most important fields in a curated Overview visualization configured using output schema specification, while all available fields are automatically available in the “All fields” view.
 
 In the future, output schema will also help with strict output data format validation, which will make integrations more solid and easier to set up.

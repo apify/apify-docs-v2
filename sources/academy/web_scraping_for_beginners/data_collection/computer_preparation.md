@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/computer-preparation
 
 # [](#prepare-computer) Prepare your computer for programming
 
+**Set up your computer to be able to code scrapers with Node.js and JavaScript. Download Node.js and NPM and run a Hello World script.**
+
+---
+
 Before you can start writing scraper code, you need to have your computer set up for it. In this lesson, we will show you all the tools you need to install to successfully write your first scraper.
 
 ## [](#install-node) Install Node.js

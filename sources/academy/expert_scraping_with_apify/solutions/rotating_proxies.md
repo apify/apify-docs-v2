@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/solutions/rotating-proxies
 
 # [](#rotating-proxy-sessions) Rotating proxies/sessions
 
+**Learn first hand how to rotate proxies and sessions in order to avoid the majority of the most common anti-scraping protections.**
+
+---
+
 If you take a look at our current code for the Amazon scraping actor, you might notice this snippet:
 
 ```js

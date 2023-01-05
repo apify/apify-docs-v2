@@ -7,6 +7,10 @@ slug: /node-js/dealing-with-dynamic-pages
 
 # [](#dealing-with-dynamic-pages) How to scrape from dynamic pages
 
+**Learn about dynamic pages and dynamic content. How can we find out if a page is dynamic? How do we programmatically scrape dynamic content?**
+
+---
+
 <!-- In the last few lessons, we learned about Crawlee, which is a powerful library for writing reliable and efficient scrapers. We recommend reading up on those last two lessons in order to install the `crawlee` package and familiarize yourself with it before moving forward with this lesson. -->
 
 In this lesson, we'll be discussing dynamic content and how to scrape it while utilizing Crawlee.

@@ -8,6 +8,10 @@ slug: /robotic-process-automation
 
 # [](#what-is-robotic-process-automation-rpa) What is robotic process automation (RPA)?
 
+**Learn the basics of robotic process automation. Make your processes on the web and other software more efficient by automating repetitive tasks.**
+
+---
+
 RPA allows you to create software (also known as **bots**), which can imitate your digital actions. You can program bots to perform repetitive tasks faster, more reliably and more accurately than humans. Plus, they can do these tasks all day, every day.
 
 ## [](#what-can-i-use-rpa-for) What can I use RPA for?

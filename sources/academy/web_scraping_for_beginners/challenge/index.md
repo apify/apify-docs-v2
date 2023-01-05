@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/challenge
 
 # Challenge
 
+**Test your knowledge acquired in the previous sections of this course by building an Amazon scraper using Crawlee's CheerioCrawler!**
+
+---
+
 Before moving onto the other courses in the academy, we recommend following along with this section, as it combines everything you've learned in the previous lessons into one cohesive project that helps you prove to yourself that you've thoroughly understood the material.
 
 We recommend that you make sure you've gone through both the [data collection](../data_collection/index.md) sections of this course to ensure the smoothest development process.

@@ -7,6 +7,10 @@ slug: /switching-to-typescript/mini-project
 
 # [](#mini-project) Mini-project
 
+**Build an entire project in TypeScript using concepts learned in this course. Also, learn about two more advanced TypeScript features.**
+
+---
+
 You're here! If you made it this far, that means that you've familiarized yourself with all the core concepts in TypeScript (and some of the more advanced ones too). We're going to scrape product data from [this API endpoint](https://dummyjson.com/products), then manipulate it based on user input.
 
 ## [](#project-overview) Project overview

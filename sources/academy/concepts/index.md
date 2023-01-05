@@ -8,6 +8,10 @@ slug: /concepts
 
 # [](#concepts) Concepts 🤔
 
+**Learn about some common yet tricky concepts and terms that are used frequently within the academy, as well as in the world of scraper development.**
+
+---
+
 There are some terms and concepts you'll see frequently repeated throughout various courses in the academy. Many of these concepts are common, and even fundamental in the scraping world, which makes it necessary to explain them to our course-takers; however it would be inconvenient for our readers to explain these terms each time they appear in a lesson.
 
 Because of this slight dilemma, and because there are no outside resources which compile all of these concepts into an educational and digestible form, we've decided to do just that. So, welcome to the **Concepts** section of the Apify Academy's **Glossary**!

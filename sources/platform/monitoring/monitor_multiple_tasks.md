@@ -8,6 +8,10 @@ slug: /monitoring/monitor-multiple-tasks
 
 # [](#monitor-multiple-actors-or-tasks) Monitor multiple actors or tasks
 
+**A step-by-step monitoring tutorial that shows you how to monitor multiple runs, validate your results and visualize them using the monitoring dashboard.**
+
+---
+
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a multiple [tasks](../actors/tasks.md).
 
 ## [](#use-case) Use case

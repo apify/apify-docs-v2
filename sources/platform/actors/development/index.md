@@ -7,6 +7,10 @@ slug: /actors/development
 
 # Development
 
+**Read about the technical part of building Apify actors. Learn to define actor inputs, build new versions, persist actor state, and choose base Docker images.**
+
+---
+
 In this section, you can find documentation on creating your own actors using the Apify platform.
 
 **If you're interested in building paid actors, contact [community@apify.com](mailto:community@apify.com) to receive the guide.**

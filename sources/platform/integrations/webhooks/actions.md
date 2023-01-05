@@ -7,6 +7,10 @@ slug: /integrations/webhooks/actions
 
 # Actions
 
+**Send notifications when specific events occur in your actor (task) run or build. Dynamically add data to the notification payload when sending the notification.**
+
+---
+
 Currently, the only available action is to send an HTTP POST request to a URL specified in the webhook. New actions will come later.
 
 ## HTTP request

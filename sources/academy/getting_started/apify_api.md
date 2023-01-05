@@ -7,6 +7,10 @@ slug: /getting-started/apify-api
 
 # [](#the-apify-api) The Apify API
 
+**Learn how to use the Apify API to programmatically call your actors, retrieve data stored on the platform, view actor logs, and more!**
+
+---
+
 [Apify's API](https://docs.apify.com/api/v2#/reference) is your ticket to the Apify platform without even needing to access the [Apify Console](https://console.apify.com?asrc=developers_portal) web-interface. The API is organized around RESTful HTTP endpoints.
 
 In this lesson, we'll be learning how to use the Apify API to call an actor and view its results. We'll be using the actor we created in the previous lesson, so if you haven't already gotten that one set up, go ahead do that before moving forward if you'd like to follow along.

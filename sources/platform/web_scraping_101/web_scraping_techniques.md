@@ -7,6 +7,10 @@ slug: /web-scraping-101/web-scraping-techniques
 
 # Web scraping techniques
 
+**An introduction to the methods you can use to extract data from websites. Analyze web pages for hidden elements to find the most effective approach.**
+
+---
+
 This article provides a quick summary of ways websites structure and send their information. Knowing these techniques will help you extract data quicker and more efficiently.
 
 You can find more in-depth discussion and code examples for all the techniques in [this](https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javascript-variables-8167f252439c) article.

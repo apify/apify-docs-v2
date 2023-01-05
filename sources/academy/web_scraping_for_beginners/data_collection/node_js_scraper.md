@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/node-js-scraper
 
 # [](#first-scraper) First Node.js scraper
 
+**Learn how to use JavaScript and Node.js to create a web scraper, plus take advantage of the cheerio and got-scraping libraries to make your job easier.**
+
+---
+
 Finally we have everything ready to start scraping! Yes, the setup is a bit daunting, but luckily, you only have to do it once. We have our project, we have our **main.js** file, so let's add some code to it.
 
 ## [](#downloading-html) Downloading HTML

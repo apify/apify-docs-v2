@@ -7,6 +7,10 @@ slug: /switching-to-typescript/using-types-continued
 
 # [](#using-types-continued) Using types (continued)
 
+**Continue learning about the core types in TypeScript. In this second part lesson, learn how to use and define object types, array types, and tuples.**
+
+---
+
 Now that you're (hopefully) fairly comfortable with strings, booleans, and numbers in TypeScript, we can start discussing the more complex types supported by the language.
 
 | Name     | Example                        | Description                                                                          |

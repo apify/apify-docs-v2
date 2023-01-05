@@ -7,6 +7,10 @@ slug: /switching-to-typescript/type-aliases
 
 # [](#type-aliases) Type aliases
 
+**Create your own custom types using the "type" keyword, understand the "void" type, and learn how to write custom function types.**
+
+---
+
 Real quick, let's look at this code:
 
 ```ts

@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/node-continued
 
 # [](#finish-scraper) Finish Node.js scraper
 
+**Continue learning how to create a web scraper with Node.js and Cheerio. Learn how to parse HTML and print the results of the data your scraper has collected.**
+
+---
+
 In the first part of the Node.js tutorial we downloaded the HTML of our [tutorial e-commerce site](https://demo-webstore.apify.org/search/on-sale) and parsed it with Cheerio. Now, we will replicate the collection logic from the [Collecting Data with DevTools](./using_devtools.md) lessons and finish our scraper.
 
 ## [](#querying-with-cheerio) Querying data with Cheerio

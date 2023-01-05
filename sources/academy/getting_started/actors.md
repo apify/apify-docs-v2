@@ -7,6 +7,10 @@ slug: /getting-started/actors
 
 # [](#actors) Actors
 
+**What is an actor? How do we create them? Learn the basics of what actors are, how they work, and try out an actor yourself right on the Apify platform!**
+
+---
+
 After you've followed the **Getting started** lesson, you're almost ready to start creating some actors! But before we get into that, let's discuss what an actor is, and a bit about how they work.
 
 ## [](#what-is-an-actor) What's an actor?

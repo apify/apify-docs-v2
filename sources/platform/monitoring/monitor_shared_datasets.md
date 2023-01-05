@@ -9,6 +9,10 @@ slug: /monitoring/monitor-shared-datasets
 
 # [](#monitor-shared-named-datasets) Monitor shared named datasets
 
+**A step-by-step monitoring tutorial that shows you how to monitor and ensure consistency in named datasets which aggregate data from multiple actors or tasks.**
+
+---
+
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a [dataset](../storage/dataset.md) add data.
 
 ## [](#use-case) Use case

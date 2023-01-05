@@ -7,6 +7,10 @@ slug: /actors/running/input
 
 # Input
 
+**Configure your actor's input parameters using the Apify Console, locally or via API. Access parameters in key-value stores from your actor's code.**
+
+---
+
 An Apify actor's input is stored in the **INPUT.json** key-value store in the actor's **apify_storage/key_value_stores/default** directory.
 
 > Note that the actor can store other values such as crawling results or screenshots of web pages under arbitrary keys.

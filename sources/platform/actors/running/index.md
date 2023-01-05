@@ -8,6 +8,10 @@ slug: /actors/running
 
 # Running
 
+**Start an actor from the Apify Console or via API. Learn about actor lifecycles, how to specify settings and version, provide input and resurrect finished runs.**
+
+---
+
 You can start an Apify actor in a number of ways. One option is to start an actor from its page in [Apify Console](https://console.apify.com/actors):
 
 ![Apify developer console](../images/actor-console.webp)

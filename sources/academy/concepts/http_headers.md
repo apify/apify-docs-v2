@@ -7,6 +7,10 @@ slug: /concepts/http-headers
 
 # [](#headers) HTTP headers
 
+**Understand what HTTP headers are, what they're used for, and three of the biggest differences between HTTP/1.1 and HTTP/2 headers.**
+
+---
+
 [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) let the client and the server pass additional information with an HTTP request or response. Headers are represented by an object where the keys are header names. Headers can also contain certain authentication tokens.
 
 In general, there are 4 different paths you'll find yourself on when scraping a website and dealing with headers:

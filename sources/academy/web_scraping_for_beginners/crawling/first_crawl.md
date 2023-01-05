@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/first-crawl
 
 # [](#your-first-crawl) Your first crawl
 
+**Learn how to crawl the web using Node.js, Cheerio and an HTTP client. Collect URLs from pages and use them to visit more websites.**
+
+---
+
 In the previous lessons, we learned what crawling is and how to collect URLs from a page's HTML. The only thing that remains is to write the code - so let's get right to it!
 
 > If the code starts to look too complex for you, don't worry. We're showing it for educational purposes, so that you can learn how crawling works. Near the end of this module, we'll show you a much easier and faster way to crawl, using a specialized scraping library. If you want, you can skip the details and [go there now](./pro_scraping.md).

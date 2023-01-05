@@ -7,6 +7,10 @@ slug: /puppeteer-playwright/common-use-cases/paginating-through-results
 
 # [](#paginating-through-results) Paginating through results
 
+**Learn how to paginate through results on websites that use either page number-based pagination or dynamic lazy-loading pagination.**
+
+---
+
 If you're trying to [collect data](../executing_scripts/collecting_data.md) on a website that has millions, thousands, or even just hundreds of results, it is very likely that they are paginating their results to reduce strain on their backend as well as on the users loading and rendering the content.
 
 ![Amazon pagination](https://apify-docs.s3.amazonaws.com/master/docs/assets/tutorials/images/pagination.webp)

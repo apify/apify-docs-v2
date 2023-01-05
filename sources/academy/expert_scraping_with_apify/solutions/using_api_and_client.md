@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/solutions/using-api-and-client
 
 # [](#using-api-and-client) Using the Apify API & JavaScript client
 
+**Learn how to interact with the Apify API directly through the well-documented RESTful routes, or by using the proprietary Apify JavaScript client.**
+
+---
+
 Since we need to create another actor, we'll once again use the `apify create` command and start from an empty template.
 
 ![Selecting an empty template to start with](./images/select-empty.webp)

@@ -8,6 +8,10 @@ slug: /web-scraping-for-beginners
 
 # [](#welcome) Web scraping for beginners
 
+**Learn how to develop web scrapers with this comprehensive and practical course. Go from beginner to expert, all in one place.**
+
+---
+
 Welcome to **Web scraping for beginners**, a comprehensive and practical web scraping course that will take you from an absolute beginner to a successful web scraper developer. This course is sponsored by [Apify](https://apify.com), the web scraping and automation platform, but we will use only open-source technologies throughout all academy lessons. This means that the skills you learn will be applicable to any scraping project, and you'll be able to run your scrapers on any computer. No Apify account needed.
 
 <!--If you would like to learn about the Apify platform and how it can help you build, run and scale your web scraping and automation projects, visit the Apify Academy, where we'll teach you all about our actors, proxies, API, scheduling, webhooks and much more. ONCE IT'S AVAILABLE-->

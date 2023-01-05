@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/crawling/pro-scraping
 
 # [](#pro-scraping) Professional scraping 💪
 
+**Learn how to build scrapers quicker and get better and more robust results by using Crawlee, an open-source library for scraping in Node.js.**
+
+---
+
 While it's definitely an interesting exercise to do all the programming manually, and we hope you enjoyed it, it's neither the most effective, nor the most efficient way of scraping websites. Because we scrape for a living at Apify, we've built a library that we use to scrape tens of millions of pages every day.
 
 It's called [Crawlee](https://crawlee.dev/) and it is, **and always will be**, completely open-source and **free** to use. You don't need to sign up for an Apify account or use the Apify platform. You can use it on your personal computer, on any server, or in any cloud environment you want.

@@ -7,6 +7,10 @@ slug: /proxy/connection-settings
 
 # Connection settings
 
+**Learn how to connect your application to Apify Proxy. See the required parameters such as the correct username and password.**
+
+---
+
 Below are the HTTP proxy connection settings for Apify Proxy.
 
 | Parameter           | Value / explanation                                                                                                                                                                                                                                                                                                                                        |

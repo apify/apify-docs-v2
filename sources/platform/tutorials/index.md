@@ -8,6 +8,10 @@ slug: /tutorials
 
 # Tutorials
 
+**Learn how to scrape the web and automate processes with Apify. From beginner guides for using actors to advanced topics like migrations and performance.**
+
+---
+
 This section contains everything you need to get you up and running with Apify, as well as advanced techniques for experienced users. Before you start, it will help to have an [Apify account](https://console.apify.com) set up and ready to go.
 
 ## The basics

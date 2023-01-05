@@ -7,6 +7,10 @@ slug: /actors/paid-actors
 
 # Paid actors
 
+**Learn how actor rentals work on the Apify platform. Find out about running costs, what you need to rent an actor, and how to pay for your rentals.**
+
+---
+
 Paid actors are a new feature in [Apify Store](https://apify.com/store). They're like any other public actors, but with a slight difference. In order to use a paid actor, you **rent** it and pay a monthly fee to the developer. This empowers the developer to dedicate more time and effort to their actors. It ensures that these actors are of the **highest quality** and receive **ongoing maintenance**.
 
 ![Paid actors in Apify Store](./images/paid-actors-store.webp)

@@ -7,6 +7,10 @@ slug: /tutorials/analyze-pages-and-fix-errors
 
 # How to analyze pages and fix errors
 
+**Learn to deal with random crashes in your web scraping and automation jobs. Find our the essentials of debugging and fixing problems in your actors.**
+
+---
+
 Debugging is essential in programming. Even if you would not call yourself a programmer, having basic debugging skills will make building and maintaining [scrapers](./apify_scrapers/index.md) on Apify easier. It will help you avoid hiring an expensive developer and solve your issues faster.
 
 This article covers the absolute basics. It discusses the most common problems and the simplest tools for analyzing the issue.

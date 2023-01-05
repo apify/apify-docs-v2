@@ -7,6 +7,10 @@ slug: /proxy/datacenter-proxy/examples
 
 # Connect to datacenter proxies
 
+**Learn how to connect to Apify's datacenter proxies from your application with Node.js (axios and got-scraping), Python 2 and 3 and PHP using code examples.**
+
+---
+
 This page contains code examples for connecting to [datacenter proxies](./index.md) using [Apify Proxy](https://apify.com/proxy).
 
 See the [connection settings](../connection_settings.md) page for connection parameters.

@@ -7,6 +7,10 @@ slug: /puppeteer-playwright/executing-scripts/collecting-data
 
 # [](#collecting-data) Collecting data
 
+**Learn how to collect data from a page with evaluate functions, then how to safely collect it by using a second library called Cheerio.**
+
+---
+
 Now that we know how to execute scripts on a page, we're ready to learn a bit about [data collection](../../web_scraping_for_beginners/data_collection/index.md). In this lesson, we'll be scraping all of the on-sale products from our [Fakestore](https://demo-webstore.apify.org/search/on-sale) website.
 
 > Most data collection cases involve looping through a list of items of some sort.

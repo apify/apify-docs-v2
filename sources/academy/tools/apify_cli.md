@@ -7,6 +7,10 @@ slug: /tools/apify-cli
 
 # [](#the-apify-cli) The Apify CLI
 
+**Learn about, install, and log into the Apify CLI - your best friend for interacting with the Apify platform via your terminal.**
+
+---
+
 The [Apify CLI](https://docs.apify.com/cli) helps you create, develop, build and run Apify actors, and manage the Apify cloud platform from any computer. It can be used to automatically generate the boilerplate for different types of projects, initialize projects, remotely call actors on the platform, and run your own projects.
 
 ## [](#installing) Installing

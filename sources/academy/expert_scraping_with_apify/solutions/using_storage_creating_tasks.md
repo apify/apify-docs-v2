@@ -7,6 +7,10 @@ slug: /expert-scraping-with-apify/solutions/using-storage-creating-tasks
 
 # [](#using-storage-creating-tasks) Using storage & creating tasks
 
+**Follow along with step-by-step instructions on how to complete the task outlined in the previous lesson. Use different storage types, and create a task.**
+
+---
+
 Last lesson, our task was outlined for us. In this lesson, we'll be completing that task by making our Amazon actor push to a **named dataset** and use the **default key-value store** to store the cheapest item found by the scraper. Finally, we'll create a task for the actor back on the Apify platform.
 
 ## [](#using-named-dataset) Using a named dataset

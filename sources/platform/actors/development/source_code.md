@@ -6,6 +6,10 @@ slug: /actors/development/source-code
 
 # [](#source-code)Source code
 
+**Learn all about an Apify actor's code. Compare deployment options, create a custom Dockerfile, set environment variables and metamorph your actor.**
+
+---
+
 The **Source type** setting determines the location of the source code for the actor. It can have one of the following values: [Multiple source files](#multiple-source-files), [Git repository](#git-repository), [Zip file](#zip-file) or [GitHub Gist](#github-gist).
 
 ## [](#multiple-source-files) Multiple source files

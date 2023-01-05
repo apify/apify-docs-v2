@@ -7,6 +7,10 @@ slug: /tools/modheader
 
 # [](#what-is-modheader) What is ModHeader?
 
+**Discover a super useful Chrome extension called ModHeader, which allows you to modify your browser's HTTP request headers.**
+
+---
+
 If you read about [Postman](./postman.md).
 
 [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en) is a Chrome extension which can be used to modify the HTTP headers of the requests you make with your browser. This means that, for example, if your scraper using a headless browser Puppeteer is being blocked due to an improper **User-Agent** header, you can use ModHeader to test the target website and quickly solve the issue.

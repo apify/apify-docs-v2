@@ -8,6 +8,10 @@ slug: /running-a-web-server
 
 # Running a web server on the Apify platform
 
+**A web server running in an actor can act as a communication channel with the outside world. Learn how to easily set one up with Node.js.**
+
+---
+
 Sometimes, an actor needs a channel for communication with other systems (or humans). This channel might be used to receive commands, to provide info about progress, or both. To implement this, we will run a HTTP web server inside the actor that will provide:
 
 - An API to receive commands.

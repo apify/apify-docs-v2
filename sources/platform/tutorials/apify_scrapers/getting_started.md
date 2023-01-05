@@ -342,3 +342,8 @@ So, it's time to choose sides. But don't worry, at Apify, no side is the dark si
 - [Web Scraper tutorial](https://docs.apify.com/tutorials/apify-scrapers/web-scraper)
 - [Cheerio Scraper tutorial](https://docs.apify.com/tutorials/apify-scrapers/cheerio-scraper)
 - [Puppeteer Scraper tutorial](https://docs.apify.com/tutorials/apify-scrapers/puppeteer-scraper)
+
+
+**Step-by-step tutorial that will help you get started with all Apify Scrapers. Learn the foundations of scraping the web with Apify and creating your own actors.**
+
+---

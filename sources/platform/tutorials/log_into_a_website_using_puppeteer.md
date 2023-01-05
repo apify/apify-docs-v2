@@ -7,6 +7,10 @@ slug: /tutorials/log-into-a-website-using-puppeteer
 
 # Log into a website using Puppeteer
 
+**Learn how to complete a website's authentication process using headless Chrome and Puppeteer. Automate the filling in of log in details and passwords.**
+
+---
+
 In this article, we demonstrate how you can easily scrape data from a page behind a login using an [Apify actor](../actors/index.md) with [Puppeteer](https://pptr.dev/). For this example, we will use [https://facebook.com](https://www.facebook.com/).
 
 ## [](#find-the-login-form) Find the login form

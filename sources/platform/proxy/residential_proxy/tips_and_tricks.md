@@ -6,6 +6,10 @@ slug: /proxy/residential-proxy/tips-and-tricks
 
 # [](#tips-and-tricks) Tips and tricks
 
+**Helpful tips for using your application with Apify's residential proxies. Control traffic, deal with interrupted connections and manage expenses.**
+
+---
+
 [Residential](./index.md) proxies and are priced differently (by number of IPs vs traffic used). Because of this, there are some important things to consider before using residential proxy in your solutions.
 
 ## [](#control-traffic-used-by-automated-browsers) Control traffic used by automated browsers

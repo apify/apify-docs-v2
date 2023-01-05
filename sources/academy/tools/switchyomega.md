@@ -7,6 +7,10 @@ slug: /tools/switchyomega
 
 # [](#what-is-switchyomega) What is SwitchyOmega?
 
+**Discover SwitchyOmega, a Chrome extension to manage and switch between proxies, which is extremely useful when testing proxies for a scraper.**
+
+---
+
 SwitchyOmega is a Chrome extension for managing and switching between proxies which can be added in the [Chrome Webstore](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif).
 
 After adding it to Chrome, you can see the SwitchyOmega icon somewhere amongst all your other Chrome extension icons. Clicking on it will display a menu, where you can select various differnt connection profiles, as well as open the extension's options.

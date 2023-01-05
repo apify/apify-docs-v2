@@ -6,6 +6,10 @@ slug: /actors/development/secret-input
 
 # [](#secret-input)Secret input
 
+**Learn about making some actor input fields secret and encrypted. Ideal for passing passwords, API tokens or login cookies to actors.**
+
+---
+
 The secret input feature allows you to mark some actor input fields as secret, causing them to be encrypted when saving an input for an actor. The input can then be decrypted only inside the actor.
 
 ## Setting an input field as secret

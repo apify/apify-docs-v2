@@ -7,6 +7,10 @@ slug: /web-scraping-for-beginners/data-collection/project-setup
 
 # [](#setting-up) Setting up your project
 
+**Create a new project with NPM and Node.js. Install necessary libraries, and test that everything works before starting the next modules.**
+
+---
+
 When you open a website in a browser, the browser first downloads the page's initial HTML. To do the same thing with Node.js, we will install a program - an NPM module - to help us with it. NPM modules are installed using `npm`, which is another program, automatically installed with Node.js.
 
 > [NPM](https://www.npmjs.com/) has a huge collection of open-source libraries for Node.js. You can (and you should) utilize it to save time and tap into the amazing open-source community around JavaScript and Node.js.

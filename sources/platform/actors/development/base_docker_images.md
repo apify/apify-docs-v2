@@ -6,6 +6,10 @@ slug: /actors/development/base-docker-images
 
 # [](#base-docker-images) Base Docker images
 
+**Learn about the Docker images you can use as your actor's base. Choose the correct base image for your actor's type and requirements.**
+
+---
+
 Apify provides several Docker images that can be used as a base for user actors.
 
 All images come in two versions: the **latest** tag corresponds to the stable version and **beta** to images where we test new features. Use the beta version at your own risk.
