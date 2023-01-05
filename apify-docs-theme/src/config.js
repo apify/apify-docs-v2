@@ -43,6 +43,8 @@ const themeConfig = ({
                     {
                         label: 'Reference',
                         href: `${absoluteUrl}/api/v2/`,
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                     {
                         label: 'Client for JavaScript',

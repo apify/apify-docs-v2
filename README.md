@@ -9,7 +9,6 @@ This is the base repository for next version of https://docs.apify.com.
 - API docs versioning either broken or links are broken
 - API docs navbar versioned link broken
 - rendering changelog in non-TS projects (CLI)
-- shared theme package
 
 ### Content migration
 
