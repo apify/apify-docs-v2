@@ -88,7 +88,7 @@ jobs:
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
                 commit_message: 'chore: publish new version of @apify/docs-theme [skip ci]'
-                file_pattern: 'package-lock.json package.json'
+                file_pattern: 'apify-docs-theme/package*.json'
                 commit_user_name: Apify Bot
                 commit_user_email: my-github-actions-bot@example.org
                 commit_author: Apify Bot <apify@apify.com>
