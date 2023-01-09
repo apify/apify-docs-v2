@@ -225,19 +225,19 @@ aside > div > a > b {
 }
 
 .navbar .icon[href*=github]::before {
-    background-image: url('/static/img/github-brand.svg');
+    background-image: url('/img/github-brand.svg');
 }
 
 html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
-    background-image: url('/static/img/github-brand-dark.svg');
+    background-image: url('/img/github-brand-dark.svg');
 }
 
 .navbar .icon[href*=discord]::before {
-    background-image: url('/static/img/discord-brand.svg');
+    background-image: url('/img/discord-brand.svg');
 }
 
 html[data-theme="dark"] .navbar .navbar__link[href*=discord]:before {
-    background-image: url('/static/img/discord-brand-dark.svg');
+    background-image: url('/img/discord-brand-dark.svg');
 }
 
 .navbar svg[class*=iconExternalLink],
@@ -565,17 +565,17 @@ html .table-of-contents ul {
 }
 
 html[data-theme='dark'] .actionLink::after {
-    background-image: url('/static/img/arrow-right-light.svg');
+    background-image: url('/img/arrow-right-light.svg');
 }
 
 html[data-theme='dark'] .actionLink:hover::after {
-    background-image: url('/static/img/arrow-right-primary-light.svg');
+    background-image: url('/img/arrow-right-primary-light.svg');
 }
 
 .actionLink::after {
     content: " ";
     display: block;
-    background-image: url('/static/img/arrow-right.svg');
+    background-image: url('/img/arrow-right.svg');
     background-size: 15px 15px;
     height: 15px;
     width: 15px;
@@ -584,6 +584,6 @@ html[data-theme='dark'] .actionLink:hover::after {
 }
 
 .actionLink:hover::after {
-    background-image: url('/static/img/arrow-right-primary.svg');
+    background-image: url('/img/arrow-right-primary.svg');
     margin-left: 8px;
 }
