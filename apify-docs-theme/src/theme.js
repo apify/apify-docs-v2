@@ -1,4 +1,7 @@
-function theme(context, options) {
+function theme(
+    context, 
+    options
+) {
     return {
         name: '@apify/docs-theme',
         getThemePath() {
