@@ -178,11 +178,11 @@ for (const source of sources) {
         let slug = await transformFrontmatter(frontmatter, paths, output);
 
         if (slug) {
-            slug = links[path] = `/${source}${slug}`;
-
             if (source === 'platform') {
-                redirects.push(`  rewrite ^/${slug}$ /platform/$1 permanent;`);
+                redirects.push(`  rewrite ^${slug}$ /${source}${slug} permanent;`);
             }
+
+            slug = links[path] = `/${source}${slug}`;
         }
 
         processed.push({ path, output, frontmatter, slug, source, parentFolder });
@@ -210,3 +210,5 @@ for (const { path, output: input, slug, source, parentFolder, frontmatter } of p
 
     await fs.writeFile(path, output.join('\n'));
 }
+
+console.log(redirects.join('\n'));
