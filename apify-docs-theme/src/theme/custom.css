@@ -297,7 +297,7 @@ article .card h2 {
 .menu__link,
 .table-of-contents__link {
     text-overflow: ellipsis;
-    display: inline-block;
+    display: inline-block !important;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -488,7 +488,7 @@ div[class*="searchBox"] {
     display: flex;
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 480px) {
     .navbar__logo {
         display: initial;
     }
@@ -556,7 +556,6 @@ html .table-of-contents ul {
     display: inline-flex;
     -webkit-box-align: center;
     align-items: center;
-    
 }
 
 .actionLink:hover {
