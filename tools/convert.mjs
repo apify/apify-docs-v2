@@ -11,6 +11,7 @@ import { request } from 'undici';
 const rootPath = dirname(fileURLToPath(import.meta.url)) + '/../';
 const sources = ['academy', 'platform'];
 const links = {};
+const redirects = [];
 
 async function transformFrontmatter(lines, paths, output) {
     let line;
@@ -178,6 +179,10 @@ for (const source of sources) {
 
         if (slug) {
             slug = links[path] = `/${source}${slug}`;
+
+            if (source === 'platform') {
+                redirects.push(`  rewrite ^/${slug}$ /platform/$1 permanent;`);
+            }
         }
 
         processed.push({ path, output, frontmatter, slug, source, parentFolder });
