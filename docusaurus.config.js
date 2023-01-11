@@ -29,12 +29,14 @@ module.exports = {
                 //             label: 'Subnav 1',
                 //             href: `${config.absoluteUrl}/platform`,
                 //             target: '_self',
+                //             activeBasePath: 'platform',
                 //             rel: 'dofollow',
                 //         },
                 //         {
                 //             label: 'Subnav 2',
                 //             href: `${config.absoluteUrl}/academy`,
                 //             target: '_self',
+                //             activeBasePath: 'academy',
                 //             rel: 'dofollow',
                 //         },
                 //         {
