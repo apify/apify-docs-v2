@@ -185,7 +185,7 @@ html.plugin-pages .main-wrapper {
 }
 
 aside > div > a {
-    padding-left: 16px;
+    padding-left: 0px;
 }
 
 aside > div > a > b {
@@ -324,7 +324,7 @@ nav.navbar .dropdown__menu {
     display: none;
     width: 11rem;
     height: 3rem;
-    padding: 10px 0;
+    /* padding: 10px 0px; */
 }
 
 .navbar-sidebar .navbar__logo {
@@ -346,6 +346,8 @@ nav.navbar .dropdown__menu {
 
 .main-wrapper a[class*='sidebarLogo'] img {
     height: 3rem;
+    width: 11rem;
+    padding: 10px 0px;
 }
 
 html.plugin-pages h2 {
