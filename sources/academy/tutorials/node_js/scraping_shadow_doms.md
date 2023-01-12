@@ -5,7 +5,7 @@ sidebar_position: 14.8
 slug: /node-js/scraping-shadow-doms
 ---
 
-# [](#scraping-shadow-doms) How to scrape sites with a shadow DOM
+# How to scrape sites with a shadow DOM {#scraping-shadow-doms}
 
 **The shadow DOM enables the isolation of web components, but causes problems for those building web scrapers. Here's an easy workaround.**
 

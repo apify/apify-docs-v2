@@ -5,7 +5,7 @@ sidebar_position: 4.2
 slug: /api-scraping/graphql-scraping
 ---
 
-# [](#graphql-scraping) GraphQL scraping
+# GraphQL scraping {#graphql-scraping}
 
 **Dig into the topic of scraping APIs which use the latest and greatest API technology - GraphQL. GraphQL APIs are very different from regular REST APIs.**
 
@@ -13,7 +13,7 @@ slug: /api-scraping/graphql-scraping
 
 [GraphQL](https://graphql.org/) APIs different from the regular [REST](https://www.redhat.com/en/topics/api/what-is-a-rest-api)ful APIs you're likely familiar with, which means that different methods and tooling are used to scrape them. This course will teach you everything you need to know about GraphQL to scrape an API built with it.
 
-## [](#graphql-endpoints) How do I know if it's a GraphQL API?
+## How do I know if it's a GraphQL API? {#graphql-endpoints}
 
 In this section, we'll be scraping [cheddar.com](https://cheddar.com)'s GraphQL API. When you visit the website and make a search for anything while your **Network Tab** is open, you'll see a request that has been sent to the endpoint **api.cheddar.com/graphql**.
 
@@ -27,7 +27,7 @@ Every GraphQL payload will be a JSON object with a **query** property, and a **v
 
 ![Taking a closer look at the payload](../images/stringified-syntax.webp)
 
-## [](#advantages-disadvantages) Advantages & disadvantages
+## Advantages & disadvantages {#advantages-disadvantages}
 
 We already discussed the advantages and disadvantages of API scraping in general in this course's introduction, but because GraphQL is such a different technology, scraping an API built with it comes with its own pros and cons.
 
@@ -45,6 +45,6 @@ We already discussed the advantages and disadvantages of API scraping in general
 
 2. GraphQL [introspection](./introspection.md) is disabled on many sites, which makes it more difficult to reap the full benefits of GraphQL.
 
-## [](#next) Next up
+## Next up {#next}
 
 This course section's [first lesson](./modifying_variables.md) will be discussing how to customize GraphQL queries without ever having to write any GraphQL language.

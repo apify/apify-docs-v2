@@ -13,7 +13,7 @@ slug: /puppeteer-playwright/common-use-cases/submitting-a-form-with-a-file-attac
 
 We can use Puppeteer or Playwright to simulate submitting the same way a human-operated browser would.
 
-## [](#downloading-the-file) Downloading the file
+## Downloading the file {#downloading-the-file}
 
 The first thing necessary is to download the file, which can be done using the `request-promise` module. We will also be using the `fs/promises` module to save it to the disk, so make sure they are included.
 
@@ -45,7 +45,7 @@ To use the file in Puppeteer/Playwright, we need to save it to the disk. This ca
 await fs.writeFile('./file.pdf', fileData);
 ```
 
-## [](#submitting-the-form) Submitting the form
+## Submitting the form {#submitting-the-form}
 
 The first step necessary is to open the form page in Puppeteer. This can be done as follows:
 

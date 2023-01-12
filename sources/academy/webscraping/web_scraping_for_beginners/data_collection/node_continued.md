@@ -5,7 +5,7 @@ sidebar_position: 7
 slug: /web-scraping-for-beginners/data-collection/node-continued
 ---
 
-# [](#finish-scraper) Finish Node.js scraper
+# Finish Node.js scraper {#finish-scraper}
 
 **Continue learning how to create a web scraper with Node.js and Cheerio. Learn how to parse HTML and print the results of the data your scraper has collected.**
 
@@ -13,7 +13,7 @@ slug: /web-scraping-for-beginners/data-collection/node-continued
 
 In the first part of the Node.js tutorial we downloaded the HTML of our [tutorial e-commerce site](https://demo-webstore.apify.org/search/on-sale) and parsed it with Cheerio. Now, we will replicate the collection logic from the [Collecting Data with DevTools](./using_devtools.md) lessons and finish our scraper.
 
-## [](#querying-with-cheerio) Querying data with Cheerio
+## Querying data with Cheerio {#querying-with-cheerio}
 
 As a reminder, the data we need for each product on the page is available in each `a[href*="/product/"]` element.
 
@@ -47,7 +47,7 @@ for (const product of products) {
 
 After you run this script, you should see data of all the 32 products printed in your terminal. Don't forget about the `const element = $(product);` line. Without wrapping each `product` with `$()`, we wouldn't be able to call the `.text()` function on it.
 
-## [](#collecting-data) Collecting final data
+## Collecting final data {#collecting-data}
 
 Now, we just need to repeat the process from the DevTools modules and add individual data point collection to the loop. From those lessons, we know that each of our product container `<a>` tags includes an `<h3>` element including the title, and a `<div>` price element matching the selector `div[class*="price"]`.
 
@@ -126,6 +126,6 @@ console.log(results);
 
 If you were able to get here, run the code, get results and also understand everything, you can give yourself a pat on the back and congratulate yourself on completing the **Basics of data collection** section of the Web scraping for beginners course. Great job! 👏🎉
 
-# [](#next) Next up
+# Next up {#next}
 
 While we were able to collect the data, it's not very useful to have those printed to the console. In the [next, bonus lesson](./save_to_csv.md), we will learn how to convert the data to a CSV and save it to a file.

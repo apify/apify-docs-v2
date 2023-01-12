@@ -5,7 +5,7 @@ sidebar_position: 8
 slug: /web-scraping-for-beginners/data-collection/save-to-csv
 ---
 
-# [](#saving-to-csv) Saving results to CSV
+# Saving results to CSV {#saving-to-csv}
 
 **Learn how to save the results of your scraper's collected data to a CSV file that can be opened in Excel, Google Sheets, or any other spreadsheets program.**
 
@@ -13,7 +13,7 @@ slug: /web-scraping-for-beginners/data-collection/save-to-csv
 
 In the last lesson, we were able collect data about all the on-sale products from [our tutorial **Fakestore** website](https://demo-webstore.apify.org/). That's great. But we ended up with results printed to the terminal, which is not very useful for further processing. In this lesson, we'll learn how to save that data into a CSV file that you can then open in Excel or Google Sheets.
 
-## [](#converting-to-csv) Converting to CSV
+## Converting to CSV {#converting-to-csv}
 
 It might look like a big programming challenge to transform a JavaScript object into a CSV, but thanks to NPM, this is going to be a walk in the park. After googling **json to csv npm** we found that there's a library called [`json2csv`](https://www.npmjs.com/package/json2csv) that can convert a JavaScript object to CSV format with a single function call. _Perfect!_
 
@@ -67,7 +67,7 @@ And here's our newly created CSV printed to the console after running the script
 
 ![Printing CSV data to terminal](./images/terminal-csv.webp)
 
-## [](#writing-to-file) Writing the CSV to a file
+## Writing the CSV to a file {#writing-to-file}
 
 The final task that remains is to save our CSV formatted data to a file on our disk, so we can open it or send it to someone. For this, we don't need any extra NPM packages because functions for saving files are included in Node.js.
 
@@ -122,6 +122,6 @@ Finally, after running it again, we will find the **products.csv** file in our p
 
 This marks the end of the **Basics of data collection** section of Web scraping for beginners. If you enjoyed the course, give us a thumbs up down below and if you're eager to learn more...
 
-## [](#next) Next up
+## Next up {#next}
 
 Next up are the [**Basics of crawling**](../crawling/index.md), where we will learn how to move between web pages and scrape data from all of them. We will build a scraper that first collects all the products on [Fakestore](https://demo-webstore.apify.org/), and then crawls each of them to scrape the data for each product separately.

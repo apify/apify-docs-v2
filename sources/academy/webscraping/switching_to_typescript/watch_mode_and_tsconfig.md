@@ -5,7 +5,7 @@ sidebar_position: 7.7
 slug: /switching-to-typescript/watch-mode-and-tsconfig
 ---
 
-# [](#watch-mode-and-tsconfig) Watch mode and tsconfig.json
+# Watch mode and tsconfig.json {#watch-mode-and-tsconfig}
 
 **Learn how to fine-tune TypeScript for an entire project's needs and efficiently compile numerous TS files at a single time (automagically).**
 
@@ -15,11 +15,11 @@ So far, each time we've made changes to our TypeScript code, we've had to run th
 
 > Test out watch mode on a single file by using the `--watch` (or `-w` for short) flag like so: `tsc FILE_NAME --watch`.
 
-## [](#tsconfig) tsconfig.json
+## tsconfig.json {#tsconfig}
 
 If your project has more than one file, it's a necessity to have a `tsconfig.json` file in the root of your project. This is a file which allows you to configure TypeScript to your liking, as well as utilize a "general" watch mode that watches all TS files and recompiles when changes are made.
 
-### [](#creating-the-file) Creating the file
+### Creating the file {#creating-the-file}
 
 In the next lesson, we'll be learning how to use interfaces in combination with type casting and a few other concepts from the previous lessons by building a small project. Let's create a new directory for this project right now and call it **my-first-typescript-project**. Within the directory, we'll first initialize the project with this command:
 
@@ -139,11 +139,11 @@ Notice that a new **tsconfig.json** file has been automatically created. When yo
 }
 ```
 
-### [](#bare-basic-configurations) Bare basic configurations
+### Bare basic configurations {#bare-basic-configurations}
 
 As you can see, there are a whole lot of options, which is quite overwhelming. Don't worry, we'll be walking you through all of the important ones, so for now let's delete all of the contents of this **tsconfig.json** and start from scratch.
 
-#### [](#excluding-files-and-folders) Excluding files and folders
+#### Excluding files and folders {#excluding-files-and-folders}
 
 It is possible to tell TypeScript which files to compile, and which ones to ignore. The **exclude** option in **tsconfig.json** holds an array of file/folder names/paths that should **not** be watched.
 
@@ -156,7 +156,7 @@ It is possible to tell TypeScript which files to compile, and which ones to igno
 
 In our case, we don't want to compile any TypeScript code that could possibly be living in the **node_modules** folder that will appear when we start installing dependencies, so we've added it to the array.
 
-#### [](#telling-typescript-what-to-compile) Telling TypeScript which files to compile
+#### Telling TypeScript which files to compile {#telling-typescript-what-to-compile}
 
 Along with the **exclude** property is the **include** property, which holds an array of files/paths to check when compiling. Anything not included within the array will be ignored.
 
@@ -170,7 +170,7 @@ In the next project, we are going to follow a very common pattern with TypeScrip
 }
 ```
 
-#### [](#specify-where-to-put-compiled-files) Specify where to put compiled files
+#### Specify where to put compiled files {#specify-where-to-put-compiled-files}
 
 It's common practice in TypeScript projects to keep **.ts** files separate from their respective compiled **.js** files. Usually, the compiled files are placed in a folder named **dist** or **build**. Let's use **dist** for our project.
 
@@ -190,11 +190,11 @@ This time, you don't have to manually create a folder named **dist**. During com
 
 > We also recommend learning about [**rootDir**](https://www.typescriptlang.org/tsconfig/#rootDir).
 
-### [](#important-basic-configurations) Important basic configurations
+### Important basic configurations {#important-basic-configurations}
 
 Other than telling TypeScript **what** files it should (and should not) compile, we also need to tell it **how** they should be compiled.
 
-#### [](#setting-the-target) Setting the target
+#### Setting the target {#setting-the-target}
 
 **target** within **compilerOptions** tells TypeScript which JavaScript version you'd like to compile your code into. This allows for the ability to, for example, use ES7 features during development time, but support environments that only work with the ES3 version of JavaScript. We'll use **esnext**.
 
@@ -209,7 +209,7 @@ Other than telling TypeScript **what** files it should (and should not) compile,
 }
 ```
 
-#### [](#setting-libs) Setting libs
+#### Setting libs {#setting-libs}
 
 By default TypeScript will allow us to use things like `document.querySelector()` or `window.reload()` even though we're writing Node.js code where those global objects don't exist. This is because TypeScript automatically has these libraries enabled. In order to prevent this, we'll get more specific about the **lib**s we'd like to use.
 
@@ -227,7 +227,7 @@ By default TypeScript will allow us to use things like `document.querySelector()
 
 > Learn more about the **lib** configuration option [in the TypeScript documentation](https://www.typescriptlang.org/tsconfig#lib).
 
-#### [](#removing-comments) Removing comments
+#### Removing comments {#removing-comments}
 
 This one is pretty straightforward. **removeComments** allows you to keep the comments which are useful in the code during development out of your compiled files.
 
@@ -244,7 +244,7 @@ This one is pretty straightforward. **removeComments** allows you to keep the co
 }
 ```
 
-#### [](#dont-compile-if-errors) Refusing to compile if there are any errors
+#### Refusing to compile if there are any errors {#dont-compile-if-errors}
 
 In most statically typed programming languages, the compiler will refuse to produce an output until all errors have been fixed; however, TypeScript by default will still compile even if there are errors. To enable the more strict functionality that other languages support, set **noEmitOnError** to **true**.
 
@@ -262,7 +262,7 @@ In most statically typed programming languages, the compiler will refuse to prod
 }
 ```
 
-#### [](#strict-type-checking) Adding strict type checking
+#### Adding strict type checking {#strict-type-checking}
 
 TypeScript has [multiple options](https://learntypescript.dev/11/l6-strictness) for strict type checking that can be configured. To enable all of them, set **strict** to **true** (this is recommended).
 
@@ -281,7 +281,7 @@ TypeScript has [multiple options](https://learntypescript.dev/11/l6-strictness) 
 }
 ```
 
-#### [](#module-resolution) Setting module resolution & type
+#### Setting module resolution & type {#module-resolution}
 
 By default, TypeScript doesn't know how to handle or recognize modules imported into our projects. We'll tell the compiler it's a Node.js project with the **moduleResolution** option set to **node**, and that we are using CommonJS for the module type.
 
@@ -303,7 +303,7 @@ By default, TypeScript doesn't know how to handle or recognize modules imported 
 }
 ```
 
-## [](#watch-mode) Watch mode
+## Watch mode {#watch-mode}
 
 Now that you've finished configuring the **tsconfig.json** file, go ahead and create an **index.ts** file in the **src** folder. Because we've configured this project with TypeScript, we can just run this command:
 
@@ -314,6 +314,6 @@ tsc -w
 
 And our files in **src** will automatically compile into a folder named **dist**, and one that change will be recompiled.
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that we're all set up, we can move forward and start building our mini-project. But first, [let's learn](./interfaces.md) about the `interface` keyword!

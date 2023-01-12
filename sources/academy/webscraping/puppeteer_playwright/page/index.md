@@ -5,7 +5,7 @@ sidebar_position: 2.2
 slug: /puppeteer-playwright/page
 ---
 
-# [](#opening-a-page) Opening a page
+# Opening a page {#opening-a-page}
 
 **Learn how to create and open a Page with a Browser, and how to use it to visit and programmatically interact with a website.**
 
@@ -75,6 +75,6 @@ await browser.close();
 
 > If you haven't already, go ahead and run this code to see what happens.
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that we know how to open up a page, [let's learn](./interacting_with_a_page.md) how to automate page interaction, such as clicking, typing, and pressing keys.

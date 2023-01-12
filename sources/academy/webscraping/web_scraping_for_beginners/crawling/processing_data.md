@@ -5,7 +5,7 @@ sidebar_position: 9
 slug: /web-scraping-for-beginners/crawling/processing-data
 ---
 
-# [](#processing-data) Processing data
+# Processing data {#processing-data}
 
 **Learn how to process the data you scraped using the Crawlee library and how to convert JSON files to Excel using the Apify API.**
 
@@ -18,7 +18,7 @@ From the previous lessons, we know two things:
 
 But when we look inside the folder, we see that there's A LOT of files, and we don't want to work with those manually. Fortunately, we can use the dataset itself to process the data.
 
-## [](#loading-data) Loading dataset data
+## Loading dataset data {#loading-data}
 
 To access the default dataset, we can use the  [`Dataset`](https://crawlee.dev/api/types/interface/Dataset) class exported from `crawlee`. We can then easily work with all the items in the dataset. Let's put the processing into a separate file in our project called **dataset.js**.
 
@@ -40,7 +40,7 @@ console.log(items.length);
 
 When we ran this code, having the results from our previous lessons in the **storage** folder, it printed **32** for us. Your number may differ.
 
-## [](#filtering-data) Filtering data
+## Filtering data {#filtering-data}
 
 Let's say we wanted to print the title for each product that is more expensive than $50. We'll also keep track of the products by price, and find out the most expensive one. There are no specific functions to do that, so we'll use plain JavaScript.
 
@@ -69,17 +69,17 @@ console.table(mostExpensive);
 
 In our case, the most expensive product was the Macbook Pro. Surprising? Heh, not really 😅
 
-## [](#converting-to-excel) Converting the dataset to Excel
+## Converting the dataset to Excel {#converting-to-excel}
 
 We promised that you won't need an Apify account for anything in this course, and it's true. You can use the skills learned in the [Save to CSV lesson](../data_collection/save_to_csv.md) to save the dataset to a CSV. Just use the loading code from above, plug it in there and then open the CSV in Excel. However, we really want to show you this neat trick. It won't cost you anything, and it's a cool and fast way to convert datasets to any format.
 
-### [](#get-apify-token) Getting an Apify token
+### Getting an Apify token {#get-apify-token}
 
 First, you need a free Apify account. To get one, head to the [sign-up form](https://console.apify.com/sign-up?asrc=developers_portal) and complete the process. Once you have created the account and verified your email, go to the [integration settings](https://console.apify.com/account#/integrations), where you can copy your personal API token. This will give you access to the Apify API.
 
 ![copy personal API token in Apify console](./images/api-token.webp)
 
-### [](#upload-dataset) Uploading your dataset to Apify
+### Uploading your dataset to Apify {#upload-dataset}
 
 Now that you have a token, you can upload your local dataset to the Apify platform. It's super easy with the [`apify-client`](https://www.npmjs.com/package/apify-client) NPM package. Let's reuse some of our earlier code and add more.
 
@@ -105,7 +105,7 @@ console.log('Uploading dataset items to the newly created dataset');
 await datasetClient.pushItems(items);
 ```
 
-### [](#download-to-excel) Download and save the Excel file
+### Download and save the Excel file {#download-to-excel}
 
 When we have the dataset uploaded on the Apify platform, we can easily download it in any format including JSON, CSV, Excel and others.
 
@@ -145,6 +145,6 @@ writeFileSync('dataset.xlsx', xlsx);
 
 It doesn't even have to be a dataset created by Crawlee. You can use this method to convert any JSON array to a CSV, XLSX, and so on.
 
-## [](#next) Next up
+## Next up {#next}
 
 And this is it for the [**Basics of crawling**](./index.md)!

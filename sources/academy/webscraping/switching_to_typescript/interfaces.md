@@ -5,7 +5,7 @@ sidebar_position: 7.8
 slug: /switching-to-typescript/interfaces
 ---
 
-# [](#interfaces) Interfaces
+# Interfaces {#interfaces}
 
 **Understand how to declare object types with the "interface" keyword, and the subtle difference interfaces have with regular type aliases.**
 
@@ -68,6 +68,6 @@ Overall, the differences between interfaces and type aliases are quite subtle. I
 
 > To learn more about the differences between `interface` and `type`, check out [this article](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c).
 
-## [](#next) Next up
+## Next up {#next}
 
 It's finally time to [build our project](./mini_project.md)! The project we'll be building in the next lesson will be a small API scraper utilizes many of the TypeScript features learned in the course.

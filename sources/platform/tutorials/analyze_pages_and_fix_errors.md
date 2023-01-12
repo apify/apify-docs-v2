@@ -15,7 +15,7 @@ Debugging is essential in programming. Even if you would not call yourself a pro
 
 This article covers the absolute basics. It discusses the most common problems and the simplest tools for analyzing the issue.
 
-## [](#possible-problems) Possible problems
+## Possible problems {#possible-problems}
 
 It is often tricky to see the full scope of what can go wrong. We assume once the code is set up correctly, it will keep working. Unfortunately, that is rarely true in the realm of web scraping and automation.
 
@@ -41,13 +41,13 @@ Here are the most common reasons your working solution may break.
 
 This is a long list, and it is by no means complete. However, if you use the right tools and remember the most common causes, you can find the problem quickly.
 
-## [](#analysis) Analysis
+## Analysis {#analysis}
 
 [Web scraping](../web_scraping_101/index.md) are very specific types of programming. It is not possible to rely on specialized debugging tools, since the code does not output the same results every time.
 
 Many issues are edge cases, which occur in just one of a thousand pages or are time-dependent. Because of this, you cannot rely only on [determinism](https://en.wikipedia.org/wiki/Deterministic_algorithm).
 
-### [](#logging) Logging
+### Logging {#logging}
 
 Logging is an essential tool for any programmer. When used correctly, they help you capture a surprising amount of information.
 
@@ -65,7 +65,7 @@ General rules for logging:
 
 - Append the current page's URL to each log. This lets you immediately open that page and review it.
 
-#### [](#example-of-a-structured-log) Example of a structured log
+#### Example of a structured log {#example-of-a-structured-log}
 
 ```log
 [CATEGORY]: Products: 20, Unique products: 4, Next page: true --- https://apify.com/store
@@ -73,7 +73,7 @@ General rules for logging:
 
 The log begins with the **page type**. Usually, we use labels such as **[CATEGORY]** and **[DETAIL]**. Then, we log important numbers and other information. Finally, we add the page's URL, so we can check if the log is correct.
 
-#### [](#errors) Errors
+#### Errors {#errors}
 
 Errors require a different approach because, if your code crashes, your usual logs will not be called. Instead, exception handlers will print the error, but these are usually ugly messages with a [stack trace](https://en.wikipedia.org/wiki/Stack_trace) that only Apify experts will understand.
 
@@ -92,7 +92,7 @@ try {
 
 Read more information about logging and error handling in our public wiki about [developer best practices](https://gitlab.com/apify-public/wiki/-/wikis/writing-actors/how-to-write-and-not-write-an-actor).
 
-### [](#saving-snapshots) Saving snapshots
+### Saving snapshots {#saving-snapshots}
 
 By snapshots, we mean **screenshots** if you use a [browser + Puppeteer/Playwright](https://sdk.apify.com/docs/examples/capture-screenshot) and **HTML** saved into a [key-value store](../storage/key_value_store.md) that you can easily display in your browser. Snapshots are useful throughout your code but especially important in error handling.
 
@@ -108,7 +108,7 @@ Snapshots can tell you if:
 
 - The page was redirected – the content is different.
 
-#### [](#how-to-save-a-snapshot) How to save a snapshot
+#### How to save a snapshot {#how-to-save-a-snapshot}
 
 In Apify scrapers (**Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)), **Cheerio Scraper** ([apify/cheerio-scraper](https://apify.com/apify/cheerio-scraper)), **Playwright Scraper** ([apify/playwright-scraper](https://apify.com/apify/playwright-scraper))) and **Puppeteer Scraper** ([apify/puppeteer-scraper](https://apify.com/apify/puppeteer-scraper))), you can use their built-in `context.saveSnapshot()` function. Once called, it saves a screenshot and HTML into the run's **key-value store**.
 
@@ -127,7 +127,7 @@ await Actor.setValue('SNAPSHOT', html, { contentType: 'text/html' });
 await Actor.exit();
 ```
 
-#### [](#when-to-save-snapshots) When to save snapshots
+#### When to save snapshots {#when-to-save-snapshots}
 
 The most common approach is to save on error. We can enhance our previous try/catch block like this:
 
@@ -165,7 +165,7 @@ To make the error snapshot descriptive, we name it `ERROR-LOGIN`. We add a rando
 
 - Do not overdo the snapshots. Once you get out of the testing phase, limit them to critical places. Saving snapshots uses resources.
 
-### [](#error-reporting) Error reporting
+### Error reporting {#error-reporting}
 
 Logging and snapshotting are great tools but once you reach a certain run size, it may be hard to read through them all. For a large project, it is handy to create a more sophisticated reporting system. For example, let's just look at simple **dataset** reporting.
 

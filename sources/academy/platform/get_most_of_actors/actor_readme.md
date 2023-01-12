@@ -82,6 +82,6 @@ If you want some general tips on how to make GitHub readmes that stand out, chec
 
 [How to Create a Beautiful README for Your GitHub Profile](https://yushi95.medium.com/how-to-create-a-beautiful-readme-for-your-github-profile-36957caa711c)
 
-## [](#next) Next up
+## Next up {#next}
 
 If you followed all the tips described above, your actor README should be good to go! In the [next lesson](./seo_and_promotion.md)! we will dive deeper into how you can improve your README's SEO and promote your actor to ensure it reaches as many potential users as possible!

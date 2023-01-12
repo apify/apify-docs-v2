@@ -5,7 +5,7 @@ sidebar_position: 7.9
 slug: /switching-to-typescript/mini-project
 ---
 
-# [](#mini-project) Mini-project
+# Mini-project {#mini-project}
 
 **Build an entire project in TypeScript using concepts learned in this course. Also, learn about two more advanced TypeScript features.**
 
@@ -13,7 +13,7 @@ slug: /switching-to-typescript/mini-project
 
 You're here! If you made it this far, that means that you've familiarized yourself with all the core concepts in TypeScript (and some of the more advanced ones too). We're going to scrape product data from [this API endpoint](https://dummyjson.com/products), then manipulate it based on user input.
 
-## [](#project-overview) Project overview
+## Project overview {#project-overview}
 
 Here's a rundown of what our project should be able to do:
 
@@ -27,11 +27,11 @@ We'll be using a single external package called [**Axios**](https://www.npmjs.co
 npm i axios
 ```
 
-## [](#writing-types) Writing types
+## Writing types {#writing-types}
 
 Especially when writing a scraper, it's extremely helpful to write out your data types before even writing a single line of logic. When you understand the data types your program is going to be working with, it's much easier to think how **how** it will work with them.
 
-### [](#defining-object-types-for-api-responses) Defining object types for API responses
+### Defining object types for API responses {#defining-object-types-for-api-responses}
 
 Our Dummy JSON API returns an array of products that look like this:
 
@@ -89,7 +89,7 @@ export interface ResponseData {
 
 > Notice that we are `export`ing these so that they can be used back in **index.ts** later on.
 
-### [](#defining-output-types) Defining output types
+### Defining output types {#defining-output-types}
 
 Luckily for us, we'll be outputting an array of `Product`s, for which we've already written a type. However, the user will have an option to modify each product by removing the **images** property from each one. So, we need to create a new `ModifiedProduct` that has all the same properties as `Product` **EXCEPT** for **images**.
 
@@ -104,7 +104,7 @@ export type ModifiedProduct = Omit<Product, 'images'>;
 
 This type takes in some arguments (a [generic](https://www.typescriptlang.org/docs/handbook/2/generics.html), as they are called in TS), notated with `<>`. The first one is the type to remove the property from, in our case it's `Product`, and the second is the property to remove.
 
-### [](#defining-input-types) Defining input types
+### Defining input types {#defining-input-types}
 
 The user of our scraper will have to provide some input. First, we'll use an enum to define the types of sorting we want to support:
 
@@ -132,7 +132,7 @@ export interface UserInput<RemoveImages extends boolean = boolean> {
 
 But hold on a minute, we didn't even learn about generics in this course!
 
-#### [](#generics) Quick chat about generics
+#### Quick chat about generics {#generics}
 
 "Generics" is just a fancy term for arguments that can be passed into a type. Just like regular JavaScript function arguments, they can be passed in and anything can be done with them. Let's break it down:
 
@@ -153,7 +153,7 @@ Using this generic allows us to go a step further in how specific we are being b
 
 > We recommend reading up on generics [in the TypeScript documentation](https://www.typescriptlang.org/docs/handbook/2/generics.html) to fully understand this slightly more advanced concept.
 
-### [](#final-types) Final types.ts file
+### Final types.ts file {#final-types}
 
 ```ts
 // types.ts
@@ -189,7 +189,7 @@ export interface UserInput<RemoveImages extends boolean = boolean> {
 }
 ```
 
-## [](#fetching-the-data) Fetching the data
+## Fetching the data {#fetching-the-data}
 
 First, let's go ahead and import **axios** and write our fetching function.
 
@@ -228,7 +228,7 @@ const fetchData = async () => {
 
 Now, the return type is `Promise<ResponseData>` - much better! Because of this small change, we'll receive full TypeScript support (and IDE autocomplete) on the return value of `fetchData`.
 
-## [](#sorting-the-data) Sorting the data
+## Sorting the data {#sorting-the-data}
 
 Now, we'll write a function that will sort an array of products.
 
@@ -267,7 +267,7 @@ const sortData = (products: Product[], order: SortOrder) => {
 };
 ```
 
-## [](#putting-the-pieces-together) Putting the pieces together
+## Putting the pieces together {#putting-the-pieces-together}
 
 Because of the abstractions we've made with the `fetchData` and `sortData` functions, we can now write another small function called `scrape` which will do the following:
 
@@ -309,7 +309,7 @@ async function scrape(input: UserInput): Promise<Product[] | ModifiedProduct[]> 
 }
 ```
 
-## [](#running-the-scraper) Running the scraper
+## Running the scraper {#running-the-scraper}
 
 Finally, we'll create a new function called `main` which will initialize the input, call the `scrape` function, and return the result.
 
@@ -332,7 +332,7 @@ And that's it! Well, not quite. We are unable to access the **images** property 
 
 This is because we haven't been specific enough. The `scrape` function can return two different data types (either `Product[]` or `ModifiedProduct[]`), and because `ModifiedProduct` doesn't have an **images** property, TypeScript freaks out and says that you shouldn't be trying to access it. This can be fixed with **overloads**.
 
-## [](#lets-talk-about-overloads) Let's talk about overloads
+## Let's talk about overloads {#lets-talk-about-overloads}
 
 [Overloads](https://www.tutorialsteacher.com/typescript/function-overloading) come in handy when you've written a function that returns different things based on what types of arguments were passed into it.
 
@@ -370,7 +370,7 @@ Now, we can access `result[0].images` on the return value of `scrape` if **remov
 
 ![No more error](./images/no-more-error.webp)
 
-## [](#final-code) Final code
+## Final code {#final-code}
 
 ```ts
 // index.ts
@@ -459,7 +459,7 @@ export interface UserInput<RemoveImages extends boolean = boolean> {
 }
 ```
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 Nice work! You've reached the end of our **Switching to TypeScript** course, which means that you're ready to start building your own projects in TypeScript. We haven't covered every single TypeScript feature in this course, but you have learned about and used all of the language's most important features.
 

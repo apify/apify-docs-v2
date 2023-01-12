@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /puppeteer-playwright/common-use-cases/paginating-through-results
 ---
 
-# [](#paginating-through-results) Paginating through results
+# Paginating through results {#paginating-through-results}
 
 **Learn how to paginate through results on websites that use either page number-based pagination or dynamic lazy-loading pagination.**
 
@@ -17,7 +17,7 @@ If you're trying to [collect data](../executing_scripts/collecting_data.md) on a
 
 Attempting to scrape thousands to tens of thousands of results using a headless browser on a website that only shows 30 results at a time might be daunting at first, but be rest assured that by the end of this lesson you'll feel confident when faced with this use case.
 
-## [](#page-number-based-pagination) Page number-based pagination
+## Page number-based pagination {#page-number-based-pagination}
 
 At the time of writing, Facebook has [115 repositories on Github](https://github.com/orgs/facebook/repositories). By default, Github lists repositories in descending order based on when they were last updated (the most recently updated repos are at the top of the list).
 
@@ -37,7 +37,7 @@ const BASE_URL = 'https://github.com';
 const REPOSITORIES_URL = `${BASE_URL}/orgs/facebook/repositories`;
 ```
 
-### [](#finding-the-last-page) Finding the last page
+### Finding the last page {#finding-the-last-page}
 
 What we want to do now is grab the last page number, so that we know exactly how many requests we need to send in order to paginate through all of the repositories. Luckily, this information is available right on the page here:
 
@@ -187,7 +187,7 @@ await browser.close();
 </marked-tab>
 ```
 
-### [](#making-a-request-for-each-results-page) Making a request for each results page
+### Making a request for each results page {#making-a-request-for-each-results-page}
 
 Cool, so now we have all the tools we need to write concise logic that will be run for every single page. First, we'll create an array of numbers from 0-4:
 
@@ -233,7 +233,7 @@ console.log(repositories.length);
 
 > **IMPORTANT!** Usually, within the map function's callback you'd want to add the requests to a request queue, especially when paginating through hundreds (or even thousands) of pages. But since we know that we have 4 pages and only 3 left to go through, it is totally safe to use `Promise.all()` for this specific use-case.
 
-### [](#final-pagination-code) Final code
+### Final code {#final-pagination-code}
 
 After all is said and done, here's what our final code looks like:
 
@@ -363,7 +363,7 @@ If we remember correctly, Facebook has 115 Github repositories (at the time of w
 115
 ```
 
-## [](#lazy-loading-pagination) Lazy-loading pagination
+## Lazy-loading pagination {#lazy-loading-pagination}
 
 Though page number-based pagination is quite straightforward to automate the pagination process with, and though it is still an extremely common implementation, [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) is becoming extremely popular on the modern web, which makes it an important and relevant topic to discuss.
 
@@ -406,7 +406,7 @@ await browser.close();
 </marked-tab>
 ```
 
-### [](#auto-scrolling) Auto scrolling
+### Auto scrolling {#auto-scrolling}
 
 Now, what we'll do is grab the height in pixels of a result item to have somewhat of a reference to how much we should scroll each time, as well as create a variable for keeping track of how many pixels have been scrolled.
 
@@ -490,7 +490,7 @@ Now, the `while` loop will exit out if we've reached the bottom of the page.
 
 > Generally, you'd want to create a utility function that handles this scrolling logic instead of putting all of the code directly into the while loop.
 
-### [](#collecting-data) Collecting data
+### Collecting data {#collecting-data}
 
 Within the loop, we can grab hold of the total number of items on the page. To avoid collecting and pushing duplicate items to the **products** array, we can use the `.slice()` method to cut out the items we've already scraped.
 
@@ -512,7 +512,7 @@ const newItems = items.map((item) => {
 products.push(...newItems);
 ```
 
-### [](#final-lazy-loading-code) Final code
+### Final code {#final-lazy-loading-code}
 
 With everything completed, this is what we're left with:
 
@@ -629,10 +629,10 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#quick-note) Quick note
+## Quick note {#quick-note}
 
 The examples shown in this lesson are not the only ways to paginate through websites. They are here to serve as solid examples, but don't view them as the end-all be-all of scraping paginated websites. The methods you use and algorithms you write might differ to various degrees based on what pages you're scraping and how your specific target website implemented pagination.
 
-## [](#next) Next up
+## Next up {#next}
 
 We're actively working in expanding this section of the course, so stay tuned!

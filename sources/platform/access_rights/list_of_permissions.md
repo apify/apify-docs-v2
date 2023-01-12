@@ -13,11 +13,11 @@ slug: /access-rights/list-of-permissions
 
 This document contains all the access options that can be granted to resources on the Apify platform.
 
-## [](#actors) Actors
+## Actors {#actors}
 
 Click [here](../actors/index.md) to learn about Apify actors.
 
-### [](#actor) Actor
+### Actor {#actor}
 
 | Permission           | Description                                  |
 |----------------------|----------------------------------------------|
@@ -28,7 +28,7 @@ Click [here](../actors/index.md) to learn about Apify actors.
 | View runs            | View a list of actor runs and their details. |
 | Manage access rights | Manage actor access rights.                  |
 
-### [](#actor-task) Actor task
+### Actor task {#actor-task}
 
 | Permission           | Description                                       |
 |----------------------|---------------------------------------------------|
@@ -40,11 +40,11 @@ Click [here](../actors/index.md) to learn about Apify actors.
 
 To learn about actor tasks, see the [documentation](../actors/tasks.md).
 
-## [](#storage) Storage
+## Storage {#storage}
 
 For more information about Storage, see its [documentation](../storage/index.md).
 
-### [](#dataset) Dataset
+### Dataset {#dataset}
 
 | Permission           | Description                                |
 |----------------------|--------------------------------------------|
@@ -55,7 +55,7 @@ For more information about Storage, see its [documentation](../storage/index.md)
 
 To learn about dataset storage, see its [documentation](../storage/dataset.md).
 
-### [](#key-value-store) Key-value-store
+### Key-value-store {#key-value-store}
 
 | Permission           | Description                                                                |
 |----------------------|----------------------------------------------------------------------------|
@@ -66,7 +66,7 @@ To learn about dataset storage, see its [documentation](../storage/dataset.md).
 
 To learn about key-value stores, see the [documentation](../storage/key_value_store.md).
 
-### [](#request-queue) Request queue
+### Request queue {#request-queue}
 
 | Permission           | Description                                                              |
 |----------------------|--------------------------------------------------------------------------|
@@ -77,7 +77,7 @@ To learn about key-value stores, see the [documentation](../storage/key_value_st
 
 To learn about request queue storage, see the [documentation](../storage/request_queue.md).
 
-## [](#schedules) Schedules
+## Schedules {#schedules}
 
 | Permission | Description                                        |
 |------------|----------------------------------------------------|
@@ -87,7 +87,7 @@ To learn about request queue storage, see the [documentation](../storage/request
 
 To learn about schedules, see the [documentation](../schedules.md).
 
-## [](#proxy) Proxy
+## Proxy {#proxy}
 
 | Permission | Description               |
 |------------|---------------------------|
@@ -95,7 +95,7 @@ To learn about schedules, see the [documentation](../schedules.md).
 
 To learn about Apify Proxy, see its [documentation](../proxy/index.md).
 
-## [](#user-permissions) User permissions
+## User permissions {#user-permissions}
 
 Permissions that can be granted to members of organizations. To learn about the organization account, see its [documentation](./organization_account/index.md).
 
@@ -109,7 +109,7 @@ Permissions that can be granted to members of organizations. To learn about the 
 | View invoices       | See the account's invoices.                                           |
 | Manage organization | Change the organization's settings.                                   |
 
-## [](#custom-solutions) Custom Solutions
+## Custom Solutions {#custom-solutions}
 
 | Permission       | Description                       |
 |------------------|-----------------------------------|

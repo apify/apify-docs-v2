@@ -6,7 +6,7 @@ category: web scraping & automation
 slug: /anti-scraping
 ---
 
-# [](#anti-scraping-protections) Anti-scraping protections
+# Anti-scraping protections {#anti-scraping-protections}
 
 **Understand the various anti-scraping measures different sites use to prevent bots from accessing them, and how to appear more human to fix these issues.**
 
@@ -18,7 +18,7 @@ This section covers the essentials of mitigating anti-scraping protections, such
 
 In development, it is crucial to check and adjust the configurations related to our next lessons' topics, as simply doing this can fix blocking issues on the majority of websites.
 
-## [](#why-block-bots) First of all, why do websites want to block bots?
+## First of all, why do websites want to block bots? {#why-block-bots}
 
 What's up with that?! There are various reasons why a website might want to block bots from accessing it. Here are a few of the main ones:
 
@@ -30,7 +30,7 @@ Unfortunately for these websites, they have to make compromises and tradeoffs. W
 
 > Going into this topic, it's important to understand that there is no one silver bullet solution to bypassing protections against bots. Even if two websites are using Cloudflare (for example), one of them might be significantly more difficult to scrape due to harsher CloudFlare configurations.
 
-## [](#the-principles) The principles of anti-scraping protections
+## The principles of anti-scraping protections {#the-principles}
 
 Anti-scraping protections can work on many different layers and use a large amount of bot-identification techniques. There are two main ways a bot can be detected, which follow two different types of web scraping:
 
@@ -54,7 +54,7 @@ One thing to keep in mind while navigating through this course is that advanced 
 
 > For an in-depth video explanation of anti-scraping, and how to fix issues caused by it, check out [this talk](https://www.youtube.com/watch?v=aXil0K-M-Vs) from [Ondra Urban](https://github.com/mnmkng).
 
-## [](#common-measures) Common anti-scraping measures
+## Common anti-scraping measures {#common-measures}
 
 Because we here at Apify scrape for a living, we have discovered many popular and niche anti-scraping techniques. We've compiled them into a short and comprehensible list here to help understand the roadblocks before this course teaches you how to get around them.
 
@@ -100,6 +100,6 @@ The honeypot approach is based on providing links that only bots can see. A typi
 
 This technique is common for blocking the bot from accessing the website. It works on the principle that every entity that accesses the site gets a token. This token is then saved together with the IP address and HTTP request information such as user-agent and other specific headers. If the entity makes another request, but without the session cookie, the IP address is added on the grey list.
 
-## [](#first) First up
+## First up {#first}
 
 In our [first section](./techniques/index.md), we'll be discussing more in-depth about the various anti-scraping methods and techniques websites use, as well as how to mitigate these protections.

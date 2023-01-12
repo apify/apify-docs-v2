@@ -5,7 +5,7 @@ sidebar_position: 9.3
 slug: /storage/request-queue
 ---
 
-# [](#request-queue) Request queue
+# Request queue {#request-queue}
 
 **Queue URLs for an actor to visit in its run. Learn how to share your queues between actor runs. Access and manage request queues from Apify Console or via API.**
 
@@ -19,7 +19,7 @@ Request queue storage supports both breadth-first and depth-first crawling order
 > Unnamed request queues expire after 7 days unless otherwise specified.<br/>
 > [Learn about named and unnamed queues.](./index.md)
 
-## [](#basic-usage) Basic usage
+## Basic usage {#basic-usage}
 
 There are five ways to access your request queues:
 
@@ -29,7 +29,7 @@ There are five ways to access your request queues:
 * [Python API client](apify-client-python#requestqueueclient) - to access your request queues from any Python application [[details](#python-api-client)].
 * [Apify API](/api/v2#/reference/request-queues) - for accessing your request queues programmatically [[details](#apify-api)].
 
-### [](#apify-console) Apify Console
+### Apify Console {#apify-console}
 
 In [Apify Console](https://console.apify.com), you can view your request queues in the [Storage](https://console.apify.com/storage) section under the [Request queues](https://console.apify.com/storage?tab=requestQueues) tab.
 
@@ -44,7 +44,7 @@ Click on the `API` button to view and test a queue's [API endpoints](https://doc
 
 ![Request queues detail](./images/request-queue-detail.webp)
 
-### [](#apify-sdk) Apify SDK
+### Apify SDK {#apify-sdk}
 
 If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://sdk.apify.com).
 In the [Apify SDK](https://sdk.apify.com/docs/guides/request-storage#request-queue), the request queue is represented by the
@@ -122,7 +122,7 @@ await Actor.exit();
 
 See the [SDK documentation](https://sdk.apify.com/docs/guides/request-storage#request-queue) and the `RequestQueue` class's [API reference](https://sdk.apify.com/api/apify/class/RequestQueue) for details on managing your request queues with the Apify SDK.
 
-### [](#javascript-api-client) JavaScript API client
+### JavaScript API client {#javascript-api-client}
 
 Apify's [JavaScript API client](/apify-client-js#requestqueueclient) (`apify-client`) allows you to access your request queues from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
@@ -136,7 +136,7 @@ You can then use that variable to [access the request queue's items and manage i
 
 See the [JavaScript API client documentation](/apify-client-js#requestqueueclient) for [help with setup](/apify-client-js#quick-start) and more details.
 
-### [](#python-api-client) Python API client
+### Python API client {#python-api-client}
 
 Apify's [Python API client](/apify-client-python) (`apify-client`) allows you to access your request queues from any Python application, whether it is running on the Apify platform or elsewhere.
 
@@ -150,7 +150,7 @@ You can then use that variable to [access the request queue's items and manage i
 
 See the [Python API client documentation](/apify-client-python#requestqueueclient) for [help with setup](/apify-client-python#quick-start) and more details.
 
-### [](#apify-api) Apify API
+### Apify API {#apify-api}
 
 The [Apify API](/api/v2#/reference/request-queues) allows you to access your request queues programmatically using [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
 
@@ -215,11 +215,11 @@ Example payload:
 
 See the [API documentation](/api/v2#/reference/request-queues) for a detailed breakdown of each API endpoint.
 
-## [](#sharing) Sharing
+## Sharing {#sharing}
 
 You can invite other Apify users to view or modify your request queues using the [access rights](../access_rights/index.md).
 
-### [](#sharing-request-queues-between-runs) Sharing request queues between runs
+### Sharing request queues between runs {#sharing-request-queues-between-runs}
 
 You can access a request queue from any [actor](../actors/index.md) run as long as you know its **name** or **ID**.
 
@@ -245,13 +245,13 @@ The same applies for the [Apify API](#apify-api) - you can use [the same endpoin
 
 See the [Storage overview](https://docs.apify.com/storage#sharing-storages-between-runs) for details on sharing storages between runs.
 
-## [](#limits) Limits
+## Limits {#limits}
 
 * While multiple actor or task runs can **add new requests** to a queue concurrently, only one run can **process a queue** at any one time.
 
 * Request queue names can be up to 63 characters long.
 
-### [](#rate-limiting) Rate limiting
+### Rate limiting {#rate-limiting}
 
 When managing request queues via [API](/api/v2#/reference/request-queues/put-items),
 CRUD ([add](/api/v2#/reference/request-queues/request-collection/add-request),

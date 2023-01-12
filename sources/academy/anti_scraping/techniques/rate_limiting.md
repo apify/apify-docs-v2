@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /anti-scraping/techniques/rate-limiting
 ---
 
-# [](#rate-limiting) Rate-limiting
+# Rate-limiting {#rate-limiting}
 
 **Learn about rate-limiting, a common tactic used by websites to avoid a large and non-human rate of requests coming from a single IP address.**
 
@@ -17,7 +17,7 @@ In the past, most websites had their own anti-scraping solutions, the most commo
 
 In cases when a higher number of requests is expected for the crawler, using a [proxy](../mitigation/proxies.md) and rotating the IPs is essential to let the crawler run as smoothly as possible and avoid being blocked.
 
-## [](#dealing-with-rate-limiting) Dealing rate limiting with proxy/session rotating
+## Dealing rate limiting with proxy/session rotating {#dealing-with-rate-limiting}
 
 The most popular and effective way of avoiding rate-limiting issues is by rotating [proxies](../mitigation/proxies.md) after every **n** number of requests, which makes your scraper appear as if it is making requests from various different places. Since the majority of rate-limiting solutions are based on IP addresses, rotating IPs allows a scraper to make large amounts to a website without getting restricted.
 
@@ -50,7 +50,7 @@ const myCrawler = new PuppeteerCrawler({
 
 > Take a look at the [**Using proxies**](../mitigation/using_proxies.md) lesson to learn more about how to use proxies and rotate them in Crawlee.
 
-### [](#configuring-session-pool) Configuring a session pool
+### Configuring a session pool {#configuring-session-pool}
 
 There are various configuration options available in `sessionPoolOptions` that can be used to set up the SessionPool for different rate-limiting scenarios. In the example above, we used `maxUsageCount` within `sessionOptions` to prevent more than 15 requests from being sent using a session before it was thrown away; however, a maximum age can also be set using `maxAgeSecs`.
 
@@ -60,6 +60,6 @@ To learn more about all configurations available in `sessionPoolOptions`, refer 
 
 > Don't worry too much about these configurations. Crawlee's defaults are usually good enough for the majority of use cases.
 
-## [](#next) Next up
+## Next up {#next}
 
 Though rate limiting is still common today, a lot of sites have improved over the years to use more complicated techniques such as **browser fingerprinting**, which is covered in the [next lesson](./fingerprinting.md).

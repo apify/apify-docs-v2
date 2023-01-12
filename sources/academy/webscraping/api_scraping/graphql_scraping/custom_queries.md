@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /api-scraping/graphql-scraping/custom-queries
 ---
 
-# [](#custom-queries) Custom queries
+# Custom queries {#custom-queries}
 
 **Learn how to write custom GraphQL queries, how to pass input values into GraphQL requests as variables, and how to retrieve and output the data from a scraper.**
 
@@ -28,7 +28,7 @@ In this lesson, we're building a scraper which expects a single number (in **hou
 ]
 ```
 
-## [](#project-setup) Project setup
+## Project setup {#project-setup}
 
 To make sure we're all on the same page, we're going to set up the project together by first creating a folder named **graphql-scraper**. Once navigated to the folder within your terminal, run the following command:
 
@@ -40,7 +40,7 @@ This command will first initialize the project with NPM, then will install the `
 
 Finally, create a file called **index.js**. This is the file we will be working in for the rest of the lesson.
 
-## [](#preparations) Preparations
+## Preparations {#preparations}
 
 If we remember from the last lesson, we need to pass a valid "app token" within the **X-App-Token** header of every single request we make, or else we will be blocked. When testing queries, we just copied this value straight from the **Network** tab; however, since this is a dynamic value, we should farm it.
 
@@ -97,7 +97,7 @@ import scrapeAppToken from './scrapeAppToken.mjs';
 const token = await scrapeAppToken();
 ```
 
-## [](#building-the-query) Building the query
+## Building the query {#building-the-query}
 
 First, we'll write a skeleton query where we define which variables we're expecting (from the user of the scraper):
 
@@ -157,7 +157,7 @@ query SearchQuery($query: String!) {
 }
 ```
 
-## [](#making-the-request) Making the request
+## Making the request {#making-the-request}
 
 Back in our code, we can import `gql` from `graphql-tag` and use it to store our query:
 
@@ -223,7 +223,7 @@ const data = await gotScraping('https://api.cheddar.com/graphql', {
 
 The final step after making the query is to format the data to match the expected output schema.
 
-## [](#final-code) Final code
+## Final code {#final-code}
 
 Here's what our final project looks like:
 

@@ -4,7 +4,7 @@ description: Learn about the Docker images you can use as your actor's base. Cho
 slug: /actors/development/base-docker-images
 ---
 
-# [](#base-docker-images) Base Docker images
+# Base Docker images {#base-docker-images}
 
 **Learn about the Docker images you can use as your actor's base. Choose the correct base image for your actor's type and requirements.**
 
@@ -16,7 +16,7 @@ All images come in two versions: the **latest** tag corresponds to the stable ve
 
 Note that all Apify Docker images are pre-cached on Apify servers in order to speed up the actor builds and runs. The source code used to generate the images is available in the [apify-actor-docker](https://github.com/apify/apify-actor-docker) GitHub repository.
 
-## [](#apify-sdk-actor-images) Images with Apify SDK and Crawlee preinstalled
+## Images with Apify SDK and Crawlee preinstalled {#apify-sdk-actor-images}
 
 The [Apify SDK for JavaScript](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/) are preinstalled on these images. You can read more about them in the [Apify SDK Docker image guide](https://sdk.apify.com/docs/guides/docker-images).
 
@@ -28,7 +28,7 @@ The [Apify SDK for JavaScript](https://sdk.apify.com) and [Crawlee](https://craw
 
 For a full list of available images, [see the Apify SDK Docker image guide](https://sdk.apify.com/docs/guides/docker-images). Note that some images available in the Apify UI can be marked as deprecated. This means that they should no longer be used for new projects and old projects are encouraged to migrate to one of the non-deprecated images.
 
-## [](#python-actor-images) Images with Apify Client for Python preinstalled
+## Images with Apify Client for Python preinstalled {#python-actor-images}
 
 The [Apify API client for Python](https://docs.apify.com/apify-client-python) is preinstalled on these images.
 

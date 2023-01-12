@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /anti-scraping/techniques/geolocation
 ---
 
-# [](#geolocation) Geolocation
+# Geolocation {#geolocation}
 
 **Learn about the geolocation techniques to determine where requests are coming from, and a bit about how to avoid being blocked based on geolocation.**
 
@@ -13,19 +13,19 @@ slug: /anti-scraping/techniques/geolocation
 
 Geolocation is yet another way websites can detect and block access or show limited data. Other than by using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) (which requires user permission in order to receive location data), there two main ways that websites geolocate a user (or bot) visiting it.
 
-## [](#cookies-headers) Cookies & headers
+## Cookies & headers {#cookies-headers}
 
 Certain websites might use certain location-specific/language-specific [headers](../../glossary/concepts/http_headers.md) to geolocate a user. Some examples of these headers are `Accept-Language` and `CloudFront-Viewer-Country` (which is a custom HTTP header from [CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-cloudfront-headers.html)).
 
 On targets which are just utilizing cookies and headers to identify the location from which a request is coming from, it is pretty straightforward to make requests which appear they are coming from somewhere else.
 
-## [](#ip-address) IP address
+## IP address {#ip-address}
 
 The oldest (and still most common) way of geolocating is based on the IP address used to make the request. Sometimes, country-specific sites block themselves from being accessed from any other country (some Chinese, Indian, Israeli, and Japanese websites do this).
 
 [Proxies](../mitigation/proxies.md).
 
-## [](#override-emulate-geolocation) Override/emulate geolocation when using a browser-based scraper
+## Override/emulate geolocation when using a browser-based scraper {#override-emulate-geolocation}
 
 When using [Puppeteer](https://pptr.dev/#?product=Puppeteer&show=api-pagesetgeolocationoptions), you can emulate the geolocation with the `page.setGeolocation()` function.
 

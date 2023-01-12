@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /api-scraping/graphql-scraping/modifying-variables
 ---
 
-# [](#modifying-variables) Modifying variables
+# Modifying variables {#modifying-variables}
 
 **Learn how to modify the variables of a JSON format GraphQL query to use the API without needing to write any GraphQL language or create custom queries.**
 
@@ -108,6 +108,6 @@ If the query provided in the payload you find in the **Network** tab is good eno
 
 Depending on the API, just doing this can be sufficient. However, sometimes we want to utilize complex GraphQL features in order to optimize our scrapers or just to receive more data than is being provided in the response of the requst found in the **Network** tab. This is what we will be discussing in the next lessons.
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./introspection.md) we will be walking you through how to learn about a GraphQL API before scraping it by using **introspection** (don't worry - it's a fancy word, but a simple concept).

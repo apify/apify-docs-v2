@@ -5,7 +5,7 @@ sidebar_position: 14.4
 slug: /node-js/dealing-with-dynamic-pages
 ---
 
-# [](#dealing-with-dynamic-pages) How to scrape from dynamic pages
+# How to scrape from dynamic pages {#dealing-with-dynamic-pages}
 
 **Learn about dynamic pages and dynamic content. How can we find out if a page is dynamic? How do we programmatically scrape dynamic content?**
 
@@ -15,7 +15,7 @@ slug: /node-js/dealing-with-dynamic-pages
 
 In this lesson, we'll be discussing dynamic content and how to scrape it while utilizing Crawlee.
 
-## [](#quick-experiment) A quick experiment
+## A quick experiment {#quick-experiment}
 
 From our adored and beloved [Fakestore](https://demo-webstore.apify.org/), we have been tasked to scrape each product's title, price, and image from the [new arrivals](https://demo-webstore.apify.org/search/new-arrivals) page. Easy enough! We did something very similar in the previous modules.
 
@@ -93,7 +93,7 @@ The reason this is happening is because CheerioCrawler makes static HTTP request
 
 So, what's the solution? We need to use something that is able to allow the page to follow through with the entire load process - a headless browser.
 
-## [](#scraping-dynamic-content) Scraping dynamic content
+## Scraping dynamic content {#scraping-dynamic-content}
 
 Let's change a few lines of our code to switch the crawler type from CheerioCrawler to PuppeteerCrawler, which will run a headless browser, allowing the `load` and `networkidle` events to fire:
 
@@ -191,6 +191,6 @@ Let's run this and check our dataset results...
 
 Each product looks like this, and each image is a valid link that can be visited. These are the results we were after.
 
-## [](#small-recap) Small Recap
+## Small Recap {#small-recap}
 
 Making static HTTP requests only downloads the HTML content from the `DOMContentLoaded` event. We must use a browser to allow dynamic code to load, or find different means altogether of scraping the data (see [API Scraping](../../webscraping/api_scraping/index.md))

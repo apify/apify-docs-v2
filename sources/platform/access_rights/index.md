@@ -6,7 +6,7 @@ category: platform
 slug: /access-rights
 ---
 
-# [](#access-rights) Access rights
+# Access rights {#access-rights}
 
 **Manage permissions for organizations or private resources such as actors, actor runs and storages. Allow other users to read, run, modify or build new versions.**
 
@@ -14,7 +14,7 @@ slug: /access-rights
 
 By default, each system resource (actor, key-value store, run, ...) you create is only available to you, the owner. There are three ways you can grant access to your resources: the [access rights](#granting-access-rights) system, using the [organization account](#organization-account) or by [publishing your actor](#publishing-in-apify-store) in [Apify Store](https://apify.com/store).
 
-## [](#granting-access-rights) Granting access rights
+## Granting access rights {#granting-access-rights}
 
 You can easily and securely share your own resources - actors, tasks, key-value stores, datasets and request queues using a [granular](https://www.google.com/search?client=firefox-b-d&q=define+granular+permissions) permissions system. This enables you to, for example, allow your colleague to run an [actor](../actors/index.md), but not to modify them.
 
@@ -27,11 +27,11 @@ To share an actor, task, key-value store, request queue or dataset, open its **S
 
 ![Access rights configuration](../images/access-rights.webp)
 
-## [](#organization-account) Organization account
+## Organization account {#organization-account}
 
 Apify's organization account allows you to grant role-specific access permissions to members of your team. For more details, see the organization account [documentation](./organization_account/index.md).
 
-## [](#publishing-in-apify-store) Publishing in Apify Store
+## Publishing in Apify Store {#publishing-in-apify-store}
 
 Another way to share your actor is to [publish](../actors/publishing.md) it in [Apify Store](https://apify.com/store). The published actor appears in Apify Store, which means that **any user will be able to view its source code and run it**.
 
@@ -45,7 +45,7 @@ To publish an actor, open it in the [Apify Console](https://console.apify.com), 
 
 ![Publishing your actor](../images/publication.webp)
 
-## [](#permissions) Permissions
+## Permissions {#permissions}
 
 Below are the permissions you can grant via the [access rights](#granting-access-rights) system, [organization account](./organization_account/index.md).
 

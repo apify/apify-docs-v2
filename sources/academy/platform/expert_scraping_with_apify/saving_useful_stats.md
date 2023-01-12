@@ -5,7 +5,7 @@ sidebar_position: 6.7
 slug: /expert-scraping-with-apify/saving-useful-stats
 ---
 
-# [](#savings-useful-run-statistics) Saving useful run statistics
+# Saving useful run statistics {#savings-useful-run-statistics}
 
 **Understand how to save statistics about an actor's run, what types of statistics you can save, and why you might want to save them for a large-scale scraper.**
 
@@ -15,7 +15,7 @@ Using Crawlee and the Apify SDK, we are now able to collect and format data comi
 
 The types of values that are saved are totally up to you, but the most common are error scores, number of total saved items, number of request retries, number of captchas hit, etc. Storing these values is not always necessary, but can be valuable when debugging and maintaining an actor. As your projects scale, this will become more and more useful and important.
 
-## [](#learning) Learning 🧠
+## Learning 🧠 {#learning}
 
 Before moving on, give these valuable resources a quick lookover:
 
@@ -24,7 +24,7 @@ Before moving on, give these valuable resources a quick lookover:
 - Understand how to use the [`errorHandler`](https://crawlee.dev/api/browser-crawler/interface/BrowserCrawlerOptions#errorHandler) function to handle request failures.
 - Ensure you are comfortable using [key-value stores](https://sdk.apify.com/docs/guides/data-storage#key-value-store) and [datasets](https://sdk.apify.com/docs/api/dataset#__docusaurus), and understand the differences between the two storage types.
 
-## [](#quiz) Knowledge check 📝
+## Knowledge check 📝 {#quiz}
 
 1. Why might you want to store statistics about an actor's run (or a specific request)?
 2. In our Amazon scraper, we are trying to store the number of retries of a request once its data is pushed to the dataset. Where would you get this information? Where would you store it?

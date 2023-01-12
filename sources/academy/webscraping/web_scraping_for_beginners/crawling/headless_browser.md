@@ -5,7 +5,7 @@ sidebar_position: 8
 slug: /web-scraping-for-beginners/crawling/headless-browser
 ---
 
-# [](#headless-browser) Headless browsers
+# Headless browsers {#headless-browser}
 
 **Learn how to scrape the web with a headless browser using only a few lines of code. Chrome, Firefox, Safari, Edge - all are supported.**
 
@@ -13,7 +13,7 @@ slug: /web-scraping-for-beginners/crawling/headless-browser
 
 A headless browser is simply a browser that runs without a user interface (UI). This means that it's normally controlled by automated scripts. Headless browsers are very popular in scraping because they can help you render JavaScript or programmatically behave like a human user to prevent blocking. The two most popular libraries for controlling headless browsers are [Puppeteer](https://pptr.dev/) and [Playwright](https://playwright.dev/). **Crawlee** supports both.
 
-## [](#playwright-scraper) Building a Playwright scraper
+## Building a Playwright scraper {#playwright-scraper}
 
 > We'll be focusing on Playwright today, as it was developed by the same team that created Puppeteer, and it is newer with more features and better documentation.
 
@@ -94,11 +94,11 @@ Notice that we are also scraping a new piece of data - `image`. We were unable t
 
 Using Playwright in combination with Cheerio like this is only one of many ways how you can utilize Playwright (and Puppeteer) with Crawlee. In the advanced courses of the Academy, we will go deeper into using headless browsers for scraping and web automation (RPA) use-cases.
 
-## [](#running-headless) Running in headless mode
+## Running in headless mode {#running-headless}
 
 We said that headless browsers didn't have a UI, but while scraping with the above scraper code, we're sure your screen was full of browser tabs. That's because in Crawlee, browsers run **headful** (with a UI) by default. This is useful for debugging and seeing what's going on in the browser. Once the scraper is complete, we switch it to **headless** mode using one of two methods:
 
-### [](#headless-env-var) Environment variable
+### Environment variable {#headless-env-var}
 
 This is the programmer's preferred solution, because you don't have to change the source code to change the behavior. All you need to do is set the [`CRAWLEE_HEADLESS=1`](https://crawlee.dev/docs/guides/configuration#crawlee_headless) environment variable when running your scraper, and it will automatically run headless. For example like this:
 
@@ -114,7 +114,7 @@ $env:CRAWLEE_HEADLESS=1; & node crawlee.js
 </marked-tab>
 ```
 
-### [](#headless-code) Scraper code
+### Scraper code {#headless-code}
 
 If you always want the scraper to run headless, it might be better to hardcode it in the source. To do that, we need to access [Playwright's launch options](https://playwright.dev/docs/api/class-browsertype#browser-type-launch-option-headless). In Crawlee we can do that [in the `PlaywrightCrawler` constructor](https://crawlee.dev/api/playwright-crawler/interface/PlaywrightLaunchContext).
 
@@ -134,6 +134,6 @@ const crawler = new PlaywrightCrawler({
 
 [`launchContext`](https://crawlee.dev/api/puppeteer-crawler/class/PuppeteerCrawler#launchContext) and [`launchOptions`](https://playwright.dev/docs/api/class-browsertype#browser-type-launch) give you control over launching browsers with Crawlee.
 
-## [](#next) Next up
+## Next up {#next}
 
 We learned how to scrape with Cheerio and Playwright, but how do we process the scraped data? Let's learn that in the [next lesson](./processing_data.md).

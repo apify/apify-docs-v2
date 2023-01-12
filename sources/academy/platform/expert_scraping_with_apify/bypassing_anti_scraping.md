@@ -5,7 +5,7 @@ sidebar_position: 6.6
 slug: /expert-scraping-with-apify/bypassing-anti-scraping
 ---
 
-# [](#bypassing-anti-scraping-methods) Bypassing anti-scraping methods
+# Bypassing anti-scraping methods {#bypassing-anti-scraping-methods}
 
 **Learn about bypassing anti-scraping methods using proxies and proxy/session rotation together with Crawlee and the Apify SDK.**
 
@@ -17,7 +17,7 @@ It is generally quite difficult to recognize the anti-scraping protections a pag
 
 You might have already noticed that we've been using the **RESIDENTIAL** proxy group in the `proxyConfiguration` within our Amazon scraping actor. But what does that mean? This is a proxy group from [Apify Proxy](https://apify.com/proxy) which has been preventing us from being blocked by Amazon this entire time. We'll be learning more about proxies and Apify Proxy in this lesson.
 
-## [](#learning) Learning 🧠
+## Learning 🧠 {#learning}
 
 - Skim [this page](https://apify.com/proxy) for a general idea of Apify Proxy.
 - Give the [proxy documentation](https://docs.apify.com/proxy#our-proxies) a solid readover (feel free to skip most of the examples).
@@ -26,7 +26,7 @@ You might have already noticed that we've been using the **RESIDENTIAL** proxy g
 - Gain a solid understanding of the [SessionPool](https://crawlee.dev/api/core/class/SessionPool).
 - Look at a few actors on the [Apify store](https://apify.com/store). How are they utilizing proxies?
 
-## [](#quiz) Knowledge check 📝
+## Knowledge check 📝 {#quiz}
 
 1. What are the different types of proxies that Apify proxy offers? What are the main differences between them?
 2. Which proxy groups do users get with the proxy trial? How long does the trial last?
@@ -44,6 +44,6 @@ Additionally, the proxies used by our scraper should now only be from the US.
 
 [**Solution**](./solutions/rotating_proxies.md)
 
-## [](#next) Next up
+## Next up {#next}
 
 Up [next](./saving_useful_stats.md), we'll be learning about how to save useful stats about our run, which becomes more and more useful as a project scales.

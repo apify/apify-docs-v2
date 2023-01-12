@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /puppeteer-playwright/page/interacting-with-a-page
 ---
 
-# [](#interacting-with-a-page) Interacting with a page
+# Interacting with a page {#interacting-with-a-page}
 
 **Learn how to programmatically do actions on a page such as clicking, typing, and pressing keys. Also, discover a common roadblock that comes up when automating.**
 
@@ -25,7 +25,7 @@ Let's say that we want to automate searching for **hello world** on Google, then
 
 Though it seems complex, the wonderful **Page** API makes all of these actions extremely easy to perform.
 
-## [](#clicking-and-pressing-keys) Clicking & pressing keys
+## Clicking & pressing keys {#clicking-and-pressing-keys}
 
 Let's first focus on the first 3 steps listed above. By using `page.click()` and the CSS selector of the element to click, we can click an element:
 
@@ -175,6 +175,6 @@ Error: No node found for selector: .g a
 
 We hit this error because we attempted to click an element that wasn't yet present on the page. The results page hadn't even loaded yet!
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./waiting.md), we'll be taking a look at how to **wait for** navigation, events, and content before resuming interactions.

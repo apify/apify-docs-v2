@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /api-scraping/general-api-scraping/handling-pagination
 ---
 
-# [](#handling-pagination) Handling pagination
+# Handling pagination {#handling-pagination}
 
 **Learn about the three most popular API pagination techniques and how to handle each of them when scraping an API with pagination.**
 
@@ -15,7 +15,7 @@ When scraping large APIs, you'll quickly realize that most APIs limit the number
 
 If you've never dealt with it before, trying to scrape thousands to hundreds of thousands of items from an API with pagination can be a bit challenging. In this lesson, we'll be discussing a few of the different types of pagination, as well as how to work with them.
 
-## [](#page-number) Page-number pagination
+## Page-number pagination {#page-number}
 
 The most common and rudimentary form of pagination is by simply having page numbers, which can be compared to paginating through a typical e-commerce website.
 
@@ -23,7 +23,7 @@ The most common and rudimentary form of pagination is by simply having page numb
 
 This implementation makes it fairly straightforward to programmatically paginate through an API, as it pretty much entails just incrementing up or down in order to receive the next set of items. The page number is usually provided right in the parameters of the request URL; however, some APIs require it to be provided in the request body instead.
 
-## [](#offset-pagination) Offset pagination
+## Offset pagination {#offset-pagination}
 
 The second most popular pagination technique used is based on using a **limit** parameter along with an **offset** parameter. The **limit** says how many records should be returned in a single request, while the **offset** parameter says how many records should be skipped.
 
@@ -35,7 +35,7 @@ const myAwesomeDataset = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 If we were to make a request with the **limit** set to **5** and the **offset** parameter also set to **5**, the API would skip over the first five items and return `[6, 7, 8, 9, 10]`.
 
-## [](#cursor-pagination) Cursor pagination
+## Cursor pagination {#cursor-pagination}
 
 Becoming more and more common is cursor-based pagination. Like with offset-based pagination, a **limit** parameter is usually present; however, instead of **offset**, **cursor** is used instead. A cursor is just a marker (sometimes a token, a date, or just a number) for an item in the dataset. All results returned back from the API will be records that come after the item matching the **cursor** parameter provided.
 
@@ -43,7 +43,7 @@ One of the most painful things about scraping APIs with cursor pagination is tha
 
 > Note: SoundCloud [migrated](https://developers.soundcloud.com/blog/pagination-updates-on-our-api) over to using cursor-based pagination; however, they did not change the parameter name from **offset** to **cursor**. Always be on the lookout for this type of stuff!
 
-## [](#using-next-page) Using "next page"
+## Using "next page" {#using-next-page}
 
 In a minute, we're going to create a mini-project which will scrape the first 100 of Tiësto's tracks by keeping a **limit** of 20 and paginating through until we've scraped 100 items.
 
@@ -59,7 +59,7 @@ Luckily for us, SoundCloud's API (and many others) provides a **next_href** prop
 
 This URL can take various different forms, and can be given different names; however, they all generally do the same thing - bring you to the next page of results.
 
-## [](#mini-project) Mini project
+## Mini project {#mini-project}
 
 First, create a new folder called **pagination-tutorial** and run this command inside of it:
 
@@ -195,11 +195,11 @@ Here's what the output of this code looks like:
 105
 ```
 
-## [](#final-note) Final note
+## Final note {#final-note}
 
 Sometimes, APIs have limited pagination. That means that they limit the total number of results that can appear for a set of pages, or that they limit the pages to a certain number. To learn how to handle these cases, take a look at [this short article](https://docs.apify.com/tutorials/scrape-paginated-sites).
 
-## [](#next) Next up
+## Next up {#next}
 
 <!-- In this lesson, you learned about how to use API parameters and properties returned in an API response to paginate through results. [Next up](link api_scraping/general_api_scraping/using_api_filters.md), you'll gain a solid understanding of using API filtering parameters. -->
 

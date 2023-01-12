@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /puppeteer-playwright/page/waiting
 ---
 
-# [](#waiting-for-elements-and-events) Waiting for elements and events
+# Waiting for elements and events {#waiting-for-elements-and-events}
 
 **Learn the importance of waiting for content and events before running interaction/collection code, as well as the best practices for doing so.**
 
@@ -19,7 +19,7 @@ Puppeteer and Playwright don't sit around waiting for a page (or specific elemen
 
 Different events and elements can be waited for using the various `waitFor...` methods offered.
 
-## [](#waiting-for-elements) Elements
+## Elements {#waiting-for-elements}
 
 In the previous lesson, we ran into an error with Puppeteer due to the fact that we weren't waiting for the `.g a` selector to be present on the page before clicking it. The same error didn't occur in Playwright, because `page.click()` [automatically waits](https://playwright.dev/docs/actionability) for the element to be visible on the page before clicking it.
 
@@ -51,7 +51,7 @@ Now, we won't see the error message anymore, and the first result will be succes
 
 > Playwright also has a `page.waitForSelector()` function and it's useful in other scenarios than clicking, or for more granular control over the waiting process.
 
-## [](#waiting-for-navigation) Navigation
+## Navigation {#waiting-for-navigation}
 
 If we remember properly, after clicking the first result, we want to console log the title of the result's page and save a screenshot into the filesystem. In order to grab a solid screenshot of the loaded page though, we should **wait for navigation**  before snapping the image. This can be done with [`page.waitForNavigation()`](https://pptr.dev/#?product=Puppeteer&version=v14.1.0&show=api-pagewaitfornavigationoptions).
 
@@ -83,7 +83,7 @@ This implementation will do the following:
 2. Click the element, firing off a navigating event
 3. Resolve once the page has navigated, allowing further code to run
 
-## [](#current-code) Our code so far
+## Our code so far {#current-code}
 
 Here's what our project's code looks like so far:
 
@@ -147,6 +147,6 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [final lesson](./page_methods.md) of the **Opening & controlling a page** section of this course, we'll be learning about various methods on **Page** which aren't related to directly interacting with a page or waiting for stuff, as well as finally adding the final touches to our mini-project (page title grabbing and screenshotting).

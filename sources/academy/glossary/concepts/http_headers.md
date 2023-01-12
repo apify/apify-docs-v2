@@ -5,7 +5,7 @@ sidebar_position: 8.1
 slug: /concepts/http-headers
 ---
 
-# [](#headers) HTTP headers
+# HTTP headers {#headers}
 
 **Understand what HTTP headers are, what they're used for, and three of the biggest differences between HTTP/1.1 and HTTP/2 headers.**
 
@@ -15,23 +15,23 @@ slug: /concepts/http-headers
 
 In general, there are 4 different paths you'll find yourself on when scraping a website and dealing with headers:
 
-## [](#no-headers) No headers
+## No headers {#no-headers}
 
 For some websites you won't need to worry about modifying headers at all, as there are no checks or verifications in place.
 
-## [](#needs-default-headers) Some default headers required
+## Some default headers required {#needs-default-headers}
 
 Some websites will require certain default browser headers to work properly, such as **User-Agent** (though, this header is becoming more obsolete, as there are more sophisticated ways to detect and block a suspicious user).
 
 Another example of such a "default" header is **Referer**. Some e-commerce websites might share the same platform, and data is loaded through XMLHttpRequests to that platform, which simply would not know which data to return without knowing which exact website is requesting it.
 
-## [](#needs-custom-headers) Custom headers required
+## Custom headers required {#needs-custom-headers}
 
 A custom header is a non-standard HTTP header used for a specific website. For example, an imaginary website of **cool-stuff.com** might have a header with the name **X_Cool_Stuff_Token** which is required for every single request to a product page.
 
 Dealing with cases like these usually isn't difficult, but can sometimes be tedious.
 
-## [](#needs-specific-headers) Very specific headers required
+## Very specific headers required {#needs-specific-headers}
 
 The most challenging websites to scrape are the ones that require a full set of site-specific headers to be included with the request. For example, not only would they potentially require proper **User-Agent** and **Referer** headers mentioned above, but also **Accept**, **Accept-Language**, **Accept-Encoding**, etc. with specific values.
 
@@ -39,7 +39,7 @@ Another big one to mention is the **Cookie** header. We cover this in more detai
 
 You could use Chrome DevTools to inspect request headers, and [Insomnia](../tools/insomnia.md) to test how the website behaves with or without specific headers.
 
-## [](#http1-vs-http2) HTTP/1.1 vs HTTP/2 headers
+## HTTP/1.1 vs HTTP/2 headers {#http1-vs-http2}
 
 There are some differences between HTTP/1.1 and HTTP/2 headers. We won't cover all the differences in this lesson, but you should overall keep these three in mind:
 

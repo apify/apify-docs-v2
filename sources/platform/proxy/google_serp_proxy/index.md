@@ -5,7 +5,7 @@ sidebar_position: 10.5
 slug: /proxy/google-serp-proxy
 ---
 
-# [](#google-serp-proxy) Google SERP proxy
+# Google SERP proxy {#google-serp-proxy}
 
 **Learn how to collect search results from Google Search-powered tools. Get search results from localized domains in multiple countries, e.g. the US and Germany.**
 
@@ -24,7 +24,7 @@ When using the proxy, **pricing is based on the number of requests made**.
 
 To use Google SERP proxy or for more information, [contact us](https://apify.com/contact).
 
-## [](#connecting-to-google-serp-proxy) Connecting to Google SERP proxy
+## Connecting to Google SERP proxy {#connecting-to-google-serp-proxy}
 
 Requests made through the proxy are automatically routed through a proxy server from the selected country and pure **HTML code of the search result page is returned**.
 
@@ -32,7 +32,7 @@ Requests made through the proxy are automatically routed through a proxy server 
 
 For code examples on how to connect to Google SERP proxies, see the [examples](./examples.md) page.
 
-### [](#username-parameters) Username parameters
+### Username parameters {#username-parameters}
 
 The `username` field enables you to pass various [parameters](../connection_settings.md), such as groups and country, for your proxy connection.
 
@@ -46,7 +46,7 @@ Unlike [datacenter](../datacenter_proxy/index.md) parameter.
 
 If you use the `country` [parameter](../connection_settings.md), the Google proxy location is used if you access a website whose hostname (stripped of `www.`) starts with **google**.
 
-## [](#country-selection) Country selection
+## Country selection {#country-selection}
 
 You must use the correct Google domain to get results for your desired country code.
 

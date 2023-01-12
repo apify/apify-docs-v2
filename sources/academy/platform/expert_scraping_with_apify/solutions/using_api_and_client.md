@@ -5,7 +5,7 @@ sidebar_position: 4
 slug: /expert-scraping-with-apify/solutions/using-api-and-client
 ---
 
-# [](#using-api-and-client) Using the Apify API & JavaScript client
+# Using the Apify API & JavaScript client {#using-api-and-client}
 
 **Learn how to interact with the Apify API directly through the well-documented RESTful routes, or by using the proprietary Apify JavaScript client.**
 
@@ -34,7 +34,7 @@ const TASK = 'YOUR_USERNAME~demo-actor-task';
 await Actor.exit();
 ```
 
-## [](#calling-a-task-via-client) Calling a task via JavaScript client
+## Calling a task via JavaScript client {#calling-a-task-via-client}
 
 When using the `apify-client` package, you can create a new client instance by using `new ApifyClient()`. Within the Apify SDK however, it is not necessary to even install the `apify-client` package, as the `Actor.newClient()` function is available for use.
 
@@ -71,7 +71,7 @@ const withClient = async () => {
 };
 ```
 
-## [](#calling-a-task-via-api) Calling a task via API
+## Calling a task via API {#calling-a-task-via-api}
 
 First, we'll create a function (right under the `withClient()`) function named `withAPI` and instantiate a new variable which represents the API endpoint to run our task:
 
@@ -119,7 +119,7 @@ const withAPI = async () => {
 };
 ```
 
-## [](#finalizing-the-actor) Finalizing the actor
+## Finalizing the actor {#finalizing-the-actor}
 
 Now, since we've written both of these functions, all we have to do is write a conditional statement based on the boolean value from `useClient`:
 
@@ -168,7 +168,7 @@ And before we push to the platform, let's not forget to write an input schema in
 }
 ```
 
-## [](#final-code) Final code
+## Final code {#final-code}
 
 To ensure we're on the same page, here is what the final code looks like:
 
@@ -224,7 +224,7 @@ if (useClient) {
 await Actor.exit();
 ```
 
-## [](#quiz-answers) Quiz answers 📝
+## Quiz answers 📝 {#quiz-answers}
 
 **Q: What is the relationship between the Apify API and Apify client? Are there any significant differences?**
 
@@ -240,6 +240,6 @@ The one main difference is that the Apify client automatically uses [**exponenti
 
 **A:** No. The Apify client is available right in the SDK with the `Actor.newClient()` function.
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 That's it! Now, if you want to go above and beyond, you should create a Github repository for this actor, integrate it with a new actor on the Apify platform, and test if it works there as well (with multiple input configurations).

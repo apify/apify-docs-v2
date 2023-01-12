@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /deploying-your-code/inputs-outputs
 ---
 
-# [](#inputs-outputs) Inputs & outputs
+# Inputs & outputs {#inputs-outputs}
 
 **Learn to accept input into your actor, do something with it, then return output. Actors can be written in any language, so this concept is language agnostic.**
 
@@ -19,13 +19,13 @@ An important thing to understand regarding inputs and outputs is that they are r
 
 - While running in a Docker container on the platform, environment variables are automatically injected, and inputs & outputs are provided and modified using Apify's REST API.
 
-## [](#about-storage) A bit about storage
+## A bit about storage {#about-storage}
 
 There are two different places you can read/write your inputs/outputs: to the [key-value store](https://docs.apify.com/storage/key-value-store), or to the [dataset](https://docs.apify.com/storage/dataset). They key-value store can be used to store any sort of unorganized/unrelated data in any formats, while the data pushed to a dataset typically resembles a table with columns (fields) and rows (items). Each actor's run is allocated both a default dataset and key-value store.
 
 When running locally, these storages are accessible through the **storage** folder within your project's root directory, while on the platform they are accessible via Apify's API.
 
-## [](#accepting-input) Accepting input
+## Accepting input {#accepting-input}
 
 There are multiple ways to accept input into your project. The option you go with depends on the language you have written your project in. If you are using Node.js for your repo's code, you can use the [`apify`](https://www.npmjs.com/package/apify) package. Otherwise, you can use the useful environment variables automatically set up for you by Apify to write utility functions which read the actor's input and return it.
 
@@ -129,7 +129,7 @@ print(solution)
 
 > For a better understanding of the API endpoints for reading and modifying key-value stores, check the [official API reference](https://docs.apify.com/api/v2#/reference/key-value-stores).
 
-## [](#writing-output) Writing output
+## Writing output {#writing-output}
 
 Similarly to reading input, you can write the actor's output either by using the Apify SDK in Node.js, or by manually writing a utility function to do so.
 
@@ -207,7 +207,7 @@ solution = add_all_numbers(actor_input)
 set_output({ 'solution': solution })
 ```
 
-## [](#testing-locally) Testing locally
+## Testing locally {#testing-locally}
 
 Since we've changed our code a lot from the way it originally was by wrapping it in the Apify SDK to accept inputs and return outputs, we most definitely should test it locally before worrying about pushing it to the Apify platform.
 
@@ -219,6 +219,6 @@ After running our script, there should be a single item in the default dataset t
 }
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 That's it! We've now added all of the files and code necessary to convert our software into an actor. In the [next lesson](./input_schema.md), we'll be learning how to easily generate a user interface for our actor's input so that users don't have to provide the input in raw JSON format.

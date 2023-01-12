@@ -5,7 +5,7 @@ sidebar_position: 7.8
 slug: /actors/limits
 ---
 
-# [](#limits) Limits
+# Limits {#limits}
 
 **Learn the Apify platform's resource capability and limitations such as max memory, disk size and number of actors/tasks per user or schedule.**
 
@@ -19,7 +19,7 @@ If needed, the limits shown below can be increased on paid accounts. For details
 * Maximum number of actors per user.
 * Maximum number of tasks per user.
 
-## [](#actor-limits) Actor limits
+## Actor limits {#actor-limits}
 
 | Description                                                      | Value                                                                                 |
 |------------------------------------------------------------------|---------------------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ If needed, the limits shown below can be increased on paid accounts. For details
 | Maximum number of dataset columns for xlsx format                | 2,000 columns                                                                         |
 | Maximum size of input schema for a task/actor                    | 100 kB<!-- ACTOR_LIMITS.INPUT_SCHEMA_MAX_BYTES -->                                    |
 
-## [](#platform-limits) Platform limits
+## Platform limits {#platform-limits}
 
 | Description                                                        | Value                                                                               |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------------------|

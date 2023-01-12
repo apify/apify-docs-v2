@@ -5,7 +5,7 @@ sidebar_position: 4
 slug: /anti-scraping/techniques/firewalls
 ---
 
-# [](#firewalls) Firewalls
+# Firewalls {#firewalls}
 
 **Understand what a web-application firewall is, how they work, and the various common techniques for avoiding them altogether.**
 
@@ -17,7 +17,7 @@ One of the most common WAFs one can come across is the one from [Cloudflare](htt
 
 ![Cloudflare waiting screen](./images/cloudflare.webp)
 
-## [](#how-it-works) How it works
+## How it works {#how-it-works}
 
 WAPs work on a similar premise as regular firewalls. Web admins define the rules, and the firewall executes them. As an example of how the WAF can work, we will take a look at Cloudflare's solution:
 
@@ -31,7 +31,7 @@ WAPs work on a similar premise as regular firewalls. Web admins define the rules
 
 Since there are multiple providers, it is essential to say that the challenges are not always graphical and can be entirely server-side (without any JavaScript evaluation in the visitor browser).
 
-## [](#bypassing-firewalls) Bypassing web-application firewalls
+## Bypassing web-application firewalls {#bypassing-firewalls}
 
 - Using [proxies](../mitigation/proxies.md).
 - Mocking [headers](../../glossary/concepts/http_headers.md).
@@ -40,6 +40,6 @@ Since there are multiple providers, it is essential to say that the challenges a
 
 As you likely already know, there is no solution that fits all. If you are struggling to get past a WAP provider, you can try using Firefox with Playwright.
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./captchas.md), we'll be covering **captchas**, which were mentioned throughout this lesson. It's important to note that attempting to solve a captcha programmatically is the last resort - always try to avoid being presented the captcha in the first place by using the techniques mentioned in this lesson.

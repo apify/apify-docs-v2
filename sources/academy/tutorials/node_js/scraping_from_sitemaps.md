@@ -5,7 +5,7 @@ sidebar_position: 14.7
 slug: /node-js/scraping-from-sitemaps
 ---
 
-# [](#scraping-with-sitemaps) How to scrape from sitemaps
+# How to scrape from sitemaps {#scraping-with-sitemaps}
 
 **The sitemap.xml file is a jackpot for every web scraper developer. Take advantage of this and learn an easier way to extract data from websites using Crawlee.**
 
@@ -15,7 +15,7 @@ Let's say we want to scrape a database of craft beers ([brewbound.com](https://b
 
 > Check out [Sitemap Sniffer](https://apify.com/vaclavrut/sitemap-sniffer), which can discover sitemaps in hidden locations!
 
-## [](#analyzing-the-sitemap) Analyzing the sitemap
+## Analyzing the sitemap {#analyzing-the-sitemap}
 
 The sitemap is usually located at the path **/sitemap.xml**. It is always worth trying that URL, as it is rarely linked anywhere on the site. It usually contains a list of all pages in [XML format](https://www.w3.org/standards/xml/core).
 
@@ -51,7 +51,7 @@ http(s)?:\/\/www\.brewbound\.com\/breweries\/[^\/]+\/[^\/<]+
 
 Note the two parts of the regular expression `[^\/<]` containing the `<` symbol. This is because we want to exclude the `</loc>` tag, which closes each URL.
 
-## [](#scraping-the-sitemap) Scraping the sitemap in Crawlee
+## Scraping the sitemap in Crawlee {#scraping-the-sitemap}
 
 If you're scraping sitemaps (or anything else, really), [Crawlee](https://crawlee.dev) is perfect for the job.
 
@@ -88,7 +88,7 @@ const crawler = new PuppeteerCrawler({
 });
 ```
 
-## [](#full-code) Full code
+## Full code {#full-code}
 
 If we create a new actor using the code below on the [Apify platform](../../platform/apify_platform.md), it returns a nicely formatted spreadsheet containing a list of breweries with their beers with descriptions.
 

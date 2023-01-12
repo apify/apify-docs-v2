@@ -7,7 +7,7 @@ slug: /monitoring/monitor-shared-datasets
 ---
 
 
-# [](#monitor-shared-named-datasets) Monitor shared named datasets
+# Monitor shared named datasets {#monitor-shared-named-datasets}
 
 **A step-by-step monitoring tutorial that shows you how to monitor and ensure consistency in named datasets which aggregate data from multiple actors or tasks.**
 
@@ -15,7 +15,7 @@ slug: /monitoring/monitor-shared-datasets
 
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a [dataset](../storage/dataset.md) add data.
 
-## [](#use-case) Use case
+## Use case {#use-case}
 
 You have two or more [actors](../actors/index.md).
 
@@ -42,7 +42,7 @@ The two extraction tasks are [scheduled](../schedules.md) to run every day using
 
 Now, to the monitoring part. For this tutorial, let's skip the monitoring of the tasks and jump right to the dataset.
 
-## [](#create-a-new-monitoring-task) Create a new monitoring task
+## Create a new monitoring task {#create-a-new-monitoring-task}
 
 If you haven't already, [add the monitoring suite to your account](./index.md).
 
@@ -52,7 +52,7 @@ If you have already added the task, under its **Settings** tab, give it a name. 
 
 Next, we will configure the monitoring suite.
 
-## [](#monitoring-configuration) Monitoring configuration
+## Monitoring configuration {#monitoring-configuration}
 
 1. Under your task's **Input** tab, set the **Mode** dropdown to **Create configuration**.
 
@@ -70,7 +70,7 @@ Your configuration will look like this:
 
 ![Monitoring configuration](./images/joke-monitoring-config.webp)
 
-## [](#validate-data) Validate data
+## Validate data {#validate-data}
 
 Now, let's ensure that your jokes are in the correct form. Each joke's dataset item should contain a `title` and `text`. Both values should be [strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 
@@ -84,7 +84,7 @@ Now, let's ensure that your jokes are in the correct form. Each joke's dataset i
 
 The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for type validation. Make sure to import the library using `/* global ow */`.
 
-## [](#check-for-duplicates) Check for duplicates
+## Check for duplicates {#check-for-duplicates}
 
 1. In the **Check for duplicates** section, select the **Enable duplicate items check** option.
 
@@ -94,7 +94,7 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 ![Monitoring duplication configuration](./images/joke-duplicates.webp)
 
-## [](#set-up-data-visualization) Set up data visualization
+## Set up data visualization {#set-up-data-visualization}
 
 You can configure data visualization in the **Statistics dashboard** section. To enable it, check the **Enable dashboard** option.
 

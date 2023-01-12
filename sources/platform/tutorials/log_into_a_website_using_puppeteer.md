@@ -13,7 +13,7 @@ slug: /tutorials/log-into-a-website-using-puppeteer
 
 In this article, we demonstrate how you can easily scrape data from a page behind a login using an [Apify actor](../actors/index.md) with [Puppeteer](https://pptr.dev/). For this example, we will use [https://facebook.com](https://www.facebook.com/).
 
-## [](#find-the-login-form) Find the login form
+## Find the login form {#find-the-login-form}
 
 First, let's find the **login form** and the **submit** button on the Facebook login page using Chrome's DevTools. Right-click on any of the elements in the form and choose **Inspect**.
 
@@ -21,7 +21,7 @@ First, let's find the **login form** and the **submit** button on the Facebook l
 
 We can see an HTML **input** element with the IDs `email` for email and `pass` for the password. The form submission button's ID is not very helpful, however we can see it is a **button** element with the name `login` and type `submit`. We will use its ID, which is `u_0_b`.
 
-## [](#code-the-actor-to-fill-in-details) Code the actor to fill in details
+## Code the actor to fill in details {#code-the-actor-to-fill-in-details}
 
 Our actor will use the Puppeteer API to fill in the **username** and **password** and click the **submit** button.
 
@@ -69,7 +69,7 @@ Now, you can run the actor and pass the login credentials as an [input JSON obje
 }
 ```
 
-## [](#save-and-reuse-cookies) Save and reuse cookies
+## Save and reuse cookies {#save-and-reuse-cookies}
 
 For most pages, you need to save cookies and reuse then in following runs. You can avoid logging in for each run with the code below.
 

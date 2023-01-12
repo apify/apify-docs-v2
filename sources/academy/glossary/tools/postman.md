@@ -5,7 +5,7 @@ sidebar_position: 9.3
 slug: /tools/postman
 ---
 
-# [](#what-is-postman) What is Postman?
+# What is Postman? {#what-is-postman}
 
 **Learn about Postman, a simple yet super valuable tool for testing requests and proxies when building scalable web scrapers.**
 
@@ -15,7 +15,7 @@ slug: /tools/postman
 
 The desktop app can be downloaded from its [official download page](https://www.postman.com/downloads/), or the web-app can be used with a simple signup - no download required. If this is your first time working with a tool like Postman, we recommend checking out their [Getting Started guide](https://learning.postman.com/docs/getting-started/introduction/).
 
-## [](#understanding-the-interface) Understanding the interface
+## Understanding the interface {#understanding-the-interface}
 
 ![A basic outline of Postman's interface](./images/postman-interface.webp)
 
@@ -37,7 +37,7 @@ This is a very useful section where you can view and edit structured query param
 
 After sending a request, the response's body will be found here, along with its cookies and headers. The response body can be viewed in various formats - **Pretty-Print**, **Raw**, or **Preview**.
 
-## [](#using-proxies) Using and testing proxies
+## Using and testing proxies {#using-proxies}
 
 In order to use a proxy, the proxy's server and configuration must be provided in the **Proxy** tab in Postman settings.
 
@@ -45,7 +45,7 @@ In order to use a proxy, the proxy's server and configuration must be provided i
 
 After configuring a proxy, the next request sent will attempt to use it. To switch off the proxy, its details don't need to be deleted. The **Add a custom proxy configuration** option in settings just needs to be un-ticked to disable it.
 
-## [](#managing-cookies) Managing the cookies cache
+## Managing the cookies cache {#managing-cookies}
 
 Postman keeps a cache of the cookies from all previous responses of a certain domain, which can be a blessing, but also a curse. Sometimes, you might notice that a request is going through just fine with Postman, but that your scraper is being blocked.
 
@@ -59,7 +59,7 @@ Clicking on this button opens a **MANAGE COOKIES** window, where a list of all c
 
 ![Managing cookies in Postman with the "MANAGE COOKIES" window](./images/postman-manage-cookies.webp)
 
-### [](#alternatives) Some alternatives to Postman
+### Some alternatives to Postman {#alternatives}
 
 - [Hoppscotch](https://hoppscotch.io/)
 - [Insomnia](./insomnia.md)

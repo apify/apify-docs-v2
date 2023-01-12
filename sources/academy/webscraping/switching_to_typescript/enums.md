@@ -5,7 +5,7 @@ sidebar_position: 7.4
 slug: /switching-to-typescript/enums
 ---
 
-# [](#enums) Enums!
+# Enums! {#enums}
 
 **Learn how to easily define, use, and manage constant values using a cool feature called "enums" that TypeScript brings to the table.**
 
@@ -13,7 +13,7 @@ slug: /switching-to-typescript/enums
 
 Enums are a nice feature offered by TypeScript that can be used to create automatically enumerated global constant identifiers that can also be used as custom types. We've dedicated an entire lesson to enums because they're a new feature brought into JavaScript by TypeScript, and because they can be quite useful in certain projects.
 
-## [](#lets-talk-about-constants) Let's talk about constants
+## Let's talk about constants {#lets-talk-about-constants}
 
 If you've followed along with any of the more advanced courses in the Apify academy, or at least read the [Best practices](../web_scraping_for_beginners/best_practices.md) lesson in the **Web scraping for beginners** course, you'll definitely be familiar with the idea of constant variables. In a nutshell, we create constant variables for values that will never change, and will likely used in multiple places. The naming convention for constants is **ALL_CAPS_AND_UNDERSCORED**.
 
@@ -64,7 +64,7 @@ And now we'll create a variable with a hacky custom type that points to the valu
 
 Because of the custom type definition for `fileExtensions` and the type annotation used for the `values` variable, we are getting some autofill for the variable, and the variable can only be set to values within the `fileExtensions` object. Though this implementation works, TypeScript offers a unique new feature called **enums** that was designed just for these use cases.
 
-## [](#creating-enums) Creating enums
+## Creating enums {#creating-enums}
 
 The [`enum`](https://www.typescriptlang.org/docs/handbook/enums.html) keyword is a new keyword brought to us by TypeScript that allows us the same functionality we implemented in the above section, plus more. To create one, simply use the keyword followed by the name you'd like to use (the naming convention is generally **CapitalizeEachFirstLetterAndSingular**).
 
@@ -78,7 +78,7 @@ enum FileExtension {
 }
 ```
 
-## [](#using-enums) Using enums
+## Using enums {#using-enums}
 
 Using enums is straightforward. Simply use dot notation as you normally would with a regular object.
 
@@ -95,7 +95,7 @@ const value = FileExtension.JAVASCRIPT;
 console.log(value) // => ".js"
 ```
 
-## [](#using-enums-as-types) Using enums as types
+## Using enums as types {#using-enums-as-types}
 
 The nice thing about enums is that they can be used directly in type annotations as somewhat of a custom type. Observe this function:
 
@@ -127,6 +127,6 @@ console.log(fileName);
 
 We don't get autocomplete, but the `extension` parameter is now restricted to the values defined in the `FileExtension` enum.
 
-## [](#next) Next up
+## Next up {#next}
 
 The `enum` keyword is just the tip of the iceberg of the exclusive features TypeScript has to offer. Let's now [learn about](./type_aliases.md) type aliases (custom types!) with the `type` keyword.

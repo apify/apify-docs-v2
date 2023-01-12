@@ -5,7 +5,7 @@ sidebar_position: 7.1
 slug: /switching-to-typescript/installation
 ---
 
-# [](#installation-getting-started) Installation & getting started
+# Installation & getting started {#installation-getting-started}
 
 **Install TypeScript and the TS compiler on your machine, then write your very first lines of TypeScript code by fixing a logical bug in a vanilla JS snippet.**
 
@@ -23,7 +23,7 @@ npm install -g typescript
 
 That's it!
 
-## [](#understanding-what-typescript-solves) Understanding the problems TypeScript solves
+## Understanding the problems TypeScript solves {#understanding-what-typescript-solves}
 
 To aid in properly showing some of the benefits TypeScript brings, here is some vanilla JavaScript code that has a bug. This bug will not throw an error or cause the program to crash, but it is a logical error that does not output what we expect.
 
@@ -77,7 +77,7 @@ console.log(addPrices(products[0].price, products[1].price));
 
 Now, the output of our code is **2099**, exactly what we wanted. However, this extra logic hasn't really solved our issue. We only ever want numbers to be passed into `addPrices`, and nothing else. This is where TS comes in handy.
 
-## [](#writing-your-first-typescript-code) Writing your first TypeScript code
+## Writing your first TypeScript code {#writing-your-first-typescript-code}
 
 > We recommend using [VSCode](https://code.visualstudio.com/) to write your TypeScript code, but feel free to use any IDE that supports TypeScript when following along with this course.
 
@@ -136,7 +136,7 @@ console.log(addPrices(+products[0].price, +products[1].price));
 
 Now, our code will work exactly as it should, and we can feel certain that no similar mistakes will be made when using the `addPrices` function again.
 
-## [](#compiling) Compiling
+## Compiling {#compiling}
 
 In order to run the code we wrote in the above section, we'll have to compile the **first-lines.ts** file into vanilla JavasScript.
 
@@ -154,6 +154,6 @@ node first-lines.js
 
 Outputted is `2099`, exactly what we expected. Awesome!
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson], we'll be discussing how to use some of the core types that TypeScript offers.

@@ -5,7 +5,7 @@ sidebar_position: 7
 slug: /expert-scraping-with-apify/solutions/saving-stats
 ---
 
-# [](#saving-stats) Saving run stats
+# Saving run stats {#saving-stats}
 
 **Implement the saving of general statistics about an actor's run, as well as adding request-specific statistics to dataset items.**
 
@@ -61,7 +61,7 @@ await Stats.initialize();
 // ...
 ```
 
-## [](#tracking-errors) Tracking errors
+## Tracking errors {#tracking-errors}
 
 In order to keep track of errors, we must write a new function within the crawler's configuration called **failedRequestHandler**. Passed into this function is an object containing an **Error** object for the error which occurred and the **Request** object, as well as information about the session and proxy which were used for the request.
 
@@ -86,7 +86,7 @@ const crawler = new CheerioCrawler({
 });
 ```
 
-## [](#tracking-total-saved) Tracking total saved
+## Tracking total saved {#tracking-total-saved}
 
 Now, we'll just increment our **totalSaved** count for every offer added to the dataset.
 
@@ -112,7 +112,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 });
 ```
 
-## [](#saving-stats-with-dataset-items) Saving stats with dataset items
+## Saving stats with dataset items {#saving-stats-with-dataset-items}
 
 Still in the **OFFERS** handler, we need to add a few extra keys to the items which are pushed to the dataset. Luckily, all of the data required by the task is easily accessible in the context object.
 
@@ -144,7 +144,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 });
 ```
 
-## [](#quiz-answers) Quiz answers
+## Quiz answers {#quiz-answers}
 
 **Q: Why might you want to store statistics about an actor's run (or a specific request)?**
 

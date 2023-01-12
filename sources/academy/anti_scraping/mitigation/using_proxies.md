@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /anti-scraping/mitigation/using-proxies
 ---
 
-# [](#using-proxies) Using proxies
+# Using proxies {#using-proxies}
 
 **Learn how to use and automagically rotate proxies in your scrapers by using Crawlee, and a bit about how to easily obtain pools of proxies.**
 
@@ -15,7 +15,7 @@ In the [**Web scraping for beginners**](../../webscraping/web_scraping_for_begin
 
 Because proxies are so widely used in the scraping world, Crawlee as been equipped with features which make it easy to implement them in an effective way. One of the main functionalities that comes baked into Crawlee is proxy rotation, which is when each request is sent through a different proxy from a proxy pool.
 
-## [](#implementing-proxies) Implementing proxies in a scraper
+## Implementing proxies in a scraper {#implementing-proxies}
 
 Let's borrow some scraper code from the end of the [pro-scraping](../../webscraping/web_scraping_for_beginners/crawling/pro_scraping.md) lesson in our **Web Scraping for Beginners** course and paste it into a new file called **proxies.js**. This code enqueues all of the product links on [demo-webstore.apify.org](https://demo-webstore.apify.org)'s on-sale page, then makes a request to each product page and scrapes data about each one:
 
@@ -101,7 +101,7 @@ const crawler = new CheerioCrawler({
 
 That's it! The crawler will now automatically rotate through the proxies we provided in the `proxyUrls` option.
 
-## [](#debugging-proxies) A bit about debugging proxies
+## A bit about debugging proxies {#debugging-proxies}
 
 At the time of writing, our above scraper utilizing our custom proxy pool is working just fine. But how can we check that the scraper is for sure using the proxies we provided it, and more importantly, how can we debug proxies within our scraper? Luckily, within the same `context` object we've been destructuring `$` and `request` out of, there is a `proxyInfo` key as well. `proxyInfo` is an object which includes useful data about the proxy which was used to make the request.
 
@@ -124,7 +124,7 @@ After modifying your code to log `proxyInfo` to the console and running the scra
 
 These logs confirm that our proxies are being used and rotated successfully by Crawlee, and can also be used to debug slow or broken proxies.
 
-## [](#higher-level-proxy-scraping) Higher level proxy scraping
+## Higher level proxy scraping {#higher-level-proxy-scraping}
 
 Though we will discuss it more in-depth in future courses, it is still important to mention that Crawlee has integrated support for the Apify SDK, which supports [Apify Proxy](https://apify.com/proxy) - a service that provides access to pools of both residential and datacenter IP addresses. A `proxyConfiguration` using Apify Proxy might look something like this:
 
@@ -138,6 +138,6 @@ const proxyConfiguration = await  Actor.createProxyConfiguration({
 
 Notice that we didn't provide it a list of proxy URLs. This is because the `SHADER` group already serves as our proxy pool (courtesy of Apify Proxy).
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next up](./generating_fingerprints.md).

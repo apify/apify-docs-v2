@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /anti-scraping/techniques/fingerprinting
 ---
 
-# [](#fingerprinting) Fingerprinting
+# Fingerprinting {#fingerprinting}
 
 **Understand browser fingerprinting, an advanced technique used by browsers to track user data and even block bots from accessing them.**
 
@@ -17,11 +17,11 @@ Yup! Surprisingly enough, browsers provide a lot of information about the user (
 
 Based on [research](https://www.eff.org/press/archives/2010/05/13) carried out by the Electronic Frontier Foundation, 84% of collected fingerprints are globally exclusive, and they found that the next 9% were in sets with a size of two. They also stated that even though fingerprints are dynamic, new ones can be matched up with old ones with 99.1% correctness. This makes fingerprinting a very viable option for websites who want to track the online behavior of their users in order to serve hyper-personalized advertisements to them. In some cases, it is also used to aid in preventing bots from accessing the websites (or certain sections of it).
 
-## [](#what-makes-up-a-fingerprint) What makes up a fingerprint?
+## What makes up a fingerprint? {#what-makes-up-a-fingerprint}
 
 To collect a good fingerprint, websites must collect them from various places.
 
-### [](#from-http-headers) From HTTP headers
+### From HTTP headers {#from-http-headers}
 
 There are a few [HTTP headers](../../glossary/concepts/http_headers.md) which can be used to create a fingerprint about a user. Here  are some of the main ones:
 
@@ -34,7 +34,7 @@ A few other headers commonly used for fingerprinting can be seen below:
 
 ![Fingerprinted headers](./images/fingerprinted-headers.webp)
 
-### [](#from-window-properties) From window properties
+### From window properties {#from-window-properties}
 
 The `window` is defined as a global variable that is accessible from an JavaScript running in the browser. It is home to a vast amount of functions, variables, and constructors, and most of the global configuration is stored there.
 
@@ -62,7 +62,7 @@ Here is a list of some of the most crucial properties on the `window` object use
 | `navigator.language` | `'en-US'` | The user's primary language. |
 | `navigator.languages` | `['en-US', 'cs-CZ', 'es']` | Other user languages. |
 
-### [](#from-function-calls) From function calls
+### From function calls {#from-function-calls}
 
 Fingerprinting tools can also collect pieces of information that are retrieved by calling specific functions:
 
@@ -85,7 +85,7 @@ HTMLMediaElement.canPlayType('some/codec')
 navigator.permissions.query('some_permission')
 ```
 
-### [](#with-canvases) With canvases
+### With canvases {#with-canvases}
 
 This technique is based on rendering [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) scenes to a canvas element and observing the pixels rendered. WebGL rendering is tightly connected with the hardware, and therefore provides high entropy. Here's a quick breakdown of how it works:
 
@@ -99,7 +99,7 @@ Here's an example of multiple WebGL scenes visibly being rendered differently on
 
 ![Differences in canvas element renderings](./images/canvas-differences.webp)
 
-### [](#from-audiocontext) From AudioContext
+### From AudioContext {#from-audiocontext}
 
 The [AudioContext](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext) API represents an audio-processing graph built from audio modules linked together, each represented by an [AudioNode](https://developer.mozilla.org/en-US/docs/Web/API/AudioNode) ([OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode)).
 
@@ -111,13 +111,13 @@ In the simplest cases, the fingerprint can be obtained by simply checking for th
 
 > A downfall of this method is that two same machines with the same browser will get the same ID.
 
-### [](#from-batterymanager) From BatteryManager
+### From BatteryManager {#from-batterymanager}
 
 The `navigator.getBattery()` function returns a promise which resolves with a [BatteryManager](https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager) interface. BatteryManager offers information about whether or not the battery is charging, and how much time is left until the battery has fully discharged/charged.
 
 On its own this method is quite weak, but it can be potent when combined with the `<canvas>` and AudioContext fingerprinting techniques mentioned above.
 
-## [](#fingerprint-example) Fingerprint example
+## Fingerprint example {#fingerprint-example}
 
 When all is said and done, this is what a browser fingerprint might look like:
 
@@ -164,7 +164,7 @@ When all is said and done, this is what a browser fingerprint might look like:
 }
 ```
 
-## [](#how-it-works) How it works
+## How it works {#how-it-works}
 
 There are multiple levels and different approaches sites take to collect browser fingerprints; however, they all have one thing in common: they are using a script written in JavaScript to evaluate the target browser's context and collect information about it (often times also storing it in their database, or in a cookie). These scripts are often obfuscated and difficult to track down and understand, especially if they are anti-bot scripts.
 
@@ -207,12 +207,12 @@ Because of how common it has become to obfuscate fingerprinting scripts, there a
 
 This extension provides monitoring of only a few critical attributes, but in order to to deceive anti-scraping protections, the full list is needed. However, the extension does reveal the scripts that collect the fingerprints.
 
-## [](#anti-bot-fingerprinting) Anti-bot fingerprinting
+## Anti-bot fingerprinting {#anti-bot-fingerprinting}
 
 On websites which implement advanced fingerprinting techniques, they will tie the fingerprint and certain headers (such as the **User-Agent** header) to the IP address of the user. These sites will block a user (or scraper) if it made a request with one fingerprint and set of headers, then tries to make another request on the same proxy but with a different fingerprint.
 
 When dealing with these cases, it's important to sync the generation of headers and fingerprints with the rotation of proxies (this is known as session rotation).
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next up](./geolocation.md), we'll be covering **geolocation** methods that websites use to grab the location from which a request has been made, and how they relate to anti-scraping.

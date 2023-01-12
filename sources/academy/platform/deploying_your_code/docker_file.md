@@ -5,7 +5,7 @@ sidebar_position: 4
 slug: /deploying-your-code/docker-file
 ---
 
-# [](#dockerfile) Dockerfile
+# Dockerfile {#dockerfile}
 
 **Understand how to write a Dockerfile (Docker image blueprint) for your project so that it can be run within a Docker container on the Apify platform.**
 
@@ -15,7 +15,7 @@ The **Dockerfile** is a file which gives the Apify platform (or Docker, more spe
 
 > Actors on the platform are always run in Docker containers; however, they can also be run in local Docker containers. This is not common practice though, as it requires more setup and a deeper understanding of Docker. For testing, it's best to just run the actor on the local OS (this requires you to have the underlying runtime installed, such as Node.js, Python, Rust, GO, etc).
 
-## [](#base-images) Base images
+## Base images {#base-images}
 
 If your project doesn’t already contain a Dockerfile, don’t worry! Apify offers [many base images](https://sdk.apify.com/docs/guides/docker-images) that are optimized for building and running actors on the platform, which can be found [here](https://hub.docker.com/u/apify). When using a language for which Apify doesn't provide a base image, [Docker Hub](https://hub.docker.com/) provides a ton of free Docker images for most use-cases, upon which you can create your own images.
 
@@ -31,7 +31,7 @@ FROM apify/actor-node:16
 
 > For syntax highlighting in your Dockerfiles, download the [**Docker** VSCode extension](https://code.visualstudio.com/docs/containers/overview#_installation).
 
-## [](#writing-the-file) Writing the file
+## Writing the file {#writing-the-file}
 
 The rest of the Dockerfile is about copying the source code from the local filesystem into the container's filesystem, installing libraries, and setting the `RUN` command (which falls back to the parent image).
 
@@ -96,7 +96,7 @@ CMD python3 main.py
 </marked-tab>
 ```
 
-## [](#examples) Examples
+## Examples {#examples}
 
 The examples we just showed were for Node.js and Python, however, to drive home the fact that actors can be written in any language, here are some examples of some Dockerfiles for actors written in different programming languages:
 
@@ -152,6 +152,6 @@ CMD ["julia", "main.jl"]
 </marked-tab>
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./deploying.md), we'll be push our code directly to the Apify platform, or create and integrate a new actor on the Apify platform with our project's GitHub repository.

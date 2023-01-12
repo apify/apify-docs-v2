@@ -18,7 +18,7 @@ You can use proxies in your [actors](../actors/index.md) or any other applicatio
 
 **You can view your proxy settings and password on the [Proxy](https://console.apify.com/proxy) page in the Apify Console.**
 
-## [](#our-proxies) Our proxies
+## Our proxies {#our-proxies}
 
 [Datacenter proxy](./datacenter_proxy/index.md)]
 
@@ -32,17 +32,17 @@ You can use proxies in your [actors](../actors/index.md) or any other applicatio
 
 In addition to our proxies, you can use your own both in Apify Console and SDK.
 
-### [](#console) Custom proxies in console
+### Custom proxies in console {#console}
 
 To use your own proxies with Apify Console, in your actor's **Input and options** tab, scroll down and open the **Proxy and browser configuration** section. Enter your proxy URLs, and you're good to go.
 
 ![Using custom proxy in Apify Console](../images/proxy-custom.webp)
 
-### [](#SDK) Custom proxies in SDK
+### Custom proxies in SDK {#SDK}
 
 In the Apify SDK, use the `proxyConfiguration.newUrl(sessionId)` command to add your custom proxy URLs to the proxy configuration. See the [SDK docs](https://sdk.apify.com/api/apify/class/ProxyConfiguration#newUrl) for more details.
 
-## [](#ip-address-rotation) IP address rotation
+## IP address rotation {#ip-address-rotation}
 
 Web scrapers can rotate the IP addresses they use to access websites. They assign each request a different IP address, which makes it appear like they are all coming from different users. This greatly enhances performance and data throughout.
 
@@ -55,7 +55,7 @@ Depending on whether you use a [browser](https://apify.com/apify/web-scraper) or
 
 [Click here](../web_scraping_101/anti_scraping_techniques.md) to learn more about IP address rotation and our findings on how blocking works.
 
-## [](#sessions) Sessions
+## Sessions {#sessions}
 
 Sessions allow you to use the same IP address for multiple connections.
 
@@ -67,7 +67,7 @@ Sessions are available for [datacenter](./datacenter_proxy/index.md) proxies.
 
 **This parameter is optional**. By default, each proxied request is assigned a randomly picked least used IP address.
 
-### [](#session-persistence) Session persistence
+### Session persistence {#session-persistence}
 
 You can persist your sessions (use the same IP address) by setting the `session` parameter in the `username` [field](./connection_settings.md). This assigns a single IP address to a **session ID** after you make the first request.
 
@@ -77,7 +77,7 @@ For datacenter proxies, a session persists for **26 hours** ([more info](./datac
 
 Google SERP proxies do not support sessions.
 
-## [](#dead-proxies) Dead proxies
+## Dead proxies {#dead-proxies}
 
 Our health check performs an HTTP and HTTPS request with each proxy server every few hours. If a server fails both requests 3 times in a row, it's marked as dead and all user sessions with this server are discarded.
 

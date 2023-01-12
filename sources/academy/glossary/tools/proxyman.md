@@ -5,7 +5,7 @@ sidebar_position: 9.4
 slug: /tools/proxyman
 ---
 
-# [](#what-is-proxyman) What's Proxyman?
+# What's Proxyman? {#what-is-proxyman}
 
 **Learn about Proxyman, a tool for viewing all network requests that are coming through your system. Filter by response type, by a keyword, or by application.**
 
@@ -15,7 +15,7 @@ Though the name sounds very similar to [Postman](./postman.md), [**Proxyman**](h
 
 If you've already gone through the [**Locating and learning** lesson](../../webscraping/api_scraping/general_api_scraping/locating_and_learning.md) in the **API scraping** section, you can think of Proxyman as an advanced Network Tab, where you can see requests that you sometimes can't see in regular browser DevTools.
 
-## [](#the-basics) The basics
+## The basics {#the-basics}
 
 Though the application offers a whole lot of advanced features, there are only a few main features you'll be utilizing when using Proxyman for scraper development purposes. Let's open up Proxyman and take a look at some of the basic features:
 
@@ -41,7 +41,7 @@ Sometimes, there can be hundreds (or even thousands) of requests that appear in 
 
 ![Filter requests with the filter options](./images/proxyman-filter.webp)
 
-## [](#alternatives) Alternatives
+## Alternatives {#alternatives}
 
 Since Proxyman is only available for macOS, it's only appropriate to list some alternatives to it that are accessible to our Windows and Linux friends:
 

@@ -5,7 +5,7 @@ sidebar_position: 10.4
 slug: /proxy/residential-proxy
 ---
 
-# [](#residential-proxy) Residential proxy
+# Residential proxy {#residential-proxy}
 
 **Achieve a higher level of anonymity using IP addresses from human users. Access a wider pool of proxies and reduce blocking by websites' anti-scraping measures.**
 
@@ -19,7 +19,7 @@ Residential proxies support [IP address rotation](../index.md) and [sessions](#s
 
 **Pricing is based on data traffic**. It is measured for each connection made and displayed on your [dashboard](https://console.apify.com) in the Apify Console.
 
-## [](#limitations) Limitations
+## Limitations {#limitations}
 
 Apify provides 2 levels of residential proxy:
 
@@ -28,7 +28,7 @@ Apify provides 2 levels of residential proxy:
 | Restricted residential proxy   | Every user                | >500 domains        | Requires [man-in-the-middle](https://crypto.stanford.edu/ssl-mitm/) access for the connection |
 | Unrestricted residential proxy | Enterprise level accounts | Entire web          | None                                                                                          |
 
-### [](#restricted-residential-proxy) Restricted residential proxy
+### Restricted residential proxy {#restricted-residential-proxy}
 
 Restricted residential proxy is available for all the users with some conditions.
 
@@ -39,14 +39,14 @@ The second limitation is that restricted residential proxy uses the man-in-the-m
 and activities and so requires acceptance of an [SSL certificate](https://apify.com/restricted-residential-proxy-cert.crt).
 This is automatically handled by [Apify SDK](https://sdk.apify.com/) and [Crawlee](https://crawlee.dev/) for both Puppeteer and Playwright. To manually check if a connection is using a man-in-the-middle connection, [head over to the Apify Proxy page](http://proxy.apify.com).
 
-### [](#unrestricted-residential-proxy) Unrestricted residential proxy
+### Unrestricted residential proxy {#unrestricted-residential-proxy}
 
 Unrestricted residential proxy neither limits the domains you can access nor requires a man-in-the-middle access to traffic.
 However, it's provided only to enterprise-level accounts on a per-request basis and under an additional contract.
 
 [Contact us](https://apify.com/contact) if you would like to use the unrestricted residential proxy or for more information.
 
-## [](#connecting-to-residential-proxy) Connecting to residential proxy
+## Connecting to residential proxy {#connecting-to-residential-proxy}
 
 Connecting to residential proxy works the same way as [datacenter proxy](../datacenter_proxy/examples.md), with two differences.
 
@@ -54,7 +54,7 @@ Connecting to residential proxy works the same way as [datacenter proxy](../data
 
 2. You can specify the country in which you want your proxies to be.
 
-### [](#how-to-set-a-proxy-group) How to set a proxy group
+### How to set a proxy group {#how-to-set-a-proxy-group}
 
 When using [standard libraries and languages](../datacenter_proxy/examples.md) as `groups-RESIDENTIAL`.
 
@@ -78,7 +78,7 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 await Actor.exit();
 ```
 
-### [](#how-to-set-a-proxy-country) How to set a proxy country
+### How to set a proxy country {#how-to-set-a-proxy-country}
 
 When using [standard libraries and languages](../datacenter_proxy/examples.md) as `country-COUNTRY-CODE`.
 
@@ -103,7 +103,7 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 await Actor.exit();
 ```
 
-### [](#username-examples) Username examples
+### Username examples {#username-examples}
 
 Use randomly allocated IP addresses from all available countries:
 
@@ -124,7 +124,7 @@ groups-RESIDENTIAL,session-my_session_1,country-US
 ```
 
 
-## [](#session-persistence) Session persistence
+## Session persistence {#session-persistence}
 
 When using residential proxy with the `session` [parameter](../index.md), a single IP address is assigned to the **session ID** provided after you make the first request.
 

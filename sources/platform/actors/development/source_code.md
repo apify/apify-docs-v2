@@ -12,7 +12,7 @@ slug: /actors/development/source-code
 
 The **Source type** setting determines the location of the source code for the actor. It can have one of the following values: [Multiple source files](#multiple-source-files), [Git repository](#git-repository), [Zip file](#zip-file) or [GitHub Gist](#github-gist).
 
-## [](#multiple-source-files) Multiple source files
+## Multiple source files {#multiple-source-files}
 
 If the actor's source code requires the use of multiple files/directories, then it can be hosted on the Apify platform using this option. This is particularly useful when you need to add [**INPUT_SCHEMA.json**](./source_code.md) or **README.md** to your actor, or if you want to create your actor in a language other than JavaScript.
 

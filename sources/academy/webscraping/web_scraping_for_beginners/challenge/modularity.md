@@ -125,6 +125,6 @@ This is not necessary, but it is best practice, as it can prevent dumb typos tha
 
 > If you haven't already read the **Best practices** lesson in the **Web scraping for beginners** course, please [give it a read](../best_practices.md).
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that we've gotten that out of the way, we can finally continue with our Amazon scraper. [Let's do it](./scraping_amazon.md)!

@@ -5,7 +5,7 @@ sidebar_position: 7.2
 slug: /switching-to-typescript/using-types
 ---
 
-# [](#using-types) Using types
+# Using types {#using-types}
 
 **Dip your toes into using types with TypeScript by learning about the core types offered by the language, and how to define variables and functions with them.**
 
@@ -21,7 +21,7 @@ In the previous lesson, we got a rough idea of how types are used by utilizing t
 | `string`  | `'hi'`, `"hello world"` | All text values.                                             |
 | `boolean` | `true`, `false`         | Just these two. No "truthy" or "falsy" values.               |
 
-## [](#with-variables) With variables
+## With variables {#with-variables}
 
 Just because we're writing TS files doesn't mean we need to explicitly define the type of every single value/parameter though. We'll create a new file called **using-types.ts** and create a basic variable:
 
@@ -82,7 +82,7 @@ value = [1, 2, 3]
 
 Later in this course, we'll be getting more into union types.
 
-## [](#with-functions) With functions
+## With functions {#with-functions}
 
 With functions, you can define the types of both the parameters and the return type. Here's a basic function:
 
@@ -122,6 +122,6 @@ function totalLengthIsGreaterThan10(string1: string, string2: string): boolean {
 }
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next up](./using_types_continued.md), we'll discuss a few more basic types supported in TypeScript and how to use them.

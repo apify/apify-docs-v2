@@ -5,7 +5,7 @@ sidebar_position: 4
 slug: /web-scraping-for-beginners/crawling/relative-urls
 ---
 
-# [](#filtering-links) Relative URLs
+# Relative URLs {#filtering-links}
 
 **Learn about absolute and relative URLs used on web pages and how to work with them when parsing HTML with Cheerio in your scraper.**
 
@@ -29,7 +29,7 @@ What's up with that?! This short version of the URL is called a **relative URL**
 
 We'll see why the difference between relative URLs and absolute URLs is important a bit later in this lesson.
 
-## [](#browser-vs-cheerio) Browser vs Cheerio: The Differences
+## Browser vs Cheerio: The Differences {#browser-vs-cheerio}
 
 Let's update the Node.js code from the [Finding links lesson](./finding_links.md) to see why links with relative URLs can be a problem.
 
@@ -53,7 +53,7 @@ for (const link of productLinks) {
 
 When you run this code in your terminal, you'll immediately see the difference. Unlike in the browser, where looping over elements produced absolute URLs, here in Node.js it only produces the relative ones. This is bad, because we can't use the relative URLs to crawl. They simply don't include all the necessary information.
 
-## [](#resolving-urls) Resolving URLs
+## Resolving URLs {#resolving-urls}
 
 Luckily, there's a process called resolving URLs that creates absolute URLs from relative ones. We need two things. The relative URL, such as `/product/lightweight-jacket`, and the URL of the website where we found the relative URL (which is `https://demo-webstore.apify.org/` in our case).
 
@@ -92,6 +92,6 @@ for (const link of productLinks) {
 
 Cheerio can't resolve the URL itself, because until you provide the necessary information - it doesn't know where you originally downloaded the HTML from. The browser always knows which page you're on, so it will resolve the absolute URLs automatically.
 
-## [](#next) Next up
+## Next up {#next}
 
 The [next lesson](./first_crawl.md) will teach you how to use the collected URLs to crawl all the individual product pages.

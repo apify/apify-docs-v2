@@ -5,7 +5,7 @@ sidebar_position: 2.3
 slug: /puppeteer-playwright/executing-scripts
 ---
 
-# [](#executing-scripts) Executing scripts
+# Executing scripts {#executing-scripts}
 
 **Understand the two different contexts which your code can be run in, and how to run custom scripts in the context of the browser.**
 
@@ -43,7 +43,7 @@ ReferenceError: document is not defined
 
 The reason this is happening is because we're trying to run browser-side code on the server-side where it is not supported. [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) is a property of the browser [**Window**](https://developer.mozilla.org/en-US/docs/Web/API/Window) instance that holds the rendered website; therefore, this API is not available in Node.js. So how are we supposed to run code within the context of the browser?
 
-## [](#running-in-browser-context) Running code in the context of the browser
+## Running code in the context of the browser {#running-in-browser-context}
 
 We will use `page.evaluate()` to run our code in the browser. This method takes a callback as its first parameter, which will be executed within the browser.
 
@@ -86,7 +86,7 @@ Here's what we see in the automated browser when we run this code:
 
 ![Google with the background color changed to green](../images/green-google.webp)
 
-## [](#using-variables-in-page-evaluate) Using variables in `page.evaluate()`
+## Using variables in `page.evaluate()` {#using-variables-in-page-evaluate}
 
 Within our code, we generate a `randomString` in the Node.js context:
 
@@ -141,6 +141,6 @@ Now, when we run this code, we can see the title change on the page's tab:
 
 ![Google with the background color changed to green](../images/title-changed.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 The [next lesson](./injecting_code.md) will be a short one discussing two different ways of executing scripts on a page.

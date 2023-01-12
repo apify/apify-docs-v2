@@ -5,7 +5,7 @@ sidebar_position: 5
 slug: /web-scraping-for-beginners/crawling/first-crawl
 ---
 
-# [](#your-first-crawl) Your first crawl
+# Your first crawl {#your-first-crawl}
 
 **Learn how to crawl the web using Node.js, Cheerio and an HTTP client. Collect URLs from pages and use them to visit more websites.**
 
@@ -15,7 +15,7 @@ In the previous lessons, we learned what crawling is and how to collect URLs fro
 
 > If the code starts to look too complex for you, don't worry. We're showing it for educational purposes, so that you can learn how crawling works. Near the end of this module, we'll show you a much easier and faster way to crawl, using a specialized scraping library. If you want, you can skip the details and [go there now](./pro_scraping.md).
 
-## [](#processing-urls) Processing URLs
+## Processing URLs {#processing-urls}
 
 In the previous lessons, we collected and filtered all the URLs pointing to individual products on our beloved [demo e-commerce site](https://demo-webstore.apify.org/). To crawl the URLs, we can't print them to the console, but rather we need to save them for future use. Once we do that, we must take this list of URLs and download the HTML of each of the pages. See the comments for changes and additions to the code.
 
@@ -66,7 +66,7 @@ for (const link of productsToScrape) {
 
 If you run the crawler from your terminal, it should print the titles.
 
-## [](#handling-errors) Handling errors
+## Handling errors {#handling-errors}
 
 The code above is correct, but it's not robust. If something goes wrong, it will crash. That something could be a network error, an internet connection error, or just that one of the websites you're trying to reach could simply be experiencing problems at that moment. Hitting any error like that would cause our current crawler to stop entirely, which means we would lose all the data it had collected so far.
 
@@ -119,6 +119,6 @@ At the time of writing, none of the links have failed; however, in your crawling
 
 > If you thought that the crawl was taking too long to complete, the [scraping library](./pro_scraping.md) we keep referring to will help once again. It automatically parallelizes the downloads and processing of HTML, which leads to significant speed improvements.
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./scraping_the_data.md) section and applying it to all of the product pages.

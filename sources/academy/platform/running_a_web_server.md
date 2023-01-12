@@ -23,7 +23,7 @@ If you start a web server on the port defined by the **APIFY_CONTAINER_PORT** en
 
 For more details, see [the documentation](https://docs.apify.com/actor/run#container-web-server).
 
-## [](#building-the-actor) Building the actor
+## Building the actor {#building-the-actor}
 
 Let's try to build the following actor:
 
@@ -147,7 +147,7 @@ app.listen(APIFY_CONTAINER_PORT, () => {
 });
 ```
 
-### [](#final-code) Final code
+### Final code {#final-code}
 
 ```js
 import { Actor } from 'apify';

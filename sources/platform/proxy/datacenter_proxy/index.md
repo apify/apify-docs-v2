@@ -5,7 +5,7 @@ sidebar_position: 10.3
 slug: /proxy/datacenter-proxy
 ---
 
-# [](#datacenter-proxy) Datacenter proxy
+# Datacenter proxy {#datacenter-proxy}
 
 **Learn how to reduce blocking when web scraping using IP address rotation. See proxy parameters and learn to implement Apify Proxy in an application.**
 
@@ -20,7 +20,7 @@ Datacenter proxies allow you to mask and [rotate](../index.md). For each [HTTP/S
 * [Shared proxy groups](#shared-proxy-groups)
 * [Dedicated proxy groups](#dedicated-proxy-groups)
 
-## [](#features) Features
+## Features {#features}
 
 * Periodic health checks of proxies in the pool so requests are not forwarded via [dead](../index.md) proxies.
 * Intelligent rotation of IP addresses so target hosts are accessed via proxies that have accessed them the longest time ago, to reduce the chance of blocking.
@@ -31,7 +31,7 @@ Datacenter proxies allow you to mask and [rotate](../index.md). For each [HTTP/S
 * Measures statistics of traffic for specific users and hostnames.
 * Allows selection of proxy servers by country.
 
-## [](#shared-proxy-groups) Shared proxy groups
+## Shared proxy groups {#shared-proxy-groups}
 
 Each user has access to a selected number of proxy servers from a shared pool. These servers are spread into groups (called proxy groups). Each group shares a common feature (location, provider, speed and so on).
 
@@ -41,7 +41,7 @@ For a full list of plans and number of allocated proxy servers for each plan, se
 
 To access more servers or to use Apify Proxy without other parts of the Apify platform, [contact us](https://apify.com/contact).
 
-## [](#dedicated-proxy-groups) Dedicated proxy groups
+## Dedicated proxy groups {#dedicated-proxy-groups}
 
 When you purchase access to dedicated proxy groups, they are assigned to you, and only you can use them. You gain access to a range of static IP addresses from these groups.
 
@@ -53,7 +53,7 @@ Prices for dedicated proxy servers are mainly based on the number of proxy serve
 
 [Contact us](https://apify.com/contact) for more details or if you have any questions.
 
-## [](#connecting-to-datacenter-proxies) Connecting to datacenter proxies
+## Connecting to datacenter proxies {#connecting-to-datacenter-proxies}
 
 By default, each proxied HTTP request is potentially sent via a different target proxy server, which adds overhead and could be potentially problematic for websites which save cookies based on IP address.
 
@@ -61,7 +61,7 @@ If you want to pick an IP address and pass all subsequent connections via that s
 
 For code examples on how to connect to datacenter proxies, see the [examples](./examples.md) page.
 
-### [](#username-parameters) Username parameters
+### Username parameters {#username-parameters}
 
 The `username` field enables you to pass various [parameters](../connection_settings.md), such as groups, session and country, for your proxy connection.
 
@@ -69,7 +69,7 @@ The `username` field enables you to pass various [parameters](../connection_sett
 
 If you do not want to specify either `groups` or `session` parameters and therefore use the default behavior for both, set the username to `auto`.
 
-## [](#session-persistence) Session persistence
+## Session persistence {#session-persistence}
 
 When you use datacenter proxy with the `session` [parameter](../index.md) set in the `username` [field](#username-parameters), a single IP is assigned to the `session ID` provided after you make the first request.
 

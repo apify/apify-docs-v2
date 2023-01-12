@@ -13,7 +13,7 @@ slug: /tutorials/scraping-dynamic-content
 
 Many websites load data in the background via [XHR requests](../web_scraping_101/web_scraping_techniques.md). These are usually tracking data, ads and other content that may not be essential for the website to load or is useful to collect periodically. Sometimes though, it may contain actual core page data that you need.
 
-## [](#quick-summary) Quick summary
+## Quick summary {#quick-summary}
 
 Use these helper functions to wait for the data. Pass in time in milliseconds or the [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to wait for.
 
@@ -23,7 +23,7 @@ E.g. `await page.waitForTimeout(10000)` - waits for 10 seconds.
 * `context.waitFor` in **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)).
 E.g. `await context.waitFor('my-selector')` - waits for `my-selector` to appear on the page.
 
-## [](#how-page-loading-works) How page loading works
+## How page loading works {#how-page-loading-works}
 
 Before looking at code examples that solve this problem, let's review what the page loading process looks like.
 
@@ -34,21 +34,21 @@ Before looking at code examples that solve this problem, let's review what the p
 3. **Network XHR requests are loaded and rendered** (`networkidle0` or `networkidle2` events). Some websites load essential data this way. The execution of these requests may depend on user behavior like in [infinite scroll](https://www.smashingmagazine.com/2013/05/infinite-scrolling-lets-get-to-the-bottom-of-this/).
 This is when you use Web Scraper or Puppeteer Scraper ([PuppeteerCrawler](https://crawlee.dev/api/puppeteer-crawler/class/PuppeteerCrawler) class) to get the page. Be careful that pages often track you with additional requests and the load may never end.
 
-## [](#how-to-wait-for-dynamic-content) How to wait for dynamic content
+## How to wait for dynamic content {#how-to-wait-for-dynamic-content}
 
 The section below describes how you can wait for dynamic content.
 
-### [](#http-request-cheerio-scraper) http-request / Cheerio Scraper
+### http-request / Cheerio Scraper {#http-request-cheerio-scraper}
 
 Often, all the essential data are presented in the initial HTML. And scraping it without a browser (without Puppeteer) is much more efficient. That is why we created [Cheerio Scraper](https://apify.com/apify/cheerio-scraper).
 
 But even if data are rendered via JavaScript or loaded dynamically, there are advanced techniques that allow you to reverse-engineer this data and still retain Cheerio's efficiency. For example, you can emulate the requests for dynamic data directly in your code.
 
-### [](#web-scraper-puppeteer-scraper-puppeteer) Web Scraper / Puppeteer Scraper / Puppeteer
+### Web Scraper / Puppeteer Scraper / Puppeteer {#web-scraper-puppeteer-scraper-puppeteer}
 
 In 95% of cases, the JavaScript-rendered page that you get with Puppeteer is enough. If you actually need to wait for the dynamic content, Puppeteer has several helper functions, of which the most important are: [`page.waitForTimeout`](https://pptr.dev/api/puppeteer.page.waitfortimeout), [`page.waitForSelector`](https://pptr.dev/api/puppeteer.page.waitforselector), [`page.waitForResponse`](https://pptr.dev/api/puppeteer.page.waitforresponse), [`page.waitForNavigation`](https://pptr.dev/api/puppeteer.page.waitfornavigation) and [`page.waitForFunction`](https://pptr.dev/api/puppeteer.page.waitforfunction).
 
-### [](#waitfor-function) waitFor function
+### waitFor function {#waitfor-function}
 
 This function can be found as `context.waitFor` in [Web Scraper](https://apify.com/apify/web-scraper#page-function) where it is a generic function that has three possible arguments.
 
@@ -60,13 +60,13 @@ This function can be found as `context.waitFor` in [Web Scraper](https://apify.c
 
 With Puppeteer, you have to use dedicated functions like `page.waitForTimeout`, `page.waitForSelector` or `page.waitForFunction`.
 
-### [](#testing-it) Testing it
+### Testing it {#testing-it}
 
 If you need to update your code with waiting logic, simply start by waiting 10 seconds. If that doesn't help, try 30 seconds. If it still doesn't work, the problem is elsewhere.
 
 Try to debug it using logs and screenshots. If your code is working, you know that it was indeed dynamically loaded data that caused your problem. Now you can change the 10 seconds waiting time for `waitForSelector` to be more efficient.
 
-### [](#timeout-and-errors) Timeout and errors
+### Timeout and errors {#timeout-and-errors}
 
 By default, `waitFor` times out after 30 seconds with an error. Usually, this means another error is preventing the selector from loading. The selector itself may be wrong, or your browser got blocked or redirected to another version of the website.
 
@@ -82,11 +82,11 @@ await page.waitForSelector('my-selector', { timeout: 10000 })
 
 The code will then continue.
 
-## [](#advanced-use-cases) Advanced use cases
+## Advanced use cases {#advanced-use-cases}
 
 So far, we have only scratched the surface of this topic. Let's have a quick look at some more advanced cases. We have not yet covered the third usage of `waitFor` – `waitForFunction`.
 
-### [](#waitforfunction) waitForFunction
+### waitForFunction {#waitforfunction}
 
 If a simple selector is not enough, we can implement a function to be evaluated in the browser context to tell us if the page is ready. Let's imagine that we know the page needs to load 24 products, but for some reason, they load over time. We can define a simple function to check it.
 
@@ -107,7 +107,7 @@ Now we simply pass it to `waitForFunction`:
 await page.waitForFunction(has24Products);
 ```
 
-### [](#waitforresponse) waitForResponse
+### waitForResponse {#waitforresponse}
 
 Sometimes, it may be handy to work directly with the XHR request's response.
 
@@ -140,7 +140,7 @@ const data = await correctResponse.json();
 const userAgent = data.user_agent;
 ```
 
-## [](#custom-waiting-functions) Custom waiting functions
+## Custom waiting functions {#custom-waiting-functions}
 
 You don't need to rely on Puppeteer's smart functions to implement something. You can implement "waiters" using a simple loop. Then, you can add your own functionality to it. For example, a `waitForSelector` that logs its waiting.
 

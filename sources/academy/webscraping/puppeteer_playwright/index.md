@@ -6,7 +6,7 @@ category: web scraping & automation
 slug: /puppeteer-playwright
 ---
 
-# [](#puppeteer-playwright-course) Puppeteer & Playwright course
+# Puppeteer & Playwright course {#puppeteer-playwright-course}
 
 **Learn in-depth how to use two of the most popular Node.js libraries for controlling a headless browser - Puppeteer and Playwright.**
 
@@ -20,13 +20,13 @@ Both packages were developed by the same team and are very similar, which is why
 
 > Each lesson's activity will contain examples for both libraries, but we recommend using Playwright, as it is newer and has more features and better [documentation](https://playwright.dev/docs/intro)
 
-## [](#advantages-of-headless-browsers) Advantages of using a headless browser
+## Advantages of using a headless browser {#advantages-of-headless-browsers}
 
 When automating a headless browser, you can do a whole lot more in comparison to just making HTTP requests for static content. In fact, you can programmatically do pretty much anything a human could do with a browser, such as clicking elements, taking screenshots, typing into text areas, etc.
 
 Additionally, since the requests aren't static, [dynamic content](../../glossary/concepts/dynamic_pages.md) can be rendered and interacted with (or, data from the dynamic content can be scraped).
 
-## [](#setup) Setup
+## Setup {#setup}
 
 For this course, we'll be jumping right into the features of these awesome libraries and expecting you to already have an environment set up. Here's how we set up our environment:
 
@@ -48,7 +48,7 @@ npm install puppeteer
 
 > For a more in-depth guide on how to set up the basic environment we'll be using in this tutorial, check out the [**Computer preparation**](../web_scraping_for_beginners/data_collection/computer_preparation.md) lesson in the **Web scraping for beginners** course
 
-## [](#course-overview) Course overview
+## Course overview {#course-overview}
 
 1. [Launching a browser](./browser.md)
 2. [Opening a page](./page/index.md)
@@ -63,6 +63,6 @@ npm install puppeteer
 6. [Creating multiple browser contexts](./browser_contexts.md)
 7. [Common use cases](./common_use_cases/index.md)
 
-## [](#next) First up
+## First up {#next}
 
 In the [first lesson](./browser.md) of this course, we'll be learning a bit about how to create and use the **Browser** object.

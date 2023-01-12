@@ -15,7 +15,7 @@ Downloading a file using Puppeteer can be tricky. On some systems, there can be 
 
 These techniques are only necessary when we don't have a direct file link, which is usually the case when the file being downloaded is based on more complicated data export.
 
-## [](#setting-up-a-download-path) Setting up a download path
+## Setting up a download path {#setting-up-a-download-path}
 
 Let's start with the easiest technique. This method tells the browser in what folder we want to download a file from Puppeteer after clicking on it.
 
@@ -46,7 +46,7 @@ const fileNames = fs.readdirSync('./my-downloads');
 const fileData = fs.readFileSync(`./my-downloads/${fileNames[0]}`);
 ```
 
-## [](#intercepting-a-file-download-request) Intercepting and replicating a file download request
+## Intercepting and replicating a file download request {#intercepting-a-file-download-request}
 
 For this second option, we can trigger the file download, intercept the request going out, and then replicate it to get the actual data. First, we need to enable request interception. This is done using the following line of code:
 

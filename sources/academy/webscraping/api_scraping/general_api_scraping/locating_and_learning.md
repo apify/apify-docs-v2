@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /api-scraping/general-api-scraping/locating-and-learning
 ---
 
-# [](#locating-endpoints) Locating API endpoints
+# Locating API endpoints {#locating-endpoints}
 
 **Learn how to effectively locate a website's API endpoints, and learn how to use them to get the data you want faster and more reliably.**
 
@@ -27,7 +27,7 @@ After a little bit of digging through the different response values of each requ
 
 ![Endpoint found in the Network tab](./images/endpoint-found.webp)
 
-## [](#learning-the-api) Learning the API
+## Learning the API {#learning-the-api}
 
 The majority of APIs, especially for popular sites that serve up large amounts of data, are configurable through different parameters, query options, or payload values. A lot of times, an endpoint discovered through the Network tab will reveal at least a few of these options.
 
@@ -51,6 +51,6 @@ https://api-v2.soundcloud.com/users/141707/tracks?client_id=zdUqm51WRIAByd0lVLnt
 
 By using the ridiculously large number of `99999`, we ensure that all of the user's tracks will be captured in this single request. Luckily, with SoundCloud's API, there is no cap to the `limit` parameter; however, most other APIs will have a limit to ensure that hundreds of thousands of results aren't retrieved at one time. For this use-case, setting a massive results limit is not much of a risk, as most users don't have a track-count over 500 anyways, but receiving too many results at once can result in overflow errors.
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next lesson](./cookies_headers_tokens.md) will be all about cookies, headers, and tokens, and how they're relevant when scraping an API.

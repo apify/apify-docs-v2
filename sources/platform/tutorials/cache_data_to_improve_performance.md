@@ -17,7 +17,7 @@ If you want to reduce your scraping costs, not re-scraping certain pages is one 
 
 > In a rush? Skip the tutorial and [see the full code example](https://github.com/metalwarrior665/apify-utils/blob/master/examples/caching-page-data.js).
 
-## [](#how-to-cache-data-inside-an-actor) How to cache data inside an actor
+## How to cache data inside an actor {#how-to-cache-data-inside-an-actor}
 
 Thanks to JavaScript's dynamic nature, we can store arbitrary data in a single object and easily manipulate it in place.
 
@@ -39,7 +39,7 @@ cache.data2.myNewKey = 'my-new-data'
 
 Because [all objects in JavaScript are just references](https://www.freecodecamp.org/news/how-to-get-a-grip-on-reference-vs-value-in-javascript-cba3f86da223/), we can cheaply pass them to other functions and read or modify them there.
 
-### [](#persisting-cache-to-the-key-value-store) Persisting cache to the key-value store
+### Persisting cache to the key-value store {#persisting-cache-to-the-key-value-store}
 
 The cache lives only in memory. This is the easiest and fastest way to use a cache. One disadvantage is that if the actor run [migrates to a new server](../actors/development/state_persistence.md).
 
@@ -66,7 +66,7 @@ await Actor.exit();
 
 Another advantage of persisting data is that you can open the key-value store and check what they look like at any time.
 
-## [](#how-to-use-caching-in-an-e-commerce-project) How to use caching in an e-commerce project
+## How to use caching in an e-commerce project {#how-to-use-caching-in-an-e-commerce-project}
 
 Now we have covered the base theory, so we can look into applying caching to help us avoid re-scraping pages. This approach is very helpful with e-commerce marketplaces. Let's define our imaginary example project:
 
@@ -80,7 +80,7 @@ Let's also define the URLs:
 - Products are available on `https://marketplace.com/product/productId`.
 - Sellers are available on `https://marketplace.com/seller/sellerId`.
 
-### [](#cache-structure) Cache structure
+### Cache structure {#cache-structure}
 
 You might have already realized how we can utilize the cache. Because a seller can sell more than one product, with a naive approach, we would just re-scrape the seller page for each of their products. This is wasteful. Instead, we can store all the data we scrape from the seller page to our cache. If we encounter the seller's product again, we can get the seller data straight from the cache.
 
@@ -107,7 +107,7 @@ Our cache will be an object where the **keys** will be the seller IDs (imagine a
 }
 ```
 
-### [](#crawler-example) Crawler example
+### Crawler example {#crawler-example}
 
 ```js
 import { Actor } from 'apify';

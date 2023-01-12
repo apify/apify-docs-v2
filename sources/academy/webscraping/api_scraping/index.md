@@ -18,7 +18,7 @@ API scraping is locating a website's API endpoints, and collecting the desired d
 
 In this module, we will discuss the benefits and drawbacks of API scraping, how to locate an API, how to utilize its potential features, and how to work around some common roadblocks.
 
-## [](#what-is-api) What's an API?
+## What's an API? {#what-is-api}
 
 An API is a custom service that lives on the server of any given website. They provide an intuitive way for the website's client-side pages to send and receive data to and from the server, where it can be stored in a database, manipulated, or used to perform an operation. Though not **all** sites have APIs, the majority do - especially modern web-applications. Learn more about APIs [in this article](https://blog.apify.com/what-is-an-api/).
 
@@ -30,7 +30,7 @@ A GraphQL API works differently from a standard API. All requests are `POST` req
 
 > **Note:** these concepts will be covered more in-depth later on, but it is good to be aware of them now.
 
-## [](#advantages) Advantages of API scraping
+## Advantages of API scraping {#advantages}
 
 <br/>
 
@@ -50,7 +50,7 @@ Especially for [dynamic sites](https://blog.apify.com/what-is-a-dynamic-page/), 
 
 Depending on the website, sending large amounts of requests to their pages could result in a slight performance decrease on their end. By using their API instead, not only does your scraper run better, but it is less demanding of the target website.
 
-## [](#disadvantages) Disdvantages of API Scraping
+## Disdvantages of API Scraping {#disadvantages}
 
 <br/>
 
@@ -64,7 +64,7 @@ For complex APIs that require certain headers and/or payloads in order to make a
 
 <!-- These will be articles in the future -->
 
-## [](#extra-challenges) Extra challenges
+## Extra challenges {#extra-challenges}
 
 <br/>
 
@@ -97,6 +97,6 @@ const decoded = Buffer.from(value, 'base64').toString('utf-8')
 console.log(decoded)
 ```
 
-## [](#first) First up
+## First up {#first}
 
 Get started with this course by learning some general knowledge about API scraping in the [General API Scraping](./general_api_scraping/index.md) section! This section will teach you everything you need to know about scraping APIs before moving into more complex sections.

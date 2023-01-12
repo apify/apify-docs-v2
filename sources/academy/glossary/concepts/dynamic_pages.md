@@ -5,7 +5,7 @@ sidebar_position: 8.3
 slug: /concepts/dynamic-pages
 ---
 
-# [](#dynamic-pages) Dynamic pages and single-page applications (SPAs)
+# Dynamic pages and single-page applications (SPAs) {#dynamic-pages}
 
 **Understand what makes a page dynamic, and how a page being dynamic might change your approach when writing a scraper for it.**
 
@@ -15,7 +15,7 @@ In the modern web, single-page applications (SPAs) are becoming increasingly pop
 
 As you progress in your scraping journey, you'll quickly realize that different websites load their content and populate their pages with data in different ways. Some pages are rendered entirely on the server, some retrieve the data dynamically, and some use a combination of both those methods.
 
-## [](#about-page-loading) How page loading works
+## How page loading works {#about-page-loading}
 
 There are three main events that occur during the process of loading a page, all of which have a designated corresponding name:
 
@@ -25,7 +25,7 @@ There are three main events that occur during the process of loading a page, all
 
 Now that we have a solid understanding of the different stages of page-loading, and the order they happen in, we can fully understand what a dynamic page is.
 
-## [](#what-is-dynamic-content) So, what is dynamic content?
+## So, what is dynamic content? {#what-is-dynamic-content}
 
 Dynamic content is any content that is rendered **after** the `DOMContentLoaded` event, which means any content loaded by JavaScript during the `load` event, or after any network XHR/Fetch requests have been made.
 

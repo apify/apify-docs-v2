@@ -17,7 +17,7 @@ While you can't manage an organization account via [API](https://docs.apify.com/
 
 **[See our video tutorial](https://www.youtube.com/watch?v=BIL6HqtnvKk) on organization accounts.**
 
-## [](#in-the-apify-console) In the Apify Console
+## In the Apify Console {#in-the-apify-console}
 
 You can switch into **Organization account** view using the account button in the top-left corner.
 
@@ -29,7 +29,7 @@ The resources you can access and account details you can edit will depend on you
 
 > When switching between accounts, beware which account you start an actor run in. If you accidentally start an organization's actor run in your personal account, the run will be billed to your account (and vice versa).
 
-### [](#manage-your-organizations) Manage your organizations
+### Manage your organizations {#manage-your-organizations}
 
 You can view and manage the organizations you are a member of from the **Organizations** tab on your [account page](https://console.apify.com/account#/myorganization).
 
@@ -37,11 +37,11 @@ If you want to leave an organization you own, you must first transfer ownership 
 
 ![My organizations](../images/my-organizations.webp)
 
-### [](#transfer-ownership) Transfer ownership
+### Transfer ownership {#transfer-ownership}
 
 The organization, its actors and integrations will keep running as they are. The original owner will either leave the organization or become a member with permissions defined by the new owner. Only the new owner will have complete access to the organization.
 
-## [](#via-api) Via API
+## Via API {#via-api}
 
 While you cannot manage an organization account's settings and members via API, you can access its actor and task runs, webhooks, schedules and storages just like you would with any other account.
 

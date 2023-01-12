@@ -5,7 +5,7 @@ sidebar_position: 7.5
 slug: /actors/publishing
 ---
 
-# [](#publishing-actor) Publishing your actor
+# Publishing your actor {#publishing-actor}
 
 **Prepare your actor for the Apify Store with a description and README file and learn how to make your actor available to the public.**
 
@@ -17,7 +17,7 @@ You can find the Title and description configurations by going to **Apify Consol
 
 ![Actor publication settings](./images/actor-publication-settings.webp)
 
-## [](#description) Description
+## Description {#description}
 
 The actor’s description is a short paragraph describing the actor’s purpose. It will be displayed on the actor’s page right below its title.
 
@@ -27,7 +27,7 @@ While writing your actor’s description you also have the option to write an SE
 
 ![SEO title and description](./images/actor-SEO.webp)
 
-## [](#readme) README
+## README {#readme}
 
 The next step is to include a **README** detailing the actor’s features, reasons to scrape the targeted website, and an explanation about how to use the actor.
 
@@ -39,7 +39,7 @@ To save some time when writing an actor’s README, you can use the template bel
 
 Note that the complexity of the README should match the actor’s complexity. This means that the template above is not immutable and that you can adapt it to fit the particularities of your actor.
 
-## [](#make-your-actor-public) Make your actor Public
+## Make your actor Public {#make-your-actor-public}
 
 Once you have finished coding and testing your actor, it's time to publish it.
 
@@ -59,7 +59,7 @@ Then, click on your actor’s card and you will see your dedicated actor’s pag
 
 ![Actor page](./images/actor-page.webp)
 
-## [](#actor-testing) Actor testing
+## Actor testing {#actor-testing}
 
 Apify has a QA system that regularly runs automated tests to ensure that all actors in the store are functional.
 

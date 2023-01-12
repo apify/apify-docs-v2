@@ -5,7 +5,7 @@ sidebar_position: 14.6
 slug: /node-js/optimizing-scrapers
 ---
 
-# [](#optimizing-scrapers) How to optimize and speed up your web scraper
+# How to optimize and speed up your web scraper {#optimizing-scrapers}
 
 **We all want our scrapers to run as cost-effective as possible. Learn how to think about performance in the context of web scraping and automation.**
 
@@ -19,7 +19,7 @@ There is one more thing. Optimization has its own cost: development time. You sh
 
 Before we dive into the practical side of things, lets diverge with an analogy to help us think about the performance of scrapers.
 
-## [](#analogy) Game development analogy
+## Game development analogy {#analogy}
 
 Modern games are extremely complicated beasts. Every frame (usually 60 times a second), the game has to calculate the physics of the world, run AI, user input, and render everything into a beautiful scene. You can imagine that running all of that every 16 ms in a complicated game is a developer's nightmare. That's why a significant portion of game development is spent on optimizations. Every little waste matters.
 
@@ -27,7 +27,7 @@ This is mainly true in the programming heart of the game - the engine. The engin
 
 Now, if you want to build your own game and you are not a C/C++ veteran with a team, you will likely use an existing engine (like Unreal or Unity) and focus on the design of the game environment itself. Unless you go crazy, the game will likely run just fine since those engines have already been optimized for you. Your job is to choose an appropriate engine and use it well.
 
-## [](#back-to-scrapers) Back to scrapers
+## Back to scrapers {#back-to-scrapers}
 
 What are the engines of the scraping world? A [browser](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md), an [HTTP library](https://www.npmjs.com/package/@apify/http-request), an [HTML parser](https://github.com/cheeriojs/cheerio), and a [JSON parser](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The CPU spends more than 99% of its workload in these libraries. As with engines, you are not likely gonna write these from scratch - instead you'll use something like [Crawlee](https://crawlee.dev) that handles a lot of the overheads for you.
 

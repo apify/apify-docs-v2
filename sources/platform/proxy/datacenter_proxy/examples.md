@@ -15,7 +15,7 @@ This page contains code examples for connecting to [datacenter proxies](./index.
 
 See the [connection settings](../connection_settings.md) page for connection parameters.
 
-## [](#using-the-apify-sdk-and-crawlee) Using the Apify SDK and Crawlee
+## Using the Apify SDK and Crawlee {#using-the-apify-sdk-and-crawlee}
 
 If you are developing your own Apify [actor](../../actors/index.md) using the [Apify SDK](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/), you can use Apify Proxy in:
 
@@ -29,7 +29,7 @@ If you are developing your own Apify [actor](../../actors/index.md) using the [A
 
 The Apify SDK's [ProxyConfiguration](https://sdk.apify.com/api/apify/class/ProxyConfiguration) enables you to choose which proxies you use for all connections. You can inspect the current proxy's URL and other attributes using the [proxyInfo](https://crawlee.dev/api/cheerio-crawler/interface/CheerioCrawlingContext#proxyInfo) property of [crawling context](https://crawlee.dev/api/cheerio-crawler/interface/CheerioCrawlingContext) of your crawler's [requestHandler](https://crawlee.dev/api/cheerio-crawler/interface/CheerioCrawlerOptions#requestHandler).
 
-### [](#rotate-ip-addresses) Rotate IP addresses
+### Rotate IP addresses {#rotate-ip-addresses}
 
 IP addresses for each request are selected at random from all available proxy servers.
 
@@ -130,7 +130,7 @@ await Actor.exit();
 </marked-tab>
 ```
 
-### [](#single-ip-address-for-multiple-requests) Single IP address for multiple requests
+### Single IP address for multiple requests {#single-ip-address-for-multiple-requests}
 
 Use a single IP address until it fails (gets retired).
 
@@ -244,7 +244,7 @@ await Actor.exit();
 </marked-tab>
 ```
 
-### [](#how-to-use-proxy-groups) How to use proxy groups
+### How to use proxy groups {#how-to-use-proxy-groups}
 
 For simplicity, the examples above use the automatic proxy configuration (no specific proxy groups are specified), which selects IP addresses from all available groups.
 
@@ -263,7 +263,7 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 await Actor.exit();
 ```
 
-## [](#using-standard-libraries-and-languages) Using standard libraries and languages
+## Using standard libraries and languages {#using-standard-libraries-and-languages}
 
 You can find your proxy password on the [Proxy page](https://console.apify.com/proxy) of the Apify Console.
 
@@ -275,7 +275,7 @@ For examples using [PHP](https://www.php.net/), you need to have the [cURL](http
 
 Examples in [Python 2](https://www.python.org/download/releases/2.0/) use the [six](https://pypi.org/project/six/) library. Run `pip install six` to enable it.
 
-### [](#use-ip-rotation) Use IP rotation
+### Use IP rotation {#use-ip-rotation}
 
 For each request, a random IP address is chosen from all [available proxy groups](https://console.apify.com/proxy). You can use random IP addresses from proxy groups by specifying the group(s) in the `username` parameter.
 
@@ -376,7 +376,7 @@ echo $response->getBody();
 </marked-tab>
 ```
 
-### [](#multiple-requests-with-the-same-ip-address) Multiple requests with the same IP address
+### Multiple requests with the same IP address {#multiple-requests-with-the-same-ip-address}
 
 The IP address in the example is chosen at random from all available proxy groups.
 
@@ -505,7 +505,7 @@ echo $response->getBody();
 </marked-tab>
 ```
 
-## [](#username-examples) Username examples
+## Username examples {#username-examples}
 
 Use randomly allocated IP addresses from the `BUYPROXIES94952` group:
 

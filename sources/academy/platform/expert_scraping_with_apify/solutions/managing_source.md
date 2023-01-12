@@ -13,7 +13,7 @@ slug: /expert-scraping-with-apify/solutions/managing-source
 
 In the lesson corresponding to this solution, we discussed an extremely important topic: source code management. Though we solved the task right in the lesson, we've still included the quiz answers here.
 
-## [](#quiz-answers) Quiz answers
+## Quiz answers {#quiz-answers}
 
 **Q: Do you have to rebuild an actor each time the source code is changed?**
 

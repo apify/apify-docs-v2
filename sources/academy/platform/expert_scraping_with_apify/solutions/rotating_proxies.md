@@ -5,7 +5,7 @@ sidebar_position: 6
 slug: /expert-scraping-with-apify/solutions/rotating-proxies
 ---
 
-# [](#rotating-proxy-sessions) Rotating proxies/sessions
+# Rotating proxies/sessions {#rotating-proxy-sessions}
 
 **Learn first hand how to rotate proxies and sessions in order to avoid the majority of the most common anti-scraping protections.**
 
@@ -25,7 +25,7 @@ We didn't provide much explanation for this initially, as it was not directly re
 
 In order to rotate sessions, we must utilize the [**SessionPool**](https://crawlee.dev/api/core/class/AutoscaledPool), which we've actually also already been using by setting the **useSessionPool** option in our crawler's configuration to **true**. The SessionPool advances the concept of proxy rotation by tying proxies to user-like sessions and rotating those instead. In addition to a proxy, each user-like session has cookies attached to it (and potentially a browser-fingerprint as well).
 
-## [](#configuring-session-pool) Configuring SessionPool
+## Configuring SessionPool {#configuring-session-pool}
 
 Let's go ahead and add a **sessionPoolOptions** key to our crawler's configuration so that we can modify the default settings:
 
@@ -71,7 +71,7 @@ const crawler = new CheerioCrawler({
 
 And that's it! We've successfully configured the session pool to match the task's requirements.
 
-## [](#limiting-proxy-location) Limiting proxy location
+## Limiting proxy location {#limiting-proxy-location}
 
 The final requirement was to only use proxies from the US. Back in our **ProxyConfiguration**, we just need to add the **countryCode** key and set it to **US**:
 
@@ -82,7 +82,7 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 });
 ```
 
-## [](#quiz-answers) Quiz answers
+## Quiz answers {#quiz-answers}
 
 **Q: What are the different types of proxies that Apify proxy offers? What are the main differences between them?**
 
@@ -112,6 +112,6 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 
 **A:** IP detection and rate-limiting, browser/fingerprint detection, user behavior tracking, etc.
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 In this solution, you learned one of the most important concepts in web-scraping - proxy/session rotation. With your newfound knowledge of the SessionPool, you'll be (practically) unstoppable!

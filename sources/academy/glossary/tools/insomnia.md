@@ -5,7 +5,7 @@ sidebar_position: 9.2
 slug: /tools/insomnia
 ---
 
-# [](#what-is-insomnia) What is Insomnia?
+# What is Insomnia? {#what-is-insomnia}
 
 **Learn about Insomnia, a simple yet super valuable tool for testing requests and proxies when building scalable web scrapers.**
 
@@ -15,7 +15,7 @@ Despite its name, the [Insomnia](https://insomnia.rest/download) desktop applica
 
 Insomnia can be downloaded from its [official website](https://insomnia.rest/download), and its features can be read about in the [official documentation](https://docs.insomnia.rest/).
 
-## [](#insomnia-interface) The Insomnia interface
+## The Insomnia interface {#insomnia-interface}
 
 After opening the app, you'll first need to create a new request. After creating the request, you'll see an interface that looks like this:
 
@@ -39,7 +39,7 @@ Here, you can add a request payload, specify authorization parameters, add query
 
 Where the response body is displayed after the request has been sent. Like in Postman, the request can be viewed in preview mode, pretty-printed, or in its raw form. This section also has the **Headers** and **Cookies** tabs, which respectively show the request headers and cookies.
 
-## [](#request-timeline) Request timeline
+## Request timeline {#request-timeline}
 
 The one feature of Insomnia that separates it from Postman is the **Timeline**.
 
@@ -47,13 +47,13 @@ The one feature of Insomnia that separates it from Postman is the **Timeline**.
 
 This feature allows you to see information about the request that is not present in the response body.
 
-## [](#using-proxies) Using proxies in Insomnia
+## Using proxies in Insomnia {#using-proxies}
 
 In order to use a proxy, you need to specify the proxy's parameters in Insomnia's preferences. In preferences, scroll down to the **HTTP Network Proxy** section under the **General** tab and specify the full proxy URL there:
 
 ![Configuring a proxy](./images/insomnia-proxy.webp)
 
-## [](#managing-cookies-cache) Managing the cookies cache
+## Managing the cookies cache {#managing-cookies-cache}
 
 Insomnia keeps the cookies for the requests you have already sent before. This might result in you receiving a difference response within your scraper from what you're receiving in Insomnia, as a necessary cookie is not present in the request sent by the scraper. To check whether or not some cookies associated with a certain request have been cached, click on the **Cookies** button at top of the list of requests:
 
@@ -63,6 +63,6 @@ This'll bring up the **Manage cookies** window, where all cached cookies can be 
 
 ![The "Manage Cookies" tab](./images/insomnia-manage-cookies.webp)
 
-## [](#postman-or-insomnia) So, Postman or Insomnia?
+## So, Postman or Insomnia? {#postman-or-insomnia}
 
 The application you choose to use is completely up to personal preference, and will not affect your development workflow. If viewing timelines of the requests you send is important to you, then you should go with Insomnia; however, if that doesn't matter, just choose the one that has the most intuitive interface for you.

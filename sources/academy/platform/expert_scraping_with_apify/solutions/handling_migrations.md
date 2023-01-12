@@ -5,7 +5,7 @@ sidebar_position: 5
 slug: /expert-scraping-with-apify/solutions/handling-migrations
 ---
 
-# [](#handling-migrations) Handling migrations
+# Handling migrations {#handling-migrations}
 
 **Get real-world experience of maintaining a stateful object stored in memory, which will be persisted through migrations and even graceful aborts.**
 
@@ -125,7 +125,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 });
 ```
 
-## [](#persisting-state) Persisting state
+## Persisting state {#persisting-state}
 
 The **persistState** event is automatically fired (by default) every 60 seconds by the Apify SDK while the actor is running, and is also fired when the **migrating** event occurs.
 
@@ -162,7 +162,7 @@ class ASINTracker {
 module.exports = new ASINTracker();
 ```
 
-## [](#handling-resurrections) Handling resurrections
+## Handling resurrections {#handling-resurrections}
 
 Great! So now our state will be persisted every 60 seconds in the key-value store. However, we're not done. Let's say that the actor migrates and is resurrected. We never actually update the `state` variable of our `ASINTracker` class with the state stored in the key-value store, so as our code currently stands, we still don't support state-persistence on migrations.
 
@@ -225,7 +225,7 @@ await tracker.initialize();
 
 That's everything! Now, even if the actor migrates (or is gracefully aborted then resurrected), this `state` object will always be persisted.
 
-## [](#quiz-answers) Quiz answers 📝
+## Quiz answers 📝 {#quiz-answers}
 
 **Q: Actors have an option the Settings tab to Restart on error. Would you use this feature for regular actors? When would you use this feature?**
 
@@ -247,7 +247,7 @@ That's everything! Now, even if the actor migrates (or is gracefully aborted the
 
 **A:** Persisting data to the default key-value store would help when handling an actor's run state or with storing metadata about the run (such as results, miscellaneous files, or logs). Using a named key-value store allows you to persist data at the account level to handle data across multiple actor runs.
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 In this activity, we learned how to persist custom values on an interval as well as after actor migrations by using the `persistState` event and the key-value store. With this knowledge, you can safely increase your actor's performance by storing data in variables then pushing them to the dataset periodically/at the end of the actor's run as opposed to pushing data immediately after it's been collected.
 

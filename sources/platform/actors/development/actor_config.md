@@ -4,7 +4,7 @@ description: Learn how to write the main actor config in the `.actor/actor.json`
 slug: /actors/development/actor-config
 ---
 
-# [](#actor-config) Actor config
+# Actor config {#actor-config}
 
 **Learn how to write the main actor config in the `.actor/actor.json` file.**
 

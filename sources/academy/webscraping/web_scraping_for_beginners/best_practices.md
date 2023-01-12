@@ -5,7 +5,7 @@ sidebar_position: 1.5
 slug: /web-scraping-for-beginners/best-practices
 ---
 
-# [](#best-practices) Best practices when writing scrapers
+# Best practices when writing scrapers {#best-practices}
 
 **Understand the standards and best practices that we here at Apify abide by to write readable, scalable, and maintainable code.**
 
@@ -15,27 +15,27 @@ Every developer has their own style, which evolves as they grow and learn. While
 
 The goal of this lesson is not to force you into a specific paradigm or to make you think that you're doing things wrong, but instead to provide you some insight into the standards and best practices that we at Apify follow to ensure readable, maintainable, scalable code.
 
-## [](#code-style) Code style
+## Code style {#code-style}
 
 There are some general things we recommend when it comes to your code style when writing scrapers.
 
-### [](#clean-code) Clean code
+### Clean code {#clean-code}
 
 Praise [clean code](https://blog.risingstack.com/javascript-clean-coding-best-practices-node-js-at-scale/)! Use proper variable and function names that are descriptive of what they are, and split your code into smaller [pure](https://en.wikipedia.org/wiki/Pure_function) functions.
 
-### [](#constants) Constant variables
+### Constant variables {#constants}
 
 Define any [constant variables](https://softwareengineering.stackexchange.com/questions/250619/best-practices-reasons-for-string-constants-in-javascript) that globally apply to the scraper in a single file named **constants.js**, from where they will all be imported. Constant variable names should be in `UPPERCASE_WITH_UNDERSCORES` style.
 
 > If you have a whole lot of constant variables, they can be in a folder named **constants** organized into different files.
 
-### [](#use-es6) Use modern ES6 JavaScript
+### Use modern ES6 JavaScript {#use-es6}
 
 If you're writing your scraper in JavaScript, use [ES6](https://www.w3schools.com/js/js_es6.asp) features and ditch the old ones which they replace. This means using `const` and `let` instead of `var`, `includes` instead of `indexOf`, etc.
 
 > To learn more about some of the most popular (and awesome) ES6+ features, check out [this](https://medium.com/@matthiasvstephens/why-is-es6-so-awesome-88bff6857849) article.
 
-### [](#no-magic-numbers) No magic numbers
+### No magic numbers {#no-magic-numbers}
 
 Avoid using [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) as much as possible. Either declare them as a **constant** variable in your **constants.js** file, or if they are only used once, add a comment explaining what the number is.
 
@@ -52,13 +52,13 @@ That is quite confusing due to the nondescriptive naming and the magic numbers. 
 const fahrenheitToCelsius = (celsius) => (celsius - 32) * (5 / 9);
 ```
 
-### [](#use-comments) Use comments!
+### Use comments! {#use-comments}
 
 Don't be shy to add comments to your code! Even when using descriptive function and variable naming, it might still be a good idea to add a comment in places where you had to make a tough decision or chose an unusual choice.
 
 > If you're a true pro, use [JSDoc](https://jsdoc.app/) to comment and document your code.
 
-## [](#logging) Logging
+## Logging {#logging}
 
 Logging helps you understand exact what your scraper is doing. Generally, having more logs is better than having less. Especially make sure to log your `catch` blocks - no error should pass unseen unless there is a good reason.
 
@@ -78,21 +78,21 @@ And here is  that log message translated into something that makes much more sen
 Index 1234 --- https://example.com/1234 --- took 300 ms
 ```
 
-## [](#input) Input
+## Input {#input}
 
 There are two main best practices when it comes to accepting input into a scraper.
 
-### [](#set-limits) Set limits
+### Set limits {#set-limits}
 
 When allowing your users to pass input properties which could break the scraper (such as **timeout** set to **0**), be sure to disallow ridiculous values. Set a maximum/minimum number allowed, maximum array input length, etc.
 
-### [](#validate) Validate
+### Validate {#validate}
 
 Validate the input provided by the user! This should be the very first thing your scraper does. If the fields in the input are missing or in an incorrect type/format, either parse the value and correct it programmatically or throw an informative error telling the user how to fix the error.
 
 > On the Apify platform, you can use the [input schema](../../platform/deploying_your_code/input_schema.md) to both easily validate inputs and generate a clean UI for those using your scraper.
 
-## [](#error-handling) Error handling
+## Error handling {#error-handling}
 
 Errors are bound to occur in scrapers. Perhaps it got blocked, or perhaps the data scraped was corrupted in some way.
 
@@ -122,7 +122,7 @@ We could not parse the price of product: Men's Trainers Orange, pushing anyways.
 
 This really depends on your use case though. If you want 100% clean data, you might not want to push incomplete objects and just retry (ideally) or log an error message instead.
 
-## [](#recap) Recap
+## Recap {#recap}
 
 Wow, that's a whole lot of things to abide by! How will you remember all of them? Well, to simplify everything, just try to follow these three points:
 

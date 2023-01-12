@@ -5,7 +5,7 @@ sidebar_position: 5
 slug: /getting-started/apify-client
 ---
 
-# [](#apify-client) Apify client
+# Apify client {#apify-client}
 
 **Interact with the Apify API in your code by using the apify-client package, which is available for both JavaScript and Python.**
 
@@ -15,7 +15,7 @@ Now that you've gotten your toes wet with interacting with the Apify API through
 
 This lesson will provide code examples for both Node.js and Python, so regardless of the language you are using, you can follow along!
 
-## [](#installing-and-importing) Installing and importing
+## Installing and importing {#installing-and-importing}
 
 If you are going to use the client in Node.js, use this command within one of your projects to install the package through NPM:
 
@@ -42,7 +42,7 @@ from apify_client import ApifyClient
 </marked-tab>
 ```
 
-## [](#running-an-actor) Running an actor
+## Running an actor {#running-an-actor}
 
 In the last lesson, we ran the **adding-actor** and retrieved its dataset items. That's exactly what we're going to do now; however, by using the Apify client instead.
 
@@ -80,7 +80,7 @@ run = client.actor('YOUR_USERNAME/adding-actor').call(run_input={
 
 > Learn more about the `.call()` function [here](https://docs.apify.com/apify-client-js#actorclient-call).
 
-## [](#collecting-dataset-items) Collecting dataset items
+## Collecting dataset items {#collecting-dataset-items}
 
 Once an actor's run has completed, it will return a **run info** object that looks something like this:
 
@@ -155,7 +155,7 @@ print(items)
 </marked-tab>
 ```
 
-## [](#updating-actor) Updating an actor
+## Updating an actor {#updating-actor}
 
 If you check the **Settings** tab within your **adding-actor**, you'll notice that the default memory being allocated to the actor is **2048 MB**. This is a bit overkill considering the fact that the actor is only adding two numbers together - **256 MB** would be much more reasonable. Also, we can safely say that the run should never take more than 20 seconds (even this is a generous number), and that the default of 3600 seconds is also overkill.
 
@@ -193,7 +193,7 @@ After running the code, go back to the **Settings** page of **adding-actor**. If
 
 ![New run defaults](./images/new-defaults.webp)
 
-## [](#overview) Overview
+## Overview {#overview}
 
 There is so much more you can do with the Apify client than just running actors, updating actors, and collecting dataset items. The purpose of this lesson was just to get you comfortable with using the client in your own projects, as it is the absolute best developer tool for integrating the Apify platform with an external system.
 
@@ -202,6 +202,6 @@ For a more in-depth understanding of the Apify API client, give these a quick lo
 - [API client for JavaScript](https://docs.apify.com/apify-client-js)
 - [API client for Python](https://docs.apify.com/apify-client-python)
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that you're familiar and a bit more comfortable with the Apify platform, you're ready to start deploying your code to Apify! In the [next section](../deploying_your_code/index.md), you'll learn how to take any project written in any programming language and turn it into an actor.

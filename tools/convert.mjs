@@ -81,6 +81,10 @@ async function transformLine(line, cwd) {
         line = line.replace(/```GraphQL/i, '```graphql');
     }
 
+    if (line.match(/#+ \[]\(#[\w-]+\) .*/)) {
+        line = line.replace(/(#+) \[]\(#([\w-]+)\) (.*)/i, '$1 $3 {#$2}');
+    }
+
     if (line.match(/\{\{@asset .*}}/i)) {
         let imgPath = line.match(/\{\{@asset (.*)}}/i)[1];
         const files = await globby('sources/**/' + imgPath);

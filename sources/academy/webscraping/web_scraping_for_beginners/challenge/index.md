@@ -15,7 +15,7 @@ Before moving onto the other courses in the academy, we recommend following alon
 
 We recommend that you make sure you've gone through both the [data collection](../data_collection/index.md) sections of this course to ensure the smoothest development process.
 
-## [](#learning) Learning 🧠
+## Learning 🧠 {#learning}
 
 Before continuing, it is highly recommended to do the following:
 
@@ -24,7 +24,7 @@ Before continuing, it is highly recommended to do the following:
 - Check out [this tutorial](../../../tutorials/node_js/dealing_with_dynamic_pages.md) about dynamic pages.
 - Read about the [RequestQueue](https://crawlee.dev/api/core/class/RequestQueue).
 
-## [](#our-task) Our task
+## Our task {#our-task}
 
 On Amazon, we can use this link to get to the results page of any product we want:
 
@@ -79,7 +79,7 @@ Each of the items in the dataset will represent a scraped offer, and will have t
 
 <!-- After the scrape has completed, we'll programmatically call a [public actor which sends emails](https://apify.com/apify/send-mail) to send ourselves an email with a publicly viewable link to the actor's final dataset. -->
 
-## [](#next) First up
+## First up {#next}
 
 From this course, you should have all the knowledge to build this scraper by yourself. Give it a try, then come back to compare your scraper with our solution.
 

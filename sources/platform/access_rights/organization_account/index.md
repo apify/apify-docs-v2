@@ -22,11 +22,11 @@ You can set up an organization in two ways.
 
 > Prefer video to reading? [See our video tutorial](https://www.youtube.com/watch?v=BIL6HqtnvKk) for organization accounts.
 
-## [](#availability-and-pricing) Availability and pricing
+## Availability and pricing {#availability-and-pricing}
 
 The organization account is available on all our plans. [Visit our pricing page](https://apify.com/pricing) for more information.
 
-## [](#create-a-new-organization) Create a new organization
+## Create a new organization {#create-a-new-organization}
 
 You can create a new organization by clicking the **Create new organization** button under the **Organizations** tab in your [account](https://console.apify.com/account#/myorganizations). If you want the organization to have a separate email address (used for notifications), enter it here. Otherwise, leave the **email** field empty and the owner's email will be used for notifications.
 
@@ -34,7 +34,7 @@ You can create a new organization by clicking the **Create new organization** bu
 
 **You can own up to 5 and be a member of as many organizations as you need.**
 
-## [](#convert-an-existing-account) Convert an existing account
+## Convert an existing account {#convert-an-existing-account}
 
 > **When you convert an existing user account into an organization,**
 >
@@ -56,7 +56,7 @@ And that's it! Your personal account becomes the organization, and you will be l
 
 For information on [adding members and assigning roles](./setup.md), see the Setup page.
 
-## [](#billing) Billing
+## Billing {#billing}
 
 Actor and task runs are billed to the account they are started from. **Always make sure you start your runs from the correct account** to avoid having an organization's runs billed to your personal account.
 

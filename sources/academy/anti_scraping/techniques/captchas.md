@@ -5,7 +5,7 @@ sidebar_position: 5
 slug: /anti-scraping/techniques/captchas
 ---
 
-# [](#captchas) Captchas
+# Captchas {#captchas}
 
 **Learn about the reasons a bot might be presented a captcha, the best ways to avoid captchas in the first place, and how to programmatically solve them.**
 
@@ -16,7 +16,7 @@ In general, a website will present a user (or scraper) a captcha for 2 main reas
 1. The website always does captcha checks to access the desired content.
 2. One of the website's anti-bot measures (or the [WAF](./firewalls.md)) has flagged the user as suspicious.
 
-## [](#dealing-with-captchas) Dealing with captchas
+## Dealing with captchas {#dealing-with-captchas}
 
 When you've hit a captcha, your first thought should not be how to programmatically solve it. Rather, you should consider the factors as to why you received the captcha in the first place: your bot didn't appear enough like a real user to avoid being presented the challenge.
 
@@ -27,7 +27,7 @@ Have you expended all of the possible options to make your scraper appear more h
 - Generating and using a custom [browser fingerprint](./fingerprinting.md)?
 - Trying different general scraping methods (HTTP scraping, browser scraping)? If you are using browser scraping, have you tried using a different browser?
 
-## [](#solving-captchas) Solving captchas
+## Solving captchas {#solving-captchas}
 
 If you've tried everything you can to avoid being presented the captcha and are still facing this roadblock, there are methods to programmatically solve captchas.
 

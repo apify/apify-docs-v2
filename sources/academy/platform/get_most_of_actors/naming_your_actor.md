@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /get-most-of-actors/naming-your-actor
 ---
 
-# [](#naming-your-actor) Naming your actor
+# Naming your actor {#naming-your-actor}
 
 **Apify's standards for actor naming. Learn how to choose the right name for scraping and non-scraping actors and how to optimize your actor for search engines.**
 
@@ -15,7 +15,7 @@ Naming your actor can be tricky. Especially when you've spent a long time coding
 
 > Your actor's name should be 3-63 characters long.
 
-## [](#scrapers) Scrapers
+## Scrapers {#scrapers}
 
 For actors such as [YouTube Scraper](https://apify.com/bernardo/youtube-scraper) or [Amazon Scraper](https://apify.com/vaclavrut/amazon-crawler), which scrape web pages, we usually have one actor per domain. This helps with naming, as the domain name serves as your actor's name.
 
@@ -39,7 +39,7 @@ For example,
 - Publication title: **${Domain} ${Service} Scraper**, e.g. [**Google Search Scraper**](https://apify.com/apify/google-search-scraper).
 - GitHub repository: **actor-${domain}-${service}-scraper**, e.g. **actor-google-search-scraper**.
 
-## [](#non-scraping-actors) Non-scraping actors
+## Non-scraping actors {#non-scraping-actors}
 
 Naming for non-scraping actors is more liberal. Being creative and considering SEO and user experience are good places to start. Think about what your users will type into a search engine when looking for your actor. What is your actor's function?
 
@@ -59,12 +59,12 @@ AVOID:
 - Publication title: **Actor for Importing to and Exporting from Google Sheets**.
 - GitHub repository: **actor-for-import-and-export-google-sheets**.
 
-## [](#renaming-your-actor) Renaming your actor
+## Renaming your actor {#renaming-your-actor}
 
 **Warning!** Changing your actor's **technical name** may break current integrations for that actor's users. This is why some actors in the Apify Store don't have consistent naming. For the same reason, it is best to change the actor's name early, before you build a steady user base.
 
 The **publication title**, however, can be changed without any problems.
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that your actor is properly named and you know the differences between your actor's technical name and publication title, it's time to take the [next step](./actor_readme.md)! into making your actor public in Apify Store by ensuring that it has a well-structured and comprehensive README.

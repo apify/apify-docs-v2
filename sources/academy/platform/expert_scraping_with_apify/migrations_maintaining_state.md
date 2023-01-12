@@ -5,7 +5,7 @@ sidebar_position: 6.5
 slug: /expert-scraping-with-apify/migrations-maintaining-state
 ---
 
-# [](#migrations-maintaining-state) Migrations & maintaining state
+# Migrations & maintaining state {#migrations-maintaining-state}
 
 **Learn about what actor migrations are and how to handle them properly so that state is not lost and it can safely be resurrected.**
 
@@ -17,13 +17,13 @@ On migration, the process inside of an actor is completely restarted and everyth
 
 When a migration happens, you want to do a so-called "state transition", which means saving any data you care about so the actor can continue right where it left off before the migration.
 
-## [](#learning) Learning 🧠
+## Learning 🧠 {#learning}
 
 Read this [article](https://docs.apify.com/actors/development/state-persistence) on migrations and dealing with state transitions.
 
 Before moving forward, read about actor [events](https://sdk.apify.com/docs/api/apify#apifyevents) and how to listen for them.
 
-## [](#quiz) Knowledge check 📝
+## Knowledge check 📝 {#quiz}
 
 1. Actors have an option the **Settings** tab to **Restart on error**. Would you use this feature for regular actors? When would you use this feature?
 2. Migrations happen randomly, but by [aborting **gracefully**](https://docs.apify.com/actors/running#aborting-runs), you can simulate a similar situation. Try this out on the platform and observe what happens. What changes occur, and what remains the same for the restarted actor's run?
@@ -46,6 +46,6 @@ Every 10 seconds, we should log the most up-to-date version of this object to th
 
 [**Solution**](./solutions/handling_migrations.md)
 
-## [](#next) Next up
+## Next up {#next}
 
 You might have already noticed that we've been using the **RESIDENTIAL** proxy group in the `proxyConfiguration` within our Amazon scraping actor. But what does that mean? Learn why we've used this group, about proxies, and about avoiding anti-scraping measures in the [next lesson](./bypassing_anti_scraping.md).

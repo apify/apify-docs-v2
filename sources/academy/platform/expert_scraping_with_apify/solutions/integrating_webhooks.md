@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /expert-scraping-with-apify/solutions/integrating-webhooks
 ---
 
-# [](#integrating-webhooks) Integrating webhooks
+# Integrating webhooks {#integrating-webhooks}
 
 **Learn how to integrate webhooks into your actors. Webhooks are a super powerful tool, and can be used to do almost anything!**
 
@@ -17,7 +17,7 @@ In this lesson we'll be writing a new actor and integrating it with our beloved 
 
 Cool! Now, we're ready to get started.
 
-## [](#building-the-new-actor) Building the new actor
+## Building the new actor {#building-the-new-actor}
 
 First of all, we should clear out any of the boilerplate code within **main.js** to get a clean slate:
 
@@ -121,7 +121,7 @@ Cool! But **wait**, don't forget to configure the **INPUT_SCHEMA.json** file as 
 
 Now we're done, and we can push it up to the Apify platform with the `apify push` command.
 
-## [](#setting-up-the-webhook) Setting up the webhook
+## Setting up the webhook {#setting-up-the-webhook}
 
 Since we'll be calling the actor via the [Apify API](https://docs.apify.com/tutorials/integrations/run-actor-and-retrieve-data-via-api#run-an-actor-or-task), we'll need to grab hold of the ID of the actor we just created and pushed to the platform. The ID is always accessible through the **Settings** page of the actor.
 
@@ -149,7 +149,7 @@ We have chosen to run the webhook once the actor has succeeded, which means that
 
 Click **Save**, then run the Amazon **demo-actor** again.
 
-## [](#checking-the-webhook) Making sure it worked
+## Making sure it worked {#checking-the-webhook}
 
 If everything worked, then at the end of the **demo-actor**'s run, we should see this within the **Integrations** tab:
 
@@ -159,7 +159,7 @@ Additionally, we should be able to see that our **filter-actor** was run, and ha
 
 ![Dataset preview](./images/dataset-preview.webp)
 
-## [](#quiz-answers) Quiz answers 📝
+## Quiz answers 📝 {#quiz-answers}
 
 **Q: How do you allocate more CPU for an actor's run?**
 
@@ -181,6 +181,6 @@ Every actor's run is given a default key-value store and a default dataset. The 
 
 **A:** This can be done by using the `actor-node-puppeteer-chrome` Docker image and making sure that `launchContext.launchOptions.headless` in `PuppeteerCrawlerOptions` is set to `false`.
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 See that?! Integrating webhooks is a piece of cake on the Apify platform! You'll soon discover that the platform factors away a lot of complex things and allows you to focus on what's most important - developing and releasing actors.

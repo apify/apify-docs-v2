@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /api-scraping/graphql-scraping/introspection
 ---
 
-# [](#introspection) Introspection
+# Introspection {#introspection}
 
 **Understand what introspection is, and how it can help you understand a GraphQL API to take advantage the features it has to offer before writing any code.**
 
@@ -17,7 +17,7 @@ Just like when working with regular RESTful APIs in the [**General API scraping*
 
 Not only does becoming comfortable with and understanding the ins and outs of using the API make the development process easier, but it can also sometimes expose features which will return data you'd otherwise be scraping from a different location.
 
-## [](#making-the-query) Making the query
+## Making the query {#making-the-query}
 
 In order to perform introspection on our [target website](https://cheddar.com), we just need to make a request to their GraphQL API with this introspection query using [Insomnia](../../../glossary/tools/insomnia.md) or another HTTP client that supports GraphQL:
 
@@ -128,7 +128,7 @@ Here's what we got back from the request:
 
 The response body of our introspection query contains a whole lot of useful information about the API, such as the data types defined within it, as well the queries and mutations available for retrieving/changing the data.
 
-## [](#understanding-the-response) Understanding the response
+## Understanding the response {#understanding-the-response}
 
 An introspection query's response body size will vary depending on how big the target API is. In our case, what we got back is a 27 thousand line JSON response 🤯 If you just thought to yourself, "Wow, that's a whole lot to sift through! I don't want to look through that!", you are absolutely right. Luckily for us, there is a fantastic online tool called [GraphQL Voyager](https://apis.guru/graphql-voyager/) (no install required) which can take this massive JSON response and turn it into a digestable visualization of the API.
 
@@ -142,7 +142,7 @@ Finally, we can click on **Display** and immediately be shown a visualization of
 
 Now that we have this visualization to work off of, it will be much easier to build a query of our own.
 
-## [](#building-a-query) Building a query
+## Building a query {#building-a-query}
 
 In future lessons, we'll be building more complex queries using **dynamic variables** and advanced features such as **fragments**; however, for now let's just  get our feet wet by using the data we have from GraphQL Voyager to build a simple query.
 
@@ -171,7 +171,7 @@ query {
 }
 ```
 
-## [](#sending-the-query) Sending the query
+## Sending the query {#sending-the-query}
 
 Let's send it!
 
@@ -191,7 +191,7 @@ Cool, it worked! Now we know that if we want to scrape this API, we'll likely ha
 
 > For more information about cookies, headers, and tokens, refer back to [this lesson](../general_api_scraping/cookies_headers_tokens.md) from the previous section of the **API scraping** course.
 
-## [](#introspection-disabled) Introspection disabled?
+## Introspection disabled? {#introspection-disabled}
 
 If the target website is smart, they will have introspection disabled. One of the most widely used GraphQL development tools is [ApolloServer](https://www.apollographql.com/docs/apollo-server/), which automatically disables introspection, so these cases are actually quite common.
 
@@ -199,6 +199,6 @@ If the target website is smart, they will have introspection disabled. One of th
 
 In these cases, it is still possible to get some information about the API when using [Insomnia](../../../glossary/tools/insomnia.md), due to the autocomplete that they provide. If we remember from the [Building a query](#building-a-query) section of this lesson, we were able to receive autocomplete suggestions when we entered a non-existent field into the query. Though this is not as great as seeing an entire visualization of the API in GraphQL Voyager, it can still be quite helpful.
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next lesson](./custom_queries.md)'s code-along project will walk you through how to  construct a custom GraphQL query for scraping purposes, how to accept input into it, and how to retrieve and output the data.

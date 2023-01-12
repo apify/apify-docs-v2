@@ -123,6 +123,6 @@ Now that you’ve created a cool new actor, let others see it! Share it on your 
 - While promoting the actor on forums like Reddit or Quora, try not to post strictly promotional answers. If you help someone with their problem, all readers will be more willing to upvote your posts or check the actor.
 - If it's possible to upvote your posts, do it and get others help you.
 
-## [](#next) Next up
+## Next up {#next}
 
 Congratulations! Your actor is coming together and getting ready to be shared with the world. In the [next lesson](./monetizing_your_actor.md)! we will learn how you can monetize your actor on Apify Store.

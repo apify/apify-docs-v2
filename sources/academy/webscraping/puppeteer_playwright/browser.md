@@ -5,7 +5,7 @@ sidebar_position: 2.1
 slug: /puppeteer-playwright/browser
 ---
 
-# [](#browser) Browser
+# Browser {#browser}
 
 **Understand what the Browser object is in Puppeteer/Playwright, how to create one, and a bit about how to interact with one.**
 
@@ -36,7 +36,7 @@ When we run this code with the command `node index.js`, a browser will open up; 
 
 > If you run this code right now, it will hang. Use **control^** + **C** to force quit the program.
 
-## [](#launch-options) Launch options
+## Launch options {#launch-options}
 
 In order to see what's actually happening, we can pass an **options** object ([Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v13.7.0&show=api-puppeteerlaunchoptions), [Playwright](https://playwright.dev/docs/api/class-browsertype#browser-type-launch)) with **headless** set to **false**.
 
@@ -59,7 +59,7 @@ Now we'll actually see a browser open up.
 
 There are a whole lot more options that we can pass into the `launch()` function, which we'll be getting into a little bit later on.
 
-## [](#browser-methods) Browser methods
+## Browser methods {#browser-methods}
 
 The `launch()` function also returns an object representation of the browser that we can use to interact with the browser right from our code. This **Browser** object ([Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v13.7.0&show=api-class-browser), [Playwright](https://playwright.dev/docs/api/class-browser)) has many functions which make it easy to do this. One of these functions is `close()`. Until now, we've been using **control^** + **C** to force quit the process, but with this function, we'll no longer have to do that.
 
@@ -86,12 +86,12 @@ await browser.close();
 
 <!-- In a few lessons from now, we'll be discussing the `browser.contexts()` (Playwright)/`browser.browserContexts()` (Puppeteer) functions and how to create **browser contexts** with another function on the **Browser** object. -->
 
-## [](#next) Next up
+## Next up {#next}
 
 Now that we can open a browser, let's move onto the [next lesson](./page/index.md) where we will learn how to create pages and visit websites programmatically.
 
 <!-- Talk about browser context later, it doesn't make sense to show it until we're actually creating pages -->
 
-<!-- ## [](#browser-context) Browser context
+<!-- ## Browser context {#browser-context}
 
 **BrowserContext** objects ([Playwright](https://pptr.dev/#?product=Puppeteer&version=v13.7.0&show=api-class-browsercontext), [Playwright](https://playwright.dev/docs/api/class-browsercontext)) allow us to create and manage multiple browser sessions. -->

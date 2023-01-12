@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /puppeteer-playwright/page/page-methods
 ---
 
-# [](#page-methods) Page methods
+# Page methods {#page-methods}
 
 **Understand that the Page object has many different methods to offer, and learn how to use two of them to capture a page's title and take a screenshot.**
 
@@ -15,7 +15,7 @@ Other than having methods for interacting with a page and waiting for events and
 
 Last lesson, we left off at a point where we are waiting for the page to navigate so that we can collect the page's title and take a screenshot of it. In this lesson, we'll be learning about the two methods we can use to easily achieve both of those things.
 
-## [](#grabbing-the-title) Grabbing the title
+## Grabbing the title {#grabbing-the-title}
 
 There are two main page functions which will return general data:
 
@@ -32,7 +32,7 @@ const title = await page.title();
 console.log(title);
 ```
 
-## [](#screenshotting) Screenshotting
+## Screenshotting {#screenshotting}
 
 The `page.screenshot()` function will return a buffer which can be written to the filesystem as an image:
 
@@ -43,7 +43,7 @@ await page.screenshot({ path: 'screenshot.png' });
 
 > The image will by default be **.png**. To change the image to **.jpeg** type, set the (optional) `type` option to **jpeg**.
 
-## [](#final-code) Final code
+## Final code {#final-code}
 
 Here's our final code which extracts the page's title, takes a screenshot and saves it to our project's folder as `screenshot.png`:
 
@@ -119,6 +119,6 @@ Additionally, you should see a new image named **screenshot.png** in your projec
 
 ![Screenshot from Playwright/Puppeteer](./images/wikipedia-screenshot.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next exciting lesson](../executing_scripts/index.md), we'll gain a solid understanding of the two different contexts we can run our code in when using Puppeteer and Playwright, as well as how to run code in the context of the browser.

@@ -18,6 +18,6 @@ If you've managed to follow along with all of the courses prior to this one, the
 
 <!-- Just like the [**Web scraping for beginners**](../web_scraping_for_beginners/index.md) course, this course is divided into two main sections: **Data collection** and **Crawling**. -->
 
-## [](#first-up) First up
+## First up {#first-up}
 
 This course's [first lesson](./scraping_paginated_sites.md) dives head-first into one of the most valuable skills you can have as a scraper developer: **Scraping paginated sites**.

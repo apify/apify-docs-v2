@@ -12,7 +12,7 @@ slug: /robotic-process-automation/tips-and-tricks
 
 This collection of [robotic process automation](./index.md) (RPA) tips and tricks aims to help you make your automations work smoother and produce fewer errors.
 
-## [](#event-bound-flows) Event-bound flows
+## Event-bound flows {#event-bound-flows}
 
 Always strive to make automation as fluid as possible. Listen to events and react to them as needed by triggering consecutive actions immediately.
 
@@ -39,7 +39,7 @@ await page.waitForFunction(selector =>
 );
 ```
 
-## [](#proofs-and-verification) Proofs and verification
+## Proofs and verification {#proofs-and-verification}
 
 **Absence of evidence ≠ evidence of absence**.
 
@@ -70,7 +70,7 @@ const $paymentAmount = await page.$('#PaymentAmount');
 if (!$paymentAmount) return OUTPUT.paymentSuccess;
 ```
 
-## [](#presumption-of-failure) Presumption of failure
+## Presumption of failure {#presumption-of-failure}
 
 **Every action has failed until it has provably succeeded.**
 
@@ -112,11 +112,11 @@ await Promise.all([
 return OUTPUT.paymentSuccess;
 ```
 
-## [](#targeting-elements) Targeting elements
+## Targeting elements {#targeting-elements}
 
 Be both as specific and as generic as possible at the same time.
 
-### [](#dom-element-selectors) DOM element selectors
+### DOM element selectors {#dom-element-selectors}
 
 Make sure your [CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) have the best chance to remain valid after a website is updated.
 
@@ -139,7 +139,7 @@ If you are reasonably confident a page layout will remain without any dramatic f
 #ReceiptToolStripLabel_P_L_v201w3_t3 => table li > a[id^="ReceiptToolStripLabel"]
 ```
 
-### [](#content-pattern-matching) Content pattern matching
+### Content pattern matching {#content-pattern-matching}
 
 Matching elements by content is already natively supported by [Playwright](https://playwright.dev/). Playwright is a [Node.js](https://nodejs.org/en/) library that allows you to automate Chromium, Firefox and WebKit with a single API.
 

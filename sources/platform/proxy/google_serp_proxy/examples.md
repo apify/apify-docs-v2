@@ -15,13 +15,13 @@ This page contains code examples for connecting to [Google SERP proxies](./index
 
 See the [connection settings](../connection_settings.md) page for connection parameters.
 
-## [](#using-the-apify-sdk) Using the Apify SDK
+## Using the Apify SDK {#using-the-apify-sdk}
 
 If you are developing your own Apify [actor](../../actors/index.md). Alternatively, you can use the [got-scraping](https://github.com/apify/got-scraping) [NPM package](https://www.npmjs.com/package/got-scraping) by specifying proxy URL in the options.
 
 Apify Proxy also works with [PuppeteerCrawler](https://crawlee.dev/api/puppeteer-crawler/class/PuppeteerCrawler), [launchPuppeteer()](https://crawlee.dev/api/puppeteer-crawler/function/launchPuppeteer), [PlaywrightCrawler](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler), [launchPlaywright()](https://crawlee.dev/api/playwright-crawler/function/launchPlaywright) and [JSDOMCrawler](https://crawlee.dev/api/jsdom-crawler/class/JSDOMCrawler). However, `CheerioCrawler` is simply the most efficient solution for this use case.
 
-### [](#get-a-list-of-search-results) Get a list of search results
+### Get a list of search results {#get-a-list-of-search-results}
 
 Get a list of search results for the keyword **wikipedia** from the USA (`google.com`).
 
@@ -72,7 +72,7 @@ await Actor.exit();
 </marked-tab>
 ```
 
-### [](#get-a-list-of-shopping-results) Get a list of shopping results
+### Get a list of shopping results {#get-a-list-of-shopping-results}
 
 Get a list of shopping results for the query **Apple iPhone XS 64GB** from Great Britain (`google.co.uk`).
 
@@ -125,7 +125,7 @@ await Actor.exit();
 </marked-tab>
 ```
 
-## [](#using-standard-libraries-and-languages) Using standard libraries and languages
+## Using standard libraries and languages {#using-standard-libraries-and-languages}
 
 You can find your proxy password on the [Proxy page](https://console.apify.com/proxy) of the Apify Console.
 
@@ -137,7 +137,7 @@ For examples using [PHP](https://www.php.net/), you need to have the [cURL](http
 
 Examples in [Python 2](https://www.python.org/download/releases/2.0/) use the [six](https://pypi.org/project/six/) library. Run `pip install six` to enable it.
 
-### [](#html-from-search-results) HTML from search results
+### HTML from search results {#html-from-search-results}
 
 Get the HTML of search results for the keyword **wikipedia** from the USA (**google.com**).
 
@@ -241,7 +241,7 @@ echo $response->getBody();
 </marked-tab>
 ```
 
-### [](#html-from-localized-shopping-results) HTML from localized shopping results
+### HTML from localized shopping results {#html-from-localized-shopping-results}
 
 Get HTML of shopping results for the query **Apple iPhone XS 64GB** from Great Britain (`google.co.uk`).
 

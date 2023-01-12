@@ -6,7 +6,7 @@ category: guides
 slug: /monitoring/check-data-quality
 ---
 
-# [](#check-product-based-data-for-correct-format-and-duplicates) Check product-based data for correct format and duplicates
+# Check product-based data for correct format and duplicates {#check-product-based-data-for-correct-format-and-duplicates}
 
 **A step-by-step monitoring tutorial that shows you how to ensure your data is correctly formatted and unique. Visualize your data using the monitoring dashboard.**
 
@@ -14,7 +14,7 @@ slug: /monitoring/check-data-quality
 
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md).
 
-## [](#use-case) Use case
+## Use case {#use-case}
 
 You want regularly scrape product data using a single scraper.
 
@@ -29,7 +29,7 @@ Let's say you're using the **Amazon Crawler** ([vaclavrut/amazon-crawler](https:
 
 You have set up a task named `amazon-iphone-offers` and set up a [schedule](../schedules.md) named `iphone-daily-offers`. The schedule runs your task [every morning](https://crontab.guru/#0_7_*_*_*), so you have fresh data ready when you wake up.
 
-## [](#create-a-new-monitoring-task) Create a new monitoring task
+## Create a new monitoring task {#create-a-new-monitoring-task}
 
 If you haven't already, [add the monitoring suite to your account](./index.md).
 
@@ -37,7 +37,7 @@ If you have already added the task, under its **Settings** tab, give it a name. 
 
 > We recommend prefixing your monitoring task names with `monitoring-` so you could identify them easier.
 
-## [](#monitoring-configuration) Monitoring configuration
+## Monitoring configuration {#monitoring-configuration}
 
 1. Under your task's **Input** tab, set the **Mode** dropdown to **Create configuration**.
 
@@ -55,7 +55,7 @@ This is what the configuration should look like:
 
 ![Task configuration - input](./images/iphone-task.webp)
 
-## [](#validate-data) Validate data
+## Validate data {#validate-data}
 
 Let's say you need each item to always have properties such as `title`, `ASIN`, `currency` and a list of `sellers`.
 
@@ -69,7 +69,7 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 > Validation is done after each run finishes.
 
-## [](#check-for-duplicates) Check for duplicates
+## Check for duplicates {#check-for-duplicates}
 
 1. In the **Check for duplicates** section, select the **Enable duplicate items check** option.
 
@@ -77,7 +77,7 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 ![Task configuration - check for duplicates](./images/iphone-check-duplicates.webp)
 
-## [](#set-up-data-visualization) Set up data visualization
+## Set up data visualization {#set-up-data-visualization}
 
 In the **Statistics dashboard** section, check the **Enable dashboard** option to activate data visualization.
 
@@ -85,7 +85,7 @@ In the **Statistics dashboard** section, check the **Enable dashboard** option t
 
 Finally, click the **Save & Run** button. It will create a monitoring configuration and turn the monitoring ON.
 
-## [](#getting-your-results) Getting your results
+## Getting your results {#getting-your-results}
 
 Following each of your `amazon-iphone-offers` tasks runs, the suite will process your results and report if any of the checks fail. You receive an email with a link to your **monitoring project dashboard**.
 

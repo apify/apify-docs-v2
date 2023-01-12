@@ -5,7 +5,7 @@ sidebar_position: 9.6
 slug: /tools/switchyomega
 ---
 
-# [](#what-is-switchyomega) What is SwitchyOmega?
+# What is SwitchyOmega? {#what-is-switchyomega}
 
 **Discover SwitchyOmega, a Chrome extension to manage and switch between proxies, which is extremely useful when testing proxies for a scraper.**
 
@@ -17,7 +17,7 @@ After adding it to Chrome, you can see the SwitchyOmega icon somewhere amongst a
 
 ![The SwitchyOmega interface](./images/switchyomega.webp)
 
-## [](#options) Options
+## Options {#options}
 
 The options page has the following:
 
@@ -28,7 +28,7 @@ The options page has the following:
 
 ![SwitchyOmega options page](./images/switchyomega-options.webp)
 
-## [](#adding-a-new-proxy) Adding a new proxy
+## Adding a new proxy {#adding-a-new-proxy}
 
 After clicking on **New profile**, you'll be greeted with a **New profile** popup, where you can give the profile a name and select the type of profile you'd like to create. To add a proxy profile, select the respective option and click **Create**.
 
@@ -44,7 +44,7 @@ If the proxy requires authentication, click on the lock icon and fill in the det
 
 Don't forget to click on **Apply changes** within the left-hand side menu under **Actions**!
 
-## [](#selecting-profiles) Selecting proxy profiles
+## Selecting proxy profiles {#selecting-profiles}
 
 And that's it! All of your proxy profiles will appear in the menu. When one is chosen, the page you are currently on will be reloaded using the selected proxy profile.
 

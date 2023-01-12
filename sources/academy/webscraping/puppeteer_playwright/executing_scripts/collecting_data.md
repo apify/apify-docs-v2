@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /puppeteer-playwright/executing-scripts/collecting-data
 ---
 
-# [](#collecting-data) Collecting data
+# Collecting data {#collecting-data}
 
 **Learn how to collect data from a page with evaluate functions, then how to safely collect it by using a second library called Cheerio.**
 
@@ -57,7 +57,7 @@ await browser.close();
 
 <!-- > Notice the slightly different syntax between Playwright and Puppeteer with `waitForLoadState('DOMContentLoaded')` and `waitForNavigation({ waitUntil: 'DOMContentLoaded' })`. Sometimes, the differences are fairly subtle like this, but later on we'll run into some more significant differences. -->
 
-## [](#collecting-in-page-evaluate) Collecting in the browser context
+## Collecting in the browser context {#collecting-in-page-evaluate}
 
 Whatever is returned from the callback function in `page.evaluate()` will be returned by the evaluate function, which means that we can set it to a variable like so:
 
@@ -91,7 +91,7 @@ When we run this code, we see this logged to our console:
 
 ![Products logged to the console](./images/log-products.webp)
 
-## [](#using-jquery) Using jQuery
+## Using jQuery {#using-jquery}
 
 Working with document.querySelector is cumbersome and quite verbose, but with the `page.addScriptTag()` function and the latest [jQuery CDN link](https://releases.jquery.com/), we can inject jQuery into the current page to gain access to its syntactical sweetness:
 
@@ -127,7 +127,7 @@ console.log(products);
 
 This will output the same exact result as the code in the previous section.
 
-## [](#parsing-in-node-context) Parsing in the Node.js context
+## Parsing in the Node.js context {#parsing-in-node-context}
 
 One of the most popular parsing libraries for Node.js is [Cheerio](https://www.npmjs.com/package/cheerio), which can be used in tandem with Playwright and Puppeteer. It is extremely beneficial to parse the page's HTML in the Node.js context for a number of reasons:
 
@@ -277,6 +277,6 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 Our [next lesson](../reading_intercepting_requests.md) will be discussing something super cool - request interception and reading data from requests and responses. It's just like using DevTools, except programmatically!

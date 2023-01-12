@@ -15,19 +15,19 @@ To crawl websites that require a login, you can transfer cookies from your web b
 
 This is the quickest and simplest solution, however there are others that may be more reliable. For example, you can also [fill in the login form directly in the code](./log_into_a_website_using_puppeteer.md).
 
-## [](#install-a-cookie-editor) Install a cookie editor
+## Install a cookie editor {#install-a-cookie-editor}
 
 First, install a browser extension like [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg). After installation, go to the website you'd like to crawl and log in using your credentials.
 
 ![Inspect Facebook login with DevTools](./images/edit-this-cookie.webp)
 
-## [](#export-your-cookies) Export your cookies
+## Export your cookies {#export-your-cookies}
 
 Click the **EditThisCookie** button next to your URL and click **Export**. Cookies will be copied to your clipboard as a **JSON array**, which is compatible with the cookie format used by [Puppeteer](https://pptr.dev)/[Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) (the headless browser we use for crawling).
 
 ![Export your cookies](./images/open-edit-this-cookie.webp)
 
-## [](#pass-cookies-to-web-scraper) Pass cookies to Web Scraper
+## Pass cookies to Web Scraper {#pass-cookies-to-web-scraper}
 
 The **Initial cookies** field is in the **Proxy and browser configuration** tab in Web Scraper's **Input** section. Paste the cookies into the field.
 

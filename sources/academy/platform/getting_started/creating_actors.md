@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /getting-started/creating-actors
 ---
 
-# [](#creating-actors) Creating actors
+# Creating actors {#creating-actors}
 
 **Build and run your very first actor right on the Apify platform from a template. This lesson provides a hands-on experience with building and running an actor.**
 
@@ -13,7 +13,7 @@ slug: /getting-started/creating-actors
 
 Creating an actor is so easy to do, we'll show you right in this lesson how to get one up and running in 5 minutes or less. There is no need to install any special software, as everything can be done right on the Apify platform with an Apify account!
 
-## [](#choose-your-template) Choose your template
+## Choose your template {#choose-your-template}
 
 On the [Apify Console](https://console.apify.com?asrc=developers_portal), click on the **Actors** tab we visited in the previous lesson. In the top right-hand corner, you should see a **Create new** button.
 
@@ -25,7 +25,7 @@ Click it, then choose the **Basic Node.js actor** template and click on **Use te
 
 ![Choosing a template](./images/choose-template.webp)
 
-## [](#hello-world) Hello World!
+## Hello World! {#hello-world}
 
 After clicking on **Use template**, you should be brought to a page that looks like this:
 
@@ -65,7 +65,7 @@ await Actor.exit();
 
 To save your changes, click on the blue **Save** button.
 
-## [](#build-an-actor) Build an actor
+## Build an actor {#build-an-actor}
 
 In order to run the actor, you've gotta build it. Luckily, that's only a button press away.
 
@@ -77,7 +77,7 @@ After you've clicked the **Build** button, it'll take around 5-10 seconds to com
 
 This beautiful button's presence means we can now run the actor!
 
-## [](#run-an-actor) Run an actor
+## Run an actor {#run-an-actor}
 
 Click **Start** and wait a few seconds... Do you see something that looks like this?:
 
@@ -87,6 +87,6 @@ If so, it worked! 🥳
 
 Later on, we'll be working on some more complex actors - this was just a fun and quick exercise to get your toes wet.
 
-## [](#next) Next up
+## Next up {#next}
 
 So we've created an actor, but how can we give it some input, then make it do stuff based on that input? This is exactly what we'll be discussing in the [next lesson](./inputs_outputs.md)'s activity.

@@ -5,7 +5,7 @@ sidebar_position: 9.7
 slug: /tools/edit-this-cookie
 ---
 
-# [](#what-is-it) What's EditThisCookie?
+# What's EditThisCookie? {#what-is-it}
 
 **Learn how to add, delete, and modify different cookies in your browser for testing purposes using the EditThisCookie chrome extension.**
 
@@ -15,7 +15,7 @@ slug: /tools/edit-this-cookie
 
 ![EditThisCookie popup](./images/edit-this-cookie-popup.webp)
 
-## [](#functions) Functionalities
+## Functionalities {#functions}
 
 At the top of the popup, there is a row of buttons. From left to right, here is an explanation for each one:
 

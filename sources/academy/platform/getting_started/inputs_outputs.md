@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /getting-started/inputs-outputs
 ---
 
-# [](#inputs-outputs) Inputs & outputs
+# Inputs & outputs {#inputs-outputs}
 
 **Create an actor from scratch which takes an input, processes that input, then outputs a result that can be used elsewhere.**
 
@@ -15,7 +15,7 @@ Most of the time, when you are writing any sort of software, it will generally e
 
 In this lesson, we'll be demonstrating inputs and outputs by building an actor which takes two numbers as input, adds them up, then outputs the result.
 
-## [](#accept-input) Accept input into an actor
+## Accept input into an actor {#accept-input}
 
 Let's first create another new actor using the same template as before. Feel free to refer to the [previous lesson](./creating_actors.md) for a refresher on how to do this.
 
@@ -69,7 +69,7 @@ Then, replace everything in **INPUT_SCHEMA.json**  with this:
 
 Finally, **Save** and **Build** the actor just as you did in the previous lesson.
 
-## [](#configuring) Configuring an actor with inputs
+## Configuring an actor with inputs {#configuring}
 
 If you scroll down a bit, you'll find the **Developer console** located under the multifile editor. By default, after running a build, the **Last build** tab will be selected, where you can see all of the logs related to building the actor. Inputs can be configured within the **Input** tab.
 
@@ -77,7 +77,7 @@ If you scroll down a bit, you'll find the **Developer console** located under th
 
 Enter any two numbers you'd like, then press **Start**. The actor's run should complete almost immediately.
 
-## [](#view-results) View actor results
+## View actor results {#view-results}
 
 Since we've pushed the result into the default dataset, it, and some info about it can be viewed by clicking this box, which will take you to the results tab:
 
@@ -91,6 +91,6 @@ There's our solution! Did it work for you as well? Now, we can download the data
 
 It's important to note that the default dataset of the actor, which we pushed our solution to, will be retained for 7 days. If we wanted the data to be retained for an indefinite period of time, we'd have to use a named dataset. For more information about named storages vs unnamed storages, read a bit about [data retention on the Apify platform](https://docs.apify.com/storage#data-retention).
 
-## [](#next) Next up
+## Next up {#next}
 
 In [next lesson](./apify_api.md)'s fun activity, you'll learn how to call the actor we created in this lesson programmatically using one of Apify's most powerful tools - the Apify API.

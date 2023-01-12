@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /api-scraping/general-api-scraping/cookies-headers-tokens
 ---
 
-# [](#challenges) Dealing with headers, cookies, and tokens
+# Dealing with headers, cookies, and tokens {#challenges}
 
 **Learn about how some APIs require certain cookies, headers, and/or tokens to be present in a request in order for data to be received.**
 
@@ -15,7 +15,7 @@ Unfortunately, most APIs will require a valid cookie to be included in the `cook
 
 Luckily, there are ways to retrieve and set cookies for requests prior to sending them, which will be covered more in-depth within future Scraping Academy modules. The most important things to know at the moment are:
 
-## [](#cookies) Cookies
+## Cookies {#cookies}
 
 1. For sites that heavily rely on cookies for user-verification and request authorization, certain generic requests (such as to the website's main page, or to the target page) will return back a (or multiple) `set-cookie` header(s).
 2. The `set-cookie` response header(s) can be parsed and used as the `cookie` header in the headers of a request. A great package for parsing these values from a response's headers is [`set-cookie-parser`](https://www.npmjs.com/package/set-cookie-parser). With this package, cookies can be parsed from headers like so:
@@ -43,7 +43,7 @@ const getCookie = async () => {
 getCookie();
 ```
 
-## [](#headers) Headers
+## Headers {#headers}
 
 Other APIs may not require a valid cookie header, but instead will require certain headers to be attached to the request which are typically attached when a user makes a "real" request from a browser. The most commonly required headers are:
 
@@ -87,7 +87,7 @@ const response = await gotScraping({
 })
 ```
 
-## [](#tokens) Tokens
+## Tokens {#tokens}
 
 For our SoundCloud example, testing the endpoint from the previous section in a tool like [Postman](../../../glossary/tools/postman.md) works perfectly, and returns the data we want; however, when the `client_id` parameter is removed, we receive a **401 Unauthorized** error. Luckily, the Client ID is the same for every user, which means that it is not tied to a session or an IP address (this is based on our own observations and tests). The big downfall is that the token being used by SoundCloud changes every few weeks, so it shouldn't be hardcoded. This case is actually quite common, and is not only seen with SoundCloud.
 
@@ -128,6 +128,6 @@ const scrapeClientId = async () => {
 scrapeClientId();
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 Keep the code above in mind, because we'll be using it in the [next lesson](./handling_pagination.md) when paginating through results from SoundCloud's API.

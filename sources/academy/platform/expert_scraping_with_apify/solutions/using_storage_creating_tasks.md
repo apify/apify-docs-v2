@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /expert-scraping-with-apify/solutions/using-storage-creating-tasks
 ---
 
-# [](#using-storage-creating-tasks) Using storage & creating tasks
+# Using storage & creating tasks {#using-storage-creating-tasks}
 
 **Follow along with step-by-step instructions on how to complete the task outlined in the previous lesson. Use different storage types, and create a task.**
 
@@ -13,7 +13,7 @@ slug: /expert-scraping-with-apify/solutions/using-storage-creating-tasks
 
 Last lesson, our task was outlined for us. In this lesson, we'll be completing that task by making our Amazon actor push to a **named dataset** and use the **default key-value store** to store the cheapest item found by the scraper. Finally, we'll create a task for the actor back on the Apify platform.
 
-## [](#using-named-dataset) Using a named dataset
+## Using a named dataset {#using-named-dataset}
 
 Something important to understand is that, in the Apify SDK, when you use `Actor.pushData()`, the data will always be pushed to the default dataset. To open up a named dataset, we'll use the `Actor.openDataset()` function:
 
@@ -63,7 +63,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 
 That's it! Now, our actor will push its data to a dataset named **amazon-offers-KEYWORD**!
 
-## [](#using-key-value-store) Using a key-value store
+## Using a key-value store {#using-key-value-store}
 
 We now want to store the cheapest item in the default key-value store under a key named **CHEAPEST-ITEM**. The most efficient and practical way of doing this is by filtering through all of the new named dataset's items and pushing the cheapest one to the store.
 
@@ -106,7 +106,7 @@ export const labels = {
 export const CHEAPEST_ITEM = 'CHEAPEST-ITEM';
 ```
 
-## [](#code-check-in) Code check-in
+## Code check-in {#code-check-in}
 
 Just to ensure we're all on the same page, here is what the **main.js** file looks like now:
 
@@ -232,7 +232,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 
 Don't forget to push your changes to Github using `git push origin MAIN_BRANCH_NAME` to see them on the Apify platform!
 
-## [](#creating-task) Creating a task (It's easy!)
+## Creating a task (It's easy!) {#creating-task}
 
 Back on the platform, on your actor's page, you can see a button in the top right hand corner that says **Create new task**:
 
@@ -246,7 +246,7 @@ Then, configure the task to use **google pixel** as a keyword and click **Save**
 
 After saving it, you'll be able to see the newly created task in the **Tasks** tab on the Apify Console. Go ahead and run it. Did it work?
 
-## [](#quiz-answers) Quiz answers 📝
+## Quiz answers 📝 {#quiz-answers}
 
 **Q: What is the relationship between actors and tasks?**
 
@@ -262,6 +262,6 @@ After saving it, you'll be able to see the newly created task in the **Tasks** t
 
 **A:** Default/unnamed storages expire after 7 days unless otherwise specified. Named storages are retained indefinitely.
 
-## [](#wrap-up) Wrap up
+## Wrap up {#wrap-up}
 
 You've learned how to use the different storage options available on with Apify, the two different types of storages, as well as how to create tasks for actors.

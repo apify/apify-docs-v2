@@ -5,7 +5,7 @@ sidebar_position: 2.4
 slug: /puppeteer-playwright/reading-intercepting-requests
 ---
 
-# [](#reading-intercepting-requests) Reading & intercepting requests
+# Reading & intercepting requests {#reading-intercepting-requests}
 
 **You can use DevTools, but did you know that you can do all the same stuff (plus more) programmatically? Read and intercept requests in Puppeteer/Playwright.**
 
@@ -46,7 +46,7 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#reading-requests) Reading requests
+## Reading requests {#reading-requests}
 
 We can use the [`page.on()`](https://pptr.dev/#?product=Puppeteer&version=v14.0.0&show=api-event-close) function to listen for the **request** event, passing in a callback function. The first parameter of the passed in callback function is an object representing the request.
 
@@ -149,7 +149,7 @@ After running this code, we can see this logged to the console:
 }
 ```
 
-## [](#reading-responses) Reading responses
+## Reading responses {#reading-responses}
 
 Listening for and reading responses is very similar to reading requests. The only difference is that we need to listen for the **response** event instead of **request**. Additionally, the object passed into the callback function represents the response instead of the request.
 
@@ -192,7 +192,7 @@ Upon running this code, we'll see the API response logged into the console:
 
 ![API response in console](./images/api-response-tiesto.webp)
 
-## [](#intercepting-requests) Intercepting requests
+## Intercepting requests {#intercepting-requests}
 
 One of the most popular ways of speeding up website loading in Puppeteer and Playwright is by blocking certain resources from loading. These resources are usually CSS files, images, and other miscellaneous resources that aren't super necessary (mainly because the computer doesn't have eyes - it doesn't care how the website looks!).
 
@@ -200,7 +200,7 @@ In Puppeteer, we must first enable request interception with the `page.setReques
 
 With Playwright, request interception is a bit different. We use the [`page.route()`](https://playwright.dev/docs/api/class-page#page-route) function instead of `page.on()`, passing in a string, regular expression, or a function that will match the URL of the request we'd like to read from. The second parameter is also a callback function, but with the [**Route**](https://playwright.dev/docs/api/class-route) object passed into it instead.
 
-### [](#blocking-resources) Blocking resources
+### Blocking resources {#blocking-resources}
 
 We'll first create an array of some file extensions that we'd like to block:
 
@@ -262,7 +262,7 @@ Here's what we see when we run this logic:
 
 This confirms that we've successfully blocked the CSS and image resources from loading.
 
-#### [](#quick-note) Quick note about resource blocking
+#### Quick note about resource blocking {#quick-note}
 
 Something **very** important to note is that by using request interception, the browser's cache is turned **off**. This means that resources on websites that would normally be cached (and pulled from the cache instead on the next request for those resources) will not be cached, which can have varying negative effects on performance, especially when making many requests to the same domain, which is very common in web scraping. You can learn how to solve this problem in [this short tutorial](../../tutorials/node_js/caching_responses_in_puppeteer.md)
 
@@ -308,7 +308,7 @@ await browser.close();
 </marked-tab>
 ```
 
-### [](#modifyng-the-request) Modifying the request
+### Modifying the request {#modifyng-the-request}
 
 There's much more to intercepting requests than just aborting them though. We can change the payload, headers, query parameters, and even the base URL.
 
@@ -362,6 +362,6 @@ Here's what we see when we run `node index.js`:
 
 ![Request intercepted and sent to Mesto's page instead](./images/mesto-following.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 The [next lesson](./proxies.md) will teach you how to use proxies in Playwright and Puppeteer in order to avoid blocking or appear as if you are requesting from a different location.

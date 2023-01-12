@@ -6,7 +6,7 @@ category: guides
 slug: /monitoring/actor-or-task-run-failure
 ---
 
-# [](#monitor-actor-or-task-runs-for-failure) Monitor actor or task runs for failure
+# Monitor actor or task runs for failure {#monitor-actor-or-task-runs-for-failure}
 
 **A step-by-step monitoring tutorial that shows how you can receive notifications when an actor or task run fails or does not return enough results.**
 
@@ -14,7 +14,7 @@ slug: /monitoring/actor-or-task-run-failure
 
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md). The monitoring suite will send you notifications when the actor or task fails or returns too few results.
 
-## [](#use-case) Use case
+## Use case {#use-case}
 
 You want to be notified when an actor / task **does not** finish successfully.
 
@@ -30,7 +30,7 @@ Let us say you have created a task named **puppies-from-instagram** and run it r
 
 ![Puppies](./images/puppies-task.webp)
 
-## [](#create-a-new-monitoring-task) Create a new monitoring task
+## Create a new monitoring task {#create-a-new-monitoring-task}
 
 If you haven't already, [add the monitoring suite to your account](./index.md).
 
@@ -40,7 +40,7 @@ If you have already added the task, under its **Settings** tab, give it a name. 
 
 Next, we will configure the monitoring suite.
 
-## [](#monitoring-configuration) Monitoring configuration
+## Monitoring configuration {#monitoring-configuration}
 
 1. Under your task's **Input** tab, set the **Mode** dropdown to **Create configuration**.
 
@@ -58,7 +58,7 @@ The configuration should look like this:
 
 ![Task configuration](./images/puppies-config.webp)
 
-## [](#validate-data) Validate data
+## Validate data {#validate-data}
 
 Let's say you need a minimum number of 100 results.
 

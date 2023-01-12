@@ -5,7 +5,7 @@ sidebar_position: 6
 slug: /web-scraping-for-beginners/crawling/scraping-the-data
 ---
 
-# [](#scraping-data) Scraping data
+# Scraping data {#scraping-data}
 
 **Learn how to add data collection logic to your crawler, which will allow you to extract data from all the websites you crawled.**
 
@@ -13,7 +13,7 @@ slug: /web-scraping-for-beginners/crawling/scraping-the-data
 
 At the [very beginning of the course](../index.md) section, and we will combine that into a web scraper.
 
-## [](#review-code) Quick review of earlier's code
+## Quick review of earlier's code {#review-code}
 
 Here's a quick reminder of earlier's data collection code:
 
@@ -91,7 +91,7 @@ Using this flow as guidance, we should be able to connect the pieces of code tog
 
 > We will be using slightly new code to write the new scraper, but the flow and logic will be the same as the two code snippets above. First, we'll visit the on-sale products page, scrape each product's link, then download each product page's HTML and finally scrape the data from each product.
 
-## [](#building-scraper) Building the scraper
+## Building the scraper {#building-scraper}
 
 Let's create a brand new file called **final.js** and write our scraper there. Then, we'll put our imports at the top of the file:
 
@@ -226,6 +226,6 @@ At the time of writing, we were getting 32 product results. Our demo site is bou
 
 ![Results in Terminal](./images/final-results.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 And that's it for the basics of crawling. But don't leave just yet. As promised, in the [next lesson](./pro_scraping.md) we will rewrite the scraper using a proper scraping library. It will make development much faster and the scraper more robust.

@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /web-scraping-for-beginners/data-collection/using-devtools
 ---
 
-# [](#devtools-data-collection) Data collection with DevTools
+# Data collection with DevTools {#devtools-data-collection}
 
 **Learn how to use browser DevTools, CSS selectors, and JavaScript via the DevTools console to collect data from a website.**
 
@@ -13,7 +13,7 @@ slug: /web-scraping-for-beginners/data-collection/using-devtools
 
 We know the basics of HTML, CSS, JavaScript and DevTools and we can finally try doing something more practical - collecting data from a website. Let's try collecting the on-sale products from [this fake e-commerce website](https://demo-webstore.apify.org/). We will use CSS selectors, JavaScript, and DevTools to achieve this task.
 
-## [](#getting-structured-data) Getting structured data from HTML
+## Getting structured data from HTML {#getting-structured-data}
 
 When you open up the [on-sale section of Fakestore](https://demo-webstore.apify.org/search/on-sale), you'll see that there's a grid of products on the page with names and pictures of products. We will now learn how to collect all this information. Open DevTools and select the first product with the selector tool.
 
@@ -27,7 +27,7 @@ This element is the parent element of all the nested (child) elements, and we ca
 
 > Websites change and the structure or their HTML or the CSS selectors can become outdated. We'll try our best to keep this course updated, but if you find that what you see on the website doesn't match this guide exactly, don't worry. Everything will work exactly the same. You will only have to use whatever you see on your screen and not in the screenshots here.
 
-## [](#selecting-elements) Selecting elements with JavaScript
+## Selecting elements with JavaScript {#selecting-elements}
 
 We know how to find an element manually using the DevTools, but for automated scraping, we need to tell the computer how to find it as well. We can do that using JavaScript and CSS selectors.
 
@@ -45,7 +45,7 @@ document.querySelector('a[aria-label][href*="/product/"]');
 
 > There are always multiple ways to select an element using CSS selectors. We always try to choose the one that seems the most reliable, precise, and unlikely to change with website updates. For example the `href` attribute can be assumed to always include `/products/`, as this is the path to view a specific product.
 
-## [](#collecting-from-elements) Collecting data from elements
+## Collecting data from elements {#collecting-from-elements}
 
 Now that we found the element, we can start poking into it to collect data. First, let's save the element to a variable so that we can work with it repeatedly and then print its text content to the console.
 
@@ -60,7 +60,7 @@ Here, we are using a special selector. Normally, if you use a selector like `a[h
 
 As you can see, we were able to collect the data, but the format is still not very useful - there's a whole lot of weird data there that we probably don't need. For further processing (ex. in a spreadsheet), we would like to have each piece of data as a separate field (column). To do that, we will look at the HTML structure in more detail.
 
-### [](#selecting-child-elements) Selecting child elements
+### Selecting child elements {#selecting-child-elements}
 
 In the [Getting structured data from HTML](#getting-structured-data-from-html) section, we were hovering over the elements in the **Elements** tab to find the element that contains all the data. We can use that to find the individual data points as well. After a bit more inspection, we discover that the product's title is a `<span>` tag with a parent `<h3>` element, and the price is held inside a `<div>` with a `class` attribute including the keyword of **price**.
 
@@ -88,7 +88,7 @@ There are 32 products on the page, so if we've done this correctly, a list of 32
 
 ![List child elements with JavaScript](./images/list-child-elements.webp)
 
-### [](#collecting-data) Collecting data
+### Collecting data {#collecting-data}
 
 The `products` array now contains all the elements we need, and we can access each one's data individually. Let's save the title and price of the first product into an [object](https://javascript.info/object). Those of you who know JavaScript will know that this is not the prettiest code ever written, but it is beginner-friendly and that's important here. We will also use the `.trim()` function to remove unnecessary whitespace from the results.
 
@@ -105,6 +105,6 @@ console.log(result);
 
 If you were able to get the same result in your browser console, congratulations! You successfully collected your first data. If not, don't worry and review your code carefully. You'll crush the bug soon enough.
 
-## [](#next) Next up
+## Next up {#next}
 
 We have learned how to collect information about a few products from an e-commerce website. In the [next lesson](./devtools_continued.md), we will learn how to collect all of them.

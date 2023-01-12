@@ -5,7 +5,7 @@ sidebar_position: 2.6
 slug: /puppeteer-playwright/browser-contexts
 ---
 
-# [](#creating-browser-contexts) Creating multiple browser contexts
+# Creating multiple browser contexts {#creating-browser-contexts}
 
 **Learn what a browser context is, how to create one, how to emulate devices, and how to use browser contexts to automate multiple sessions at one time.**
 
@@ -25,7 +25,7 @@ const myNewContext = await browser.createIncognitoBrowserContext();
 </marked-tab>
 ```
 
-## [](#persistent-vs-non-persistent) Persistent vs non-persistent browser contexts
+## Persistent vs non-persistent browser contexts {#persistent-vs-non-persistent}
 
 In both examples above, we are creating a new **non-persistent** browser context, which means that once it closes, all of its cookies, cache, etc. will be lost. For some cases, that's okay, but in most situations the performance hit from this is too large. This is why we have **persistent** browser contexts. Persistent browser contexts open up a bit slower and they store all their cache, cookies, session storage, and local storage in a file on disk.
 
@@ -56,7 +56,7 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#using-browser-contexts) Using browser contexts
+## Using browser contexts {#using-browser-contexts}
 
 In both Playwright and Puppeteer, various devices (iPhones, iPads, Androids, etc.) can be emulated by using [`playwright.devices`](https://playwright.dev/docs/api/class-playwright#playwright-devices) or [`puppeteer.devices`](https://pptr.dev/#?product=Puppeteer&version=v14.1.0&show=api-puppeteerdevices). We'll be using this to create two different browser contexts, one emulating an iPhone, and one emulating an Android:
 
@@ -127,7 +127,7 @@ Let's go ahead and run our code and analyze the data on each **deviceinfo.me** p
 
 We see that **deviceinfo.me** detects both contexts as using different devices, despite the fact they're visiting the same page at the same time.  This shows firsthand that different browser contexts can have totally different configurations, as they all have separate sessions.
 
-## [](#accessing-browser-contexts) Accessing browser contexts
+## Accessing browser contexts {#accessing-browser-contexts}
 
 When working with multiple browser contexts, it can be difficult to keep track of all of them and repetitive when making changes to all of them. This is why the **Browser** instance returned from the `launch()` function also has a `contexts()` function (`browserContexts()` in Puppeteer). This function returns an array of all the contexts that are currently attached to the browser.
 

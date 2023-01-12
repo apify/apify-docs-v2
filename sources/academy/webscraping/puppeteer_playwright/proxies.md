@@ -5,7 +5,7 @@ sidebar_position: 2.5
 slug: /puppeteer-playwright/proxies
 ---
 
-# [](#using-proxies) Using proxies
+# Using proxies {#using-proxies}
 
 **Understand how to use proxies in your Puppeteer and Playwright requests, as well as a couple of the most common use cases for proxies.**
 
@@ -15,7 +15,7 @@ slug: /puppeteer-playwright/proxies
 
 In this lesson, we'll be learning how to use proxies with Playwright and Puppeteer. This will be demonstrated with a Vietnamese proxy that we got by running [this](https://apify.com/mstephen190/proxy-scraper) proxy-scraping actor on the Apify platform.
 
-## [](#adding-a-proxy) Adding a proxy
+## Adding a proxy {#adding-a-proxy}
 
 First, let's add our familiar boilerplate code for visiting Google and also create a variable called `proxy` which will point to our proxy server:
 
@@ -100,7 +100,7 @@ And that's it! Now, when we visit Google, it's in Vietnamese. Depending on the c
 
 > Note that in order to rotate through multiple proxies, you must retire a browser instance then create a new one to continue automating with a new proxy.
 
-## [](#authenticating-a-proxy) Authenticating a proxy
+## Authenticating a proxy {#authenticating-a-proxy}
 
 The proxy in the last activity didn't require a username and password, but let's say that this one does:
 
@@ -181,6 +181,6 @@ await page.authenticate({ username, password });
 </marked-tab>
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 You already know how to launch a browser with various configurations, which means you're ready to [learn about browser contexts](./browser_contexts.md). Browser contexts can be used to automate multiple sessions at once with completely different configurations. You'll also learn how to emulate different devices, such as iPhones, iPads, and Androids.

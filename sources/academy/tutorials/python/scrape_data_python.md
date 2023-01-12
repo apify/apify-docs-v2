@@ -223,7 +223,7 @@ In the previous tutorial, we set out to select our next holiday destination base
 
 Now, we need to process the scraped data and make a simple visualization that will help us decide which location has the best weather, and will therefore become our next holiday destination.
 
-### [](#setting-up-the-actor) Setting up the actor
+### Setting up the actor {#setting-up-the-actor}
 
 First, we need to create another actor. You can do it the same way as before - go to the [Apify Console](https://console.apify.com/), open the [Actors section](https://console.apify.com/actors), click on the **Create new** button in the top right, and select the **Example: Hello world in Python** actor template.
 

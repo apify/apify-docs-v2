@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /deploying-your-code/output-schema
 ---
 
-# [](#output-schema) Output schema
+# Output schema {#output-schema}
 
 **Learn how to generate an appealing Overview table interface to preview your actor results in real time on the Apify Platform.**
 
@@ -17,7 +17,7 @@ The Output schema generates an interface that enables users to instantly preview
 
 In this quick tutorial, you will learn how to set up an output tab for your own actor.
 
-## [](#implementation) Implementation
+## Implementation {#implementation}
 
 Firstly, create a `.actor` folder in the root of your actor's source code. Then, create a `actor.json` file in this folder, after which you'll have .actor/actor.json.
 
@@ -158,7 +158,7 @@ const results = {
     };
 ```
 
-## [](#final-result) Final result
+## Final result {#final-result}
 
 Great! Now that everything is set up, it's time to run the actor and admire your actor's brand new output tab.
 
@@ -168,6 +168,6 @@ A few seconds after running the actor, you should see the actors results being d
 
 ![Output table overview](./images/output-schema-final-example.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 In the [next lesson](./docker_file.md), we'll learn about a very important file that is required for our project to run on the Apify platform - the Dockerfile.

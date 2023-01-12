@@ -22,7 +22,7 @@ There are 2 main ways of using the Apify API:
 
 If the actor being run via API takes 5 minutes or less to complete a typical run, it should be called **synchronously**. Otherwise, (if a typical run takes longer than 5 minutes), it should be called **asynchronously**.
 
-## [](#run-an-actor-or-task) Run an actor or task
+## Run an actor or task {#run-an-actor-or-task}
 
 > If you are unsure about the differences between an actor and task, you can read about them in the [tasks](../actors/tasks.md) documentation. In brief, tasks are just pre-configured inputs for actors.
 
@@ -52,7 +52,7 @@ https://api.apify.com/v2/actor-tasks/TASK_NAME_OR_ID/runs?token=YOUR_TOKEN
 
 If we send a correct POST request to one of these endpoints, the actor/actor-task will start just as if we had pressed the **Start** button on the actor's page in the [Apify Console](https://console.apify.com).
 
-### [](#additional-settings) Additional settings
+### Additional settings {#additional-settings}
 
 We can also add settings for the actor (which will override the default settings) as additional query parameters. For example, if we wanted to change how much memory the actor's run should be allocated and which build to run, we could simply add the `memory` and `build` parameters separated by `&`.
 
@@ -62,7 +62,7 @@ https://api.apify.com/v2/acts/ACTOR_NAME_OR_ID/runs?token=YOUR_TOKEN&memory=8192
 
 This works nearly identically for both actors and tasks; however, for tasks there is no reason to specify a [`build`](../actors/development/builds.md) parameter, as a task already has only one specific actor build which cannot be changed with query parameters.
 
-### [](#input-json) Input JSON
+### Input JSON {#input-json}
 
 Most actors would not be much use if input could not be passed into them to change their behavior. Additionally, even though tasks already have specified input configurations, it is handy to have the ability to overwrite task inputs through the **body** of the POST request.
 
@@ -86,13 +86,13 @@ If we press **Send**, it will immediately return some info about the run. The `s
 
 We will later use this **run info** JSON to retrieve the run's output data. This info about the run can also be retrieved with another call to the [**Get run**](https://apify.com/docs/api/v2#/reference/actors/run-object/get-run) endpoint.
 
-## [](#synchronous-flow) Synchronous flow
+## Synchronous flow {#synchronous-flow}
 
 If each of your runs will last shorter than 5 minutes, you can use a single [synchronous endpoint](https://usergrid.apache.org/docs/introduction/async-vs-sync.html#synchronous). When running **synchronously**, the connection will be held for _up to_ 5 minutes.
 
 If your synchronous run exceeds the 5-minute time limit, the response will be a run object containing information about the run and the status of `RUNNING`. If that happens, you need to restart the run [asynchronously](#asynchronous-flow) and [wait for the run to finish](#wait-for-the-run-to-finish).
 
-### [](#synchronous-runs-with-dataset-output) Synchronous runs with dataset output
+### Synchronous runs with dataset output {#synchronous-runs-with-dataset-output}
 
 Most actor runs will store their data in the default [dataset](../storage/dataset.md). The Apify API provides **run-sync-get-dataset-items** endpoints for [actors](/api/v2#/reference/actors/run-actor-synchronously-and-get-dataset-items/run-actor-synchronously-with-input-and-get-dataset-items) and [tasks](/api/v2#/reference/actor-tasks/run-task-synchronously-and-get-dataset-items/run-task-synchronously-and-get-dataset-items-(post)), which allow you to run an actor and receive the items from the default dataset once the run has completed.
 
@@ -129,13 +129,13 @@ items.forEach((item) => {
 });
 ```
 
-### [](#synchronous-runs-with-key-value-store-output) Synchronous runs with key-value store output
+### Synchronous runs with key-value store output {#synchronous-runs-with-key-value-store-output}
 
 [Key-value stores](../storage/key_value_store.md) are useful for storing files like images, HTML snapshots, or JSON data. The Apify API provides **run-sync** endpoints for [actors](/api/v2#/reference/actors/run-actor-synchronously/with-input) and [tasks](/api/v2#/reference/actor-tasks/run-task-synchronously/run-task-synchronously), which allow you to run a specific task and receive the output. By default, they return the `OUTPUT` record from the default key-value store.
 
 > For more detailed information, check the [API reference](/api/v2#/reference/actors/run-actor-synchronously-and-get-dataset-items/run-actor-synchronously-with-input-and-get-dataset-items).
 
-## [](#asynchronous-flow) Asynchronous flow
+## Asynchronous flow {#asynchronous-flow}
 
 For runs longer than 5 minutes, the process consists of three steps:
 
@@ -143,7 +143,7 @@ For runs longer than 5 minutes, the process consists of three steps:
 - [Wait for the run to finish](#wait-for-the-run-to-finish)
 - [Collect the data](#collect-the-data)
 
-### [](#wait-for-the-run-to-finish) Wait for the run to finish
+### Wait for the run to finish {#wait-for-the-run-to-finish}
 
 There may be cases where we need to simply run the actor and go away. But in any kind of integration, we are usually interested in its output. We have three basic options for how to wait for the actor/task to finish.
 
@@ -151,7 +151,7 @@ There may be cases where we need to simply run the actor and go away. But in any
 - [Webhooks](#webhooks)
 - [Polling](#polling)
 
-#### [](#waitforfinish-parameter) `waitForFinish` parameter
+#### `waitForFinish` parameter {#waitforfinish-parameter}
 
 This solution is quite similar to the synchronous flow. To make the POST request wait, add the `waitForFinish` parameter. It can have a value from `0` to `300`, which is the maximum time in seconds to wait (the max value for `waitForFinish` is 5 minutes). Knowing this, we can extend the example URL like this:
 
@@ -163,7 +163,7 @@ You can also use the `waitForFinish` parameter with the [**GET Run** endpoint](/
 
 Once again, the final response will be the **run info object**; however, now its status should be `SUCCEEDED` or `FAILED`. If the run exceeds the `waitForFinish` duration, the status will still be `RUNNING`.
 
-#### [](#webhooks) Webhooks
+#### Webhooks {#webhooks}
 
 If you have a server, [webhooks](../integrations/webhooks/index.md) has occurred.
 
@@ -177,7 +177,7 @@ Once your server receives this request from the webhook, you know that the event
 
 > Don't forget to respond to the webhook with a **200** status code! Otherwise, it will ping you again.
 
-#### [](#polling) Polling
+#### Polling {#polling}
 
 What if you don't have a server, and the run you'd like to do is much too long to use a synchronous call? In cases like these, periodic **polling** of the run's status is the solution.
 
@@ -191,13 +191,13 @@ https://api.apify.com/v2/acts/ACTOR_NAME_OR_ID/runs/RUN_ID
 
 Once a status of `SUCCEEDED` or `FAILED` has been received, we know the run has finished and can cancel the interval and finally [collect the data](#collect-the-data).
 
-### [](#collect-the-data) Collecting the data
+### Collecting the data {#collect-the-data}
 
 Unless you used the [synchronous call](#synchronous-flow) mentioned above, you will have to make one additional request to the API to retrieve the data.
 
 The **run info** JSON also contains the IDs of the default [dataset](../storage/dataset.md) that are allocated separately for each run, which is usually everything you need. The fields are called `defaultDatasetId` and `defaultKeyValueStoreId`.
 
-#### [](#retrieve-a-dataset) Retrieving a dataset
+#### Retrieving a dataset {#retrieve-a-dataset}
 
 > If you are scraping products, or any list of items with similar fields, the [dataset](https://docs.apify.com/storage/dataset) should be your storage of choice. Don't forget though, that dataset items are immutable. This means that you can only add to the dataset, and not change the content that is already inside it.
 
@@ -217,7 +217,7 @@ The items are paginated, which means you can ask only for a subset of the data. 
 https://api.apify.com/v2/datasets/DATASET_ID/items?format=csv&offset=250000
 ```
 
-#### [](#retrieve-a-key-value-store) Retrieving a key-value store
+#### Retrieving a key-value store {#retrieve-a-key-value-store}
 
 > [Key-value stores](../storage/key_value_store.md) are mainly useful if you have a single output or any kind of files that cannot be [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) (such as images or PDFs).
 

@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /anti-scraping/mitigation/proxies
 ---
 
-# [](#about-proxies) Proxies
+# Proxies {#about-proxies}
 
 **Learn all about proxies, how they work, and how they can be leveraged in a scraper to avoid blocking and other anti-scraping tactics.**
 
@@ -26,7 +26,7 @@ Although IP quality is still the most important factor when it comes to using pr
 
 Fixing rate-limiting issues is only the tip of the iceberg of what proxies can do for your scrapers, though. By implementing proxies properly, you can successfully avoid the majority of anti-scraping measures listed in the [previous lesson](../index.md).
 
-## [](#understanding-proxy-links) A bit about proxy links
+## A bit about proxy links {#understanding-proxy-links}
 
 When using proxies in your crawlers, you'll most likely be using them in a format that looks like this:
 
@@ -42,10 +42,10 @@ If authentication (a username and a password) is required, the format will look 
 http://USERNAME:PASSWORD@proxy.example.com:8080
 ```
 
-## [](#proxy-rotation) Proxy rotation
+## Proxy rotation {#proxy-rotation}
 
 Web scrapers can implement a method called "proxy rotation" to **rotate** the IP addresses they use to access websites. Each request can be assigned a different IP address, which makes it appear as if they are all coming from different users in different location. This greatly enhances performance, and is a major factor when it comes to making a web scraper appear more human.
 
-## [](#next) Next up
+## Next up {#next}
 
 Proxies are one of the most important things to understand when it comes to mitigating anti-scraping techniques in a scraper. Now that you're familiar with what they are, the next lesson will be teaching you how to configure your crawler in Crawlee to use and automatically rotate proxies. [Let's get right into it!](./using_proxies.md)

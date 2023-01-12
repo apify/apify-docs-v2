@@ -6,7 +6,7 @@ category: apify platform
 slug: /deploying-your-code
 ---
 
-# [](#deploying) Deploying your code to Apify
+# Deploying your code to Apify {#deploying}
 
 **In this course learn how to take an existing project of yours and deploy it to the Apify platform as an actor in just a few minutes!**
 
@@ -28,7 +28,7 @@ Though the majority of actors currently on the platform were written in Node.js,
 - [GO actor](https://apify.com/jirimoravcik/go-actor-example)
 - [Actor written with Julia](https://apify.com/jirimoravcik/julia-actor-example)
 
-## [](#workflow) The "actorification" workflow
+## The "actorification" workflow {#workflow}
 
 There are four main steps to turning a piece of code into an actor:
 
@@ -66,6 +66,6 @@ print(add_all_numbers([1, 2, 3, 4])) # -> 10
 
 <!-- We've pushed this code to GitHub and are ready to turn it into an actor that takes any number of integers as input, adds them all up, then stores the solution as its output. -->
 
-## [](#next) Next up
+## Next up {#next}
 
 [Next lesson](./inputs_outputs.md), we'll be learning how to accept input into our actor as well as deliver output.

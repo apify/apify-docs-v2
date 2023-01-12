@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /web-scraping-for-beginners/crawling/finding-links
 ---
 
-# [](#finding-links) Finding links
+# Finding links {#finding-links}
 
 **Learn what a link looks like in HTML and how to find and collect their URLs when web scraping using both DevTools and Node.js.**
 
@@ -21,7 +21,7 @@ On a webpage, the link above will look like this: "<a href="https://example.com"
 
 > `href` means **H**ypertext **REF**erence. You don't need to remember this - just know that `href` typically means some sort of link.
 
-## [](#collecting-links) Collecting links 🔗
+## Collecting links 🔗 {#collecting-links}
 
 So, if a link is just an HTML element, and the URL is just an attribute, this means that we can collect links exactly the same way as we collected data.💡 Easy!
 
@@ -41,7 +41,7 @@ for (const link of links) {
 
 **_Boom_** 💥, all the links from the website have now been printed to the console. Unless you were on example.com, it's usually a lot of links. By doing this, we can get a first-hand look at how interconnected the web really is.
 
-## [](#collecting-links-in-node) Collecting links in Node.js
+## Collecting links in Node.js {#collecting-links-in-node}
 
 DevTools is a fun playground, but Node.js is way more useful. Let's create a new file in our project called **crawler.js** and start adding some basic crawling code. We'll start with the same boilerplate as with our original scraper, but this time, we'll download the HTML of [the demo site's main page](https://demo-webstore.apify.org/).
 
@@ -66,6 +66,6 @@ for (const link of links) {
 
 Aside from importing libraries and downloading HTML, we loaded the HTML into Cheerio and then used it to retrieve all the `<a>` elements. After that, we iterated over the collected links and printed their `href` attributes, which we accessed using the [`.attr()`](https://api.jquery.com/attr/) function. Remember, Cheerio functions are exactly the same as they are in jQuery.
 
-## [](#next) Next Up
+## Next Up {#next}
 
 After running the code, you will see quite a lot of links in the terminal. Some of them may look weird because they don't start with the regular **https://** protocol. We'll learn what to do with them in the [next lesson](./filtering_links.md).

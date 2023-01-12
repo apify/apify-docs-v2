@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /puppeteer-playwright/executing-scripts/injecting-code
 ---
 
-# [](#injecting-code) Injecting code
+# Injecting code {#injecting-code}
 
 **Learn how to inject scripts prior to a page's load (pre-injecting), as well as how to expose functions to be run at a later time on the page.**
 
@@ -15,7 +15,7 @@ In the previous lesson, we learned how to execute code on the page using `page.e
 
 We'll be covering both of these cases in this brief lesson.
 
-## [](#pre-injecting) Pre-injecting scripts
+## Pre-injecting scripts {#pre-injecting}
 
 Sometimes, you need your custom code to run before any other code is run on the page. Perhaps you need to modify an object's prototype, or even re-define certain global variables before they are used by the page's native scripts.
 
@@ -58,7 +58,7 @@ await browser.close();
 
 > Go ahead and run this code. Can you click the **I accept** button to accept Google's cookies policy?
 
-## [](#exposing-functions) Exposing functions
+## Exposing functions {#exposing-functions}
 
 Here's a super awesome function we've created called `returnMessage()`, which simply returns the string **Apify academy!**:
 
@@ -107,6 +107,6 @@ await browser.close();
 </marked-tab>
 ```
 
-## [](#next) Next up
+## Next up {#next}
 
 Next, we'll be learning a bit about how to collect data using Playwright/Puppeteer. There are two main ways to do this, so [next exciting lesson](./collecting_data.md) will be about both of them!

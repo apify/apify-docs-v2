@@ -5,7 +5,7 @@ sidebar_position: 9.1
 slug: /storage/dataset
 ---
 
-# [](#dataset) Dataset
+# Dataset {#dataset}
 
 **Store and export web scraping, crawling or data processing job results. Learn how to access and manage datasets in Apify Console or via API.**
 
@@ -21,7 +21,7 @@ Datasets usually contain results from web scraping, crawling or data processing 
 
 Dataset storage is **append-only** - data can only be added and cannot be changed or deleted.
 
-## [](#basic-usage) Basic usage
+## Basic usage {#basic-usage}
 
 There are five ways to access your datasets:
 
@@ -31,7 +31,7 @@ There are five ways to access your datasets:
 * [Python API client](/apify-client-python#datasetclient) - to access your datasets from any Python application [[details](#python-api-client)].
 * [Apify API](https://docs.apify.com/api/v2#/reference/datasets) - for accessing your datasets programmatically [[details](#apify-api)].
 
-### [](#apify-console) Apify Console
+### Apify Console {#apify-console}
 
 In [Apify Console](https://console.apify.com), you can view your datasets in the [Storage](https://console.apify.com/storage) section under the [Datasets](https://console.apify.com/storage?tab=datasets) tab.
 
@@ -44,7 +44,7 @@ To view or download a dataset in the above-mentioned formats, click on its **Dat
 
 ![Datasets detail view](./images/datasets-detail.webp)
 
-### [](#apify-sdk) Apify SDK
+### Apify SDK {#apify-sdk}
 
 If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://sdk.apify.com).
 In the [Apify SDK](https://sdk.apify.com/docs/guides/result-storage#dataset), the dataset is represented by the
@@ -120,7 +120,7 @@ await Actor.exit();
 
 See the [SDK documentation](https://sdk.apify.com/docs/guides/result-storage#dataset) and the `Dataset` class's [API reference](https://sdk.apify.com/api/apify/class/Dataset) for details on managing datasets with the Apify SDK.
 
-### [](#javascript-api-client) JavaScript API client
+### JavaScript API client {#javascript-api-client}
 
 Apify's [JavaScript API client](/apify-client-js#datasetclient) (`apify-client`) allows you to access your datasets from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
@@ -136,7 +136,7 @@ You can then use that variable to [access the dataset's items and manage it](/ap
 
 See the [JavaScript API client documentation](/apify-client-js#datasetclient) for [help with setup](/apify-client-js#quick-start) and more details.
 
-### [](#python-api-client) Python API client
+### Python API client {#python-api-client}
 
 Apify's [Python API client](/apify-client-python#datasetclient) (`apify-client`) allows you to access your datasets from any Python application, whether it is running on the Apify platform or elsewhere.
 
@@ -152,7 +152,7 @@ You can then use that variable to [access the dataset's items and manage it](/ap
 
 See the [Python API client documentation](/apify-client-python#datasetclient) for [help with setup](/apify-client-python#quick-start) and more details.
 
-### [](#apify-api) Apify API
+### Apify API {#apify-api}
 
 The [Apify API](https://docs.apify.com/api/v2#/reference/datasets) allows you to access your datasets programmatically using [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and easily share your crawling results.
 
@@ -220,7 +220,7 @@ Example payload:
 
 See the [API documentation](https://docs.apify.com/api/v2#/reference/datasets) for a detailed breakdown of each API endpoint.
 
-## [](#hidden-fields) Hidden fields
+## Hidden fields {#hidden-fields}
 
 Top-level fields starting with the `#` character are considered hidden.
 These fields may be easily omitted when downloading the data from a dataset by providing the **skipHidden=1** or **clean=1** query parameters. This provides a convenient way to store debug information that should not appear in the final dataset.
@@ -243,7 +243,7 @@ Below is an example of a dataset record containing hidden fields with an HTTP re
 
 Data without hidden fields are called "clean" and can be downloaded from [Apify Console](https://console.apify.com/storage?tab=datasets) using the "Clean items" link or via API using the **clean=true** or **clean=1** [URL parameters](https://docs.apify.com/api/v2#/reference/datasets/item-collection/get-items).
 
-## [](#xml-format-extension) XML format extension
+## XML format extension {#xml-format-extension}
 
 When you export results to XML or RSS formats, object property names become XML tags, while the corresponding values become the tags' children.
 
@@ -319,11 +319,11 @@ This feature is also useful when customizing your RSS feeds generated for variou
 
 By default, the whole result is wrapped in an `<items/>` element, while each page object is contained in an `<item/>` element. You can change this using the `xmlRoot` and `xmlRow` URL parameters when GETting your data.
 
-## [](#sharing) Sharing
+## Sharing {#sharing}
 
 You can invite other Apify users to view or modify your datasets using the [access rights](../access_rights/index.md).
 
-### [](#sharing-datasets-between-runs) Sharing datasets between runs
+### Sharing datasets between runs {#sharing-datasets-between-runs}
 
 You can access a dataset from any [actor](../actors/index.md) run as long as you know its **name** or **ID**.
 
@@ -349,7 +349,7 @@ The same applies for the [Apify API](#apify-api) - you can use [the same endpoin
 
 See the [Storage overview](https://docs.apify.com/storage#sharing-storages-between-runs) for details on sharing storages between runs.
 
-## [](#limits) Limits
+## Limits {#limits}
 
 * Tabulated data storage formats (the ones that display the data in columns), such as HTML, CSV, and EXCEL, have a maximum limit of **3000** columns. All data that do not fit into this limit will not be retrieved.
 
@@ -357,7 +357,7 @@ See the [Storage overview](https://docs.apify.com/storage#sharing-storages-betwe
 
 * Dataset names can be up to 63 characters long.
 
-### [](#rate-limiting) Rate limiting
+### Rate limiting {#rate-limiting}
 
 When pushing data to a dataset via [API](https://docs.apify.com/api/v2#/reference/datasets/item-collection/put-items), the request rate is limited to **200** per second per dataset. This helps protect Apify servers from being overloaded.
 

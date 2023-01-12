@@ -5,7 +5,7 @@ sidebar_position: 14.5
 slug: /node-js/js-in-html
 ---
 
-# [](#what-is-js-in-html) How to scrape hidden JavaScript objects in HTML
+# How to scrape hidden JavaScript objects in HTML {#what-is-js-in-html}
 
 **Learn about "hidden" data found within the JavaScript of certain pages, which can increase the scraper reliability and improve your development experience.**
 
@@ -17,7 +17,7 @@ The advantages of using these objects instead of parsing the HTML are that parsi
 
 > **Note:** In this tutorial, we'll be using [SoundCloud's website](https://soundcloud.com) as an example target, but the techniques described here can be applied to any site.
 
-## [](#locating-json-in-html) Locating JSON objects within script tags
+## Locating JSON objects within script tags {#locating-json-in-html}
 
 Using our DevTools, we can inspect our [target page](https://soundcloud.com/tiesto/tracks), or right click the page and click **View Page Source** to see the DOM. Next, we'll find a value on the page that we can predict would be in a potential API response. For our page, we'll use the **Tracks** count of `845`. On the **View Page Source** page, we'll do **⌘** + **F** and type in this value, which will show all matches for it within the DOM. This method can expose `<script>` tag objects which hold the target data.
 
@@ -27,7 +27,7 @@ These data objects will usually be attached to the window object (often prefixed
 
 ![View the target data in the window object using the console in DevTools](./images/view-object-in-window.webp)
 
-## [](#parsing-objects) Parsing
+## Parsing {#parsing-objects}
 
 There are two ways to go about obtaining these objects to be used and manipulated in JavaScript code:
 

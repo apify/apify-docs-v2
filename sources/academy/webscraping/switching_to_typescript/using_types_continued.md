@@ -5,7 +5,7 @@ sidebar_position: 7.3
 slug: /switching-to-typescript/using-types-continued
 ---
 
-# [](#using-types-continued) Using types (continued)
+# Using types (continued) {#using-types-continued}
 
 **Continue learning about the core types in TypeScript. In this second part lesson, learn how to use and define object types, array types, and tuples.**
 
@@ -19,7 +19,7 @@ Now that you're (hopefully) fairly comfortable with strings, booleans, and numbe
 | `Array`  | `[1, 2, 3]`, `['a', 'b', 'c']` | Any JavaScript array. Types can be flexible or strict (regarding the element types). |
 | `Tuple`  | `[1, 2]`                       | A fixed-length array.                                                                |
 
-## [](#objects) Objects
+## Objects {#objects}
 
 By now, you're already familiar with what type inference is. Even when creating objects, TypeScript will do its best to infer what that object's type is. For example, TS automatically infers correctly that this object is an object with `name` and `currentLesson` properties, both strings:
 
@@ -49,7 +49,7 @@ const course: {
 
 > We know, this looks extremely weird at first, but by the end of the course you'll be super comfortable with this syntax. And, a bit later on in the course, you'll learn how to define object types separate from the variable to improve code readability.
 
-### [](#optional-properties) Optional properties
+### Optional properties {#optional-properties}
 
 Finally, we'll add an optional property to our object type with a key of `learningBasicTypes` and a type of `boolean`. Properties become optional by adding a question mark (`?`) before the colon (`?`) after the property name.
 
@@ -72,7 +72,7 @@ course.learningBasicTypes = true;
 
 What this question mark does is tells TypeScript that the property doesn't necessarily have to exist on the `course` object (it can be undefined), but if it does exist, it must be a boolean.
 
-## [](#arrays) Arrays
+## Arrays {#arrays}
 
 Defining arrays is quite straightforward. We'll first add a `typesLearned` property to our `course` object:
 
@@ -107,7 +107,7 @@ Some of the benefits of TypeScript can be seen when accessing one of the propert
 
 Nice!
 
-## [](#tuples) Tuples
+## Tuples {#tuples}
 
 The **Tuple** type is a special type that is not in vanilla JavaScript, but is supported in other programming languages - including TypeScript. It is almost the same thing as an array; however tuples have a fixed length that cannot be changed, and each element at each index has a specific type. Don't worry, this type is much easier to understand in practice.
 
@@ -163,6 +163,6 @@ By placing types inside of the square brackets in a specific order, we tell Type
 
 ![Epic autocomplete](./images/string-not-number.webp)
 
-## [](#next) Next up
+## Next up {#next}
 
 Whew! Nice job learning about the core types in TypeScript. The next lesson is lighter than the last two, but still super important. [Let's learn](./enums.md) about the `enum` keyword!

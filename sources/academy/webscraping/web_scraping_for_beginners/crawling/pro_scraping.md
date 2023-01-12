@@ -5,7 +5,7 @@ sidebar_position: 7
 slug: /web-scraping-for-beginners/crawling/pro-scraping
 ---
 
-# [](#pro-scraping) Professional scraping 💪
+# Professional scraping 💪 {#pro-scraping}
 
 **Learn how to build scrapers quicker and get better and more robust results by using Crawlee, an open-source library for scraping in Node.js.**
 
@@ -43,7 +43,7 @@ Crawlee and its resources can be found in various different places:
 2. [Crawlee Github repository (source code, issues)](https://github.com/apify/crawlee)
 3. [Crawlee on NPM](https://www.npmjs.com/package/crawlee)
 
-## [](#crawlee-installation) Install Crawlee
+## Install Crawlee {#crawlee-installation}
 
 To use Crawlee, we have to install it from NPM. Let's add it to our project from the previous lessons.
 
@@ -68,7 +68,7 @@ node crawlee.js
 
 If you see **Crawlee works!** printed to the console, it means you successfully installed the Crawlee library.
 
-## [](#coding-the-scraper) Coding the scraper
+## Coding the scraper {#coding-the-scraper}
 
 You probably noticed that we did not `import` Cheerio or got-scraping. That's because they're both already included in a component of Crawlee called [`CheerioCrawler`](https://crawlee.dev/docs/guides/cheerio-crawler-guide). It automatically visits URLs that you feed to it, downloads the HTML, and parses it with Cheerio. The benefit of this over writing the code yourself is that it automatically handles errors and retries the request when one occurs. It also parallelizes the downloads, making them faster, and removes a lot of boilerplate code that you would have to write yourself.
 
@@ -107,7 +107,7 @@ URL: https://demo-webstore.apify.org/search/on-sale
 Title: Fakestore
 ```
 
-## [](#crawling-links) Crawling links
+## Crawling links {#crawling-links}
 
 The current scraper only visits the on-sale products URL, but we want data for all the countries. We can use the [`enqueueLinks()`](https://crawlee.dev/api/cheerio-crawler/interface/CheerioCrawlingContext#enqueueLinks) function to help us with that. The function automatically extracts URLs from the current page based on a provided CSS selector and adds them to the request queue. Once added, the crawler will automatically crawl them.
 
@@ -148,7 +148,7 @@ When you run the code, you'll immediately see that it crawls faster than the man
 
 > If the crawler gets stuck for you at the end, it's ok. It's not actually stuck, but waiting to retry any pages that potentially failed.
 
-## [](#collecting-data) Collecting data
+## Collecting data {#collecting-data}
 
 We have the crawler in place, and it's time to collect data. We already have the extraction code from the previous lesson, so we can just copy and paste it into the `requestHandler` with tiny changes.
 
@@ -201,6 +201,6 @@ await crawler.run();
 
 By using the `crawlee` library, we were able to create a faster and more robust scraper, but with less code than what was needed for the simple scraper in the earlier lessons. What we've learned so far only scratches the surface of Crawlee's full capabilities.
 
-## [](#next) Next up
+## Next up {#next}
 
 Crawlee is a full-featured scraping library. That's why we can use it to scrape any website at any scale. In the [next lesson](./headless_browser.md) we will change only a few lines of code and turn our scraper into a full **headless browser**.

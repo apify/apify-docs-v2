@@ -4,7 +4,7 @@ description: Learn how to provide your actor with context that determines its be
 slug: /actors/development/environment-variables
 ---
 
-# [](#environment-variables) Environment variables
+# Environment variables {#environment-variables}
 
 **Learn how to provide your actor with context that determines its behavior through a plethora of pre-defined environment variables offered by the Apify SDK.**
 

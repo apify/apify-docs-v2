@@ -6,7 +6,7 @@ category: guides
 slug: /monitoring/monitor-multiple-tasks
 ---
 
-# [](#monitor-multiple-actors-or-tasks) Monitor multiple actors or tasks
+# Monitor multiple actors or tasks {#monitor-multiple-actors-or-tasks}
 
 **A step-by-step monitoring tutorial that shows you how to monitor multiple runs, validate your results and visualize them using the monitoring dashboard.**
 
@@ -14,7 +14,7 @@ slug: /monitoring/monitor-multiple-tasks
 
 This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a multiple [tasks](../actors/tasks.md).
 
-## [](#use-case) Use case
+## Use case {#use-case}
 
 You want to monitor multiple actors or tasks at once.
 
@@ -33,7 +33,7 @@ You have created a task from each of the actors tracking those countries.
 
 ![Multiple tasks](./images/covid-multiple-tasks.webp)
 
-## [](#create-a-new-monitoring-task) Create a new monitoring task
+## Create a new monitoring task {#create-a-new-monitoring-task}
 
 If you haven't already, [add the monitoring suite to your account](./index.md).
 
@@ -43,7 +43,7 @@ If you have already added the task, under its **Settings** tab, give it a name. 
 
 Next, we will configure the monitoring suite.
 
-## [](#configure-monitoring) Configure monitoring
+## Configure monitoring {#configure-monitoring}
 
 1. Under your task's **Input** tab, set the **Mode** dropdown to **Create configuration**.
 
@@ -59,7 +59,7 @@ Next, we will configure the monitoring suite.
 
 ![Monitoring covid tasks - configuration](./images/covid-config.webp)
 
-## [](#validate-data) Validate data
+## Validate data {#validate-data}
 
 Now let's ensure that your data have the correct format.
 
@@ -75,7 +75,7 @@ We have used four actors from [Apify Store](https://apify.com/store). Each actor
 
 The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for type validation. Make sure to import the library using `/* global ow */`.
 
-## [](#set-up-data-visualization) Set up data visualization
+## Set up data visualization {#set-up-data-visualization}
 
 To add the monitoring dashboard, open the **Statistics dashboard** section and enable this feature.
 

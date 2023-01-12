@@ -5,7 +5,7 @@ sidebar_position: 4.1
 slug: /api-scraping/general-api-scraping
 ---
 
-# [](#general-api-scraping) General API scraping
+# General API scraping {#general-api-scraping}
 
 **Learn the benefits and drawbacks of API scraping, how to locate an API, how to utilize its features, and how to work around common roadblocks.**
 
@@ -15,6 +15,6 @@ This section will teach you everything you should know about API scraping before
 
 Each lesson will prepare you for real-world API scraping, and will help put yet another data-collection technique into your scraping toolbelt.
 
-## [](#next) Next up
+## Next up {#next}
 
 In our [first lesson](./locating_and_learning.md), we will take a look at how to locate a website's API endpoints with DevTools, and how to use them. This is your entrypoint into learning how to scrape APIs.

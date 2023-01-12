@@ -5,7 +5,7 @@ sidebar_position: 6.4
 slug: /expert-scraping-with-apify/apify-api-and-client
 ---
 
-# [](#api-and-client) Apify API & client
+# Apify API & client {#api-and-client}
 
 **Gain an in-depth understanding of the two main ways of programmatically interacting with the Apify platform - through the API, and through a client.**
 
@@ -15,14 +15,14 @@ There are two main ways to programmatically interact with the Apify platform: by
 
 > Apify's API and JavaScript API client allow us to do anything a regular user can do when interacting with the platform's web interface, only programmatically.
 
-## [](#learning) Learning 🧠
+## Learning 🧠 {#learning}
 
 - Scroll through the [Apify API docs](https://docs.apify.com/api/v2) (there's a whole lot there, so you're not expected to memorize everything).
 - Read about the Apify client in [Apify's docs](https://docs.apify.com/apify-client-js). It can also be seen on [Github](https://github.com/apify/apify-client-js) and [NPM](https://www.npmjs.com/package/apify-client).
 - Learn about the [`Actor.newClient()`](https://sdk.apify.com/docs/api/apify#apifynewclientoptions) function in the Apify SDK.
 - Skim through [this article](https://help.apify.com/en/articles/2868670-how-to-pass-data-from-web-scraper-to-another-actor) about API integration (this article is old; however, still relevant).
 
-## [](#quiz) Knowledge check 📝
+## Knowledge check 📝 {#quiz}
 
 1. What is the relationship between the Apify API and Apify client? Are there any significant differences?
 2. How do you pass input when running actor or task via API?
@@ -60,6 +60,6 @@ The new actor should take the following input values, which be mapped to paramet
 
 [**Solution**](./solutions/using_api_and_client.md)
 
-## [](#next) Next up
+## Next up {#next}
 
 [Lesson VI](./migrations_maintaining_state.md) will teach us everything we need to know about migrations and how to handle them properly to avoid losing any state; therefore, increasing the reliability of our **demo-actor** Amazon scraper.

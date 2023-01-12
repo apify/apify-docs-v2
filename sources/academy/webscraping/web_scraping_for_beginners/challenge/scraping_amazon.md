@@ -99,7 +99,7 @@ router.addHandler(labels.OFFERS, async ({ $, request }) => {
 });
 ```
 
-## [](#final-code) Final code
+## Final code {#final-code}
 
 That should be it! Let's just make sure we've all got the same code:
 
@@ -212,7 +212,7 @@ await crawler.run();
 log.info('Crawl finished.');
 ```
 
-## [](#wrap-up) Wrap up 💥
+## Wrap up 💥 {#wrap-up}
 
 Nice work! You've officially built your first scraper with Crawlee! You're now ready to take on the rest of the Apify Academy with confidence.
 

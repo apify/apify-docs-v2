@@ -5,7 +5,7 @@ sidebar_position: 10.6
 slug: /proxy/troubleshooting
 ---
 
-# [](#troubleshooting) Troubleshooting
+# Troubleshooting {#troubleshooting}
 
 **Useful tips for debugging applications that use Apify Proxy. Check the status of your proxies and view information about the client IP address.**
 

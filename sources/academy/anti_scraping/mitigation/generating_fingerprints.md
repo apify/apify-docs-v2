@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /anti-scraping/mitigation/generating-fingerprints
 ---
 
-# [](#generating-fingerprints) Generating fingerprints
+# Generating fingerprints {#generating-fingerprints}
 
 **Learn how to use two super handy NPM libraries to easily generate fingerprints and inject them into a Playwright or Puppeteer page.**
 
@@ -31,7 +31,7 @@ const crawler = new PlaywrightCrawler({
 
 > Note that Crawlee will automatically generate fingerprints for you with no configuration necessary, but the option to configure them yourself is still there within **browserPoolOptions**.
 
-## [](#using-fingerprint-generator) Using the fingerprint-generator package
+## Using the fingerprint-generator package {#using-fingerprint-generator}
 
 Crawlee uses the [Fingerprint generator](https://github.com/apify/fingerprint-generator) NPM package to do its fingerprint generating magic. For maximum control outside of Crawlee, you can install it on its own. With this package, you can easily generate browser fingerprints.
 
@@ -60,7 +60,7 @@ const generated = fingerprintGenerator.getFingerprint({
 });
 ```
 
-## [](#injecting-fingerprints) Injecting fingerprints
+## Injecting fingerprints {#injecting-fingerprints}
 
 Once you've manually generated a fingerprint using the **Fingerprint generator** package, it can be injected into the browser using [**fingerprint-injector**](https://github.com/apify/fingerprint-injector). This tool allows you to inject fingerprints into browsers automated by Playwright or Puppeteer:
 
@@ -116,7 +116,7 @@ await page.goto('https://google.com');
 
 That's it for the **Mitigation** course for now, but be on the lookout for future lessons! We release lessons as we write them, and will be updating the Academy frequently, so be sure to check back every once in a while for new content! Alternatively, you can subscribe to our mailing list to get periodic updates on the Academy, as well as what Apify is up to.
 
-## [](#generating-headers) Generating headers
+## Generating headers {#generating-headers}
 
 Headers are also used by websites to fingerprint users (or bots), so it might sometimes be necessary to generate some user-like headers to mitigate anti-scraping protections. Similarly with fingerprints, **Crawlee** automatically generates headers for you, but you can have full control by using the [**browser-headers-generator**](https://github.com/apify/browser-headers-generator) package.
 

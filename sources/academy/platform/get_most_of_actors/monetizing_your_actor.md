@@ -5,7 +5,7 @@ sidebar_position: 4
 slug: /get-most-of-actors/monetizing-your-actor
 ---
 
-# [](#monetizing-your-actor) Monetizing your actor
+# Monetizing your actor {#monetizing-your-actor}
 
 **Learn how you can monetize your web scraping and automation projects by publishing and renting actors to users in Apify Store.**
 
@@ -17,7 +17,7 @@ When publishing your actor on the Apify platform you have the choice to make it 
 
 Paid actor users pay a monthly rental fee to use the tool, which is **paid in full to the actor’s developer.** This means that, in the example above, the developer would get the full $45 monthly rent paid by each actor’s user.
 
-## [](#request-monetization) Request monetization
+## Request monetization {#request-monetization}
 
 First, go to your actor page, **Actors → My Actors** and click on the actor you want to monetize. While on your actor page, go to the **Publication** tab on the right side of the screen and click on the **Request Monetization** button, located under the **Monetization** section.
 
@@ -25,7 +25,7 @@ First, go to your actor page, **Actors → My Actors** and click on the actor yo
 
 Our support team will be notified about your request and promptly contact you to discuss the desired price and trial length for your actor, and help you fill in your billing details.
 
-## [](#billing-details) Billing details
+## Billing details {#billing-details}
 
 Billing details and payment method should be added as soon as your actor is public since this information is mandatory for the creation of payout invoices. Please note that the billing details and payment method should be added as soon as your actor is public since this information is mandatory for the creation of payout invoices.
 
@@ -40,7 +40,7 @@ To add your billing details head over to **Setting > Payouts** on the left side 
 
 Invoices are created automatically at the beginning of the new month, just under your billing details in the same section of your Apify console. Once the invoice is ready, you will need to review and approve it in order the payment to be processed.
 
-## [](#price-and-trial-length) Price and trial length
+## Price and trial length {#price-and-trial-length}
 
 **You choose the price and free trial length of your actor.** Apify can give you advice about the best practices of the most successful actors, but at the end of the day, we give developers full control over the pricing strategy of their tools.
 
@@ -52,7 +52,7 @@ Here you have access to a table detailing all the relevant information about you
 
 ![Scraper earnings](./images/scraper-earnings-example.webp)
 
-## [](#promote-your-actor) Promote your actor
+## Promote your actor {#promote-your-actor}
 
 Your paid actors’ earnings are directly related to the amount of paying users you have for your tool. So, after publishing and monetizing your software, comes a crucial step for your actor’s success: **attracting users**.
 

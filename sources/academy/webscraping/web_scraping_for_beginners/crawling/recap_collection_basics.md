@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /web-scraping-for-beginners/crawling/recap-collection-basics
 ---
 
-# [](#quick-recap) Recap of data collection basics
+# Recap of data collection basics {#quick-recap}
 
 **Review our e-commerce website scraper and refresh our memory about its code and the programming techniques we used to collect and save the data.**
 
@@ -65,6 +65,6 @@ writeFileSync('products.csv', csv)
 
 > If some of the code is hard for you to understand, please review the [Basics of data collection](../data_collection/index.md) section. We will not go through the details again in this section about crawling.
 
-## [](#next) Next up
+## Next up {#next}
 
 The [next lesson](./finding_links.md) is all about finding some links to crawl on [Fakestore](https://demo-webstore.apify.org/).

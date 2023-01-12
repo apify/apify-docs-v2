@@ -15,7 +15,7 @@ Let's say we want to scrape a database of craft beers ([brewbound.com](https://w
 
 > Check out [Sitemap Sniffer](https://apify.com/vaclavrut/sitemap-sniffer) tool, which can discover sitemaps in hidden locations.
 
-## [](#the-sitemap) The sitemap
+## The sitemap {#the-sitemap}
 
 The sitemap is usually located at the path `/sitemap.xml`. It is always worth trying that URL, as it is rarely linked anywhere on the site. It usually contains a list of all pages in [XML format](https://www.w3.org/standards/xml/core).
 
@@ -51,7 +51,7 @@ They can be matched with the following regular expression (regex).
 
 Note the two parts of the regular expression `[^\/<]` containing `<`. This is because we want to exclude the `</loc>` tag, which closes each URL.
 
-## [](#using-the-sitemap-in-apify-sdk) Using the sitemap in Apify SDK and Crawlee
+## Using the sitemap in Apify SDK and Crawlee {#using-the-sitemap-in-apify-sdk}
 
 Our [web scraping and automation library](https://crawlee.dev/) is well-suited for scraping with sitemaps.
 
@@ -88,7 +88,7 @@ const crawler = new PuppeteerCrawler({
 });
 ```
 
-## [](#full-code-example) Full code example
+## Full code example {#full-code-example}
 
 If we create a new actor using the code below on the [Apify platform](https://console.apify.com/actors), it returns a nicely formatted spreadsheet containing a list of breweries with their beers and descriptions.
 

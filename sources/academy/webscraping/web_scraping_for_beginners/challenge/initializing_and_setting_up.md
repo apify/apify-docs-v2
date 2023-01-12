@@ -69,6 +69,6 @@ Finally, we'll add the following input file to **INPUT.json** in the project's r
 
 > This is how we'll be inputting data into our scraper from now on. Don't worry though, from now on, we'll only need  to work in the **main.js** and **routes.js** files!
 
-## [](#next) Next up
+## Next up {#next}
 
 Cool! We're ready. But [let's discuss a bit about modularity](./modularity.md) before moving forward!

@@ -15,7 +15,7 @@ Once you have created your organization, you can customize it. Under the **Setti
 
 **[See our video tutorial](https://www.youtube.com/watch?v=BIL6HqtnvKk) on organization accounts.**
 
-## [](#add-users-to-your-organization) Add users to your organization
+## Add users to your organization {#add-users-to-your-organization}
 
 You can add members to your organization in the **Members** tab. You can use their **User ID**, **username** or **email**. When adding a member to the organization, you must assign them a **Role** so their permissions are known right away.
 
@@ -23,7 +23,7 @@ The **Members** tab allows you to view and manage your organization's members an
 
 ![Organization members](../images/members.webp)
 
-## [](#define-roles-and-permissions) Define roles and permissions
+## Define roles and permissions {#define-roles-and-permissions}
 
 Roles allow you to define permissions to your organization's resources by group. Every new organization comes with three pre-defined roles, which you can customize or remove.
 

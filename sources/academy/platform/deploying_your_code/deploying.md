@@ -5,7 +5,7 @@ sidebar_position: 5
 slug: /deploying-your-code/deploying
 ---
 
-# [](#deploying) Deploying
+# Deploying {#deploying}
 
 **Push local code to the platform, or create a new actor on the console and integrate it with a Git repo to optionally automatically rebuild any new changes.**
 
@@ -13,7 +13,7 @@ slug: /deploying-your-code/deploying
 
 Once you've **actorified** your code, there are two ways to deploy your it to the Apify platform. You can either push the code directly from your local machine onto the platform, or you can create a blank actor in the web-interface, then integrate its source code with a GitHub repository.
 
-## [](#with-git-repository) With a Git repository
+## With a Git repository {#with-git-repository}
 
 Before we deploy our project onto the Apify platform, let's ensure that we've pushed the changes we made in the last 3 lessons into our remote GitHub repository.
 
@@ -27,7 +27,7 @@ Before anything can be integrated, we've gotta create a new actor. Luckily, this
 
 Easy peasy!
 
-### [](#change-source-code) Changing source code location
+### Changing source code location {#change-source-code}
 
 In the **Source** tab on the new actor's page, we'll click the dropdown menu under **Source code** and select **Git repository**. By default, this is set to **Multiple source files**.
 
@@ -35,7 +35,7 @@ In the **Source** tab on the new actor's page, we'll click the dropdown menu und
 
 Now we'll paste the link to our GitHub repository into the **Git URL** text field and click **Save**.
 
-### [](#adding-repo-webhook) Adding the webhook to the repository
+### Adding the webhook to the repository {#adding-repo-webhook}
 
 The final step is to click on **API** in the top right corner of our actor's page:
 
@@ -47,7 +47,7 @@ And scroll through all of the links until we find the **Build actor** API endpoi
 
 That's it! the actor should now pull its source code from the repo and automatically build.
 
-## [](#with-apify-cli) Without a GitHub repository (using the Apify CLI)
+## Without a GitHub repository (using the Apify CLI) {#with-apify-cli}
 
 > If you don't yet have the Apify CLI, learn how to install it and log in by following along with [this brief lesson](../../glossary/tools/apify_cli.md) about it.
 
@@ -57,7 +57,7 @@ One important thing to note is that you can use a `.gitignore` file to exclude f
 
 > The `apify push` command should only really be used for quickly pushing and testing actors on the platform during development. If you are ready to make your actor public, use a Git repository instead, as you will reap the benefits of using Git and others will be able to contribute to the project.
 
-## [](#deployed) Deployed!
+## Deployed! {#deployed}
 
 Great! Once you've pushed your actor to the platform, you should see it in the list of actors under the **Actors** tab. If you used `apify push`, you'll have access to the **multifile editor** (discussed [here](../getting_started/creating_actors.md)).
 
@@ -65,6 +65,6 @@ Great! Once you've pushed your actor to the platform, you should see it in the l
 
 The next step is to test your actor and experiment with the vast amount of features the platform has to offer.
 
-## [](#next) Wrap up
+## Wrap up {#next}
 
 That's it! In this short section, you've learned how to take your code written in any programming language and turn it into a usable actor that can run on the Apify platform! The next step is to start looking into the [paid actors](https://docs.apify.com/actors/paid-actors) program, which allows you to monetize your work.

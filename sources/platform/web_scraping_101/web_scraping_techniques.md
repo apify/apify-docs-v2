@@ -15,7 +15,7 @@ This article provides a quick summary of ways websites structure and send their 
 
 You can find more in-depth discussion and code examples for all the techniques in [this](https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javascript-variables-8167f252439c) article.
 
-## [](#css-selectors) CSS selectors
+## CSS selectors {#css-selectors}
 
 The first method you will use when trying web scraping is most likely
 [CSS selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors). They allow you to select your desired elements by type, class, ID or attributes.
@@ -26,7 +26,7 @@ To see which element contains the information you need (and its details), open y
 
 If you are only looking to scrape a couple of elements from a page, this method is sufficient. For more elaborate extraction use cases, however, there are other, more effective, methods.
 
-## [](#schema-org-microdata) Schema.org microdata
+## Schema.org microdata {#schema-org-microdata}
 
 Schemas provide a way to mark up web pages so major search engines like Google, Bing and Yahoo can understand them.
 
@@ -45,7 +45,7 @@ If a site uses microdata, you will find it in its `<head>` element using your br
 
 Check out this [tutorial](https://help.apify.com/en/articles/1444245-scraping-data-from-websites-using-schema-org-microdata) to learn how to scrape pages using Schema.org microdata.
 
-## [](#json-ld) JSON-LD
+## JSON-LD {#json-ld}
 
 Similar to [Schema.org microdata](#schema-org-microdata), some sites use [JSON for Linking Data](https://json-ld.org/) (JSON-LD). Based on the [JSON](https://www.json.org/json-en.html) format, JSON-LD helps structure a web page's content in a way that's easy for humans and computers to read. This improves a site's [SEO](https://moz.com/learn/seo/what-is-seo).
 
@@ -63,7 +63,7 @@ const pageFunction = (context) => {
 };
 ```
 
-## [](#internal-javascript-variables) Internal JavaScript variables
+## Internal JavaScript variables {#internal-javascript-variables}
 
 You can find internal JavaScript variables in a `<script>` tag in a web page's `<head>` element. These variables contain custom data that is set when the page loads.
 
@@ -84,7 +84,7 @@ For example, if you are searching for Kaffeine café on [Yelp](https://www.yelp.
 
 Check out [this tutorial](https://blog.apify.com/web-scraping-in-2018-forget-html-use-xhrs-metadata-or-javascript-variables-8167f252439c) for more information and code examples for scraping with internal JavaScript variables.
 
-## [](#xhrs) XHRs
+## XHRs {#xhrs}
 
 [XMLHttpRequests](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) (XHRs) allow you to scrape websites that load their data [dynamically](https://en.wikipedia.org/wiki/Dynamic_web_page#Client-side_scripting). When you perform the required action (e.g. click a **Load more** button), the page makes an [API](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/) call to the XHR, which returns the data that will be displayed.
 
