@@ -4,13 +4,11 @@ This is the base repository for next version of https://docs.apify.com.
 
 ## TODO
 
-- robots.txt for root of apify.github.io
-- versioning of api docs broken (at least the switcher and versioned navbar links)
-- API docs versioning either broken or links are broken
-- API docs navbar versioned link broken
 - rendering changelog in non-TS projects (CLI)
 
 ### Content migration
+
+last content sync: 12.1.2023 ~11:00 ([first not included PR](https://github.com/apify/apify-docs/pull/488))
 
 - run `node tools/convert.mjs`
 - some pages need to be manually updated:
