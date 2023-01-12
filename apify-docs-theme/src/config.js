@@ -148,11 +148,15 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'Academy',
-                        to: 'academy',
+                        href: `${absoluteUrl}/academy`,
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                     {
                         label: 'Platform',
-                        to: 'platform',
+                        href: `${absoluteUrl}/platform`,
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                 ],
             },
@@ -161,19 +165,19 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'Reference',
-                        href: `/api/v2/`,
+                        href: `${absoluteUrl}/api/v2/`,
                         target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'Client for JavaScript',
-                        href: `/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'Client for Python',
-                        href: `/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
@@ -184,13 +188,13 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'SDK for JavaScript',
-                        href: `/sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'SDK for Python',
-                        href: `/sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
@@ -201,7 +205,7 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'CLI',
-                        href: `/cli/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/cli/`, // we need a trailing slash here, we'd get redirected there anyway
                         position: 'left',
                         target: '_self',
                         rel: 'dofollow',
