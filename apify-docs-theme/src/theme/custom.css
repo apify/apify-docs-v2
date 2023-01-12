@@ -64,7 +64,7 @@ html[data-theme='dark'] {
 
     --ifm-footer-background-color: #272c3d;
     --ifm-footer-title-color: #f2f3fb;
-    --ifm-footer-link-color: #f2f3fb;
+    --ifm-footer-link-color: #8d92af;
     --max-layout-width: 1680px;
 
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -104,6 +104,10 @@ html[data-theme='dark'] {
 
 .footer__copyright {
     color: var(--ifm-footer-title-color);
+}
+
+footer .col {
+    margin-bottom: 2rem;
 }
 
 .navbar__title {
@@ -493,7 +497,6 @@ div[class*="searchBox"] {
         display: initial;
     }
 }
-
 
 @media (min-width: 997px) {
     .navbar__sub {

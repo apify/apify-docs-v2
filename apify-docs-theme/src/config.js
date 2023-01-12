@@ -144,7 +144,7 @@ const themeConfig = ({
     footer: {
         links: [
             {
-                title: 'Docs',
+                title: 'Learn',
                 items: [
                     {
                         label: 'Academy',
@@ -157,19 +157,54 @@ const themeConfig = ({
                 ],
             },
             {
-                title: 'Community',
+                title: 'API',
                 items: [
                     {
-                        label: 'Discord',
-                        href: 'https://discord.com/invite/jyEM2PRvMU',
+                        label: 'Reference',
+                        href: `/api/v2/`,
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                     {
-                        label: 'Stack Overflow',
-                        href: 'https://stackoverflow.com/questions/tagged/apify',
+                        label: 'Client for JavaScript',
+                        href: `/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                     {
-                        label: 'Twitter',
-                        href: 'https://twitter.com/apify',
+                        label: 'Client for Python',
+                        href: `/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        target: '_self',
+                        rel: 'dofollow',
+                    },
+                ],
+            },
+            {
+                title: 'SDK',
+                items: [
+                    {
+                        label: 'SDK for JavaScript',
+                        href: `/sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        target: '_self',
+                        rel: 'dofollow',
+                    },
+                    {
+                        label: 'SDK for Python',
+                        href: `/sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        target: '_self',
+                        rel: 'dofollow',
+                    },
+                ],
+            },
+            {
+                title: 'Other',
+                items: [
+                    {
+                        label: 'CLI',
+                        href: `/cli/`, // we need a trailing slash here, we'd get redirected there anyway
+                        position: 'left',
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                 ],
             },
@@ -177,20 +212,16 @@ const themeConfig = ({
                 title: 'More',
                 items: [
                     {
-                        label: 'Apify Platform',
-                        href: 'https://apify.com',
-                    },
-                    {
-                        label: 'Crawlee',
-                        href: 'https://crawlee.dev',
-                    },
-                    {
-                        label: 'Docusaurus',
-                        href: 'https://docusaurus.io',
+                        label: 'Cralwee',
+                        to: 'https://crawlee.dev',
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                     {
                         label: 'GitHub',
                         href: 'https://github.com/apify',
+                        target: '_self',
+                        rel: 'dofollow',
                     },
                 ],
             },
