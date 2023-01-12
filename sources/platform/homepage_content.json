@@ -111,7 +111,7 @@
         },
         {
             "cardItem": "API Docs",
-            "href": "/platform/api/v2"
+            "href": "/api/v2"
         },
         {
             "cardItem": "Integrate with the Apify platform",
