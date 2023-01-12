@@ -218,14 +218,11 @@ const themeConfig = ({
                     {
                         label: 'Cralwee',
                         to: 'https://crawlee.dev',
-                        target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'GitHub',
                         href: 'https://github.com/apify',
-                        target: '_self',
-                        rel: 'dofollow',
                     },
                 ],
             },
