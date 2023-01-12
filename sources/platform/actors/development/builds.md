@@ -14,7 +14,7 @@ Before the actor can be run, it first needs to be built. The build effectively c
 
 Each build is assigned a unique build number of the form **MAJOR\.MINOR\.BUILD** (e.g. **1\.2\.345**), where **MAJOR\.MINOR** corresponds to the actor version number (see [Versioning](./source_code.md)) and **BUILD** is an automatically-incremented number starting at **1**.
 
-By default, the build has a timeout of 300 seconds and consumes 2048 MB of memory from the user's memory limit. See the [Resource limits](../running/index.md) section for more details.
+By default, the build has a timeout of 300 seconds and consumes 4096 MB (2048 MB on the free plan) of memory from the user's memory limit. See the [Resource limits](../running/index.md) section for more details.
 
 ## [](#tags)Tags
 

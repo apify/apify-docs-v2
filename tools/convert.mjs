@@ -121,6 +121,48 @@ async function transformLinksOnLine(line, cwd, source) {
 // copy everything first
 await fs.remove('sources');
 await fs.copy('sources_orig', 'sources');
+
+// reshuffle academy content to groups
+await fs.mkdirp('sources/academy/glossary');
+await fs.move('sources/academy/glossary.md', 'sources/academy/glossary/glossary.md');
+await fs.move('sources/academy/concepts', 'sources/academy/glossary/concepts');
+await fs.move('sources/academy/concepts.md', 'sources/academy/glossary/concepts.md');
+await fs.move('sources/academy/tools', 'sources/academy/glossary/tools');
+await fs.move('sources/academy/tools.md', 'sources/academy/glossary/tools.md');
+
+await fs.mkdirp('sources/academy/tutorials-new');
+await fs.move('sources/academy/tutorials', 'sources/academy/tutorials-new/tutorials');
+await fs.move('sources/academy/tutorials.md', 'sources/academy/tutorials-new/tutorials.md');
+await fs.move('sources/academy/node_js', 'sources/academy/tutorials-new/node_js');
+await fs.move('sources/academy/node_js.md', 'sources/academy/tutorials-new/node_js.md');
+await fs.move('sources/academy/python', 'sources/academy/tutorials-new/python');
+await fs.move('sources/academy/python.md', 'sources/academy/tutorials-new/python.md');
+await fs.move('sources/academy/tutorials-new', 'sources/academy/tutorials');
+
+await fs.mkdirp('sources/academy/platform');
+await fs.move('sources/academy/apify_platform.md', 'sources/academy/platform/apify_platform.md');
+await fs.move('sources/academy/getting_started', 'sources/academy/platform/getting_started');
+await fs.move('sources/academy/getting_started.md', 'sources/academy/platform/getting_started.md');
+await fs.move('sources/academy/deploying_your_code', 'sources/academy/platform/deploying_your_code');
+await fs.move('sources/academy/deploying_your_code.md', 'sources/academy/platform/deploying_your_code.md');
+await fs.move('sources/academy/get_most_of_actors', 'sources/academy/platform/get_most_of_actors');
+await fs.move('sources/academy/get_most_of_actors.md', 'sources/academy/platform/get_most_of_actors.md');
+await fs.move('sources/academy/running_a_web_server.md', 'sources/academy/platform/running_a_web_server.md');
+await fs.move('sources/academy/expert_scraping_with_apify', 'sources/academy/platform/expert_scraping_with_apify');
+await fs.move('sources/academy/expert_scraping_with_apify.md', 'sources/academy/platform/expert_scraping_with_apify.md');
+
+await fs.mkdirp('sources/academy/webscraping');
+await fs.move('sources/academy/web_scraping_for_beginners', 'sources/academy/webscraping/web_scraping_for_beginners');
+await fs.move('sources/academy/web_scraping_for_beginners.md', 'sources/academy/webscraping/web_scraping_for_beginners.md');
+await fs.move('sources/academy/puppeteer_playwright', 'sources/academy/webscraping/puppeteer_playwright');
+await fs.move('sources/academy/puppeteer_playwright.md', 'sources/academy/webscraping/puppeteer_playwright.md');
+await fs.move('sources/academy/api_scraping', 'sources/academy/webscraping/api_scraping');
+await fs.move('sources/academy/api_scraping.md', 'sources/academy/webscraping/api_scraping.md');
+await fs.move('sources/academy/switching_to_typescript', 'sources/academy/webscraping/switching_to_typescript');
+await fs.move('sources/academy/switching_to_typescript.md', 'sources/academy/webscraping/switching_to_typescript.md');
+await fs.move('sources/academy/advanced_web_scraping', 'sources/academy/webscraping/advanced_web_scraping');
+await fs.move('sources/academy/advanced_web_scraping.md', 'sources/academy/webscraping/advanced_web_scraping.md');
+
 const processed = [];
 
 for (const source of sources) {

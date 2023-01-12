@@ -4,12 +4,6 @@ module.exports = {
         {
             type: 'category',
             label: 'Web scraping & Automation',
-            // link: {
-            //     type: 'generated-index',
-            //     title: 'Web scraping & Automation',
-            //     slug: '/web-scraping-and-automation',
-            //     keywords: ['web scraping', 'automation'],
-            // },
             collapsible: false,
             items: [
                 {

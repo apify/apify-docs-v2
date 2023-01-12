@@ -93,7 +93,7 @@ module.exports = {
                 rehypePlugins: [externalLinkProcessor],
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
-                // sidebarPath: require.resolve('./sources/academy/sidebars.js'),
+                sidebarPath: require.resolve('./sources/academy/sidebars.js'),
             },
         ],
         // TODO this should be somehow computed from all the external sources

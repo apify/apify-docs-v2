@@ -21,7 +21,7 @@ In cases when a higher number of requests is expected for the crawler, using a [
 
 The most popular and effective way of avoiding rate-limiting issues is by rotating [proxies](../mitigation/proxies.md) after every **n** number of requests, which makes your scraper appear as if it is making requests from various different places. Since the majority of rate-limiting solutions are based on IP addresses, rotating IPs allows a scraper to make large amounts to a website without getting restricted.
 
-In Crawlee, proxies are automatically rotated for you when you use `ProxyConfiguration` and a [**SessionPool**](https://crawlee.dev/api/core/class/SessionPool) within a crawler. The SessionPool handles a lot of the nitty gritty of proxy rotating, especially with [browser based crawlers](../../puppeteer_playwright/index.md) by retiring a browser instance after a certain number of requests have been sent from it in order to use a new proxy (a browser instance must be retired in order to use a new proxy).
+In Crawlee, proxies are automatically rotated for you when you use `ProxyConfiguration` and a [**SessionPool**](https://crawlee.dev/api/core/class/SessionPool) within a crawler. The SessionPool handles a lot of the nitty gritty of proxy rotating, especially with [browser based crawlers](../../webscraping/puppeteer_playwright/index.md) by retiring a browser instance after a certain number of requests have been sent from it in order to use a new proxy (a browser instance must be retired in order to use a new proxy).
 
 Here is an example of these features being used in a **PuppeteerCrawler** instance:
 
