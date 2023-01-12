@@ -1,5 +1,4 @@
 .footer {
-    background: #272c3d;
     padding-top: 64px;
 }
 
@@ -43,4 +42,15 @@
     text-transform: uppercase;
     color: #8d92af;
     margin-bottom: 20px;
+}
+
+.footerLogo {
+    width: 90px;
+    height: 24px;
+    background-image: url('/img/footer-apify-logo-black.svg');
+    background-repeat: no-repeat;
+}
+
+html[data-theme='dark'] .footerLogo {
+    background-image: url('/img/footer-apify-logo-white.svg');
 }

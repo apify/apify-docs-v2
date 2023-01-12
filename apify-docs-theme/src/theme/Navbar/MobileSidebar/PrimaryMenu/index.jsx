@@ -14,7 +14,7 @@ export default function NavbarMobilePrimaryMenu() {
     // TODO how can the order be defined for mobile?
     // Should we allow providing a different list of items?
     const items = useNavbarItems();
-    const baseUrl = useBaseUrl('.');
+    const baseUrl = useBaseUrl('/');
     const { options: { subNavbar } } = usePluginData('@apify/docs-theme');
     return (
         <>

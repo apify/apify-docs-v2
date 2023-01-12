@@ -26,42 +26,20 @@ function Footer() {
         return null;
     }
     const { links, style } = footer;
-    const OpenSourceIcon = require('../../img/footer-open-source.svg').default;
-    const ApifyLogo = require('../../img/footer-apify-logo.svg').default;
     return (
         <footer className={clsx(styles.footer, style)}>
             <div className="container padding-horiz--lg">
-                <div className="row">
-                    <div className="col col--5">
-                        <div className="row">
-                            <div className="col col--6">
-                                <FooterLinksColumn column={links[0]} />
-                            </div>
-                            <div className="col col--6">
-                                <FooterLinksColumn column={links[1]} />
-                            </div>
+                <div className="row" style={{ justifyContent: 'space-between' }}>
+                    { links.map((column, i) => (
+                        <div key={i} className={`col col--2`}>
+                            <FooterLinksColumn {...{ column }} />
                         </div>
-                    </div>
-                    <div className="col col--7">
-                        <div className="row">
-                            <div className="col col--3 col--offset-9">
-                                <FooterLinksColumn column={links[2]} />
-                            </div>
-                        </div>
-                    </div>
+                    ))
+                    }
                 </div>
                 <div className="row padding-vert--md padding-top--lg">
                     <div className="col padding-vert--md col--6">
-                        <div className={styles.freeAndOpenSource}>
-                            <OpenSourceIcon className={styles.alignMiddle} />
-                            <span className={styles.alignMiddle}>Apify SDK is free and open source</span>
-                        </div>
-                    </div>
-                    <div className="col padding-vert--md col--6 text--right">
-                        <span className={styles.builtBy}>
-                            <span className={styles.alignMiddle}>Built by</span>
-                            <ApifyLogo className={styles.alignMiddle} />
-                        </span>
+                        <div className={styles.footerLogo}></div>
                     </div>
                 </div>
             </div>
