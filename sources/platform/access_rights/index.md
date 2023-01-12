@@ -6,7 +6,7 @@ category: platform
 slug: /access-rights
 ---
 
-# [](./access_rights)Access rights
+# [](#access-rights) Access rights
 
 **Manage permissions for organizations or private resources such as actors, actor runs and storages. Allow other users to read, run, modify or build new versions.**
 
