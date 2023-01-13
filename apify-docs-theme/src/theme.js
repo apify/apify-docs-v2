@@ -20,6 +20,9 @@ function theme(
 ) {
     return {
         name: '@apify/docs-theme',
+        getPathsToWatch() {
+            return ['./pages'];
+        },
         getThemePath() {
             return '../src/theme';
         },

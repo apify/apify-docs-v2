@@ -11,6 +11,8 @@ import remarkSlug from 'remark-slug';
 import remarkParse from 'remark-parse';
 import remarkStringify from 'remark-stringify';
 import remarkHeadings from '@vcarl/remark-headings';
+import rehypeHighlight from 'rehype-highlight';
+import dockerfile from 'highlight.js/lib/languages/dockerfile';
 
 export default function ChangelogPage({ changelog }) {
     const windowSize = useWindowSize();
@@ -41,21 +43,30 @@ function ChangelogPageDesktop({ changelog, toc }) {
             title={`Changelog · ${siteConfig.tagline}`}
             description={siteConfig.tagline}
         >
-            <div className='col apiItemCol' style={{ margin: 'auto', display: 'flex', flexDirection: 'row' }}>
-                <div style={{ flexDirection: 'column' }} className='theme-doc-markdown markdown'>
-                    <ReactMarkdown
-                        remarkPlugins={[remarkSlug]}
-                    >
-                        {changelog}
-                    </ReactMarkdown>
-                </div>
-                <div style={{ width: '50%' }}>
-                    <TOC
-                        {...{
-                            toc,
-                            minHeadingLevel: 1,
-                        }}
-                    />
+            <div className='docPage docMainContainer' style={{ margin: 'auto' }}>
+                <div className="row" style={{ flexWrap: 'nowrap' }}>
+                    <div style={{ flexDirection: 'column' }} className='theme-doc-markdown markdown col--9'>
+                        <ReactMarkdown
+                            remarkPlugins={[remarkSlug]}
+                            rehypePlugins={[
+                                [rehypeHighlight,
+                                    {
+                                        languages: { dockerfile },
+                                        ignoreMissing: true,
+                                    },
+                                ]]}
+                        >
+                            {changelog}
+                        </ReactMarkdown>
+                    </div>
+                    <div className="col--3">
+                        <TOC
+                            {...{
+                                toc,
+                                minHeadingLevel: 1,
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
         </Layout>
