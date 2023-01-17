@@ -139,7 +139,7 @@ const themeConfig = ({
         darkTheme: require('prism-react-renderer/themes/dracula'),
         additionalLanguages: ['docker', 'log'],
     },
-    metadata: [],
+    metadata: [{ name: 'robots', content: 'noindex, nofollow' }],
     image: 'https://apify.com/img/og/docs.png',
     footer: {
         links: [
