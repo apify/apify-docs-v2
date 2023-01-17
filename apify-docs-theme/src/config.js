@@ -216,7 +216,7 @@ const themeConfig = ({
                 title: 'More',
                 items: [
                     {
-                        label: 'Cralwee',
+                        label: 'Crawlee',
                         to: 'https://crawlee.dev',
                         rel: 'dofollow',
                     },

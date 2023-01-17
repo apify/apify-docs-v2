@@ -81,7 +81,7 @@ To learn more about [sessions]({{@link proxy.md#sessions}}) and [IP address rota
 
 ## Code examples
 
-We have code examples for connecting to our proxy using the [Apify SDK](https://sdk.apify.com) and [Cralwee](https://crawlee.dev/) and other JavaScript libraries (**axios** and **got-scraping**), as well as examples in Python and PHP.
+We have code examples for connecting to our proxy using the [Apify SDK](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/) and other JavaScript libraries (**axios** and **got-scraping**), as well as examples in Python and PHP.
 
 * [Datacenter proxy]({{@link proxy/datacenter_proxy/examples.md}})
 * [Residential proxy]({{@link proxy/residential_proxy.md#connecting-to-residential-proxy}})
