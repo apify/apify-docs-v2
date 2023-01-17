@@ -127,7 +127,7 @@ solution = add_all_numbers(actor_input)
 print(solution)
 ```
 
-> For a better understanding of the API endpoints for reading and modifying key-value stores, check the [official API reference](https://docs.apify.com/api/v2#/reference/key-value-stores).
+> For a better understanding of the API endpoints for reading and modifying key-value stores, check the [official API reference](/api/v2#/reference/key-value-stores).
 
 ## Writing output {#writing-output}
 

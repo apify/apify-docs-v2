@@ -18,12 +18,12 @@ slug: /schedules
 
 You can set up and manage schedules from
 [Apify Console](https://console.apify.com/schedules)
-and via [API](https://docs.apify.com/api/v2#/reference/schedules)
+and via [API](/api/v2#/reference/schedules)
 (also with the
 [JavaScript]({{@link apify_client_js.md#scheduleclient}}) and
 [Python]({{@link apify_client_python.md#apifyclient-schedule}})
 API clients).
-When scheduling a new actor or task run, you can override its input settings using a JSON object similarly to when invoking a schedule using the [Apify API](https://docs.apify.com/api/v2#/reference/schedules/).
+When scheduling a new actor or task run, you can override its input settings using a JSON object similarly to when invoking a schedule using the [Apify API](/api/v2#/reference/schedules/).
 
 > In most cases, scheduled events are fired within one second of their scheduled time. <br/>
 > Occasionally, however, runs can be delayed because of a system overload or a server shutting down.
@@ -72,7 +72,7 @@ For integrations, you can also add a [webhook](https://docs.apify.com/webhooks) 
 
 ### Via API
 
-To create a new [schedule](https://docs.apify.com/api/v2#/reference/schedules) using the [Apify API](https://docs.apify.com/api/v2#), send a [POST request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) to the [create schedule](https://docs.apify.com/api/v2#/reference/schedules/schedules-collection/create-schedule) endpoint.
+To create a new [schedule](/api/v2#/reference/schedules) using the [Apify API](/api/v2#), send a [POST request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) to the [create schedule](/api/v2#/reference/schedules/schedules-collection/create-schedule) endpoint.
 
 You can find your [secret API token](./integrations/index.md) in your Apify account's [Integrations](https://console.apify.com/account?tab=integrations) tab. When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](/api/v2#/introduction/authentication)).
 
@@ -105,7 +105,7 @@ If the request is successful, you will receive a 201 [HTTP response code](https:
 
 You can add multiple actor and task runs to a schedule with a single POST request. Simply add another object with the run's details to the **actions** array in your POST request's payload object.
 
-For more information, see the [schedules section](https://docs.apify.com/api/v2#/reference/schedules/schedule-object/get-schedule) in the API documentation.
+For more information, see the [schedules section](/api/v2#/reference/schedules/schedule-object/get-schedule) in the API documentation.
 
 ## Schedule setup
 

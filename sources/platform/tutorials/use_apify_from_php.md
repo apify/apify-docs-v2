@@ -11,7 +11,7 @@ slug: /tutorials/use-apify-from-php
 
 ---
 
-Apify's [RESTful API](https://docs.apify.com/api/v2#) allows you to use the platform from basically anywhere. Many projects are and will continue to be built using [PHP](https://www.php.net/). This tutorial enables you to use Apify in these projects in PHP and frameworks built on it.
+Apify's [RESTful API](/api/v2#) allows you to use the platform from basically anywhere. Many projects are and will continue to be built using [PHP](https://www.php.net/). This tutorial enables you to use Apify in these projects in PHP and frameworks built on it.
 
 Apify does not have an official PHP client (yet), so we are going to use [guzzle](https://github.com/guzzle/guzzle), a great library for HTTP requests. By covering a few fundamental endpoints, this tutorial will show you the principles you can use for all Apify API endpoints.
 
@@ -181,7 +181,7 @@ file_put_contents(__DIR__ . '/hello-world.pdf', $response->getBody());
 
 If you open the generated `hello-world.pdf` file, you should see... well, "Hello World".
 
-If the actor stored the data in a key-value store other than the default, we can use the standalone endpoints, `key-value-stores/<STORE_ID>`, `key-value-stores/<STORE_ID>/keys`, and `key-value-stores/<STORE_ID>/records/<KEY>`. They behave the same way as the default endpoints. See the [full docs](https://docs.apify.com/api/v2#/reference/key-value-stores/store-object).
+If the actor stored the data in a key-value store other than the default, we can use the standalone endpoints, `key-value-stores/<STORE_ID>`, `key-value-stores/<STORE_ID>/keys`, and `key-value-stores/<STORE_ID>/records/<KEY>`. They behave the same way as the default endpoints. See the [full docs](/api/v2#/reference/key-value-stores/store-object).
 
 ## When are the data ready?
 

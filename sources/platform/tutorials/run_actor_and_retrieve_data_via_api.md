@@ -223,7 +223,7 @@ https://api.apify.com/v2/datasets/DATASET_ID/items?format=csv&offset=250000
 
 When you want to retrieve something from a key-value store, the `defaultKeyValueStoreId` is _not_ enough. You also need to know the name (or **key**) of the record you want to retrieve.
 
-If you have a single output JSON, the convention is to return it as a record named `OUTPUT` to the default key-value store. To retrieve the record's content, call the [**Get record**](https://docs.apify.com/api/v2#/reference/key-value-stores/record/get-record) endpoint.
+If you have a single output JSON, the convention is to return it as a record named `OUTPUT` to the default key-value store. To retrieve the record's content, call the [**Get record**](/api/v2#/reference/key-value-stores/record/get-record) endpoint.
 
 ```cURL
 https://api.apify.com/v2/key-value-stores/STORE_ID/records/RECORD_KEY
