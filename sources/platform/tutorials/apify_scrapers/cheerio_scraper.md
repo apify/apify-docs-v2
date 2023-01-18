@@ -321,8 +321,7 @@ We iterate through the items we found, build actor detail URLs from the availabl
 those URLs into the request queue. We need to specify the label too, otherwise our page function wouldn't know
 how to route those requests.
 
->If you're wondering how we know the structure of the URL, see the [Getting started
-with Apify Scrapers](intro-scraper-tutorial) tutorial again.
+>If you're wondering how we know the structure of the URL, see the [Getting started with Apify Scrapers](./getting_started.md) tutorial again.
 
 ### [](#plugging-it-into-the-page-function) Plugging it into the Page function
 

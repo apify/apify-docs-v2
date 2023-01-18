@@ -36,17 +36,21 @@ For example, the `.actor/actor.json` file can look this:
 
 Note that actor `name`, `version`, and `buildTag` are for informative purposes only, so they are not enforced on the platform right now. You will still need to properly name your actor during its creation, whether you create it directly on the platform or push it using the Apify CLI.
 
-**`dockerfile` field**\
+**`dockerfile` field**
+
 If you specify the path to your Docker file under the `dockerfile` field, this file will be used for actor builds on the platform. If not specified, the system will look for Docker files at `.actor/Dockerfile` and `Dockerfile`, in this order of preference.
 
-**`readme` field** \
+**`readme` field**
+
 If you specify the path to your README file under the `readme` field, the README at this path will be used on the platform. If not specified, README at `.actor/README.md` or `README.md` will be used, in this order of preference.
 
-**`input` field**\
-You can embed your [input schema](/actors/development/input-schema#specification-version-1) object directly in `actor.json` under the `input` field. Alternatively, you can provide a path to a custom input schema. If not provided, the input schema at `.actor/INPUT_SCHEMA.json` or `INPUT_SCHEMA.json` is used, in this order of preference.
+**`input` field**
 
-**`storages.dataset` field**\
-You can define the schema of the items in your dataset under the `storages.dataset` field. This can be either an embedded object or a path to a JSON schema file. [Read more](/actors/development/output-schema#specification-version-1) about actor output schema.
+You can embed your [input schema](./input-schema#specification-version-1) object directly in `actor.json` under the `input` field. Alternatively, you can provide a path to a custom input schema. If not provided, the input schema at `.actor/INPUT_SCHEMA.json` or `INPUT_SCHEMA.json` is used, in this order of preference.
+
+**`storages.dataset` field**
+
+You can define the schema of the items in your dataset under the `storages.dataset` field. This can be either an embedded object or a path to a JSON schema file. [Read more](./output-schema#specification-version-1) about actor output schema.
 
 
 

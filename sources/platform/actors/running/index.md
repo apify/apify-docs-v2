@@ -40,12 +40,12 @@ Actors can also be invoked using the Apify API, by sending an HTTP POST request 
 https://api.apify.com/v2/acts/apify~hello-world/runs?token=<YOUR_API_TOKEN>
 ```
 
-An actor's input and its content type can be passed as a payload of the POST request and additional options can be specified using URL query parameters. For more details, see the [Run actor](https://docs.apify.com/api/v2/#/reference/actors/run-collection/run-actor) section in the API reference.
+An actor's input and its content type can be passed as a payload of the POST request and additional options can be specified using URL query parameters. For more details, see the [Run actor](/api/v2/#/reference/actors/run-collection/run-actor) section in the API reference.
 
 Actors can also be invoked programmatically from other actors:
 
 - JavaScript: using the [`call()`](https://sdk.apify.com/api/apify/class/Actor#call) function of [`Actor`](https://sdk.apify.com/api/apify/class/Actor) class provided by the [`apify`](https://sdk.apify.com/) NPM package.
-- Python: using the [`call()`](https://docs.apify.com/apify-client-python#actorclient-call) function provided by the [`apify-client`](https://docs.apify.com/apify-client-python) Python package.
+- Python: using the [`call()`](/client-python#actorclient-call) function provided by the [`apify-client`](/client-python) Python package.
 
 ```marked-tabs
 
@@ -74,7 +74,7 @@ print(run['id'])
 
 The newly started actor runs under the same user account as the initial actor and therefore all resources consumed are charged to the same user account. This allows more complex actors to be built using simpler actors built and owned by other users.
 
-Internally, the `call()` function takes the user's API token from the `APIFY_TOKEN` environment variable, then it invokes the [Run actor](https://docs.apify.com/api/v2/#/reference/actors/run-collection/run-actor) API endpoint, waits for the actor to finish and reads its output using the [Get record](https://docs.apify.com/api/v2/#/reference/key-value-stores/record/get-record) API endpoint.
+Internally, the `call()` function takes the user's API token from the `APIFY_TOKEN` environment variable, then it invokes the [Run actor](/api/v2/#/reference/actors/run-collection/run-actor) API endpoint, waits for the actor to finish and reads its output using the [Get record](/api/v2/#/reference/key-value-stores/record/get-record) API endpoint.
 
 ## Resource limits
 
@@ -120,14 +120,14 @@ The whole process of resurrection looks as follows:
 - Updated duration will include the time when actor was not running. This does not affect compute units consumption.
 - Timeout will be counted from the point when this actor run was resurrected.
 
-Resurrection can be performed in Apify Console using the **resurrect** button or via API using the [Resurrect run](https://docs.apify.com/api/v2#/reference/actors/resurrect-run) API endpoint.
+Resurrection can be performed in Apify Console using the **resurrect** button or via API using the [Resurrect run](/api/v2#/reference/actors/resurrect-run) API endpoint.
 
 ## Container web server
 
 Each actor run is assigned a unique hard-to-guess URL (e.g. `kmdo7wpzlshygi.runs.apify.net`), which enables HTTP access to an optional web server running inside the actor run's Docker container. The URL is available in the following places:
 
 - In the web application, on the actor run details page as the **Container URL** field.
-- In the API as the `containerUrl` property of the [Run object](https://docs.apify.com/api/v2#/reference/actors/run-object/get-run).
+- In the API as the `containerUrl` property of the [Run object](/api/v2#/reference/actors/run-object/get-run).
 - In the actor run's container as the **APIFY_CONTAINER_URL** environment variable.
 
 The web server running inside the container must listen at the port defined by the `APIFY_CONTAINER_PORT` environment variable (typically 4321). If you want to use another port, simply define the **APIFY_CONTAINER_PORT** environment variable with the desired port number in your actor version configuration - see [Custom environment variable](../development/source_code.md) for details.
