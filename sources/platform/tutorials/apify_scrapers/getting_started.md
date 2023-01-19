@@ -239,7 +239,7 @@ This may seem like a lot of new information, but it's all connected to our earli
 
 ### [](#context-request) `context.request`
 
-The `request` is an instance of the [`Request`](https://sdk.apify.com/docs/api/request) class and holds information about the currently processed page, such as its `url`. Each `request` also has the `request.userData` property of type `Object`. While configuring the **Start URL** and the **Pseudo URL**, we gave them a `label`. We're now using them in the `pageFunction` to distinguish between the store page and the detail pages.
+The `request` is an instance of the [`Request`](https://crawlee.dev/api/core/class/Request) class and holds information about the currently processed page, such as its `url`. Each `request` also has the `request.userData` property of type `Object`. While configuring the **Start URL** and the **Pseudo URL**, we gave them a `label`. We're now using them in the `pageFunction` to distinguish between the store page and the detail pages.
 
 ### [](#context-skip-links) `context.skipLinks()`
 
@@ -247,7 +247,7 @@ When a **Pseudo URL** is set, the scraper attempts to enqueue matching links on 
 
 ### [](#context-log) `context.log`
 
-`log` is used for printing messages to the console. You may be tempted to use `console.log()`, but this will not work unless you turn on the **Browser log** option. `log.info()` should be used for general messages, but you can also use `log.debug()` for messages that will only be shown when you turn on the **Debug log** option. [See the docs for more info](https://sdk.apify.com/docs/api/log).
+`log` is used for printing messages to the console. You may be tempted to use `console.log()`, but this will not work unless you turn on the **Browser log** option. `log.info()` should be used for general messages, but you can also use `log.debug()` for messages that will only be shown when you turn on the **Debug log** option. [See the docs for more info](https://crawlee.dev/api/core/class/Log).
 
 ### [](#the-page-functions-return-value) The page function's return value
 

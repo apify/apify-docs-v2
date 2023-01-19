@@ -26,8 +26,8 @@ Key-value stores are mutable–you can both add entries and delete them.
 There are five ways to access your key-value stores:
 
 * [Apify Console](https://console.apify.com/storage?tab=keyValueStores) - provides an easy-to-understand interface [[details](#apify-console)].
-* [Apify SDK](https://sdk.apify.com/docs/guides/result-storage#key-value-store) - when building your own Apify actor [[details](#apify-sdk)].
-* [JavaScript API client](/client-js/api#keyvaluestoreclient) - to access your key-value stores from any Node.js application [[details](#javascript-api-client)].
+* [Apify SDK](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#key-value-store) - when building your own Apify actor [[details](#apify-sdk)].
+* [JavaScript API client](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient) - to access your key-value stores from any Node.js application [[details](#javascript-api-client)].
 * [Python API client](/apify-client-python#keyvaluestoreclient) - to access your key-value stores from any Python application [[details](#python-api-client)].
 * [Apify API](/api/v2#/reference/key-value-stores/get-items) - for accessing your key-value stores programmatically [[details](#apify-api)].
 
@@ -47,11 +47,11 @@ Click on the `API` button to view and test a store's [API endpoints](/api/v2#/re
 
 ### Apify SDK
 
-If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://sdk.apify.com).
-In the [Apify SDK](https://sdk.apify.com/docs/guides/result-storage#key-value-store), the key-value store is represented by the [`KeyValueStore`](https://sdk.apify.com/api/apify/class/KeyValueStore) class.
+If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://docs-v2.apify.com/sdk-js).
+In the [Apify SDK](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#key-value-store), the key-value store is represented by the [`KeyValueStore`](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore) class.
 
 You can use the `KeyValueStore` class to specify whether your data is stored locally or in the Apify cloud,
-get and set values using the [`getValue()`](https://sdk.apify.com/api/apify/class/KeyValueStore#getValue) and [`setValue()`](https://sdk.apify.com/api/apify/class/KeyValueStore#setValue) methods respectively, or iterate over your key-value store keys using the [`forEachKey()`](https://sdk.apify.com/api/apify/class/KeyValueStore#forEachKey) method.
+get and set values using the [`getValue()`](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore#getValue) and [`setValue()`](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore#setValue) methods respectively, or iterate over your key-value store keys using the [`forEachKey()`](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore#forEachKey) method.
 
 Each actor run is associated with the default key-value store, which is created for the actor run. When running your actors and storing data locally, you can pass its [input](../actors/running/input.md) using the **INPUT.json** file in the default key-value store directory.
 
@@ -63,7 +63,7 @@ You can find `INPUT.json` and other key-value store files in the location below.
 
 The default key-value store's ID is **default**. The {KEY} is the record's **key** and {EXT} corresponds to the record value's MIME content type.
 
-To manage your key-value stores, you can use the following methods. See the `KeyValueStore` class's [API reference](https://sdk.apify.com/api/apify/class/KeyValueStore) for the full list.
+To manage your key-value stores, you can use the following methods. See the `KeyValueStore` class's [API reference](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore) for the full list.
 
 ```js
 import { Actor } from 'apify';
@@ -115,11 +115,11 @@ await Actor.exit();
 
 The `Actor.getInput()` method is not only a shortcut to `Actor.getValue('INPUT')` - it is also compatible with `Actor.metamorph()` [[docs](https://docs.apify.com/actors/source-code#metamorph)]. This is because a metamorphed actor run's input is stored in the **INPUT-METAMORPH-1** key instead of **INPUT**, which hosts the original input.
 
-See the [SDK documentation](https://sdk.apify.com/docs/guides/result-storage#key-value-store) and the `KeyValueStore` class's [API reference](https://sdk.apify.com/api/apify/class/KeyValueStore) for details on managing your key-value stores with the Apify SDK.
+See the [SDK documentation](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#key-value-store) and the `KeyValueStore` class's [API reference](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore) for details on managing your key-value stores with the Apify SDK.
 
 ### JavaScript API client
 
-Apify's [JavaScript API client](/client-js/api#keyvaluestoreclient) (`apify-client`) allows you to access your key-value stores from any Node.js application, whether it is running on the Apify platform or elsewhere.
+Apify's [JavaScript API client](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient) (`apify-client`) allows you to access your key-value stores from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
 After importing and initiating the client, you can save each key-value store to a variable for easier access.
 
@@ -127,9 +127,9 @@ After importing and initiating the client, you can save each key-value store to 
 const myKeyValStoreClient = apifyClient.keyValueStore('jane-doe/my-key-val-store');
 ```
 
-You can then use that variable to [access the key-value store's items and manage it](/client-js/api#keyvaluestoreclient).
+You can then use that variable to [access the key-value store's items and manage it](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient).
 
-See the [JavaScript API client documentation](/client-js/api#keyvaluestoreclient) for [help with setup](/client-js/api#quick-start) and more details.
+See the [JavaScript API client documentation](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient) for [help with setup](https://docs-v2.apify.com/client-js/api#quick-start) and more details.
 
 ### Python API client
 
@@ -200,7 +200,7 @@ In the past, every record uploaded using the [Put record](/api/v2#/reference/key
 
 You can compress a record and use the [Content-Encoding request header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding) to let our platform know which compression it uses. We recommend compressing large key-value records to save storage space and network traffic.
 
-**If you use the [Apify SDK](https://sdk.apify.com/api/apify/class/KeyValueStore#setValue) or our [JavaScript API client](/client-js/api#keyvaluestoreclient-setrecord), your files are compressed automatically by default.** We recommend using the JavaScript API client, which compresses your data before they are sent to our servers and decompresses them when you retrieve them. This makes your storage costs as low as possible.
+**If you use the [Apify SDK](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore#setValue) or our [JavaScript API client](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient-setrecord), your files are compressed automatically by default.** We recommend using the JavaScript API client, which compresses your data before they are sent to our servers and decompresses them when you retrieve them. This makes your storage costs as low as possible.
 
 ## Sharing
 
@@ -210,19 +210,19 @@ You can invite other Apify users to view or modify your key-value stores using t
 
 You can access a key-value store from any [actor](../actors/index.md) run as long as you know its **name** or **ID**.
 
-To access a key-value store from another run using the Apify SDK, open it using the [`Actor.openKeyValueStore(storeIdOrName)`](https://sdk.apify.com/api/apify/class/Actor#openKeyValueStore) method like you would do with any other store.
+To access a key-value store from another run using the Apify SDK, open it using the [`Actor.openKeyValueStore(storeIdOrName)`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#openKeyValueStore) method like you would do with any other store.
 
 ```js
 const otherStore = await Actor.openKeyValueStore('old-store');
 ```
 
-In the [JavaScript API client](/client-js), you can access a store using [its client](/client-js/api#keyvaluestoreclient). Once you've opened a store, read and manage its contents like you would do with a key-value store from your current run.
+In the [JavaScript API client](https://docs-v2.apify.com/client-js/), you can access a store using [its client](https://docs-v2.apify.com/client-js/api#keyvaluestoreclient). Once you've opened a store, read and manage its contents like you would do with a key-value store from your current run.
 
 ```js
 const otherStoreClient = apifyClient.keyValueStore('jane-doe/old-store');
 ```
 
-Likewise, in the [Python API client](/client-python), you can access a store using [its client](/apify-client-python#keyvaluestoreclient).
+Likewise, in the [Python API client](https://docs-v2.apify.com/client-python/), you can access a store using [its client](/apify-client-python#keyvaluestoreclient).
 
 ```python
 other_store_client = apify_client.key_value_store('jane-doe/old-store')

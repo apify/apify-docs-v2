@@ -32,12 +32,12 @@ The example actors (and many more) are available in [Apify Store](https://apify.
 
 ## Code examples
 
-Below are a few example use cases for what you can do with actors. The [Apify SDK documentation](https://sdk.apify.com/docs/examples/capture-screenshot) contains many more examples using [Puppeteer](https://sdk.apify.com/docs/examples/puppeteer-crawler), [Playwright](https://sdk.apify.com/docs/examples/playwright-crawler), and [Cheerio](https://sdk.apify.com/docs/examples/cheerio-crawler).
+Below are a few example use cases for what you can do with actors. The [Apify SDK documentation](https://docs-v2.apify.com/sdk-js/docs/examples/capture-screenshot) contains many more examples using [Puppeteer](https://docs-v2.apify.com/sdk-js/docs/examples/puppeteer-crawler), [Playwright](https://docs-v2.apify.com/sdk-js/docs/examples/playwright-crawler), and [Cheerio](https://docs-v2.apify.com/sdk-js/docs/examples/cheerio-crawler).
 
-- [Crawl an entire website](https://sdk.apify.com/docs/examples/crawl-all-links).
-- [Navigate to a page and capture a screenshot](https://sdk.apify.com/docs/examples/capture-screenshot).
-- [Process data](https://sdk.apify.com/docs/examples/map-and-reduce).
-- [Use other actors in yours](https://sdk.apify.com/docs/examples/call-actor).
+- [Crawl an entire website](https://docs-v2.apify.com/sdk-js/docs/examples/crawl-all-links).
+- [Navigate to a page and capture a screenshot](https://docs-v2.apify.com/sdk-js/docs/examples/capture-screenshot).
+- [Process data](https://docs-v2.apify.com/sdk-js/docs/examples/map-and-reduce).
+- [Use other actors in yours](https://docs-v2.apify.com/sdk-js/docs/examples/call-actor).
 
 ## Language support
 

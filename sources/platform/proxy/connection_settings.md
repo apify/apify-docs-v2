@@ -84,7 +84,7 @@ To learn more about [sessions](./index.md).
 
 ## Code examples
 
-We have code examples for connecting to our proxy using the [Apify SDK](https://sdk.apify.com) and [Crawlee](https://crawlee.dev/) and other JavaScript libraries (**axios** and **got-scraping**), as well as examples in Python and PHP.
+We have code examples for connecting to our proxy using the [Apify SDK](https://docs-v2.apify.com/sdk-js) and [Crawlee](https://crawlee.dev/) and other JavaScript libraries (**axios** and **got-scraping**), as well as examples in Python and PHP.
 
 * [Datacenter proxy](./datacenter_proxy/examples.md)
 * [Residential proxy](./residential_proxy/index.md)

@@ -36,7 +36,7 @@ To achieve this we will use the following technologies:
 
 - [Express.js](https://expressjs.com) framework to create the server
 - [Puppeteer](https://pptr.dev) to grab screenshots.
-- The [Apify SDK](https://sdk.apify.com) to access Apify storages to store the screenshots.
+- The [Apify SDK](https://docs-v2.apify.com/sdk-js) to access Apify storages to store the screenshots.
 
 Our server needs two paths:
 

@@ -60,7 +60,7 @@ log.info('Done.');
 await Actor.exit();
 ```
 
-Now, you can run the actor and pass the login credentials as an [input JSON object](https://sdk.apify.com/docs/examples/accept-user-input#docsNav).
+Now, you can run the actor and pass the login credentials as an [input JSON object](https://docs-v2.apify.com/sdk-js/docs/examples/accept-user-input#docsNav).
 
 ```json
 {

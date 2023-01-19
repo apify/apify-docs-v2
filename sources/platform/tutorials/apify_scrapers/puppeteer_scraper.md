@@ -39,9 +39,9 @@ In fact, Web Scraper uses Puppeteer underneath. The difference is the amount of 
 Where Web Scraper only gives you access to in-browser JavaScript and the `pageFunction` is executed
 in the browser context, Puppeteer Scraper's `pageFunction` is executed in Node.js context, giving you
 much more freedom to bend the browser to your will. You're the puppeteer and the browser is your puppet.
-It's also much easier to work with external APIs, databases or the [Apify SDK](https://sdk.apify.com)
+It's also much easier to work with external APIs, databases or the [Apify SDK](https://docs-v2.apify.com/sdk-js)
 in the Node.js context. The tradeoff is simple. Power vs simplicity. Web Scraper is simple,
-Puppeteer Scraper is powerful (and the [Apify SDK](https://sdk.apify.com) is super-powerful).
+Puppeteer Scraper is powerful (and the [Apify SDK](https://docs-v2.apify.com/sdk-js) is super-powerful).
 
 > Simply put, Web Scraper's `pageFunction` is just a single
 [page.evaluate()](https://pptr.dev/#?product=Puppeteer&show=api-pageevaluatepagefunction-args) call.
@@ -690,27 +690,28 @@ you can easily use jQuery with Puppeteer Scraper too.
 ### [](#injecting-jquery) Injecting jQuery
 
 To be able to use jQuery, we first need to introduce it to the browser. Fortunately, we have a helper function to
-do just that: [`Apify.utils.puppeteer.injectJQuery`](https://sdk.apify.com/docs/api/puppeteer#puppeteerinjectjquerypage)
+do just that: [`PuppeteerCrawlingContext.injectJQuery`](https://crawlee.dev/api/puppeteer-crawler/interface/PuppeteerCrawlingContext#injectJQuery)
 
 > Just a friendly warning. Injecting jQuery into a page may break the page itself, if it expects a specific version
 of jQuery to be available and you override it with an incompatible one. So, be careful.
 
 You can either call this function directly in your `pageFunction`, or you can set up jQuery injection in the
-**Pre goto function** in the **Input and options** section.
-
+**Post-navigation hooks** section under **Advanced configuration**.
 ```js
-async function pageFunction(context) {
-    const { Apify, page } = context;
-    await Apify.utils.puppeteer.injectJQuery(page);
+async function pageFunction({ injectJQuery }) {
+    await injectJQuery();
 
     // your code ...
 }
 ```
 
+**Post-navigation hooks**
 ```js
-async function preGotoFunction({ page, Apify }) {
-    await Apify.utils.puppeteer.injectJQuery(page);
-}
+[
+    async ({ injectJQuery }) => {
+        await injectJQuery();
+    },
+]
 ```
 
 The implementations are almost equal in effect. That means that in some cases, you may see performance differences,
@@ -754,7 +755,7 @@ async function pageFunction(context) {
         } = context;
 
         // Inject jQuery
-        await Apify.utils.puppeteer.injectJQuery(page);
+        await injectJQuery();
 
         const { url } = request;
         log.info(`Scraping ${url}`);
@@ -805,7 +806,7 @@ Thank you for reading this whole tutorial! Really! It's important to us that our
 
 ## [](#whats-next) What's next?
 
-* Check out the [Apify SDK](https://sdk.apify.com/) and its [Getting started](https://sdk.apify.com/docs/guides/getting-started) tutorial if you'd like to try building your own actors. It's a bit more complex and involved than writing a simple `pageFunction`, but it allows you to fine-tune all the details of your scraper to your liking.
+* Check out the [Apify SDK](https://docs-v2.apify.com/sdk-js/) and its [Getting started](https://docs-v2.apify.com/sdk-js/docs/guides/apify-platform) tutorial if you'd like to try building your own actors. It's a bit more complex and involved than writing a simple `pageFunction`, but it allows you to fine-tune all the details of your scraper to your liking.
 * [Take a deep dive into actors](https://docs.apify.com/actors), from how they work to [publishing](https://docs.apify.com/actors/publishing) them in Apify Store, and even [making money](https://blog.apify.com/make-regular-passive-income-developing-web-automation-actors-b0392278d085/) on actors.
 * Found out you're not into the coding part but would still to use Apify actors? Check out our [ready-made solutions](https://apify.com/store) or [order a custom actor](https://apify.com/custom-solutions) from an Apify-certified developer.
 

@@ -65,7 +65,7 @@ Then, replace everything in **INPUT_SCHEMA.json**  with this:
 }
 ```
 
-> If you're interested in learning more about how the code works, and what the **INPUT_SCHEMA.json** means, read about [inputs](https://sdk.apify.com/docs/examples/accept-user-input) and [adding data to a dataset](https://sdk.apify.com/docs/examples/add-data-to-dataset) in the Apify SDK documentation, and refer to the [input schema docs](https://docs.apify.com/actors/development/input-schema#integer).
+> If you're interested in learning more about how the code works, and what the **INPUT_SCHEMA.json** means, read about [inputs](https://docs-v2.apify.com/sdk-js/docs/examples/accept-user-input) and [adding data to a dataset](https://docs-v2.apify.com/sdk-js/docs/examples/add-data-to-dataset) in the Apify SDK documentation, and refer to the [input schema docs](https://docs.apify.com/actors/development/input-schema#integer).
 
 Finally, **Save** and **Build** the actor just as you did in the previous lesson.
 
@@ -87,7 +87,7 @@ On the results tab, there are a whole lot of options for which format to view/do
 
 ![Dataset preview](./images/dataset-preview.webp)
 
-There's our solution! Did it work for you as well? Now, we can download the data right from the results tab to be used elsewhere, or even programmatically retrieve it by using [Apify's API](/api/v2) (we'll be discussing how to do this in the next lesson).
+There's our solution! Did it work for you as well? Now, we can download the data right from the results tab to be used elsewhere, or even programmatically retrieve it by using [Apify's API](/api/v2/) (we'll be discussing how to do this in the next lesson).
 
 It's important to note that the default dataset of the actor, which we pushed our solution to, will be retained for 7 days. If we wanted the data to be retained for an indefinite period of time, we'd have to use a named dataset. For more information about named storages vs unnamed storages, read a bit about [data retention on the Apify platform](https://docs.apify.com/storage#data-retention).
 

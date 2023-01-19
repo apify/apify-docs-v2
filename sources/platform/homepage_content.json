@@ -146,19 +146,19 @@
         },
         {
             "cardItem": "Manage proxies in Apify SDK",
-            "href": "https://sdk.apify.com/docs/guides/proxy-management",
+            "href": "https://docs-v2.apify.com/sdk-js/docs/guides/proxy-management",
             "isExternalLink": true
         },
         {
             "cardItem": "Reduce blocking using sessions in SDK",
-            "href": "https://sdk.apify.com/docs/guides/session-management",
+            "href": "https://docs-v2.apify.com/sdk-js/docs/guides/session-management",
             "isExternalLink": true
         }
     ],
     "Build actors": [
         {
             "cardItem": "Meet the Apify SDK",
-            "href": "https://sdk.apify.com",
+            "href": "https://docs-v2.apify.com/sdk-js",
             "isExternalLink": true
         },
         {
@@ -173,7 +173,7 @@
         },
         {
             "cardItem": "Apify SDK API reference",
-            "href": "https://sdk.apify.com/api/apify",
+            "href": "https://docs-v2.apify.com/sdk-js/api/apify",
             "isExternalLink": true
         },
         {
@@ -188,12 +188,12 @@
         },
         {
             "cardItem": "Manage requests in SDK",
-            "href": "https://sdk.apify.com/docs/guides/request-storage",
+            "href": "https://docs-v2.apify.com/sdk-js/docs/guides/request-storage",
             "isExternalLink": true
         },
         {
             "cardItem": "Manage results in SDK",
-            "href": "https://sdk.apify.com/docs/guides/result-storage",
+            "href": "https://docs-v2.apify.com/sdk-js/docs/guides/result-storage",
             "isExternalLink": true
         }
     ]

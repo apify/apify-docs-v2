@@ -26,9 +26,9 @@ Dataset storage is **append-only** - data can only be added and cannot be change
 There are five ways to access your datasets:
 
 * [Apify Console](https://console.apify.com/storage?tab=datasets) - provides an easy-to-understand interface [[details](#apify-console)].
-* [Apify SDK](https://sdk.apify.com/docs/guides/result-storage#dataset) - when building your own Apify actor [[details](#apify-sdk)].
-* [JavaScript API client](/client-js/api/class/DatasetClient) - to access your datasets from any Node.js application [[details](#javascript-api-client)].
-* [Python API client](/client-python/docs/api#-datasetclient) - to access your datasets from any Python application [[details](#python-api-client)].
+* [Apify SDK](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#dataset) - when building your own Apify actor [[details](#apify-sdk)].
+* [JavaScript API client](https://docs-v2.apify.com/client-js/api/class/DatasetClient) - to access your datasets from any Node.js application [[details](#javascript-api-client)].
+* [Python API client](https://docs-v2.apify.com/client-python/docs/api#-datasetclient) - to access your datasets from any Python application [[details](#python-api-client)].
 * [Apify API](/api/v2#/reference/datasets) - for accessing your datasets programmatically [[details](#apify-api)].
 
 ### Apify Console {#apify-console}
@@ -46,11 +46,11 @@ To view or download a dataset in the above-mentioned formats, click on its **Dat
 
 ### Apify SDK {#apify-sdk}
 
-If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://sdk.apify.com).
-In the [Apify SDK](https://sdk.apify.com/docs/guides/result-storage#dataset), the dataset is represented by the
-[`Dataset`](https://sdk.apify.com/api/apify/class/Dataset) class.
+If you are building an [Apify actor](../actors/index.md), you will be using the [Apify SDK](https://docs-v2.apify.com/sdk-js).
+In the [Apify SDK](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#dataset), the dataset is represented by the
+[`Dataset`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset) class.
 
-You can use the `Dataset` class to specify whether your data is stored locally or in the Apify cloud, push data to datasets of your choice using the [`pushData()`](https://sdk.apify.com/api/apify/class/Dataset#pushData) method. You could also use other methods such as [`getData()`](https://sdk.apify.com/api/apify/class/Dataset#getData), [`map()`](https://sdk.apify.com/api/apify/class/Dataset#map) and [`reduce()`](https://sdk.apify.com/api/apify/class/Dataset#reduce), see [example](https://sdk.apify.com/docs/examples/map-and-reduce).
+You can use the `Dataset` class to specify whether your data is stored locally or in the Apify cloud, push data to datasets of your choice using the [`pushData()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset#pushData) method. You could also use other methods such as [`getData()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset#getData), [`map()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset#map) and [`reduce()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset#reduce), see [example](https://docs-v2.apify.com/sdk-js/docs/examples/map-and-reduce).
 
 If you have chosen to store your dataset locally, you can find it in the location below.
 
@@ -81,7 +81,7 @@ await Actor.exit();
 
 > Make sure to use the `await` keyword when calling `pushData()`, otherwise the actor process might finish before the data are stored.
 
-If you want to use something other than the default dataset, e.g. a dataset that you share between actors or between actor runs, you can use the [Actor.openDataset()](https://sdk.apify.com/api/apify/class/Actor#openDataset) method.
+If you want to use something other than the default dataset, e.g. a dataset that you share between actors or between actor runs, you can use the [Actor.openDataset()](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#openDataset) method.
 
 ```js
 import { Actor } from 'apify';
@@ -99,7 +99,7 @@ await dataset.pushData({ foo: 'bar' });
 await Actor.exit();
 ```
 
-When using the [`getData()`](https://sdk.apify.com/api/apify/class/Dataset#getData) method, you can specify the data you retrieve using the `fields` option. It should be an array of field names (strings) that will be included in the results. To include all the results, exclude the `fields` parameter.
+When using the [`getData()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset#getData) method, you can specify the data you retrieve using the `fields` option. It should be an array of field names (strings) that will be included in the results. To include all the results, exclude the `fields` parameter.
 
 ```js
 import { Actor } from 'apify';
@@ -118,11 +118,11 @@ const hotelAndCafeData = await dataset.getData({
 await Actor.exit();
 ```
 
-See the [SDK documentation](https://sdk.apify.com/docs/guides/result-storage#dataset) and the `Dataset` class's [API reference](https://sdk.apify.com/api/apify/class/Dataset) for details on managing datasets with the Apify SDK.
+See the [SDK documentation](https://docs-v2.apify.com/sdk-js/docs/guides/result-storage#dataset) and the `Dataset` class's [API reference](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset) for details on managing datasets with the Apify SDK.
 
 ### JavaScript API client {#javascript-api-client}
 
-Apify's [JavaScript API client](/client-js/api/class/DatasetClient) (`apify-client`) allows you to access your datasets from any Node.js application, whether it is running on the Apify platform or elsewhere.
+Apify's [JavaScript API client](https://docs-v2.apify.com/client-js/api/class/DatasetClient) (`apify-client`) allows you to access your datasets from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
 After importing and initiating the client, you can save each dataset to a variable for easier access.
 
@@ -130,15 +130,15 @@ After importing and initiating the client, you can save each dataset to a variab
 const myDatasetClient = apifyClient.dataset('jane-doe/my-dataset');
 ```
 
-You can then use that variable to [access the dataset's items and manage it](/client-js/api/class/DatasetClient).
+You can then use that variable to [access the dataset's items and manage it](https://docs-v2.apify.com/client-js/api/class/DatasetClient).
 
-> When using the [`.listItems()`](/client-js/api/class/DatasetClient#listItems) method, if you mention the same field name in the `field` and `omit` parameters, the `omit` parameter will prevail and the field will not be returned.
+> When using the [`.listItems()`](https://docs-v2.apify.com/client-js/api/class/DatasetClient#listItems) method, if you mention the same field name in the `field` and `omit` parameters, the `omit` parameter will prevail and the field will not be returned.
 
-See the [JavaScript API client documentation](/client-js/api/class/DatasetClient) for [help with setup](/client-js/api#quick-start) and more details.
+See the [JavaScript API client documentation](https://docs-v2.apify.com/client-js/api/class/DatasetClient) for [help with setup](https://docs-v2.apify.com/client-js/api#quick-start) and more details.
 
 ### Python API client {#python-api-client}
 
-Apify's [Python API client](/client-python/docs/api#-datasetclient) (`apify-client`) allows you to access your datasets from any Python application, whether it is running on the Apify platform or elsewhere.
+Apify's [Python API client](https://docs-v2.apify.com/client-python/docs/api#-datasetclient) (`apify-client`) allows you to access your datasets from any Python application, whether it is running on the Apify platform or elsewhere.
 
 After importing and initiating the client, you can save each dataset to a variable for easier access.
 
@@ -146,11 +146,11 @@ After importing and initiating the client, you can save each dataset to a variab
 my_dataset_client = apify_client.dataset('jane-doe/my-dataset')
 ```
 
-You can then use that variable to [access the dataset's items and manage it](/client-python/docs/api#-datasetclient).
+You can then use that variable to [access the dataset's items and manage it](https://docs-v2.apify.com/client-python/docs/api#-datasetclient).
 
-> When using the [`.list_items()`](/client-python/docs/api#-datasetclient-list_items) method, if you mention the same field name in the `field` and `omit` parameters, the `omit` parameter will prevail and the field will not be returned.
+> When using the [`.list_items()`](https://docs-v2.apify.com/client-python/docs/api#-datasetclient-list_items) method, if you mention the same field name in the `field` and `omit` parameters, the `omit` parameter will prevail and the field will not be returned.
 
-See the [Python API client documentation](/client-python/docs/api#-datasetclient) for [help with setup](/client-python/docs/usage-guide) and more details.
+See the [Python API client documentation](https://docs-v2.apify.com/client-python/docs/api#-datasetclient) for [help with setup](https://docs-v2.apify.com/client-python/docs/usage-guide) and more details.
 
 ### Apify API {#apify-api}
 
@@ -327,19 +327,19 @@ You can invite other Apify users to view or modify your datasets using the [acce
 
 You can access a dataset from any [actor](../actors/index.md) run as long as you know its **name** or **ID**.
 
-To access a dataset from another run using the Apify SDK, open it using the [`Actor.openDataset(datasetIdOrName)`](https://sdk.apify.com/api/apify/class/Actor#openDataset) method like you would do with any other dataset.
+To access a dataset from another run using the Apify SDK, open it using the [`Actor.openDataset(datasetIdOrName)`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#openDataset) method like you would do with any other dataset.
 
 ```js
 const otherDataset = await Actor.openDataset('old-dataset');
 ```
 
-In the [JavaScript API client](/client-js), you can access a dataset using [its client](/client-js/api/class/DatasetClient). Once you've opened the dataset, read its contents and add new data like you would do with a dataset from your current run.
+In the [JavaScript API client](https://docs-v2.apify.com/client-js/), you can access a dataset using [its client](https://docs-v2.apify.com/client-js/api/class/DatasetClient). Once you've opened the dataset, read its contents and add new data like you would do with a dataset from your current run.
 
 ```js
 const otherDatasetClient = apifyClient.dataset('jane-doe/old-dataset');
 ```
 
-Likewise, in the [Python API client](/client-python), you can access a dataset using [its client](/client-python/docs/api#-datasetclient).
+Likewise, in the [Python API client](https://docs-v2.apify.com/client-python/), you can access a dataset using [its client](https://docs-v2.apify.com/client-python/docs/api#-datasetclient).
 
 ```python
 other_dataset_client = apify_client.dataset('jane-doe/old-dataset')
