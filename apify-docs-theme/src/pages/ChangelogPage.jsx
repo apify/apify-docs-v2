@@ -44,8 +44,8 @@ function ChangelogPageDesktop({ changelog, toc }) {
             description={siteConfig.tagline}
         >
             <div className='docPage docMainContainer' style={{ margin: 'auto' }}>
-                <div className="row" style={{ flexWrap: 'nowrap' }}>
-                    <div style={{ flexDirection: 'column' }} className='theme-doc-markdown markdown col--9'>
+                <div className="row" style={{ flexWrap: 'nowrap', margin: '10px' }}>
+                    <div style={{ flexDirection: 'column', flex: 3 }} className='theme-doc-markdown markdown col--9'>
                         <ReactMarkdown
                             remarkPlugins={[remarkSlug]}
                             rehypePlugins={[
@@ -59,7 +59,7 @@ function ChangelogPageDesktop({ changelog, toc }) {
                             {changelog}
                         </ReactMarkdown>
                     </div>
-                    <div className="col--3">
+                    <div style={{ flex: 1 }} className="col--3">
                         <TOC
                             {...{
                                 toc,
@@ -81,7 +81,7 @@ function ChangelogPageMobile({ changelog, toc }) {
             title={`Changelog · ${siteConfig.tagline}`}
             description={siteConfig.tagline}
         >
-            <div className='col apiItemCol' style={{ margin: 'auto' }}>
+            <div className='col apiItemCol' >
                 <TOCCollapsible
                     {...{
                         toc,
