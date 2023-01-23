@@ -1,17 +1,26 @@
 const path = require('path');
 const fs = require('fs');
 
-function findChangelogPath() {
-    let changelogPath = __dirname;
-    while (changelogPath !== path.join(changelogPath, '..')) {
-        const filePath = path.join(changelogPath, 'CHANGELOG.md');
+function findPathToParent(endPath) {
+    let parentPath = __dirname;
+    while (parentPath !== path.join(parentPath, '..')) {
+        const filePath = path.join(parentPath, endPath);
         if (fs.existsSync(filePath)) return filePath;
-        changelogPath = path.join(changelogPath, '..');
+        parentPath = path.join(parentPath, '..');
     }
-    const filePath = path.join(changelogPath, 'CHANGELOG.md');
+    const filePath = path.join(parentPath, endPath);
     if (fs.existsSync(filePath)) return filePath;
 
     throw new Error('Could not find CHANGELOG.md in any parent directory');
+}
+
+function updateChangelog(changelogPath) {
+    const changelog = fs.readFileSync(changelogPath, 'utf-8');
+    const updated = `---
+title: Changelog
+---
+${changelog.replaceAll(/\n#[^#]/g, '\n## ')}`;
+    fs.writeFileSync(changelogPath, updated, 'utf-8');
 }
 
 function theme(
@@ -29,30 +38,24 @@ function theme(
         getTypeScriptThemePath() {
             return '../src/theme';
         },
+        async loadContent() {
+            try {
+                const docsPath = findPathToParent('docs');
+                const changelogPath = findPathToParent('CHANGELOG.md');
+                if (fs.existsSync(path.join(docsPath, 'changelog.md') || fs.statSync(
+                    path.join(docsPath, 'changelog.md')).mtime >= fs.statSync(changelogPath).mtime,
+                )) return;
+                fs.copyFileSync(changelogPath, path.join(docsPath, 'changelog.md'));
+                updateChangelog(path.join(docsPath, 'changelog.md'));
+            } catch (e) {
+                console.warn(`Changelog page could not be initialized: ${e.message}`);
+            }
+        },
         async contentLoaded({ actions }) {
             const { setGlobalData } = actions;
             setGlobalData({
                 options,
             });
-
-            try {
-                const changelog = fs.readFileSync(findChangelogPath(), 'utf8');
-                const dataPath = await actions.createData(
-                    'changelog.json',
-                    JSON.stringify(changelog),
-                );
-
-                actions.addRoute({
-                    path: path.join(context.baseUrl, 'changelog'),
-                    component: require.resolve('./pages/ChangelogPage.jsx'),
-                    exact: true,
-                    modules: {
-                        changelog: dataPath,
-                    },
-                });
-            } catch (e) {
-                console.warn(`Changelog page could not be initialized: ${e.message}`);
-            }
         },
         getClientModules() {
             return [
