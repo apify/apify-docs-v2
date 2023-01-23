@@ -16,7 +16,10 @@ function findPathToParent(endPath) {
 
 function updateChangelog(changelogPath) {
     const changelog = fs.readFileSync(changelogPath, 'utf-8');
-    const updated = changelog.replaceAll(/\n#[^#]/g, '\n## ');
+    const updated = `---
+title: Changelog
+---
+${changelog.replaceAll(/\n#[^#]/g, '\n## ')}`;
     fs.writeFileSync(changelogPath, updated, 'utf-8');
 }
 
@@ -35,20 +38,24 @@ function theme(
         getTypeScriptThemePath() {
             return '../src/theme';
         },
-        async contentLoaded({ actions }) {
-            const { setGlobalData } = actions;
-            setGlobalData({
-                options,
-            });
-
+        async loadContent() {
             try {
-                const changelogPath = findPathToParent('CHANGELOG.md');
                 const docsPath = findPathToParent('docs');
+                const changelogPath = findPathToParent('CHANGELOG.md');
+                if (fs.existsSync(path.join(docsPath, 'changelog.md') || fs.statSync(
+                    path.join(docsPath, 'changelog.md')).mtime >= fs.statSync(changelogPath).mtime,
+                )) return;
                 fs.copyFileSync(changelogPath, path.join(docsPath, 'changelog.md'));
                 updateChangelog(path.join(docsPath, 'changelog.md'));
             } catch (e) {
                 console.warn(`Changelog page could not be initialized: ${e.message}`);
             }
+        },
+        async contentLoaded({ actions }) {
+            const { setGlobalData } = actions;
+            setGlobalData({
+                options,
+            });
         },
         getClientModules() {
             return [
