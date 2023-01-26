@@ -26,7 +26,7 @@ npm init -y
 
 It will set up an empty NPM project for you and create a file called **package.json**. This is a very important file in Node.js programming as it contains information about the project.
 
-![NPM init with VSCode](./images/vscode-npm-init.webp)
+![NPM init with VSCode](./images/vscode-npm-init.png)
 
 ### Use modern JavaScript {#modern-javascript}
 
@@ -36,7 +36,7 @@ Node.js and NPM support two types of projects, let's call them legacy and modern
 "type": "module"
 ```
 
-![Update package.json with VSCode](./images/vscode-type-module.webp)
+![Update package.json with VSCode](./images/vscode-type-module.png)
 
 > If you want to learn more about JSON and its syntax, we recommend [this tutorial on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON).
 
@@ -71,7 +71,7 @@ node main.js
 
 If you see **it works!** printed in your terminal, great job! You set up everything correctly. If you see an error that says **Cannot use import statement outside a module**, go back to the [Use modern JavaScript](#modern-javascript) paragraph and add the `type` property to your **package.json**. If you see a different error, try copying and pasting it into Google, and you'll find a solution soon.
 
-![Test your setup with VSCode](./images/vscode-test-setup.webp)
+![Test your setup with VSCode](./images/vscode-test-setup.png)
 
 ## Next up {#next}
 

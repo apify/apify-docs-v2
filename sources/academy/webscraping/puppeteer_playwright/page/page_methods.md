@@ -117,7 +117,7 @@ When you run this code, you should see this logged to console:
 
 Additionally, you should see a new image named **screenshot.png** in your project's folder that looks something like this:
 
-![Screenshot from Playwright/Puppeteer](./images/wikipedia-screenshot.webp)
+![Screenshot from Playwright/Puppeteer](./images/wikipedia-screenshot.png)
 
 ## Next up {#next}
 

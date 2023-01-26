@@ -206,7 +206,7 @@ const fetchData = async () => {
 
 Easy enough, right? Well, not really. Let's take a look at how TypeScript interprets the function by hovering over it.
 
-![Promise of any type](./images/promise-any.webp)
+![Promise of any type](./images/promise-any.png)
 
 We're returning a promise of any type out of this function. This is where we can use [type assertions](./unknown_and_type_assertions.md) to help TypeScript understand that this response takes the shape of our `ResponseData` type.
 
@@ -328,7 +328,7 @@ const main = async () => {
 
 And that's it! Well, not quite. We are unable to access the **images** property on `result[0]`, which makes total sense. However, even if we switch **removeImages** in the `INPUT` variable to `false`, we still get an error when trying to access that property, even though we know that it hasn't been filtered out.
 
-![Can't access the "images" property even though it exists](./images/we-need-overloads.webp)
+![Can't access the "images" property even though it exists](./images/we-need-overloads.png)
 
 This is because we haven't been specific enough. The `scrape` function can return two different data types (either `Product[]` or `ModifiedProduct[]`), and because `ModifiedProduct` doesn't have an **images** property, TypeScript freaks out and says that you shouldn't be trying to access it. This can be fixed with **overloads**.
 
@@ -368,7 +368,7 @@ async function scrape(input: UserInput) {
 
 Now, we can access `result[0].images` on the return value of `scrape` if **removeImages** was false without any compiler errors being thrown. But, if we switch **removeImages** to false, TypeScript will yell at us.
 
-![No more error](./images/no-more-error.webp)
+![No more error](./images/no-more-error.png)
 
 ## Final code {#final-code}
 

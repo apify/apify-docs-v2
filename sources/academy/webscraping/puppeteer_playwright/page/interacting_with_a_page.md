@@ -109,7 +109,7 @@ await browser.close();
 
 When we run it, we leave off on the results page:
 
-![Google results page reached by headless browser](./images/google-results.webp)
+![Google results page reached by headless browser](./images/google-results.png)
 
 Great! So now all we have to do is click the first result which matches the CSS selector `.g a`:
 

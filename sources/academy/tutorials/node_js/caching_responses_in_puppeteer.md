@@ -19,7 +19,7 @@ For this reason, in this article, we will take a look at how to use memory to ca
 
 In this example, we will use a scraper which goes through top stories on the CNN website and takes a screenshot of each opened page. The scraper is very slow right now because it waits till all network requests are finished and because the posts contain videos. If the scraper runs with disabled caching, these statistics will show at the end of the run:
 
-![Bad run stats](./images/bad-scraper-stats.webp)
+![Bad run stats](./images/bad-scraper-stats.png)
 
 As you can see, we used 177MB of traffic for 10 posts (that is how many posts are in the top-stories column) and 1 main page. We also stored all the screenshots, which you can find [here](https://my.apify.com/storage/key-value/q2ipoeLLy265NtSiL).
 
@@ -29,15 +29,15 @@ From the screenshot above, it's clear that most of the traffic is coming from sc
 
 If we go to the CNN website, open up the tools and go to the **Network** tab, we will find an option to disable caching.
 
-![Disabling cache in the Network tab](./images/cnn-network-tab.webp)
+![Disabling cache in the Network tab](./images/cnn-network-tab.png)
 
 Once caching is disabled, we can take a look at how much data is transferred when we open the page. This is visible at the bottom of the developer tools.
 
-![5.3MB of data transferred](./images/slow-no-cache.webp)
+![5.3MB of data transferred](./images/slow-no-cache.png)
 
 If we uncheck the disable-cache checkbox and refresh the page, we will see how much data we can save by caching responses.
 
-![642KB of data transferred](./images/fast-with-cache.webp)
+![642KB of data transferred](./images/fast-with-cache.png)
 
 By comparison, the data transfer appears to be reduced by 88%!
 
@@ -95,7 +95,7 @@ page.on('response', async(response) => {
 
 After implementing this code, we can run the scraper again.
 
-![Good run results](./images/good-run-results.webp)
+![Good run results](./images/good-run-results.png)
 
 Looking at the statistics, caching responses in Puppeteer brought the traffic down from 177MB to 13.4MB, which is a reduction of data transfer by 92%. The related screenshots can be found [here](https://my.apify.com/storage/key-value/iWQ3mQE2XsLA2eErL).
 

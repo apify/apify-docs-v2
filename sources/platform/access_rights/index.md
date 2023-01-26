@@ -25,7 +25,7 @@ You can also grant permission to update an actor and build a new version.
 
 To share an actor, task, key-value store, request queue or dataset, open its **Settings** tab and at the very bottom you will find the **Access rights** section. You can add a collaborator using their **user ID**, **email** or **username**. Once you have added the collaborator, you can configure their permissions.
 
-![Access rights configuration](../images/access-rights.webp)
+![Access rights configuration](../images/access-rights.png)
 
 ## Organization account {#organization-account}
 
@@ -43,7 +43,7 @@ If a user runs the actor, it gets billed to their account, and the actor run wil
 
 To publish an actor, open it in the [Apify Console](https://console.apify.com), go to the **Publication** tab and follow the instructions below.
 
-![Publishing your actor](../images/publication.webp)
+![Publishing your actor](../images/publication.png)
 
 ## Permissions {#permissions}
 

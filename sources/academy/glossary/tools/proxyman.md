@@ -23,7 +23,7 @@ Though the application offers a whole lot of advanced features, there are only a
 
 The **Apps** tab allows you to both view all of the applications on your machine which are sending requests, as well as filter requests based on application.
 
-![Apps tab in Proxyman](./images/proxyman-apps-tab.webp)
+![Apps tab in Proxyman](./images/proxyman-apps-tab.png)
 
 ### Results
 
@@ -39,7 +39,7 @@ We can see all of the requests related to us visiting **apify.com**. Then, by cl
 
 Sometimes, there can be hundreds (or even thousands) of requests that appear in the list. Rather than spending your time rooting through all of them, you can use the plethora of filtering methods that Proxyman offers to find exactly what you are looking for.
 
-![Filter requests with the filter options](./images/proxyman-filter.webp)
+![Filter requests with the filter options](./images/proxyman-filter.png)
 
 ## Alternatives {#alternatives}
 

@@ -89,7 +89,7 @@ console.log(products);
 
 When we run this code, we see this logged to our console:
 
-![Products logged to the console](./images/log-products.webp)
+![Products logged to the console](./images/log-products.png)
 
 ## Using jQuery {#using-jquery}
 

@@ -224,7 +224,7 @@ console.log(results);
 
 At the time of writing, we were getting 32 product results. Our demo site is bound to change, so you might receive different results; however, your results printed in terminal should look similar to the ones here:
 
-![Results in Terminal](./images/final-results.webp)
+![Results in Terminal](./images/final-results.png)
 
 ## Next up {#next}
 

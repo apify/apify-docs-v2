@@ -18,7 +18,7 @@ Web scraping or crawling? Data collection, mining, or extraction? You can find v
 
 For us, data collection is a process that takes a web page, like an Amazon product page, and collects useful information from the page, such as the product's name and price. Web pages are an unstructured data source and the goal of data collection is to make the information structured and readable to computers. The main sources of data on a web page are HTML documents and API calls, but also images, PDFs, and so on.
 
-![product data collection from Amazon](./images/beginners-data-collection.webp)
+![product data collection from Amazon](./images/beginners-data-collection.png)
 
 ## What is crawling? {#what-is-crawling}
 

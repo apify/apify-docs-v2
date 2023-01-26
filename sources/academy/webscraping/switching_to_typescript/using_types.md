@@ -31,7 +31,7 @@ let value = 10;
 
 When hovering over the variable, we see that TypeScript was smart enough to infer that the data type stored in `value` should always be a number.
 
-![Type of variable automatically inferred](./images/number-inference.webp)
+![Type of variable automatically inferred](./images/number-inference.png)
 
 Attempting to reassign `value` to be a type other than a number will result in a compiler error.
 
@@ -49,7 +49,7 @@ TypeScript can't automatically infer the type of the variable when we don't prov
 
 Because of this, we can set `value` to be absolutely anything without receiving any compiler errors.
 
-![TypeScript didn't infer the type](./images/is-any.webp)
+![TypeScript didn't infer the type](./images/is-any.png)
 
 To resolve this, we can annotate the variable by adding a colon (`:`) after the name followed by the name of the type we'd like to be tied to the variable.
 
@@ -104,7 +104,7 @@ const totalLengthIsGreaterThan10 = (string1: string, string2: string) => {
 
 The return value of this function is a boolean, which TypeScript has intelligently inferred.
 
-![Return type inferred](./images/return-inferred.webp)
+![Return type inferred](./images/return-inferred.png)
 
 Despite the correct inference, if we wanted to explicitly annotate this function's return type, we could. Return type annotations go after the parentheses (`()`) where the function's parameters are defined.
 

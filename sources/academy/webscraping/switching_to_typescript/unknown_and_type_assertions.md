@@ -41,7 +41,7 @@ Sometimes, `any` can be useful; however, in 99% of cases it is best to avoid it 
 
 Just like `any`, the `unknown` type is also a special type that represents all possible JavaScript value, and all types are assignable to it. The big difference is that the TypeScript compiler won't allow any operation on values typed as `unknown`. To see this in action, we just have to change the type of `userInput` in the above code snippet from `any` to `unknown`.
 
-![Replacing "any" with "unknown" from the above snippet](./images/replace-with-unknown.webp)
+![Replacing "any" with "unknown" from the above snippet](./images/replace-with-unknown.png)
 
 Even this will result in the same error:
 

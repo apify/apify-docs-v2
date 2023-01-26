@@ -14,7 +14,7 @@ slug: /actors/running
 
 You can start an Apify actor in a number of ways. One option is to start an actor from its page in [Apify Console](https://console.apify.com/actors):
 
-![Apify developer console](../images/actor-console.webp)
+![Apify developer console](../images/actor-console.png)
 
 You can specify options such as [build](../development/builds.md) for your actor run.
 

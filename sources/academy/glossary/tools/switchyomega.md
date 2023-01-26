@@ -15,7 +15,7 @@ SwitchyOmega is a Chrome extension for managing and switching between proxies wh
 
 After adding it to Chrome, you can see the SwitchyOmega icon somewhere amongst all your other Chrome extension icons. Clicking on it will display a menu, where you can select various differnt connection profiles, as well as open the extension's options.
 
-![The SwitchyOmega interface](./images/switchyomega.webp)
+![The SwitchyOmega interface](./images/switchyomega.png)
 
 ## Options {#options}
 
@@ -26,21 +26,21 @@ The options page has the following:
 - The **New profile** button
 - The main section, which shows the selected settings sub-section or selected proxy profile connection settings.
 
-![SwitchyOmega options page](./images/switchyomega-options.webp)
+![SwitchyOmega options page](./images/switchyomega-options.png)
 
 ## Adding a new proxy {#adding-a-new-proxy}
 
 After clicking on **New profile**, you'll be greeted with a **New profile** popup, where you can give the profile a name and select the type of profile you'd like to create. To add a proxy profile, select the respective option and click **Create**.
 
-![Adding a proxy profile](./images/switchyomega-proxy-profile.webp)
+![Adding a proxy profile](./images/switchyomega-proxy-profile.png)
 
 Then, you need to fill in the proxy settings:
 
-![Adding proxy settings](./images/switchyomega-proxy-settings.webp)
+![Adding proxy settings](./images/switchyomega-proxy-settings.png)
 
 If the proxy requires authentication, click on the lock icon and fill in the details within the popup.
 
-![Authenticating a proxy](./images/switchyomega-auth.webp)
+![Authenticating a proxy](./images/switchyomega-auth.png)
 
 Don't forget to click on **Apply changes** within the left-hand side menu under **Actions**!
 
@@ -48,4 +48,4 @@ Don't forget to click on **Apply changes** within the left-hand side menu under 
 
 And that's it! All of your proxy profiles will appear in the menu. When one is chosen, the page you are currently on will be reloaded using the selected proxy profile.
 
-![SwitchyOmega menu](./images/switchyomega-menu.webp)
+![SwitchyOmega menu](./images/switchyomega-menu.png)

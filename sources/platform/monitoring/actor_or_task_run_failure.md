@@ -28,7 +28,7 @@ For this example, we will use an **Instagram Scraper** ([jaroslavhejlek/instagra
 
 Let us say you have created a task named **puppies-from-instagram** and run it regularly (manually or using a [schedule](../schedules.md)).
 
-![Puppies](./images/puppies-task.webp)
+![Puppies](./images/puppies-task.png)
 
 ## Create a new monitoring task {#create-a-new-monitoring-task}
 
@@ -56,7 +56,7 @@ Next, we will configure the monitoring suite.
 
 The configuration should look like this:
 
-![Task configuration](./images/puppies-config.webp)
+![Task configuration](./images/puppies-config.png)
 
 ## Validate data {#validate-data}
 
@@ -66,11 +66,11 @@ Let's say you need a minimum number of 100 results.
 
 2. In the **Validation options** field, create an [object](https://javascript.info/object) containing a `minItemCount` key with `100` as its value. You can also set this number to `1` if you want to be notified only when there are **no** items.
 
-![Task configuration - schema](./images/puppies-schema.webp)
+![Task configuration - schema](./images/puppies-schema.png)
 
 Finally, click the **Save & Run** button, and you're done.
 
 From now on, you will get a [notification](./index.md) to your account's email every time your `puppies-from-instagram` task doesn't succeed or returns fewer than 100 items.
 
-![Failed run example](./images/puppies-failed-run.webp)
+![Failed run example](./images/puppies-failed-run.png)
 

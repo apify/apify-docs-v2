@@ -21,11 +21,11 @@ The advantages of using these objects instead of parsing the HTML are that parsi
 
 Using our DevTools, we can inspect our [target page](https://soundcloud.com/tiesto/tracks), or right click the page and click **View Page Source** to see the DOM. Next, we'll find a value on the page that we can predict would be in a potential API response. For our page, we'll use the **Tracks** count of `845`. On the **View Page Source** page, we'll do **⌘** + **F** and type in this value, which will show all matches for it within the DOM. This method can expose `<script>` tag objects which hold the target data.
 
-![Find the value within the DOM using CMD + F](./images/view-845.webp)
+![Find the value within the DOM using CMD + F](./images/view-845.png)
 
 These data objects will usually be attached to the window object (often prefixed with two underscores - `__`). When scrolling to the beginning of the script tag on our **View Page Source** page, we see that the name of our target object is `__sc_hydration`. Heading back to DevTools and typing this into the console, the object is displayed.
 
-![View the target data in the window object using the console in DevTools](./images/view-object-in-window.webp)
+![View the target data in the window object using the console in DevTools](./images/view-object-in-window.png)
 
 ## Parsing {#parsing-objects}
 

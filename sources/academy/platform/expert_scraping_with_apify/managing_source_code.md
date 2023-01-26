@@ -39,13 +39,13 @@ First, we must initialize a Github repository (you can use Gitlab if you'd like,
 
 First, let's create a repository. This can be done [in a number of ways](https://kbroman.org/github_tutorial/pages/init.html), but in this lesson we'll do it by creating the remote repository on Github's website:
 
-![Create a new Github repo](./images/github-new-repo.webp)
+![Create a new Github repo](./images/github-new-repo.png)
 
 Then, we'll run the commands it tells us in our terminal (while within the **demo-actor** directory) to initialize the repository locally, then push all of the files to the remote one.
 
 After you've created your repo, navigate on the Apify platform to the actor we called **demo-actor**. In the **Source** tab, click the dropdown menu under **Source code** and select **Git repository**. By default, this is set to **Multiple source files**, which is what we've been using so far.
 
-![Select source code location](./images/select-source-location.webp)
+![Select source code location](./images/select-source-location.png)
 
 Then, go ahead and paste the link to your repository into the **Git URL** text field and click **Save**.
 

@@ -32,7 +32,7 @@ There are a few [HTTP headers](../../glossary/concepts/http_headers.md) which ca
 
 A few other headers commonly used for fingerprinting can be seen below:
 
-![Fingerprinted headers](./images/fingerprinted-headers.webp)
+![Fingerprinted headers](./images/fingerprinted-headers.png)
 
 ### From window properties {#from-window-properties}
 
@@ -97,7 +97,7 @@ Canvas fingerprinting takes advantage of the CSS3 feature for importing fonts in
 
 Here's an example of multiple WebGL scenes visibly being rendered differently on different machines:
 
-![Differences in canvas element renderings](./images/canvas-differences.webp)
+![Differences in canvas element renderings](./images/canvas-differences.png)
 
 ### From AudioContext {#from-audiocontext}
 
@@ -203,7 +203,7 @@ We recommend watching some videos from [Jarrod Overson on YouTube](https://www.y
 
 Because of how common it has become to obfuscate fingerprinting scripts, there are many extensions help identify fingerprinting scripts due to the fact that browser fingerprinting is such a big privacy question. Browser extensions such as [**Don't Fingerprint Me**](https://github.com/freethenation/DFPM) have been created to help detect them. In the extension's window, you can see a report on which functions commonly used for fingerprinting have been called, and which navigator properties have been accessed.
 
-![Don't Fingerprint Me extension window](./images/dont-fingerprint-me.webp)
+![Don't Fingerprint Me extension window](./images/dont-fingerprint-me.png)
 
 This extension provides monitoring of only a few critical attributes, but in order to to deceive anti-scraping protections, the full list is needed. However, the extension does reveal the scripts that collect the fingerprints.
 

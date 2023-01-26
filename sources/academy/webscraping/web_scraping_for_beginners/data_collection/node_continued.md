@@ -17,7 +17,7 @@ In the first part of the Node.js tutorial we downloaded the HTML of our [tutoria
 
 As a reminder, the data we need for each product on the page is available in each `a[href*="/product/"]` element.
 
-![Selecting an element from the Elements tab](./images/selecting-container-element.webp)
+![Selecting an element from the Elements tab](./images/selecting-container-element.png)
 
 To get all the elements with that CSS selector using Cheerio, we call the `$` function with the selector.
 
@@ -51,7 +51,7 @@ After you run this script, you should see data of all the 32 products printed in
 
 Now, we just need to repeat the process from the DevTools modules and add individual data point collection to the loop. From those lessons, we know that each of our product container `<a>` tags includes an `<h3>` element including the title, and a `<div>` price element matching the selector `div[class*="price"]`.
 
-![Finding child elements in Elements tab](./images/find-child-elements.webp)
+![Finding child elements in Elements tab](./images/find-child-elements.png)
 
 We will loop over all the `products` and collect the data points from each of them using the `for..of` loop. For reference, this is the code from the DevTools lesson, where we collected the data **using a browser**:
 
@@ -122,7 +122,7 @@ for (const product of products) {
 console.log(results);
 ```
 
-![Printing all products' data to terminal](./images/terminal-all-products-data.webp)
+![Printing all products' data to terminal](./images/terminal-all-products-data.png)
 
 If you were able to get here, run the code, get results and also understand everything, you can give yourself a pat on the back and congratulate yourself on completing the **Basics of data collection** section of the Web scraping for beginners course. Great job! 👏🎉
 

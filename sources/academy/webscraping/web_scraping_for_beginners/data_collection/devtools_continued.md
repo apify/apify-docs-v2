@@ -25,7 +25,7 @@ const products = document.querySelectorAll('a[href*="/product/"]')
 console.log(products);
 ```
 
-![Print all products](./images/print-all-product-elements.webp)
+![Print all products](./images/print-all-product-elements.png)
 
 Second, we will loop over each product and print their unstructured data. The following `for..of` loop will iterate over all elements of the `products` array and execute the code provided in curly brackets `{}` for each element. In each iteration, the element is saved into the variable called `product` and we can use the variable to interact with the element.
 
@@ -40,7 +40,7 @@ for (const product of products) {
 
 > [Find out more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) about the `for..of` loop.
 
-![Print all products' text](./images/print-all-products-text.webp)
+![Print all products' text](./images/print-all-products-text.png)
 
 ## Collecting data in a loop {#collecting-data-in-loop}
 
@@ -61,7 +61,7 @@ console.log(results);
 
 The `results.push()` function takes its argument and pushes (adds) it to the `results` array. [Learn more about it here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). The rest of the code is just copy-pasted from the previous lesson. For each `product` of `products`, we find the `title` and `price`, then save them to the `results` array by pushing the object with the data into it. When you run the code, you should see all the data neatly structured.
 
-![Print all products' data](./images/print-all-products-data.webp)
+![Print all products' data](./images/print-all-products-data.png)
 
 ## Next up {#next}
 

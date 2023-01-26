@@ -15,7 +15,7 @@ Each website is represented by an HTML DOM, a tree-like structure consisting of 
 
 Let's take a look at this page [alodokter.com](https://www.alodokter.com/). If you click on the menu and open a Chrome debugger, you will see that the menu tree is attached to the main DOM as shadow DOM under the element `<top-navbar-view id="top-navbar-view">`.
 
-![Shadow root of the top-navbar-view custom element](./images/shadow.webp)
+![Shadow root of the top-navbar-view custom element](./images/shadow.png)
 
 The rest of the content is rendered the same way. This makes it hard to scrape because `document.body.innerText`, `document.getElementsByTagName('a')`, and all others return an empty result.
 

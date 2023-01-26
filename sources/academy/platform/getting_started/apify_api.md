@@ -59,7 +59,7 @@ curl -d '{"num1":1, "num2":8}' -H "Content-Type: application/json" -X POST "http
 
 Here's the response we got:
 
-![API response](./images/api-csv-response.webp)
+![API response](./images/api-csv-response.png)
 
 And there it is! The actor was run with our inputs of **num1** and **num2**, then the dataset results were returned back to us in CSV format.
 

@@ -52,7 +52,7 @@ We can use the [`page.on()`](https://pptr.dev/#?product=Puppeteer&version=v14.0.
 
 Upon visiting Tiësto's following page, we can see in the **Network** tab that a request is made to fetch all of the users which he is following.
 
-![Request to grab Tiësto's following list](./images/tiesto-request.webp)
+![Request to grab Tiësto's following list](./images/tiesto-request.png)
 
 Let's go ahead and listen for this request in our code:
 
@@ -190,7 +190,7 @@ page.on('response', async (res) => {
 
 Upon running this code, we'll see the API response logged into the console:
 
-![API response in console](./images/api-response-tiesto.webp)
+![API response in console](./images/api-response-tiesto.png)
 
 ## Intercepting requests {#intercepting-requests}
 
@@ -258,7 +258,7 @@ await browser.close();
 
 Here's what we see when we run this logic:
 
-![SoundCloud with no CSS or image resources loaded](./images/ugly-soundcloud.webp)
+![SoundCloud with no CSS or image resources loaded](./images/ugly-soundcloud.png)
 
 This confirms that we've successfully blocked the CSS and image resources from loading.
 

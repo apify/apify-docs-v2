@@ -13,7 +13,7 @@ slug: /tools/edit-this-cookie
 
 **EditThisCookie** is a simple Chrome extension to manage your browser's cookies. It can be added through the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions). After adding it to Chrome, you'll see a button with a delicious cookie icon next to any other Chrome extensions you might have installed. Clicking on it will open a pop-up window with a list of all saved cookies associated with the currently opened page domain.
 
-![EditThisCookie popup](./images/edit-this-cookie-popup.webp)
+![EditThisCookie popup](./images/edit-this-cookie-popup.png)
 
 ## Functionalities {#functions}
 
@@ -47,4 +47,4 @@ Allows you to filter through cookies by name.
 
 Will open a new browser tab with a bunch of EditThisCookie options. The options page allows you to tweak a few settings such as changing the export format, but you will most likely never need to change anything there.
 
-![EditThisCookie options](./images/edit-this-cookie-options.webp)
+![EditThisCookie options](./images/edit-this-cookie-options.png)

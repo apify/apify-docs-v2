@@ -65,7 +65,7 @@ console.log(csv)
 
 And here's our newly created CSV printed to the console after running the script.
 
-![Printing CSV data to terminal](./images/terminal-csv.webp)
+![Printing CSV data to terminal](./images/terminal-csv.png)
 
 ## Writing the CSV to a file {#writing-to-file}
 
@@ -118,7 +118,7 @@ writeFileSync('products.csv', csv);
 
 Finally, after running it again, we will find the **products.csv** file in our project folder. And when we open it with Excel/Google Sheets – voila!
 
-![Displaying CSV data in Google Sheets](./images/data-in-sheets.webp)
+![Displaying CSV data in Google Sheets](./images/data-in-sheets.png)
 
 This marks the end of the **Basics of data collection** section of Web scraping for beginners. If you enjoyed the course, give us a thumbs up down below and if you're eager to learn more...
 

@@ -134,7 +134,7 @@ An introspection query's response body size will vary depending on how big the t
 
 Let's copy the response to our clipboard by clicking inside of the response body and pressing **CMD** + **A**, then subsequently **CMD** + **C**. Now, we'll head over to [GraphQL Voyager](https://apis.guru/graphql-voyager/) and click on **Change Schema**. In the modal, we'll click on the **Introspection** tab and paste our data into the text area.
 
-![Pasting the introspection](./images/pasting-introspection.webp)
+![Pasting the introspection](./images/pasting-introspection.png)
 
 Finally, we can click on **Display** and immediately be shown a visualization of the API:
 
@@ -152,7 +152,7 @@ Right now, our goal is to fetch the 1000 most recent articles on [Cheddar](https
 
 Cool. So now we know we need to access **media** through the **organization** query. The **media** field also takes in some arguments, of which we will be using the **first** parameter set to **1000**. Let's start writing our query in Insomnia!
 
-![Receiving a suggestion for a field titled edges](./images/edges-suggested.webp)
+![Receiving a suggestion for a field titled edges](./images/edges-suggested.png)
 
 While writing our query, we've hit a slight roadblock - the **media** type doesn't seem to be accepting a **title** field; however, we are being suggested an **edges** field. This signifies that Cheddar is using [cursor-based relay pagination](https://relay.dev/graphql/connections.htm#relay-style-cursor-pagination), and that what is returned from media is actually a **Connection** type with multiple properties. The **edges** property contains the list of results we're after, and each result lies within a **Node** type accessible within **edges** as **node**. With this knowledge, we can finish writing our query:
 
@@ -175,7 +175,7 @@ query {
 
 Let's send it!
 
-![Unauthorized](./images/unauthorized.webp)
+![Unauthorized](./images/unauthorized.png)
 
 Oh, okay. So that didn't work. But **why**?
 
@@ -185,7 +185,7 @@ Rest assured, nothing is wrong with our query. We are most likely just missing a
 
 The **Authorization** and **X-App-Token** headers seem to be our culprits. Of course these values are dynamic, but for testing purposes we can copy them right from the **Network** tab and use them for our request in Insomnia.
 
-![Successful request](./images/successful-request.webp)
+![Successful request](./images/successful-request.png)
 
 Cool, it worked! Now we know that if we want to scrape this API, we'll likely have to scrape these authorization headers as well in order to not get blocked.
 
@@ -195,7 +195,7 @@ Cool, it worked! Now we know that if we want to scrape this API, we'll likely ha
 
 If the target website is smart, they will have introspection disabled. One of the most widely used GraphQL development tools is [ApolloServer](https://www.apollographql.com/docs/apollo-server/), which automatically disables introspection, so these cases are actually quite common.
 
-![Introspection disabled](./images/introspection-disabled.webp)
+![Introspection disabled](./images/introspection-disabled.png)
 
 In these cases, it is still possible to get some information about the API when using [Insomnia](../../../glossary/tools/insomnia.md), due to the autocomplete that they provide. If we remember from the [Building a query](#building-a-query) section of this lesson, we were able to receive autocomplete suggestions when we entered a non-existent field into the query. Though this is not as great as seeing an entire visualization of the API in GraphQL Voyager, it can still be quite helpful.
 

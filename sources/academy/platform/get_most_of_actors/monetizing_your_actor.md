@@ -33,7 +33,7 @@ To add your billing details head over to **Setting > Payouts** on the left side 
 
 **Note:** The "Payouts" tab will only be visible after your submit the monetization request.
 
-![Billing details](./images/billing-details.webp)
+![Billing details](./images/billing-details.png)
 
 
 ### Payout Invoices

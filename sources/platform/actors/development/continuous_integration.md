@@ -74,7 +74,7 @@ You will need an [actor](../../tutorials/quick_start.md), a GitHub repo for it, 
 
 [Find your Apify token in the Apify Console](https://console.apify.com/account#/integrations).
 
-![Apify token in app](./images/ci-token.webp)
+![Apify token in app](./images/ci-token.png)
 
 [Add the token to GitHub secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository). Go to **your repo > Settings > Secrets > New repository secret**.
 
@@ -84,7 +84,7 @@ Add the [**build actor** API endpoint URL](/api/v2#/reference/actors/build-colle
 https://api.apify.com/v2/acts/YOUR-ACTOR-NAME/builds?token=YOUR-TOKEN-HERE&version=0.0&tag=beta&waitForFinish=60
 ```
 
-![Add build actor URL to secrets](./images/ci-add-build-url.webp)
+![Add build actor URL to secrets](./images/ci-add-build-url.png)
 
 ## Set up automatic builds
 
@@ -102,7 +102,7 @@ name: Build actor
 
 You can find your builds under the actor's **Builds** section.
 
-![An actor's builds](./images/ci-builds.webp)
+![An actor's builds](./images/ci-builds.png)
 
 ## Automate tests
 

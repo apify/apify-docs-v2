@@ -81,11 +81,11 @@ Enter any two numbers you'd like, then press **Start**. The actor's run should c
 
 Since we've pushed the result into the default dataset, it, and some info about it can be viewed by clicking this box, which will take you to the results tab:
 
-![Result box](./images/result-box.webp)
+![Result box](./images/result-box.png)
 
 On the results tab, there are a whole lot of options for which format to view/download the data in. Keep the default of **JSON** selected, and click on **Preview**.
 
-![Dataset preview](./images/dataset-preview.webp)
+![Dataset preview](./images/dataset-preview.png)
 
 There's our solution! Did it work for you as well? Now, we can download the data right from the results tab to be used elsewhere, or even programmatically retrieve it by using [Apify's API](/api/v2/) (we'll be discussing how to do this in the next lesson).
 

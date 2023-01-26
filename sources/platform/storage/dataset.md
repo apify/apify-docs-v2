@@ -37,12 +37,12 @@ In [Apify Console](https://console.apify.com), you can view your datasets in the
 
 Only named datasets are displayed by default. Select the **Include unnamed datasets** checkbox to display all of your datasets.
 
-![Datasets in app](./images/datasets-app.webp)
+![Datasets in app](./images/datasets-app.png)
 
 To view or download a dataset in the above-mentioned formats, click on its **Dataset ID**. Under the **Settings** tab, you can update the dataset's name (and, in turn, its [retention period](./index.md)) and
 [access rights](../access_rights/index.md). Click on the `API` button to view and test the dataset's [API endpoints](/api/v2#/reference/datasets).
 
-![Datasets detail view](./images/datasets-detail.webp)
+![Datasets detail view](./images/datasets-detail.png)
 
 ### Apify SDK {#apify-sdk}
 

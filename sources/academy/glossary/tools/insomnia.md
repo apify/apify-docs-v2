@@ -51,13 +51,13 @@ This feature allows you to see information about the request that is not present
 
 In order to use a proxy, you need to specify the proxy's parameters in Insomnia's preferences. In preferences, scroll down to the **HTTP Network Proxy** section under the **General** tab and specify the full proxy URL there:
 
-![Configuring a proxy](./images/insomnia-proxy.webp)
+![Configuring a proxy](./images/insomnia-proxy.png)
 
 ## Managing the cookies cache {#managing-cookies-cache}
 
 Insomnia keeps the cookies for the requests you have already sent before. This might result in you receiving a difference response within your scraper from what you're receiving in Insomnia, as a necessary cookie is not present in the request sent by the scraper. To check whether or not some cookies associated with a certain request have been cached, click on the **Cookies** button at top of the list of requests:
 
-![Click on the "Cookies" button](./images/insomnia-cookies.webp)
+![Click on the "Cookies" button](./images/insomnia-cookies.png)
 
 This'll bring up the **Manage cookies** window, where all cached cookies can be viewed, edited, or deleted.
 

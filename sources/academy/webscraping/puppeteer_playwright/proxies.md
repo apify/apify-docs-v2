@@ -96,7 +96,7 @@ await browser.close();
 
 And that's it! Now, when we visit Google, it's in Vietnamese. Depending on the country of your proxy, the language will vary.
 
-![Vietnamese Google](./images/vietnamese-google.webp)
+![Vietnamese Google](./images/vietnamese-google.png)
 
 > Note that in order to rotate through multiple proxies, you must retire a browser instance then create a new one to continue automating with a new proxy.
 

@@ -36,7 +36,7 @@ In addition to our proxies, you can use your own both in Apify Console and SDK.
 
 To use your own proxies with Apify Console, in your actor's **Input and options** tab, scroll down and open the **Proxy and browser configuration** section. Enter your proxy URLs, and you're good to go.
 
-![Using custom proxy in Apify Console](../images/proxy-custom.webp)
+![Using custom proxy in Apify Console](../images/proxy-custom.png)
 
 ### Custom proxies in SDK {#SDK}
 

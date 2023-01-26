@@ -37,13 +37,13 @@ In [Apify Console](https://console.apify.com), you can view your key-value store
 
 Only named key-value stores are displayed by default. Select the **Include unnamed key-value stores** checkbox to display all of your stores.
 
-![Key-value stores in app](./images/key-value-stores-app.webp)
+![Key-value stores in app](./images/key-value-stores-app.png)
 
 To view a key-value store's content, click on its **Store ID**.
 Under the **Settings** tab, you can update the store's name (and, in turn, its [retention period](./index.md).
 Click on the `API` button to view and test a store's [API endpoints](/api/v2#/reference/key-value-stores).
 
-![Key-value stores detail](./images/key-value-stores-detail.webp)
+![Key-value stores detail](./images/key-value-stores-detail.png)
 
 ### Apify SDK
 

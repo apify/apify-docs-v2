@@ -49,7 +49,7 @@ And you could even change the text of the element, if you wanted to:
 temp1.textContent = 'Hello!';
 ```
 
-![Chrome DevTools JavaScript command execution](./images/basic-console-commands.webp)
+![Chrome DevTools JavaScript command execution](./images/basic-console-commands.png)
 
 > You can interact with the page in many more ways using the Console. If you want to dive deeper we recommend this [tutorial on documents](https://javascript.info/document). A web page in a browser is called a document.
 

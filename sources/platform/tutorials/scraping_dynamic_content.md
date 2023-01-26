@@ -117,7 +117,7 @@ Sometimes, it may be handy to work directly with the XHR request's response.
 
 Keep in mind that `waitForResponse` is not included in `waitFor` cases, so it does not work in Web Scraper. If you are interested in exploring the responses, you can look through them in your browser's developer console. In Firefox and Chrome, it is the **Network** tab with the **XHR** filter selected.
 
-![The Network tab in a browser](./images/network-tab.webp)
+![The Network tab in a browser](./images/network-tab.png)
 
 We can catch this response by checking for its URL and method (we have to do it since the same URL is included in the OPTIONS method). We return `true` or `false` depending on whether it is the response we want. `waitForResponse` will even give us the response back.
 

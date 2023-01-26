@@ -27,7 +27,7 @@ For a super quick and dirty understanding of what a published actor looks like, 
 
 On the front page of the actor, click the green **Try for free** button. If you're logged into your Apify account which you created during the [**Getting started**](./index.md) lesson, you'll be taken to the Apify Console and greeted with a page that looks like this:
 
-![Actor configuration](./images/seo-actor-config.webp)
+![Actor configuration](./images/seo-actor-config.png)
 
 This is where we can provide input to the actor. The defaults here are just fine, so we'll just leave it as is and click the green **Start** button to run it. While the actor is running, you'll see it log some information about itself.
 

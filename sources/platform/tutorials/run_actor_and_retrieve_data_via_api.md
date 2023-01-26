@@ -78,11 +78,11 @@ https://api.apify.com/v2/acts/apify~web-scraper/runs?token=YOUR_TOKEN
 
 Here is how it looks in [Postman](https://www.getpostman.com/):
 
-![Run an actor via API in Postman](./images/run-actor-postman.webp)
+![Run an actor via API in Postman](./images/run-actor-postman.png)
 
 If we press **Send**, it will immediately return some info about the run. The `status` will be either `READY` (which means that it is waiting to be allocated on a server) or `RUNNING` (99% of cases).
 
-![Actor run info in Postman](./images/run-info-postman.webp)
+![Actor run info in Postman](./images/run-info-postman.png)
 
 We will later use this **run info** JSON to retrieve the run's output data. This info about the run can also be retrieved with another call to the [**Get run**](https://apify.com/docs/api/v2#/reference/actors/run-object/get-run) endpoint.
 
@@ -169,7 +169,7 @@ If you have a server, [webhooks](../integrations/webhooks/index.md) has occurred
 
 Usually, this event is a successfully finished run, but you can also set a different webhook for failed runs, etc.
 
-![Webhook example](./images/webhook.webp)
+![Webhook example](./images/webhook.png)
 
 The webhook will send you a pretty complicated [JSON object](../integrations/webhooks/actions.md), but usually you are only interested in the `resource` object within the response, which is essentially just the **run info** JSON from the previous sections. We can leave the payload template as is as for our example use case, since it is what we need.
 

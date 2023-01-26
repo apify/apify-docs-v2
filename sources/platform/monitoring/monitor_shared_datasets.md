@@ -30,15 +30,15 @@ For this use case, we will imagine you want to scrape fresh jokes from two websi
 
 You created two tasks from **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)) and set them to save the results in the desired dataset. Next, you need to test (validate/verify) your data to make sure it fits your needs. To avoid creating separate software that will do this, you can use our [monitoring suite](https://apify.com/apify/monitoring).
 
-![Joke tasks](./images/joke-scraper-tasks.webp)
+![Joke tasks](./images/joke-scraper-tasks.png)
 
 Each of the above tasks handles a different website. After the tasks finish successfully, they call the monitoring actor using a [webhook](../integrations/webhooks/index.md) that handles the data aggregation.
 
-![Joke schedule](./images/joke-schedule.webp)
+![Joke schedule](./images/joke-schedule.png)
 
 The two extraction tasks are [scheduled](../schedules.md) to run every day using the `@daily` [cron](https://crontab.guru) expression. They produce a new named dataset each day. The [naming convention](https://en.wikipedia.org/wiki/Naming_convention_(programming)) for the dataset is `DAILY-JOKES-<DateOfTheDay>`.
 
-![Joke storage](./images/joke-storage.webp)
+![Joke storage](./images/joke-storage.png)
 
 Now, to the monitoring part. For this tutorial, let's skip the monitoring of the tasks and jump right to the dataset.
 
@@ -68,7 +68,7 @@ Next, we will configure the monitoring suite.
 
 Your configuration will look like this:
 
-![Monitoring configuration](./images/joke-monitoring-config.webp)
+![Monitoring configuration](./images/joke-monitoring-config.png)
 
 ## Validate data {#validate-data}
 
@@ -80,7 +80,7 @@ Now, let's ensure that your jokes are in the correct form. Each joke's dataset i
 
 3. Make sure you set **Validation frequency** to something other than **Per run** because datasets don't have runs. You can use [natural language cron expressions](https://github.com/darkeyedevelopers/natural-cron.js), so in this instance, you can set frequency to **Every day at noon**.
 
-![Monitoring dashboard configuration - validate](./images/joke-validate-schema.webp)
+![Monitoring dashboard configuration - validate](./images/joke-validate-schema.png)
 
 The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for type validation. Make sure to import the library using `/* global ow */`.
 
@@ -92,10 +92,10 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 3. Just like with validation frequency, set the **Check frequency** to something other than **Per run** (check step 3 for tips).
 
-![Monitoring duplication configuration](./images/joke-duplicates.webp)
+![Monitoring duplication configuration](./images/joke-duplicates.png)
 
 ## Set up data visualization {#set-up-data-visualization}
 
 You can configure data visualization in the **Statistics dashboard** section. To enable it, check the **Enable dashboard** option.
 
-![Enable monitoring dashboard](./images/enable-dashboard.webp)
+![Enable monitoring dashboard](./images/enable-dashboard.png)

@@ -87,6 +87,19 @@ async function transformLine(line, cwd) {
 
     if (line.match(/\{\{@asset .*}}/i)) {
         let imgPath = line.match(/\{\{@asset (.*)}}/i)[1];
+
+        if (imgPath.endsWith('.webp')) {
+            const files = await globby('sources/**/' + imgPath.replace(/\.webp/, '.png'));
+
+            if (files.length > 0) {
+                let path = relative(cwd, files[0]);
+                path = path.startsWith('.') ? path : './' + path;
+                line = line.replace(/\{\{@asset (.*)}}/i, path);
+
+                return line;
+            }
+        }
+
         const files = await globby('sources/**/' + imgPath);
 
         if (files.length > 0) {

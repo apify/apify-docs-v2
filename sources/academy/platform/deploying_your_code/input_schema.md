@@ -100,7 +100,7 @@ For our case, we've made the **numbers** field required, as it is crucial to our
 
 Here is what the input schema we wrote will render on the platform:
 
-![Rendered UI from input schema](./images/rendered-ui.webp)
+![Rendered UI from input schema](./images/rendered-ui.png)
 
 Later on, we'll be building more complex input schemas, as well as discussing how to write quality input schemas that allow the user to easily understand the actor and not become overwhelmed.
 

@@ -44,7 +44,7 @@ In [Apify Console](https://console.apify.com/schedules), click on the **Schedule
 
 In the **Settings** tab, give your schedule a memorable name, add a description, and choose how often you would like your actor or task to run using the [schedule setup tool](#schedule-setup).
 
-![New schedule](./images/schedule-settings.webp)
+![New schedule](./images/schedule-settings.png)
 
 Next, you'll need to give the schedule something to run. This is where the actor or task you prepared earlier comes in. Switch to the **Actors and Tasks** tab, and click the **Add [new]** button.
 
@@ -56,11 +56,11 @@ The **timeout** value is specified in seconds; a value of **0** means there is n
 
  If you don't provide an input, then the actor's default input is used. If you provide an input with some fields missing, the missing fields are filled in with values from the default input. If input options are not provided, the default options values are used.
 
-![Add actor to schedule](./images/schedule-actor-run.webp)
+![Add actor to schedule](./images/schedule-actor-run.png)
 
 If you're scheduling a task, just select the task you prepared earlier using the drop-down. If you need to override the task's input, you can pass it as a JSON object in the **Input JSON overrides** field.
 
-![Add task to schedule](./images/schedule-add-tasks.webp)
+![Add task to schedule](./images/schedule-add-tasks.png)
 
 To add more actors or tasks, just repeat the process.
 
@@ -111,7 +111,7 @@ For more information, see the [schedules section](/api/v2#/reference/schedules/s
 
 The schedule setup tool uses [cron expressions](https://en.wikipedia.org/wiki/Cron#CRON_expression) to specify run times. If you're familiar with how to use them and need a specific run schedule, you can dive right in. If not, don't worry - the setup tool has a visual custom schedule builder that provides a similar level of control as cron expressions, though it's not quite as powerful.
 
-![Schedule setup tool](./images/schedule-setup.webp)
+![Schedule setup tool](./images/schedule-setup.png)
 
 The **Next runs** section at the bottom shows when the next five runs will be. You can use this live feedback to experiment until you find the correct configuration.
 

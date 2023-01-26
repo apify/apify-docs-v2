@@ -84,7 +84,7 @@ await browser.close();
 
 Here's what we see in the automated browser when we run this code:
 
-![Google with the background color changed to green](../images/green-google.webp)
+![Google with the background color changed to green](../images/green-google.png)
 
 ## Using variables in `page.evaluate()` {#using-variables-in-page-evaluate}
 
@@ -139,7 +139,7 @@ await browser.close();
 
 Now, when we run this code, we can see the title change on the page's tab:
 
-![Google with the background color changed to green](../images/title-changed.webp)
+![Google with the background color changed to green](../images/title-changed.png)
 
 ## Next up {#next}
 

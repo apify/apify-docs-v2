@@ -17,7 +17,7 @@ To view your connection status to [Apify Proxy](https://apify.com/proxy), open t
 
 If the proxy connection is working, the page should look something like this:
 
-![Apify proxy status page](./images/proxy-status.webp)
+![Apify proxy status page](./images/proxy-status.png)
 
 To test that your requests are proxied and IP addresses are being [rotated](../web_scraping_101/anti_scraping_techniques.md) correctly, open the following API endpoint via the proxy. It shows information about the client IP address.
 

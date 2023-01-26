@@ -60,7 +60,7 @@ const fileExtensions = {
 
 And now we'll create a variable with a hacky custom type that points to the values in the `fileExtensions` object:
 
-![TypeScript autofilling the values of the fileExtensions object](./images/constant-autofill.webp)
+![TypeScript autofilling the values of the fileExtensions object](./images/constant-autofill.png)
 
 Because of the custom type definition for `fileExtensions` and the type annotation used for the `values` variable, we are getting some autofill for the variable, and the variable can only be set to values within the `fileExtensions` object. Though this implementation works, TypeScript offers a unique new feature called **enums** that was designed just for these use cases.
 

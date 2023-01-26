@@ -15,7 +15,7 @@ A web-application firewall (or **WAF**) is a tool for website admins which allow
 
 One of the most common WAFs one can come across is the one from [Cloudflare](https://www.cloudflare.com). It allows setting a waiting screen that runs a few tests against the visitor to detect a genuine visitor or a bot. However, not all WAFs are that easy to detect.
 
-![Cloudflare waiting screen](./images/cloudflare.webp)
+![Cloudflare waiting screen](./images/cloudflare.png)
 
 ## How it works {#how-it-works}
 

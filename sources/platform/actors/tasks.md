@@ -23,13 +23,13 @@ Like any other resource, you can share your actor tasks with other Apify users v
 
 Open any actor from [Apify Store](https://console.apify.com/store) or your list of [actors](https://console.apify.com/actors) in Apify Console. In the top-right section of the page, click the **Create empty task** button.
 
-![Create a new Apify task](./images/create-task.webp)
+![Create a new Apify task](./images/create-task.png)
 
 ## Configure
 
 You can set up your task's input under the **Input and options** tab. A task's input configuration works just like an actor's. After all, it is just a copy of an actor you can pre-configure for a specific scenario. You can use either JSON or the visual input UI.
 
-![Apify task configuration](./images/create-task-configure.webp)
+![Apify task configuration](./images/create-task-configure.png)
 
 Actors' input fields will vary depending on their purpose, but they all follow the same principle: you provide an actor with the information it needs so it can do what you want it to do.
 
@@ -47,7 +47,7 @@ Under the **Settings** tab of their detail page, you can grant [access rights](.
 
 Once you've configured you task, you can run it using the **Run** button in the bottom-left side of the **Input and options** tab.
 
-![Run an Apify task](./images/create-task-run.webp)
+![Run an Apify task](./images/create-task-run.png)
 
 You can also run tasks using:
 

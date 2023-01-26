@@ -242,7 +242,7 @@ Then, configure the task to use **google pixel** as a keyword and click **Save**
 
 > You can also add a custom name and description for the task in the **Settings** tab!
 
-![Creating a task](./images/creating-task.webp)
+![Creating a task](./images/creating-task.png)
 
 After saving it, you'll be able to see the newly created task in the **Tasks** tab on the Apify Console. Go ahead and run it. Did it work?
 

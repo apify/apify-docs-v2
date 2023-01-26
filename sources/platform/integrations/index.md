@@ -53,7 +53,7 @@ Other platforms you can connect to Apify:
 
 To access our API in your integrations, you will need to use your secret API token. You can find it on the [Integrations](https://console.apify.com/account?tab=integrations) page in the Apify Console. Give your token a reasonable description and never use one token for several services, much like you shouldn't use the same password for different accounts.
 
-![Integrations page in the Apify Console](./images/api-token.webp)
+![Integrations page in the Apify Console](./images/api-token.png)
 
 > When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](#introduction/authentication)).
 

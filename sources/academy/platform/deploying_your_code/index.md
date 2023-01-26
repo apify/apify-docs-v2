@@ -16,7 +16,7 @@ This section will discuss how to use your newfound knowledge of the Apify platfo
 
 Because actors are basically just chunks of code running in Docker containers, you're able to **_Actorify_** just about anything!
 
-![The deployment workflow](../../images/deployment-workflow.webp)
+![The deployment workflow](../../images/deployment-workflow.png)
 
 Actors are language agnostic, which means that the language your project is written in does not affect your ability to actorify it.
 

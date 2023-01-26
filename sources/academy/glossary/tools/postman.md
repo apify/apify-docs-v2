@@ -17,7 +17,7 @@ The desktop app can be downloaded from its [official download page](https://www.
 
 ## Understanding the interface {#understanding-the-interface}
 
-![A basic outline of Postman's interface](./images/postman-interface.webp)
+![A basic outline of Postman's interface](./images/postman-interface.png)
 
 There are four main sections to get familiar when starting out with Postman:
 
@@ -41,7 +41,7 @@ After sending a request, the response's body will be found here, along with its 
 
 In order to use a proxy, the proxy's server and configuration must be provided in the **Proxy** tab in Postman settings.
 
-![Proxy configuration in Postman settings](./images/postman-proxy.webp)
+![Proxy configuration in Postman settings](./images/postman-proxy.png)
 
 After configuring a proxy, the next request sent will attempt to use it. To switch off the proxy, its details don't need to be deleted. The **Add a custom proxy configuration** option in settings just needs to be un-ticked to disable it.
 
@@ -53,11 +53,11 @@ More often than not in these cases, the reason is because the endpoint being rea
 
 In order to check whether there are any cookies associated with a certain request are cached in Postman, click on the **Cookies** button in any opened request tab:
 
-![Button to view the cached cookies](./images/postman-cookies-button.webp)
+![Button to view the cached cookies](./images/postman-cookies-button.png)
 
 Clicking on this button opens a **MANAGE COOKIES** window, where a list of all cached cookies per domain can be seen. If we had been previously sending multiple requests to **<https://github.com/apify>**, within this window we would be able to easily find cached cookies associated with github.com. Cookies can also be easily edited (to update some specific values), or deleted (to send a "clean" request without any cached data) here.
 
-![Managing cookies in Postman with the "MANAGE COOKIES" window](./images/postman-manage-cookies.webp)
+![Managing cookies in Postman with the "MANAGE COOKIES" window](./images/postman-manage-cookies.png)
 
 ### Some alternatives to Postman {#alternatives}
 

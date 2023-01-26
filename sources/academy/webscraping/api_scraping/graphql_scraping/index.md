@@ -17,15 +17,15 @@ slug: /api-scraping/graphql-scraping
 
 In this section, we'll be scraping [cheddar.com](https://cheddar.com)'s GraphQL API. When you visit the website and make a search for anything while your **Network Tab** is open, you'll see a request that has been sent to the endpoint **api.cheddar.com/graphql**.
 
-![GraphQL endpoint](../images/graphql-endpoint.webp)
+![GraphQL endpoint](../images/graphql-endpoint.png)
 
 As a rule of thumb, when the endpoint ends with **/graphql** and it's a **POST** request, it's a 99.99% bulletproof indicator that the target site is using GraphQL. If you want to be 100% certain though, taking a look at the request payload will most definitely give it away.
 
-![GraphQL payload](../images/graphql-payload.webp)
+![GraphQL payload](../images/graphql-payload.png)
 
 Every GraphQL payload will be a JSON object with a **query** property, and a **variables** property if any variables were provided. If you take a closer look at the full **query** property of this request, you'll notice that it's stringified GraphQL language content.
 
-![Taking a closer look at the payload](../images/stringified-syntax.webp)
+![Taking a closer look at the payload](../images/stringified-syntax.png)
 
 ## Advantages & disadvantages {#advantages-disadvantages}
 

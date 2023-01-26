@@ -57,7 +57,7 @@ Imagine you are building a simple crawler whose inputs are an array of start URL
 
 And generated the input UI will be:
 
-![Apify actor input schema example](./images/input-schema-example.webp)
+![Apify actor input schema example](./images/input-schema-example.png)
 
 If you switch the input to the **JSON** display using the toggle, then you will see the entered input stringified to JSON, as it will be passed to the actor:
 
@@ -134,7 +134,7 @@ Example of a code input:
 
 Rendered input:
 
-![Apify actor input schema page function](./images/input-schema-page-function.webp)
+![Apify actor input schema page function](./images/input-schema-page-function.png)
 
 Example of country selection using a select input:
 
@@ -152,7 +152,7 @@ Example of country selection using a select input:
 
 Rendered input:
 
-![Apify actor input schema - country input](./images/input-schema-country.webp)
+![Apify actor input schema - country input](./images/input-schema-country.png)
 
 Properties:
 
@@ -198,7 +198,7 @@ Example options with group caption:
 
 Rendered input:
 
-![Apify actor input schema options](./images/input-schema-options.webp)
+![Apify actor input schema options](./images/input-schema-options.png)
 
 Properties:
 
@@ -226,7 +226,7 @@ Example:
 
 Rendered input:
 
-![Apify actor input schema memory](./images/input-schema-memory.webp)
+![Apify actor input schema memory](./images/input-schema-memory.png)
 
 Properties:
 
@@ -254,7 +254,7 @@ Example of proxy configuration:
 
 Rendered input:
 
-![Apify actor input schema proxy](./images/input-schema-proxy.webp)
+![Apify actor input schema proxy](./images/input-schema-proxy.png)
 
 The object where the proxy configuration is stored has the following structure:
 
@@ -291,7 +291,7 @@ Example of a blackbox object:
 
 Rendered input:
 
-![Apify actor input schema user object](./images/input-schema-user.webp)
+![Apify actor input schema user object](./images/input-schema-user.png)
 
 Properties:
 
@@ -321,7 +321,7 @@ Example of request list sources configuration:
 
 Rendered input:
 
-![Apify actor input schema start urls array](./images/input-schema-start-urls.webp)
+![Apify actor input schema start urls array](./images/input-schema-start-urls.png)
 
 Example of an array:
 
@@ -337,7 +337,7 @@ Example of an array:
 
 Rendered input:
 
-![Apify actor input schema colors array](./images/input-schema-colors.webp)
+![Apify actor input schema colors array](./images/input-schema-colors.png)
 
 Properties:
 

@@ -13,13 +13,13 @@ slug: /actors/paid-actors
 
 Paid actors are a new feature in [Apify Store](https://apify.com/store). They're like any other public actors, but with a slight difference. In order to use a paid actor, you **rent** it and pay a monthly fee to the developer. This empowers the developer to dedicate more time and effort to their actors. It ensures that these actors are of the **highest quality** and receive **ongoing maintenance**.
 
-![Paid actors in Apify Store](./images/paid-actors-store.webp)
+![Paid actors in Apify Store](./images/paid-actors-store.png)
 
 Each paid actor has a **free trial,** followed by a flat monthly rental fee that is automatically charged **from your platform usage credits** in advance for the following month. The trial's length is always shown for each paid actor.
 
 For more information about how to monetize your actor, best practices and SEO and promotion tips and tricks, head over to the [Getting the most of your public actors on Apify Store](https://developers.apify.com/academy/apify-platform/get-most-of-actors) section of the Apify Developers Academy.
 
-![Paid actors free trial](./images/paid-actors-trial.webp)
+![Paid actors free trial](./images/paid-actors-trial.png)
 
 <!-- You can read more about why we released paid actors in [this blog post](tbd) from Apify CEO Jan Čurn. -->
 
@@ -61,7 +61,7 @@ Since actor rental fees are paid from platform usage credits, these fees concept
 
 Hence, you can find the breakdown of how much you have been charged for paid actors on the bottom of the **Platform usage** tab in the [Billing](https://console.apify.com/billing) section. The overall sum will also be visible in the usage bar chart and the table on the top of the same tab.
 
-![Paid actors billing in Apify Console](./images/paid-actors-billing.webp)
+![Paid actors billing in Apify Console](./images/paid-actors-billing.png)
 
 ## How do I report issues with an actor?
 
@@ -69,7 +69,7 @@ Each actor has an `Issues` tab present in the Apify Console. There, you can open
 and other users of this actor. Please, feel free to use the tab to ask any questions, request new features or give feedback. Alternatively, you can
 always write to [community@apify.com](mailto:community@apify.com).
 
-![Paid actors issues tab](./images/paid-actors-issues-tab.webp)
+![Paid actors issues tab](./images/paid-actors-issues-tab.png)
 
 ## How do I give general feedback on paid actors?
 

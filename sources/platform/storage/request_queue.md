@@ -35,14 +35,14 @@ In [Apify Console](https://console.apify.com), you can view your request queues 
 
 Only named request queues are displayed by default. Select the **Include unnamed request queues** checkbox to display all of your queues.
 
-![Request queues in app](./images/request-queue-app.webp)
+![Request queues in app](./images/request-queue-app.png)
 
 To view a request queue, click on its **Queue ID**.
 Under the **Settings** tab, you can update the queue's name (and, in turn, its
 [retention period](./index.md).
 Click on the `API` button to view and test a queue's [API endpoints](/api/v2#/reference/request-queues).
 
-![Request queues detail](./images/request-queue-detail.webp)
+![Request queues detail](./images/request-queue-detail.png)
 
 ### Apify SDK {#apify-sdk}
 

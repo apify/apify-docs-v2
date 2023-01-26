@@ -17,7 +17,7 @@ On our target page, we'll open up the Network tab, and filter by request type of
 
 _Here's what we can see see in the Network tab after reloading the page:_
 
-![Network tab results after completing an action on the page which results in the API being called](./images/results-in-network-tab.webp)
+![Network tab results after completing an action on the page which results in the API being called](./images/results-in-network-tab.png)
 
 Let's say that our target data is a full list of Tiësto's uploaded songs on SoundCloud. We can use the **Filter** option to search for the keyword `tracks`, and see if any endpoints have been hit that include that word. Multiple results may still be in the list when using this feature, so it is important to carefully examine the payloads and responses of each request in order to ensure that the correct one is found.
 
@@ -25,7 +25,7 @@ Let's say that our target data is a full list of Tiësto's uploaded songs on Sou
 
 After a little bit of digging through the different response values of each request in our filtered list within the Network tab, we can discover this endpoint, which returns a JSON list including 20 of Tiësto's latest tracks:
 
-![Endpoint found in the Network tab](./images/endpoint-found.webp)
+![Endpoint found in the Network tab](./images/endpoint-found.png)
 
 ## Learning the API {#learning-the-api}
 
@@ -39,7 +39,7 @@ https://api-v2.soundcloud.com/users/141707/tracks?representation=&client_id=zdUq
 
 Since our request doesn't have any body/payload, we just need to analyze the URL. We can break this URL down into chunks that help us understand what each value does.
 
-![Breaking down the request url into understandable chunks](./images/analyzing-the-url.webp)
+![Breaking down the request url into understandable chunks](./images/analyzing-the-url.png)
 
 Understanding an API's various configurations helps with creating a game-plan on how to best scrape it, as many of the parameters can be utilized for easy pagination, or easy data-filtering. Additionally, these values can be mapped to a scraper's configuration options, which overall makes the scraper more versatile.
 

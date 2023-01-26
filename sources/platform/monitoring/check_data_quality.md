@@ -53,7 +53,7 @@ If you have already added the task, under its **Settings** tab, give it a name. 
 
 This is what the configuration should look like:
 
-![Task configuration - input](./images/iphone-task.webp)
+![Task configuration - input](./images/iphone-task.png)
 
 ## Validate data {#validate-data}
 
@@ -63,7 +63,7 @@ Let's say you need each item to always have properties such as `title`, `ASIN`, 
 
 2. In the **Validation options** field, create an [object](https://javascript.info/object) containing a `schema` key. As its value, set an object specifying the format of each of the properties you want to validate.
 
-![Task configuration - validate data](./images/iphone-validate-data.webp)
+![Task configuration - validate data](./images/iphone-validate-data.png)
 
 The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for type validation. Make sure to import the library using `/* global ow */`.
 
@@ -75,13 +75,13 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 2. Set the **Unique keys** field to `asin` to make sure all the ASIN properties are unique.
 
-![Task configuration - check for duplicates](./images/iphone-check-duplicates.webp)
+![Task configuration - check for duplicates](./images/iphone-check-duplicates.png)
 
 ## Set up data visualization {#set-up-data-visualization}
 
 In the **Statistics dashboard** section, check the **Enable dashboard** option to activate data visualization.
 
-![Task configuration - visualization](./images/enable-dashboard.webp)
+![Task configuration - visualization](./images/enable-dashboard.png)
 
 Finally, click the **Save & Run** button. It will create a monitoring configuration and turn the monitoring ON.
 
@@ -93,5 +93,5 @@ Here, you can see the result statuses of your monitored tasks and filter them by
 
 This is what your dashboard can look like after some time:
 
-![Monitoring dashboard](./images/monitoring-dashboard.webp)
+![Monitoring dashboard](./images/monitoring-dashboard.png)
 

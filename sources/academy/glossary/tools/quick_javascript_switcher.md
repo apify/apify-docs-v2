@@ -15,6 +15,6 @@ slug: /tools/quick-javascript-switcher
 
 If JavaScript is enabled - clicking the button will switch it off and reload the page. The next click will re-enable JavaScript and refresh the page. This extension is useful for checking whether a certain website will work without JavaScript (and thus could be parsed without using a browser with a plain HTTP request) or not.
 
-![JavaScript toggled on (enabled)](./images/js-on.webp)
+![JavaScript toggled on (enabled)](./images/js-on.png)
 
-![JavaScript toggled off (disabled)](./images/js-off.webp)
+![JavaScript toggled off (disabled)](./images/js-off.png)

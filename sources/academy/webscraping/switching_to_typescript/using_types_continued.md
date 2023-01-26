@@ -23,7 +23,7 @@ Now that you're (hopefully) fairly comfortable with strings, booleans, and numbe
 
 By now, you're already familiar with what type inference is. Even when creating objects, TypeScript will do its best to infer what that object's type is. For example, TS automatically infers correctly that this object is an object with `name` and `currentLesson` properties, both strings:
 
-![Object type correctly inferred](./images/object-inference.webp)
+![Object type correctly inferred](./images/object-inference.png)
 
 Notice that the value showed in the popup when hovering over the `course` variable looks very much like a regular JavaScript object; however, it is not an object at all - instead, it is an object **type**.
 
@@ -31,7 +31,7 @@ Notice that the value showed in the popup when hovering over the `course` variab
 
 This inference from TypeScript is totally valid and correct; however, what if we want to add a new property to the `course` object after it's been initialized?
 
-![Error adding a new property to the object](./images/object-type-error.webp)
+![Error adding a new property to the object](./images/object-type-error.png)
 
 So what's the problem? The problem is that we didn't tell TypeScript that the `course` object can have a property called `learningBasicTypes` of a boolean type in the variable's initial state, which is what TypeScript's inference is based off of. Because of this, we have to write our own custom object type.
 
@@ -103,7 +103,7 @@ const course: {
 
 Some of the benefits of TypeScript can be seen when accessing one of the properties on the `course.typesLearned` array. Since we told TypeScript that it's an array of strings, it confidently knows that each of those properties are going to have the methods on the [String prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods), so it will autocomplete methods such as `.slice()`, `.toUpperCase()`, and `.slice()`.
 
-![Epic autocomplete](./images/epic-autocomplete.webp)
+![Epic autocomplete](./images/epic-autocomplete.png)
 
 Nice!
 
@@ -161,7 +161,7 @@ const course: {
 
 By placing types inside of the square brackets in a specific order, we tell TypeScript that the property is not of an array type, but a tuple instead. So, when we try to reassign the properties to an incorrect data type, we get an error.
 
-![Epic autocomplete](./images/string-not-number.webp)
+![Epic autocomplete](./images/string-not-number.png)
 
 ## Next up {#next}
 

@@ -28,7 +28,7 @@ and general information for using storages with the [Apify API](#apify-api).
 
 [Dataset](./dataset.md) storage allows you to store a series of data objects such as results from web scraping, crawling or data processing jobs. You can export your datasets in JSON, CSV, XML, RSS, Excel or HTML formats.
 
-![Dataset graphic](../images/datasets-overview.webp)
+![Dataset graphic](../images/datasets-overview.png)
 
 The easiest way to access your datasets is via [Apify Console](https://console.apify.com/storage?tab=datasets), which provides a user-friendly interface for viewing or downloading the data and editing your datasets' properties.
 
@@ -88,7 +88,7 @@ There are five ways to access your storage:
 
 To access your storages from Apify Console, go to the [**Storage** section](https://console.apify.com/storage) in the left-side menu. From there, you can click through the tabs to view your key-value stores, datasets, request queues and related API endpoints. To view a storage, click its **ID**.
 
-![Storages in app](./images/datasets-app.webp)
+![Storages in app](./images/datasets-app.png)
 
 > Only named storages are displayed by default. Select the **Include unnamed store** checkbox to display all of your storages.
 
@@ -98,7 +98,7 @@ Under the **Settings** tab of their detail page, you can grant [access rights](/
 
 You can quickly share your storages' contents and details by sharing the URLs you find under the **API** tab in a store's detail page.
 
-![Storage API](./images/overview-api.webp)
+![Storage API](./images/overview-api.png)
 
 These URLs provide links to API **endpoints**–the places where your data are stored. Endpoints that allow you to **read** stored information do not require an [authentication token](/api/v2#/introduction/authentication). The calls are authenticated using a hard-to-guess ID, so they can be shared freely. Operations such as **update** or **delete**, however, will need the authentication token.
 
@@ -170,7 +170,7 @@ Unnamed storages expire after 7 days unless otherwise specified. Named storages 
 
 To preserve your storages indefinitely, give them a name. You can do this in Apify Console or using our API. First, you'll need your store's ID. You can find it in the details of the run that created it. In Apify Console, head over to your run's details and select the **Dataset**, **Key-value store**, or **Request queue** tab as appropriate. Check that store's details, and you will find its ID among them.
 
-![Finding your store's ID](./images/find-store-id.webp)
+![Finding your store's ID](./images/find-store-id.png)
 
 Then, head over to the **Storage** menu, select the appropriate tab, and tick the **Include unnamed \[storages\]** box. Find and open your storage using the ID you just found, select the Settings tab, and enter its new name in the field. Your storage will now be preserved indefinitely.
 

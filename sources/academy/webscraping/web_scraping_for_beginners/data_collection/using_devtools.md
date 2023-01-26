@@ -17,11 +17,11 @@ We know the basics of HTML, CSS, JavaScript and DevTools and we can finally try 
 
 When you open up the [on-sale section of Fakestore](https://demo-webstore.apify.org/search/on-sale), you'll see that there's a grid of products on the page with names and pictures of products. We will now learn how to collect all this information. Open DevTools and select the first product with the selector tool.
 
-![Selecting an element with DevTools](./images/selecting-first-website.webp)
+![Selecting an element with DevTools](./images/selecting-first-website.png)
 
 Now you know where to find the name of one of the products in the page's HTML, but we want to find all information about this product. To do that, in the **Elements** tab, hover over the elements above the one you just found, until you find the element that contains all the data about the selected product. Alternatively, you can press the up arrow a few times to get the same result.
 
-![Selecting an element from the Elements tab](./images/selecting-container-element.webp)
+![Selecting an element from the Elements tab](./images/selecting-container-element.png)
 
 This element is the parent element of all the nested (child) elements, and we can find it using JavaScript and collect the data. Notice that the element has an `aria-label` attribute, as well as multiple `class` attributes. This is where CSS selectors become handy, because we can use them to select an element with a specific class.
 
@@ -41,7 +41,7 @@ At the time of writing, the HTML element that contained all the data we wanted h
 document.querySelector('a[aria-label][href*="/product/"]');
 ```
 
-![Query a selector with JavaScript](./images/query-selector.webp)
+![Query a selector with JavaScript](./images/query-selector.png)
 
 > There are always multiple ways to select an element using CSS selectors. We always try to choose the one that seems the most reliable, precise, and unlikely to change with website updates. For example the `href` attribute can be assumed to always include `/products/`, as this is the path to view a specific product.
 
@@ -56,7 +56,7 @@ console.log(product.textContent);
 
 Here, we are using a special selector. Normally, if you use a selector like `a[href]`, all `<a>` tags with a `href` attribute will be matched. By adding an `=` and a value (`a[href="something"]`), you match all `<a>` elements with the exact `href` value specified. Using the `*` before the `=` allows us to match any elements where the `href` attribute **includes** the specified value, rather than strictly equals it. There are many `<a>` tags on our page, but we only want the ones that lead to a path including `/product/`, which is why we've chosen to use this selector.
 
-![Print text content of an element](./images/print-text-content.webp)
+![Print text content of an element](./images/print-text-content.png)
 
 As you can see, we were able to collect the data, but the format is still not very useful - there's a whole lot of weird data there that we probably don't need. For further processing (ex. in a spreadsheet), we would like to have each piece of data as a separate field (column). To do that, we will look at the HTML structure in more detail.
 
@@ -66,7 +66,7 @@ In the [Getting structured data from HTML](#getting-structured-data-from-html) s
 
 > Don't forget that the selectors may have changed, but the general principle of finding them will always be the same. Use what you see on your screen.
 
-![Finding child elements in Elements tab](./images/find-child-elements.webp)
+![Finding child elements in Elements tab](./images/find-child-elements.png)
 
 The `document.querySelector()` function looks for a specific element in the whole HTML `document`, so if we called it with `h3`, it would find the first `<h3>` node in the `document`. Luckily we can also use this function to look for elements within an element.
 
@@ -86,7 +86,7 @@ console.log(products);
 
 There are 32 products on the page, so if we've done this correctly, a list of 32 product elements should be logged to the console.
 
-![List child elements with JavaScript](./images/list-child-elements.webp)
+![List child elements with JavaScript](./images/list-child-elements.png)
 
 ### Collecting data {#collecting-data}
 
@@ -101,7 +101,7 @@ const result = {
 console.log(result);
 ```
 
-![Print collected data to the Console](./images/print-product-data.webp)
+![Print collected data to the Console](./images/print-product-data.png)
 
 If you were able to get the same result in your browser console, congratulations! You successfully collected your first data. If not, don't worry and review your code carefully. You'll crush the bug soon enough.
 

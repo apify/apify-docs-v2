@@ -144,7 +144,7 @@ const addAll: AddFunction = (nums, toString, printResult, printWithMessage) => {
 
 We've significantly cleaned up the function by moving its verbose type annotations into a type alias without losing the benefits of TypeScript.
 
-![Parameter type](./images/parameter-type.webp)
+![Parameter type](./images/parameter-type.png)
 
 ## Next up {#next}
 

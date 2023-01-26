@@ -19,7 +19,7 @@ This article shows you the very basics of using the Apify platform. It shows you
 
 **1.** Navigate to [Apify Store](https://console.apify.com/store) and pick any actor you like the look of. We'll pick the [Google Search Results Scraper](https://console.apify.com/actors/nFJndFXA5zjCTuudP#/information/latest/readme).
 
-![Apify store](./images/apify-store.webp)
+![Apify store](./images/apify-store.png)
 
 **2.** On the actor's page, head over to the **Input** tab.
 
@@ -27,7 +27,7 @@ Don't be put off by all the boxes - the actor is pre-configured to run without a
 
 Alternatively, you can play around with the settings to make the results more interesting for you.
 
-![Actor input view](./images/actor-input-view.webp)
+![Actor input view](./images/actor-input-view.png)
 
 **3.** Wait for the actor to run...
 
@@ -35,21 +35,21 @@ Alternatively, you can play around with the settings to make the results more in
 
 Click on the flashing **Results** button.
 
-![Actor successful run view](./images/actor-run-view.webp)
+![Actor successful run view](./images/actor-run-view.png)
 
 Then, choose which format you want your data in and check it out.
 
-![Choose the data format](./images/actor-run-results.webp)
+![Choose the data format](./images/actor-run-results.png)
 
 Here is a preview of the actor's output as a table.
 
-![Dataset preview](./images/actor-run-dataset.webp)
+![Dataset preview](./images/actor-run-dataset.png)
 
 ## Create an actor
 
 **1.** [Go to the **Actors** section](https://console.apify.com/actors) in the Apify Console and click on the **Create new** button.
 
-![Create a new actor](./images/create-actor.webp)
+![Create a new actor](./images/create-actor.png)
 
 **2.** Go to the **Source** tab and paste the Node.js code below into the **Source code** editor.
 
@@ -67,7 +67,7 @@ Click **Save**.
 
 **3.** Click **Build** in the **Developer console** below to build your actor. After the build is finished, click **▷ Start** to run your actor. After the run is finished, you should see something like:
 
-![Apify actor run log](./images/run-log.webp)
+![Apify actor run log](./images/run-log.png)
 
 Congratulations, you have successfully created and run your first actor!
 
@@ -98,11 +98,11 @@ await Actor.exit();
 { "hello": 123 }
 ```
 
-![Apify actor run log](./images/create-actor-set-input.webp)
+![Apify actor run log](./images/create-actor-set-input.png)
 
 **4.** Click **▷ Start**. When the run finishes, you will see something like:
 
-![Apify actor run log](./images/run-log-2.webp)
+![Apify actor run log](./images/run-log-2.png)
 
 Excellent, you have just created your first actor that accepts input and logs output! Now you can start adding some magic.
 

@@ -153,11 +153,11 @@ Click **Save**, then run the Amazon **demo-actor** again.
 
 If everything worked, then at the end of the **demo-actor**'s run, we should see this within the **Integrations** tab:
 
-![Webhook succeeded](./images/webhook-succeeded.webp)
+![Webhook succeeded](./images/webhook-succeeded.png)
 
 Additionally, we should be able to see that our **filter-actor** was run, and have access to its dataset:
 
-![Dataset preview](./images/dataset-preview.webp)
+![Dataset preview](./images/dataset-preview.png)
 
 ## Quiz answers 📝 {#quiz-answers}
 

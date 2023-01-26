@@ -31,7 +31,7 @@ Easy peasy!
 
 In the **Source** tab on the new actor's page, we'll click the dropdown menu under **Source code** and select **Git repository**. By default, this is set to **Multiple source files**.
 
-![Select source code location](../expert_scraping_with_apify/images/select-source-location.webp)
+![Select source code location](../expert_scraping_with_apify/images/select-source-location.png)
 
 Now we'll paste the link to our GitHub repository into the **Git URL** text field and click **Save**.
 

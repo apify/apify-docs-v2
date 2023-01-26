@@ -23,7 +23,7 @@ Click it, then choose the **Basic Node.js actor** template and click on **Use te
 
 > Also feel free to give the actor a custom name instead of the default name. For this lesson though, we'll keep it as **my-actor**.
 
-![Choosing a template](./images/choose-template.webp)
+![Choosing a template](./images/choose-template.png)
 
 ## Hello World! {#hello-world}
 
@@ -73,7 +73,7 @@ In order to run the actor, you've gotta build it. Luckily, that's only a button 
 
 After you've clicked the **Build** button, it'll take around 5-10 seconds to complete the build. You'll know it's finished when you see a green **Start** button.
 
-![Start button](./images/start.webp)
+![Start button](./images/start.png)
 
 This beautiful button's presence means we can now run the actor!
 

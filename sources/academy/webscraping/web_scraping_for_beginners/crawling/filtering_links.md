@@ -56,7 +56,7 @@ $('main.fit a[href*="/product/"]');
 
 We already know both the `main.fit` and `a[href*="/product/"]` selectors and how they work on their own, but their combination is new. It's called a [descendant selector](https://css-tricks.com/almanac/selectors/d/descendant/), and it selects all `<a href=".../product/...">` elements that are descendants of a `<main class="fit">` element. A descendant is any element that's nested somewhere inside another element. It does not have to be a direct child of the specified parent element.
 
-![Nested HTML tags](./images/nested-tag.webp)
+![Nested HTML tags](./images/nested-tag.png)
 
 When we print all the URLs in the DevTools console, we can see that we've correctly filtered only the featured product links.
 
@@ -66,7 +66,7 @@ for (const a of document.querySelectorAll('main.fit a[href*="/product/"]')) {
 }
 ```
 
-![Product URLs printed to console](./images/product-urls.webp)
+![Product URLs printed to console](./images/product-urls.png)
 
 Notice that we might have some duplicate URLs. These duplicates can be easily filtered out. _We will be learning about data filtering/manipulation in future lessons._
 

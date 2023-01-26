@@ -31,7 +31,7 @@ the [USA](https://apify.com/petrpatek/covid-usa-cdc)
 and [Singapore](https://apify.com/tugkan/covid-sg).
 You have created a task from each of the actors tracking those countries.
 
-![Multiple tasks](./images/covid-multiple-tasks.webp)
+![Multiple tasks](./images/covid-multiple-tasks.png)
 
 ## Create a new monitoring task {#create-a-new-monitoring-task}
 
@@ -57,7 +57,7 @@ Next, we will configure the monitoring suite.
 
 > Each of your monitoring suites must have a unique name.
 
-![Monitoring covid tasks - configuration](./images/covid-config.webp)
+![Monitoring covid tasks - configuration](./images/covid-config.png)
 
 ## Validate data {#validate-data}
 
@@ -71,7 +71,7 @@ We have used four actors from [Apify Store](https://apify.com/store). Each actor
 
 3. It is best to set **Validation frequency** to `Per run`, so the data is validated right after it is collected.
 
-![Monitoring dashboard configuration - validate](./images/covid-validate-schema.webp)
+![Monitoring dashboard configuration - validate](./images/covid-validate-schema.png)
 
 The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for type validation. Make sure to import the library using `/* global ow */`.
 
@@ -79,4 +79,4 @@ The monitoring suite uses the [ow](https://www.npmjs.com/package/ow) library for
 
 To add the monitoring dashboard, open the **Statistics dashboard** section and enable this feature.
 
-![Monitoring dashboard configuration](./images/enable-dashboard.webp)
+![Monitoring dashboard configuration](./images/enable-dashboard.png)

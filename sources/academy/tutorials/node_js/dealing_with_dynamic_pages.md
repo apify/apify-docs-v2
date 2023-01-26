@@ -81,7 +81,7 @@ await crawler.run([{ url: 'https://demo-webstore.apify.org/search/new-arrivals' 
 
 After running it, you might say, "Great! It works!" **But wait...** What are those results being logged to console?
 
-![Bad results in console](./images/bad-results.webp)
+![Bad results in console](./images/bad-results.png)
 
 Every single image seems to have the same exact "URL," but they are most definitely not the image URLs we are looking for. This is strange, because in the browser, we were getting URLs that looked like this:
 
@@ -136,7 +136,7 @@ await crawler.run([{ url: 'https://demo-webstore.apify.org/search/new-arrivals' 
 
 After running this one, we can see that our results look different from before. We're getting the image links!
 
-![Not perfect results](./images/almost-there.webp)
+![Not perfect results](./images/almost-there.png)
 
 Well... Not quite. It seems that the only images which we got the full links to were the ones that were being displayed within the view of the browser. This means that the images are lazy-loaded. **Lazy-loading** is a common technique used across the web to improve performance. Lazy-loaded items allow the user to load content incrementally, as they perform some action. In most cases, including our current one, this action is scrolling.
 
