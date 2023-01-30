@@ -117,20 +117,25 @@ async function transformLinksOnLine(line, cwd, source) {
         return line;
     }
 
-    const mdPath = (line.match(/\{\{@link (.*?)(#.+)?}}/i))[1];
-    const files = await globby([
-        `sources/${source}/**/${mdPath}`,
-        `sources/${source}/**/${mdPath.replace(/\.mdx?$/, '')}/index.md`,
-    ]);
+    const links = line.match(/\{\{@link (.*?)(#.+)?}}/ig);
+    for (const link of links) {
+        const mdPath = link.match(/\{\{@link (.*?)(#.+)?}}/i)[1];
+        if (line.startsWith('[Datacenter proxy]({{@link proxy/datacenter_proxy.md}})')) {
+            console.log(link, mdPath);
+        }
+        const files = await globby([
+            `sources/${source}/**/${mdPath}`,
+            `sources/${source}/**/${mdPath.replace(/\.mdx?$/, '')}/index.md`,
+        ]);
 
-    if (files.length !== 1) {
-        console.error('link not matched to source file', mdPath, source, files);
-        return line;
+        if (files.length === 1) {
+            let path = relative(cwd, files[0]);
+            path = path.startsWith('.') ? path : './' + path;
+            line = line.replace(/\{\{@link (.*?)}}/i, path);
+        } else {
+            console.error('link not matched to source file', mdPath, source, files);
+        }
     }
-
-    let path = relative(cwd, files[0]);
-    path = path.startsWith('.') ? path : './' + path;
-    line = line.replace(/\{\{@link (.*)}}/i, path);
 
     return line;
 }
