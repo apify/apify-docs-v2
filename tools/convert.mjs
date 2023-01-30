@@ -64,6 +64,45 @@ async function transformFrontmatter(lines, paths, output) {
     return slug;
 }
 
+const BASE_URL = 'https://docs-v2.apify.com';
+
+const newRepl = [
+    [
+        'https://sdk.apify.com', // sdk-js
+        `${BASE_URL}/sdk-js`,
+    ],
+    [
+        'https://docs.apify.com(/api)?/apify-', // client-js, client-python
+        `${BASE_URL}/`,
+    ],
+    [
+        'https://docs.apify.com(/api)?/cli', // cli
+        `${BASE_URL}/cli`,
+    ],
+    [
+        'https://docs.apify.com/(api/v2|tutorials|storage|actors|proxy|web-scraping-101)',
+        '/platform/$1',
+    ],
+    [
+        '/platform/api/v2',
+        '/api/v2',
+    ],
+    [
+        'https://docs.apify.com/webhooks',
+        '/platform/integrations/webhooks',
+    ],
+    [
+        'https://developers.apify.com/academy/(apify-platform/)?',
+        '/academy/',
+    ],
+].map(([from, to]) => [new RegExp(from, 'g'), to]);
+
+function useCustomReplacements(line) {
+    return newRepl.reduce((acc, [from, to]) => {
+        return acc.replace(from, to);
+    }, line);
+}
+
 async function transformLine(line, cwd) {
     if (line.match(/```JavaScript/i)) {
         line = line.replace(/```JavaScript/i, '```js');
@@ -108,6 +147,8 @@ async function transformLine(line, cwd) {
             line = line.replace(/\{\{@asset (.*)}}/i, path);
         }
     }
+
+    line = useCustomReplacements(line);
 
     return line;
 }
