@@ -124,7 +124,9 @@ export default function ApiDocs() {
             title={`${siteConfig.title} · ${siteConfig.tagline}`}
             description={siteConfig.description}>
             <div id="nav-empty-space"/>
-            <div style={{ margin: '0 auto' }} id="apiary-container"/>
+            <div style={{ width: '100%' }}>
+                <div id="apiary-container"/>
+            </div>
         </Layout>
     );
 }
