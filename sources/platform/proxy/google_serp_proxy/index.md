@@ -42,7 +42,7 @@ When using Google SERP proxy, the username should always be:
 groups-GOOGLE_SERP
 ```
 
-Unlike [datacenter](../datacenter_proxy/index.md) parameter.
+Unlike [datacenter](../datacenter_proxy/index.md) or [residential](../residential_proxy/index.md) proxies, there is no [session](../connection_settings.md) parameter.
 
 If you use the `country` [parameter](../connection_settings.md), the Google proxy location is used if you access a website whose hostname (stripped of `www.`) starts with **google**.
 

@@ -188,7 +188,7 @@ Finally, we can put all the extracted information together and push them to the 
 
 #### Storing the data
 
-As the last step, we need to store the scraped data in a dataset on the Apify platform, so that we can access it later. We do that through the [Apify API Client for Python](https://docs-v2.apify.com/client-python/), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
+As the last step, we need to store the scraped data in a dataset on the Apify platform, so that we can access it later. We do that through the [Apify API Client for Python](https://docs-v2.apify.com/client-python), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
 
 First, we initialize an `ApifyClient` instance. All the necessary arguments are automatically provided to the actor process as environment variables accessible in Python through the `os.environ` mapping. We will save the data into the default dataset belonging to the actor run, so we create a sub-client for working with that dataset, and push the data into it using its `.push_items(...)` method.
 
@@ -219,7 +219,7 @@ Earlier in this tutorial, we learned how to scrape data from the web in Python u
 
 ## Processing previously scraped data
 
-In the previous tutorial, we set out to select our next holiday destination based on the forecast of the upcoming weather there. We have written an actor that scrapes the BBC Weather forecast for the upcoming two weeks for three destinations: Prague, New York, and Honolulu. It then saves the scraped data to a [dataset](https://docs.apify.com/storage/dataset) on the Apify platform.
+In the previous tutorial, we set out to select our next holiday destination based on the forecast of the upcoming weather there. We have written an actor that scrapes the BBC Weather forecast for the upcoming two weeks for three destinations: Prague, New York, and Honolulu. It then saves the scraped data to a [dataset](/platform/storage/dataset) on the Apify platform.
 
 Now, we need to process the scraped data and make a simple visualization that will help us decide which location has the best weather, and will therefore become our next holiday destination.
 
@@ -255,7 +255,7 @@ import pandas
 
 ### Scraping the data
 
-Next, we need to run the weather scraping actor and access its results. We do that through the [Apify API Client for Python](https://docs-v2.apify.com/client-python/), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
+Next, we need to run the weather scraping actor and access its results. We do that through the [Apify API Client for Python](https://docs-v2.apify.com/client-python), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
 
 First, we initialize an `ApifyClient` instance. All the necessary arguments are automatically provided to the actor process as environment variables accessible in Python through the `os.environ` mapping. We need to run the actor from the previous tutorial, which we have named `bbc-weather-scraper`, and wait for it to finish. So, we create a sub-client for working with that actor and run the actor through it. We then check whether the actor run has succeeded. If so, we create a client for working with its default dataset.
 
@@ -310,7 +310,7 @@ axes.legend(loc='best')
 axes.figure.tight_layout()
 ```
 
-As the last step, we need to save the plot to a record in a [key-value store](https://docs.apify.com/storage/key-value-store) on the Apify platform, so that we can access it later. We save the rendered figure with the plot to an in-memory buffer, and then save the contents of that buffer to the default key-value store of the actor run through its resource subclient.
+As the last step, we need to save the plot to a record in a [key-value store](/platform/storage/key-value-store) on the Apify platform, so that we can access it later. We save the rendered figure with the plot to an in-memory buffer, and then save the contents of that buffer to the default key-value store of the actor run through its resource subclient.
 
 ```python
 # Get the resource sub-client for working with the default key-value store of the run

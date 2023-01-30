@@ -22,7 +22,7 @@ Before moving on, give these valuable resources a quick lookover:
 - Refamiliarize with the various available data on the [Request object](https://crawlee.dev/api/core/class/Request).
 - Learn about the [`failedRequestHandler` function](https://crawlee.dev/api/browser-crawler/interface/BrowserCrawlerOptions#failedRequestHandler).
 - Understand how to use the [`errorHandler`](https://crawlee.dev/api/browser-crawler/interface/BrowserCrawlerOptions#errorHandler) function to handle request failures.
-- Ensure you are comfortable using [key-value stores](https://docs-v2.apify.com/sdk-js/api/apify/class/KeyValueStore) and [datasets](https://docs-v2.apify.com/sdk-js/api/apify/class/Dataset), and understand the differences between the two storage types.
+- Ensure you are comfortable using [key-value stores](https://docs-v2.apify.com/sdk-js/docs/guides/data-storage#key-value-store) and [datasets](https://docs-v2.apify.com/sdk-js/docs/api/dataset#__docusaurus), and understand the differences between the two storage types.
 
 ## Knowledge check 📝 {#quiz}
 

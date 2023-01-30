@@ -11,9 +11,9 @@ slug: /tutorials/integrations/run-actor-and-retrieve-data-via-api
 
 ---
 
-The most popular way of [integrating](https://help.apify.com/en/collections/1669767-integrating-with-apify) the Apify platform with an external project/application is by programmatically running an [actor](../actors/index.md), waiting for it to complete its run, then collecting its data and using it within the project. Though this process sounds somewhat complicated, it's actually quite easy to do; however, due to the plethora of features offered on the Apify platform, new users may not be sure how exactly to implement this type of integration. So, let's dive in and see how you can do it.
+The most popular way of [integrating](https://help.apify.com/en/collections/1669767-integrating-with-apify) the Apify platform with an external project/application is by programmatically running an [actor](../actors/index.md) or [task](../actors/tasks.md), waiting for it to complete its run, then collecting its data and using it within the project. Though this process sounds somewhat complicated, it's actually quite easy to do; however, due to the plethora of features offered on the Apify platform, new users may not be sure how exactly to implement this type of integration. So, let's dive in and see how you can do it.
 
-> Remember to check out our [API documentation](/api/v2/) with examples in different languages and a live API console. We also recommend testing the API with a nice desktop client like [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest).
+> Remember to check out our [API documentation](/api/v2) with examples in different languages and a live API console. We also recommend testing the API with a nice desktop client like [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest).
 
 There are 2 main ways of using the Apify API:
 
@@ -165,7 +165,7 @@ Once again, the final response will be the **run info object**; however, now its
 
 #### Webhooks {#webhooks}
 
-If you have a server, [webhooks](../integrations/webhooks/index.md) has occurred.
+If you have a server, [webhooks](../integrations/webhooks/index.md) are the most elegant and flexible solution for integrations with Apify. You can simply set up a webhook for any actor or task, and that webhook will send a POST request to your server after an [event](../integrations/webhooks/events.md) has occurred.
 
 Usually, this event is a successfully finished run, but you can also set a different webhook for failed runs, etc.
 
@@ -195,11 +195,11 @@ Once a status of `SUCCEEDED` or `FAILED` has been received, we know the run has 
 
 Unless you used the [synchronous call](#synchronous-flow) mentioned above, you will have to make one additional request to the API to retrieve the data.
 
-The **run info** JSON also contains the IDs of the default [dataset](../storage/dataset.md) that are allocated separately for each run, which is usually everything you need. The fields are called `defaultDatasetId` and `defaultKeyValueStoreId`.
+The **run info** JSON also contains the IDs of the default [dataset](../storage/dataset.md) and [key-value store](../storage/key_value_store.md) that are allocated separately for each run, which is usually everything you need. The fields are called `defaultDatasetId` and `defaultKeyValueStoreId`.
 
 #### Retrieving a dataset {#retrieve-a-dataset}
 
-> If you are scraping products, or any list of items with similar fields, the [dataset](https://docs.apify.com/storage/dataset) should be your storage of choice. Don't forget though, that dataset items are immutable. This means that you can only add to the dataset, and not change the content that is already inside it.
+> If you are scraping products, or any list of items with similar fields, the [dataset](/platform/storage/dataset) should be your storage of choice. Don't forget though, that dataset items are immutable. This means that you can only add to the dataset, and not change the content that is already inside it.
 
 Retrieving the data from a dataset is simple. Just send a GET request to the [**Get items**](/api/v2#/reference/datasets/item-collection/get-items) endpoint and pass the `defaultDatasetId` into the URL. For a GET request to the default dataset, no token is needed.
 

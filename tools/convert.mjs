@@ -103,7 +103,7 @@ function useCustomReplacements(line) {
     }, line);
 }
 
-async function transformLine(line, cwd) {
+function convertCodeLang(line) {
     if (line.match(/```JavaScript/i)) {
         line = line.replace(/```JavaScript/i, '```js');
     }
@@ -119,6 +119,12 @@ async function transformLine(line, cwd) {
     if (line.match(/```GraphQL/i)) {
         line = line.replace(/```GraphQL/i, '```graphql');
     }
+
+    return line;
+}
+
+async function transformLine(line, cwd) {
+    line = convertCodeLang(line);
 
     if (line.match(/#+ \[]\(#[\w-]+\) .*/)) {
         line = line.replace(/(#+) \[]\(#([\w-]+)\) (.*)/i, '$1 $3 {#$2}');
@@ -295,13 +301,57 @@ for (const source of sources) {
     }
 }
 
-// iterate once again to fix absolute links between sources
-for (const { path, output: input, slug, source, parentFolder, frontmatter } of processed) {
+function addTabsImports(output) {
+    const idx = output.findIndex((line, no) => no > 0 && line === '---') + 1;
+    const append = ['', `import Tabs from '@theme/Tabs';`, `import TabItem from '@theme/TabItem';`];
+
+    if (output[idx].trim() !== '') {
+        append.push('');
+    }
+
+    output.splice(idx, 0, ...append)
+}
+
+// iterate once again to fix absolute links between sources and code tabs
+for (const { path, output: input, source, parentFolder, frontmatter } of processed) {
     const output = [];
     const description = frontmatter.find(row => row.startsWith('description: '))?.match(/description: (.*)/)[1].trim();
     let descriptionAdded = false;
+    let importsAdded = false;
+    let insideTabs = false;
 
     for (const line of input) {
+        if (line.startsWith('```marked-tabs')) {
+            insideTabs = true;
+            // we might want to make the grouping conditional, but this seems to work good enough too
+            output.push('<Tabs groupId="main">');
+
+            if (!importsAdded) {
+                addTabsImports(output);
+                importsAdded = true;
+            }
+
+            continue;
+        }
+
+        if (insideTabs && line === '```') {
+            insideTabs = false;
+            output.push('</Tabs>');
+            continue;
+        }
+
+        if (insideTabs && line.match(/<marked-tab header="(.*?)" lang="(.*?)">/)) {
+            const lang = line.match(/<marked-tab header=".*?" lang="(.*?)">/)[1];
+            output.push(line.replace(/<marked-tab header="(.*?)" lang="(.*?)">/, '<TabItem value="$1" label="$1">'));
+            output.push('\n```' + convertCodeLang(lang));
+            continue;
+        }
+
+        if (insideTabs && line === '</marked-tab>') {
+            output.push('\n```\n</TabItem>');
+            continue;
+        }
+
         output.push(await transformLinksOnLine(line, parentFolder, source));
 
         if (line.startsWith('# ') && !descriptionAdded) {
@@ -316,4 +366,5 @@ for (const { path, output: input, slug, source, parentFolder, frontmatter } of p
     await fs.writeFile(path, output.join('\n'));
 }
 
+console.log('redirect rules:');
 console.log(redirects.join('\n'));

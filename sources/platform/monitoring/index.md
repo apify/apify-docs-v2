@@ -28,11 +28,11 @@ And if the scraping job fails, you will receive a notification, so there will be
 
 The [monitoring suite](https://apify.com/apify/monitoring) is a collection of [Apify actors](../actors/index.md) that allows you to automate the monitoring of jobs you have running on the [Apify platform](https://apify.com).
 
-You can use it to monitor anything from a single actor to complex projects spanning multiple actors, [tasks](../actors/tasks.md).
+You can use it to monitor anything from a single actor to complex projects spanning multiple actors, [tasks](../actors/tasks.md) or [storages](../storage/index.md).
 
 ## How does it work? {#how-does-it-work}
 
-The monitoring suite is made up of a system of actors: **checkers** and **reporters**. Based on your configuration, the suite will create [schedules](../schedules.md) under your account and use those to run these actors.
+The monitoring suite is made up of a system of actors: **checkers** and **reporters**. Based on your configuration, the suite will create [schedules](../schedules.md) and [webhooks](../integrations/webhooks/index.md) under your account and use those to run these actors.
 
 As the names suggest, the checkers make sure your data is up to standard. Reporters create visualizations of how your actors perform over time and send [notifications](#notifications) about failed runs.
 

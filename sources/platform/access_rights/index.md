@@ -16,7 +16,7 @@ By default, each system resource (actor, key-value store, run, ...) you create i
 
 ## Granting access rights {#granting-access-rights}
 
-You can easily and securely share your own resources - actors, tasks, key-value stores, datasets and request queues using a [granular](https://www.google.com/search?client=firefox-b-d&q=define+granular+permissions) permissions system. This enables you to, for example, allow your colleague to run an [actor](../actors/index.md), but not to modify them.
+You can easily and securely share your own resources - actors, tasks, key-value stores, datasets and request queues using a [granular](https://www.google.com/search?client=firefox-b-d&q=define+granular+permissions) permissions system. This enables you to, for example, allow your colleague to run an [actor](../actors/index.md) or view a [dataset](../storage/dataset.md), but not to modify them.
 
 You can also grant permission to update an actor and build a new version.
 [Storages](../storage/index.md) (key-value stores, request queues and datasets) are sharable the same way with, for example, just **read** permission, or a combination of both **read** and **write** permissions.
@@ -47,7 +47,7 @@ To publish an actor, open it in the [Apify Console](https://console.apify.com), 
 
 ## Permissions {#permissions}
 
-Below are the permissions you can grant via the [access rights](#granting-access-rights) system, [organization account](./organization_account/index.md).
+Below are the permissions you can grant via the [access rights](#granting-access-rights) system, [organization account](./organization_account/index.md) and [publishing in Apify store](../actors/publishing.md).
 
 * The access rights system allows you to manage a **specific** user's permissions for a **specific** resource.
 * The organization account allows you to manage **each** member's permissions for **all** of an organization's resources.

@@ -11,7 +11,7 @@ slug: /tutorials/analyze-pages-and-fix-errors
 
 ---
 
-Debugging is essential in programming. Even if you would not call yourself a programmer, having basic debugging skills will make building and maintaining [scrapers](./apify_scrapers/index.md) on Apify easier. It will help you avoid hiring an expensive developer and solve your issues faster.
+Debugging is essential in programming. Even if you would not call yourself a programmer, having basic debugging skills will make building and maintaining [scrapers](./apify_scrapers/index.md) and [integration actors](./run_actor_and_retrieve_data_via_api.md) on Apify easier. It will help you avoid hiring an expensive developer and solve your issues faster.
 
 This article covers the absolute basics. It discusses the most common problems and the simplest tools for analyzing the issue.
 
@@ -43,7 +43,7 @@ This is a long list, and it is by no means complete. However, if you use the rig
 
 ## Analysis {#analysis}
 
-[Web scraping](../web_scraping_101/index.md) are very specific types of programming. It is not possible to rely on specialized debugging tools, since the code does not output the same results every time.
+[Web scraping](../web_scraping_101/index.md) and [automation](../robotic_process_automation/index.md) are very specific types of programming. It is not possible to rely on specialized debugging tools, since the code does not output the same results every time.
 
 Many issues are edge cases, which occur in just one of a thousand pages or are time-dependent. Because of this, you cannot rely only on [determinism](https://en.wikipedia.org/wiki/Deterministic_algorithm).
 

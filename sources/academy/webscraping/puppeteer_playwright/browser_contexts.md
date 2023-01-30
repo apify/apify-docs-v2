@@ -5,6 +5,9 @@ sidebar_position: 2.6
 slug: /puppeteer-playwright/browser-contexts
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Creating multiple browser contexts {#creating-browser-contexts}
 
 **Learn what a browser context is, how to create one, how to emulate devices, and how to use browser contexts to automate multiple sessions at one time.**
@@ -16,14 +19,22 @@ A [**BrowserContext**](https://playwright.dev/docs/api/class-browsercontext) is 
 When we create a **Browser** object by using the `launch()` function, a single [browser context](https://playwright.dev/docs/browser-contexts) is automatically created. In order to create more, we use the [`browser.newContext()`](https://playwright.dev/docs/api/class-browser#browser-new-context) function in Playwright, and [`browser.createIncognitoBrowserContext`](https://pptr.dev/#?product=Puppeteer&version=v14.1.0&show=api-browsercreateincognitobrowsercontextoptions) in Puppeteer.
 
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 const myNewContext = await browser.newContext();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
-const myNewContext = await browser.createIncognitoBrowserContext();
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
+const myNewContext = await browser.createIncognitoBrowserContext();
+
+```
+</TabItem>
+</Tabs>
 
 ## Persistent vs non-persistent browser contexts {#persistent-vs-non-persistent}
 
@@ -31,8 +42,10 @@ In both examples above, we are creating a new **non-persistent** browser context
 
 In Puppeteer, the **default** browser context is the persistent one, while in Playwright we have to use use [`BrowserType.launchPersistentContext()`](https://playwright.dev/docs/api/class-browsertype#browser-type-launch-persistent-context) instead of `BrowserType.launch()` in order for the default context to be persistent.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 // Here, we launch a persistent browser context. The first
@@ -42,8 +55,12 @@ const browser = await chromium.launchPersistentContext('./persistent-context', {
 const page = await browser.newPage();
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -53,15 +70,19 @@ const browser = await puppeteer.launch({ headless: false });
 const page = await browser.newPage();
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Using browser contexts {#using-browser-contexts}
 
 In both Playwright and Puppeteer, various devices (iPhones, iPads, Androids, etc.) can be emulated by using [`playwright.devices`](https://playwright.dev/docs/api/class-playwright#playwright-devices) or [`puppeteer.devices`](https://pptr.dev/#?product=Puppeteer&version=v14.1.0&show=api-puppeteerdevices). We'll be using this to create two different browser contexts, one emulating an iPhone, and one emulating an Android:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium, devices } from 'playwright';
 
 // Launch the browser
@@ -82,8 +103,12 @@ const androidPage = await androidContext.newPage();
 // The code in the next step will go here
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 // Launch the browser
@@ -108,8 +133,10 @@ await androidPage.emulate(android);
 // The code in the next step will go here
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Then, we'll make both `iPhonePage` and `androidPage` visit [deviceinfo.me](https://www.deviceinfo.me/), which is a website that  displays the type of device you have, the operating system you're using, and more device and location-specific information.
 
@@ -133,22 +160,30 @@ When working with multiple browser contexts, it can be difficult to keep track o
 
 Let's go ahead and use this function to loop through all of our browser contexts and make them log **Site visited** to the console whenever the website is visited:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 for (const context of browser.contexts()) {
     // In Playwright, lots of events are supported in the "on" function of
     // a BrowserContext instance
     context.on('request', (req) => req.url() === 'https://www.deviceinfo.me/' && console.log('Site visited'));
 }
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 for (const context of browser.browserContexts()) {
     // In Puppeteer, only three events are supported in the "on" function
     // of a BrowserContext instance
     context.on('targetchanged', () => console.log('Site visited'));
 }
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 After adding this above our `page.goto`s and running the code once again, we see this logged to the console:
 

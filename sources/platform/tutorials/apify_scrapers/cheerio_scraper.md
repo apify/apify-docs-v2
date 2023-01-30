@@ -321,7 +321,8 @@ We iterate through the items we found, build actor detail URLs from the availabl
 those URLs into the request queue. We need to specify the label too, otherwise our page function wouldn't know
 how to route those requests.
 
->If you're wondering how we know the structure of the URL, see the [Getting started with Apify Scrapers](./getting_started.md) tutorial again.
+>If you're wondering how we know the structure of the URL, see the [Getting started
+with Apify Scrapers](intro-scraper-tutorial) tutorial again.
 
 ### [](#plugging-it-into-the-page-function) Plugging it into the Page function
 
@@ -481,7 +482,7 @@ Thank you for reading this whole tutorial! Really! It's important to us that our
 
 ## [](#whats-next) What's next?
 
-* Check out the [Apify SDK](https://docs-v2.apify.com/sdk-js/) and its [Getting started](https://docs-v2.apify.com/sdk-js/docs/guides/apify-platform) tutorial if you'd like to try building your own actors. It's a bit more complex and involved than writing a simple `pageFunction`, but it allows you to fine-tune all the details of your scraper to your liking.
+* Check out the [Apify SDK](https://sdk.apify.com/) and its [Getting started](https://sdk.apify.com/docs/guides/getting-started) tutorial if you'd like to try building your own actors. It's a bit more complex and involved than writing a simple `pageFunction`, but it allows you to fine-tune all the details of your scraper to your liking.
 * [Take a deep dive into actors](https://docs.apify.com/actors), from how they work to [publishing](https://docs.apify.com/actors/publishing) them in Apify Store, and even [making money](https://blog.apify.com/make-regular-passive-income-developing-web-automation-actors-b0392278d085/) on actors.
 * Found out you're not into the coding part but would still to use Apify actors? Check out our [ready-made solutions](https://apify.com/store) or [order a custom actor](https://apify.com/custom-solutions) from an Apify-certified developer.
 

@@ -41,7 +41,7 @@ Because [all objects in JavaScript are just references](https://www.freecodecamp
 
 ### Persisting cache to the key-value store {#persisting-cache-to-the-key-value-store}
 
-The cache lives only in memory. This is the easiest and fastest way to use a cache. One disadvantage is that if the actor run [migrates to a new server](../actors/development/state_persistence.md).
+The cache lives only in memory. This is the easiest and fastest way to use a cache. One disadvantage is that if the actor run [migrates to a new server](../actors/development/state_persistence.md), is aborted or crashes, we lose the cached data. That is not a tragedy but repopulating the cache will waste some resources. Fortunately, this has a simple solution in actors: we can persist arbitrary data into the [key-value store](../storage/key_value_store.md).
 
 ```js
 import { Actor } from 'apify';

@@ -4,6 +4,9 @@ description: Learn how to integrate your actors by setting up automated builds, 
 slug: /actors/development/continuous-integration
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Continuous integration for actors
 
 **Learn how to integrate your actors by setting up automated builds, deploys, and testing for your actors using GitHub Actions or Bitbucket Pipelines.**
@@ -22,8 +25,10 @@ Below is an example GitHub Actions workflow that will run your tests and build y
 
 Each time you push to the **main/master** branch, a new **latest** version of your actor will be built. When you push to **develop**, a **beta** version will be built.
 
-```marked-tabs
-<marked-tab header="latest.yml" lang="yaml">
+<Tabs groupId="main">
+<TabItem value="latest.yml" label="latest.yml">
+
+```yaml
 name: Test and build latest version
 on:
   push:
@@ -42,10 +47,14 @@ jobs:
         env:
           webhook_url: ${{ secrets.LATEST_BUILD_URL }}
           webhook_secret: ${{ secrets.APIFY_TOKEN }}
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="beta.yml" lang="yaml">
+<TabItem value="beta.yml" label="beta.yml">
+
+```yaml
 name: Test and build beta version
 on:
   push:
@@ -63,8 +72,10 @@ jobs:
         env:
           webhook_url: ${{ secrets.BETA_BUILD_URL }}
           webhook_secret: ${{ secrets.APIFY_TOKEN }}
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 [Find the Bitbucket version here](https://help.apify.com/en/articles/1861038-setting-up-continuous-integration-for-apify-actors-on-bitbucket).
 
@@ -128,7 +139,7 @@ For most ongoing monitoring scenarios, we recommend using the [Apify monitoring 
 
 ### Ongoing testing
 
-If you have advanced and specific requirements, you can create your own test actors, which you can [schedule](../../schedules.md)).
+If you have advanced and specific requirements, you can create your own test actors, which you can [schedule](../../schedules.md) to regularly run and validate your actors' results. For this, you can use our **Actor Testing** ([pocesar/actor-testing](https://apify.com/pocesar/actor-testing)) actor ([see the guide](./testing_and_maintenance.md)).
 
 If using this approach, you can set up notifications using the **Send Mail** ([apify/send-mail](https://apify.com/apify/send-mail)) and **Send Slack Message** ([katerinahronik/slack-message](https://apify.com/katerinahronik/slack-message)) actors.
 

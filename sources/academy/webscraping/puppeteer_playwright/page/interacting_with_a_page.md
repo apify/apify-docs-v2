@@ -5,6 +5,9 @@ sidebar_position: 1
 slug: /puppeteer-playwright/page/interacting-with-a-page
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Interacting with a page {#interacting-with-a-page}
 
 **Learn how to programmatically do actions on a page such as clicking, typing, and pressing keys. Also, discover a common roadblock that comes up when automating.**
@@ -29,16 +32,24 @@ Though it seems complex, the wonderful **Page** API makes all of these actions e
 
 Let's first focus on the first 3 steps listed above. By using `page.click()` and the CSS selector of the element to click, we can click an element:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="JavaScript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```JavaScript
 // Click the "I agree" button
 await page.click('button:has-text("I agree")');
-</marked-tab>
-<marked-tab header="Puppeteer" lang="JavaScript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```JavaScript
 // Click the "I agree" button
 await page.click('button + button');
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 With `page.click()`, Puppeteer and Playwright actually drag the mouse and click, allowing the bot to act more human-like. This is different from programmatically clicking with `Element.click()` in vanilla client-side JavaScript.
 
@@ -62,8 +73,10 @@ await page.keyboard.press('Enter');
 
 So far, we've got this:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -83,8 +96,12 @@ await page.keyboard.press('Enter');
 
 await page.waitForTimeout(10000)
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -104,8 +121,10 @@ await page.keyboard.press('Enter');
 
 await page.waitForTimeout(10000)
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 When we run it, we leave off on the results page:
 
@@ -113,8 +132,10 @@ When we run it, we leave off on the results page:
 
 Great! So now all we have to do is click the first result which matches the CSS selector `.g a`:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -134,8 +155,12 @@ await page.click('.g a');
 
 await page.waitForTimeout(10000)
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 // This code will throw an error!
 import puppeteer from 'puppeteer';
 
@@ -156,8 +181,10 @@ await page.click('.g a');
 
 await page.waitForTimeout(10000)
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 But wait, when we try to run the Puppeteer code, we run into this nasty error:
 

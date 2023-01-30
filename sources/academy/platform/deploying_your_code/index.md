@@ -6,6 +6,9 @@ category: apify platform
 slug: /deploying-your-code
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Deploying your code to Apify {#deploying}
 
 **In this course learn how to take an existing project of yours and deploy it to the Apify platform as an actor in just a few minutes!**
@@ -41,14 +44,20 @@ There are four main steps to turning a piece of code into an actor:
 
 For this section, we'll be turning this example project into an actor:
 
-```marked-tabs
-<marked-tab header="JavaScript" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="JavaScript" label="JavaScript">
+
+```javascript
 // index.js
 const addAllNumbers = (...nums) => nums.reduce((total, curr) => (total += curr));
 
 console.log(addAllNumbers(1, 2, 3, 4)) // -> 10
-</marked-tab>
-<marked-tab header="Python" lang="python">
+
+```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
 # index.py
 def add_all_numbers (nums):
     total = 0
@@ -59,8 +68,10 @@ def add_all_numbers (nums):
     return total
 
 print(add_all_numbers([1, 2, 3, 4])) # -> 10
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > For all lessons in this section, we'll have examples for both Node.js and Python so that you can follow along in either language.
 

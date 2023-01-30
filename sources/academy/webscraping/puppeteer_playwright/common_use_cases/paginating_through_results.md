@@ -5,6 +5,9 @@ sidebar_position: 2
 slug: /puppeteer-playwright/common-use-cases/paginating-through-results
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Paginating through results {#paginating-through-results}
 
 **Learn how to paginate through results on websites that use either page number-based pagination or dynamic lazy-loading pagination.**
@@ -45,8 +48,10 @@ What we want to do now is grab the last page number, so that we know exactly how
 
 Let's grab this number now with a little bit of code:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -67,8 +72,12 @@ const lastPage = +(await lastPageElement.getAttribute('aria-label')).replace(/\D
 console.log(lastPage);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -89,8 +98,10 @@ const lastPage = +lastPageLabel.replace(/\D/g, '');
 console.log(lastPage);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > Learn more about the `:nth-last-child` pseudo-class [on W3Schools](https://www.w3schools.com/cssref/sel_nth-last-child.asp). It works similar to `:nth-child`, but starts from the bottom of the parent element's children instead of from the top.
 
@@ -102,8 +113,10 @@ When we run this code, here's what we see:
 
 And since we're already on the first page, we'll go ahead and scrape the repos from it. However, since we are going to reuse this logic on the other pages as well, let's create a function that will handle the data collection and reliably return a nice array of results:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -143,8 +156,12 @@ repositories.push(...(await scrapeRepos(page)));
 console.log(repositories);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -184,8 +201,10 @@ repositories.push(...(await scrapeRepos(page)));
 console.log(repositories);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### Making a request for each results page {#making-a-request-for-each-results-page}
 
@@ -237,8 +256,10 @@ console.log(repositories.length);
 
 After all is said and done, here's what our final code looks like:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -295,8 +316,12 @@ await Promise.all(promises);
 console.log(repositories.length);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -354,8 +379,10 @@ await Promise.all(promises);
 console.log(repositories.length);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 If we remember correctly, Facebook has 115 Github repositories (at the time of writing this lesson), so the final output should be:
 
@@ -373,8 +400,10 @@ Take a moment to look at and scroll through the women's clothing section [on Abo
 
 We're going to scrape the brand and price from the first 75 results on the **About You** page linked above. Here's our basic setup:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -388,8 +417,12 @@ const page = await browser.newPage();
 await page.goto('https://www.aboutyou.com/c/women/clothing-20204');
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -403,8 +436,10 @@ const page = await browser.newPage();
 await page.goto('https://www.aboutyou.com/c/women/clothing-20204');
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### Auto scrolling {#auto-scrolling}
 
@@ -420,29 +455,39 @@ let totalScrolled = 0;
 
 Then, within a `while` loop that ends once the length of the **products** array has reached 75, we'll run some logic that scrolls down the page and waits 1 second before running again.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 while (products.length < 75) {
     await page.mouse.wheel(0, itemHeight * 3);
     totalScrolled += itemHeight * 3;
     // Allow the products 1 second to load
     await page.waitForTimeout(1000);
 }
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 while (products.length < 75) {
     await page.mouse.wheel({ deltaY: itemHeight * 3 });
     totalScrolled += itemHeight * 3;
     // Allow the products 1 second to load
     await page.waitForTimeout(1000);
 }
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 This will work; however, what if we reach the bottom of the page and there are say, only 55 total products on the page? That would result in an infinite loop. Because of this edge case, we have to keep track of the constantly changing available scroll height on the page.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 while (products.length < 75) {
     const scrollHeight = await page.evaluate(() => document.body.scrollHeight);
 
@@ -462,8 +507,12 @@ while (products.length < 75) {
         break;
     }
 }
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 while (products.length < 75) {
     const scrollHeight = await page.evaluate(() => document.body.scrollHeight);
 
@@ -483,8 +532,10 @@ while (products.length < 75) {
         break;
     }
 }
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Now, the `while` loop will exit out if we've reached the bottom of the page.
 
@@ -516,8 +567,10 @@ products.push(...newItems);
 
 With everything completed, this is what we're left with:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -571,8 +624,12 @@ while (products.length < 75) {
 console.log(products.slice(0, 75));
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -626,8 +683,10 @@ while (products.length < 75) {
 console.log(products.slice(0, 75));
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Quick note {#quick-note}
 

@@ -16,7 +16,7 @@ This section contains everything you need to get you up and running with Apify, 
 
 ## The basics
 
-[Quick start](./quick_start.md).
+[Quick start](./quick_start.md) will show you how to [run existing actors](./quick_start.md) and [create your first Apify actor]({{@link tutorials/quick_start.md#create-an-actor}}).
 
 [Set up your first web scraping job](./apify_scrapers/getting_started.md) with a step-by-step guide.
 
@@ -34,13 +34,13 @@ Or, if the solution you need is beyond your skillset or schedule, you can always
 Building your own actors requires some experience with coding. If you're ready, get started with the [Apify SDK](https://docs-v2.apify.com/sdk-js/) and [Crawlee](https://crawlee.dev/docs/quick-start).
 
 "But wait, I don't speak JavaScript", we hear you say. Worry not! While we currently only have an SDK for JavaScript, your actor can be in any programming language. If you use Python, you can now [scrape data with Beautiful Soup](./scrape_data_using_python.md)
-and [parse the results with Pandas](./process_data_using_python.md).
+and [parse the results with Pandas](./process_data_using_python.md) on the Apify platform. Prefer PHP? Cool! Here's how you can [use Apify in your PHP projects](./use_apify_from_php.md).
 
 If you're interested in publishing your actors for others to use, check our [building public actors](./building_public_actors.md) guide. It contains useful information you'll need to make your actor as good as it can be.
 
 ## Advanced use cases
 
-Check out our other tutorials that cover more specific and advanced scenarios such as [scraping dynamic content](./scraping_dynamic_content.md) for your projects.
+Check out our other tutorials that cover more specific and advanced scenarios such as [scraping dynamic content](./scraping_dynamic_content.md), [integrating](../integrations/index.md) your projects with Apify, [using your actors via API](./run_actor_and_retrieve_data_via_api.md), or setting up [monitoring](../monitoring/index.md) for your projects.
 
 ## Finally
 

@@ -5,6 +5,9 @@ sidebar_position: 2
 slug: /puppeteer-playwright/executing-scripts/collecting-data
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Collecting data {#collecting-data}
 
 **Learn how to collect data from a page with evaluate functions, then how to safely collect it by using a second library called Cheerio.**
@@ -24,8 +27,10 @@ There are two main ways to collect data with Playwright and Puppeteer:
 
 Here is the base set up for our code, upon which we'll be building off of in this lesson:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -38,8 +43,12 @@ await page.goto('https://demo-webstore.apify.org/search/on-sale');
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -52,8 +61,10 @@ await page.goto('https://demo-webstore.apify.org/search/on-sale');
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 <!-- > Notice the slightly different syntax between Playwright and Puppeteer with `waitForLoadState('DOMContentLoaded')` and `waitForNavigation({ waitUntil: 'DOMContentLoaded' })`. Sometimes, the differences are fairly subtle like this, but later on we'll run into some more significant differences. -->
 
@@ -157,8 +168,10 @@ const $ = load(await page.content());
 
 Here's our full code so far:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -172,8 +185,12 @@ const $ = load(await page.content());
 // code will go here
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -187,8 +204,10 @@ const $ = load(await page.content());
 // code will go here
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Now, to loop through all of the products, we'll make use of the `$` object and loop through them while safely in the server-side context rather than running the code in the browser. Notice that this code is nearly exactly the same as the jQuery code above - it is just not running inside of a `page.evaluate()` in the browser context.
 
@@ -216,8 +235,10 @@ console.log(products);
 
 Here's what our final optimized code looks like:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import { load } from 'cheerio';
 
@@ -245,8 +266,12 @@ const products = productCards.map((element) => {
 console.log(products);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import { load } from 'cheerio';
 
@@ -274,8 +299,10 @@ const products = productCards.map((element) => {
 console.log(products);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

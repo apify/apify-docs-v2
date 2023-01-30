@@ -13,7 +13,7 @@ slug: /access-rights/organization-account/how-to-use
 
 Once an account becomes an organization, you can no longer log into it. Instead, you can switch into the organization to manage account information, memberships and actor runs.
 
-While you can't manage an organization account via [API](/api/v2/), you can still manage its runs and resources via API like you would with any other account.
+While you can't manage an organization account via [API](/api/v2), you can still manage its runs and resources via API like you would with any other account.
 
 **[See our video tutorial](https://www.youtube.com/watch?v=BIL6HqtnvKk) on organization accounts.**
 
@@ -55,4 +55,4 @@ The API tokens' functionality reflects your account's permissions in the organiz
 
 If you have the **manage organization access keys** permission, you are able to view and use organization-wide API tokens. These are shared across the organization, so everyone with the **manage organization access keys** permission can use them for organization-wide integrations.
 
-For a [detailed breakdown of all Apify API endpoints](/api/v2/) and help on using them, visit the API.
+For a [detailed breakdown of all Apify API endpoints](/api/v2) and help on using them, visit the API.

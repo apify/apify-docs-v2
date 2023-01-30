@@ -19,14 +19,14 @@ When a migration happens, you want to do a so-called "state transition", which m
 
 ## Learning 🧠 {#learning}
 
-Read this [article](https://docs.apify.com/actors/development/state-persistence) on migrations and dealing with state transitions.
+Read this [article](/platform/actors/development/state-persistence) on migrations and dealing with state transitions.
 
-Before moving forward, read about actor [events](https://docs-v2.apify.com/sdk-js/api/apify/class/PlatformEventManager) and how to listen for them.
+Before moving forward, read about actor [events](https://docs-v2.apify.com/sdk-js/docs/api/apify#apifyevents) and how to listen for them.
 
 ## Knowledge check 📝 {#quiz}
 
 1. Actors have an option the **Settings** tab to **Restart on error**. Would you use this feature for regular actors? When would you use this feature?
-2. Migrations happen randomly, but by [aborting **gracefully**](https://docs.apify.com/actors/running#aborting-runs), you can simulate a similar situation. Try this out on the platform and observe what happens. What changes occur, and what remains the same for the restarted actor's run?
+2. Migrations happen randomly, but by [aborting **gracefully**](/platform/actors/running#aborting-runs), you can simulate a similar situation. Try this out on the platform and observe what happens. What changes occur, and what remains the same for the restarted actor's run?
 3. Why don't you (usually) need to add any special migration handling code for a standard crawling/scraping actor? Are there any features in the Crawlee/Apify SDK that handle this under the hood?
 4. How can you intercept the migration event? How much time do you have after this event happens and before the actor migrates?
 5. When would you persist data to the default key-value store instead of to a named key-value store?

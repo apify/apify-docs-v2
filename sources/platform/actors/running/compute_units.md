@@ -11,7 +11,7 @@ slug: /actors/running/compute-units
 
 ---
 
-**TL;DR: An [actor](../index.md) for one hour consumes 1 compute unit.**
+**TL;DR: An [actor](../index.md) running with 1 GB of [memory](./memory_and_cpu.md) for one hour consumes 1 compute unit.**
 
 A compute unit (CU) is the unit of measurement for the resources consumed by actor runs and builds. We charge you for using actors based on CU consumption.
 

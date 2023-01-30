@@ -12,7 +12,7 @@ slug: /get-most-of-actors
 
 ---
 
-[Apify Store](https://apify.com/store) is home to hundreds of public actors available to the Apify community. Anyone is welcome to [publish actors](https://docs.apify.com/actors/publishing) in the store, and you can even [monetize your actors](https://get.apify.com/monetize-your-code) by renting them to users of the platform.
+[Apify Store](https://apify.com/store) is home to hundreds of public actors available to the Apify community. Anyone is welcome to [publish actors](/platform/actors/publishing) in the store, and you can even [monetize your actors](https://get.apify.com/monetize-your-code) by renting them to users of the platform.
 
 In this section, we will go over some of the practical steps you can take to ensure the high quality of your public actors. You will learn:
 

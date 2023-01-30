@@ -11,15 +11,15 @@ slug: /expert-scraping-with-apify/apify-api-and-client
 
 ---
 
-There are two main ways to programmatically interact with the Apify platform: by directly using [Apify's RESTful API](/api/v2/), or by using the [JavaScript](https://docs-v2.apify.com/client-js/) and [Python](https://docs-v2.apify.com/client-python/) API clients. In the next two lessons, we'll be focusing on the first two.
+There are two main ways to programmatically interact with the Apify platform: by directly using [Apify's RESTful API](/api/v2), or by using the [JavaScript](https://docs-v2.apify.com/client-js) and [Python](https://docs-v2.apify.com/client-python) API clients. In the next two lessons, we'll be focusing on the first two.
 
 > Apify's API and JavaScript API client allow us to do anything a regular user can do when interacting with the platform's web interface, only programmatically.
 
 ## Learning 🧠 {#learning}
 
-- Scroll through the [Apify API docs](/api/v2/) (there's a whole lot there, so you're not expected to memorize everything).
-- Read about the Apify client in [Apify's docs](https://docs-v2.apify.com/client-js/). It can also be seen on [Github](https://github.com/apify/apify-client-js) and [NPM](https://www.npmjs.com/package/apify-client).
-- Learn about the [`Actor.newClient()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#newClient) function in the Apify SDK.
+- Scroll through the [Apify API docs](/api/v2) (there's a whole lot there, so you're not expected to memorize everything).
+- Read about the Apify client in [Apify's docs](https://docs-v2.apify.com/client-js). It can also be seen on [Github](https://github.com/apify/apify-client-js) and [NPM](https://www.npmjs.com/package/apify-client).
+- Learn about the [`Actor.newClient()`](https://docs-v2.apify.com/sdk-js/docs/api/apify#apifynewclientoptions) function in the Apify SDK.
 - Skim through [this article](https://help.apify.com/en/articles/2868670-how-to-pass-data-from-web-scraper-to-another-actor) about API integration (this article is old; however, still relevant).
 
 ## Knowledge check 📝 {#quiz}

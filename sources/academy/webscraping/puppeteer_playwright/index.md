@@ -6,6 +6,9 @@ category: web scraping & automation
 slug: /puppeteer-playwright
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Puppeteer & Playwright course {#puppeteer-playwright-course}
 
 **Learn in-depth how to use two of the most popular Node.js libraries for controlling a headless browser - Puppeteer and Playwright.**
@@ -37,14 +40,22 @@ For this course, we'll be jumping right into the features of these awesome libra
 5. Create a new file named **index.js**
 6. Install the library you're going to be using during this course:
 
-```marked-tabs
-<marked-tab header="Install Playwright" lang="shell">
+<Tabs groupId="main">
+<TabItem value="Install Playwright" label="Install Playwright">
+
+```shell
 npm install playwright
-</marked-tab>
-<marked-tab header="Install Puppeteer" lang="shell">
-npm install puppeteer
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Install Puppeteer" label="Install Puppeteer">
+
+```shell
+npm install puppeteer
+
+```
+</TabItem>
+</Tabs>
 
 > For a more in-depth guide on how to set up the basic environment we'll be using in this tutorial, check out the [**Computer preparation**](../web_scraping_for_beginners/data_collection/computer_preparation.md) lesson in the **Web scraping for beginners** course
 

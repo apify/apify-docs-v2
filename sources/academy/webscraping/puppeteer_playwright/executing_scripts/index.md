@@ -5,6 +5,9 @@ sidebar_position: 2.3
 slug: /puppeteer-playwright/executing-scripts
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Executing scripts {#executing-scripts}
 
 **Understand the two different contexts which your code can be run in, and how to run custom scripts in the context of the browser.**
@@ -47,8 +50,10 @@ The reason this is happening is because we're trying to run browser-side code on
 
 We will use `page.evaluate()` to run our code in the browser. This method takes a callback as its first parameter, which will be executed within the browser.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -63,8 +68,12 @@ await page.evaluate(() => {
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -79,8 +88,10 @@ await page.evaluate(() => {
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Here's what we see in the automated browser when we run this code:
 
@@ -98,8 +109,10 @@ Now, let's say we want to change the title of the document to be this random str
 
 > It's best practice to make this second parameter an object, as you are usually passing more than one value in.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -116,8 +129,12 @@ await page.evaluate(({ randomString }) => {
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -134,8 +151,10 @@ await page.evaluate(({ randomString }) => {
 await page.waitForTimeout(10000)
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Now, when we run this code, we can see the title change on the page's tab:
 

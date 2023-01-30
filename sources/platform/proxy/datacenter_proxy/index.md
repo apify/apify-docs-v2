@@ -13,7 +13,7 @@ slug: /proxy/datacenter-proxy
 
 Datacenter proxies are a cheap, fast and stable way to mask your identity online. When you access a website using a datacenter proxy, the site can only see the proxy center's credentials, not yours.
 
-Datacenter proxies allow you to mask and [rotate](../index.md). For each [HTTP/S request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), the proxy takes the list of all available IP addresses and selects the one used the longest time ago for the specific hostname.
+Datacenter proxies allow you to mask and [rotate](../index.md) your IP address during web scraping and automation jobs, reducing the possibility of them being [blocked]({{@link web_scraping_101/anti_scraping_techniques.md#ip-address-based-blocking}}). For each [HTTP/S request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), the proxy takes the list of all available IP addresses and selects the one used the longest time ago for the specific hostname.
 
 [Apify Proxy](https://apify.com/proxy) currently offers two types of datacenter proxy:
 
@@ -84,5 +84,5 @@ So, if you use the session at least once a day, it will never expire, with two p
 
 If the session is discarded due to the reasons above, it is assigned a new IP address.
 
-To learn more about [sessions](../index.md).
+To learn more about [sessions](../index.md) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the [proxy overview page]({{@link proxy.md}}).
 

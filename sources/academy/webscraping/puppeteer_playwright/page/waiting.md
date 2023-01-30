@@ -5,6 +5,9 @@ sidebar_position: 2
 slug: /puppeteer-playwright/page/waiting
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Waiting for elements and events {#waiting-for-elements-and-events}
 
 **Learn the importance of waiting for content and events before running interaction/collection code, as well as the best practices for doing so.**
@@ -87,8 +90,10 @@ This implementation will do the following:
 
 Here's what our project's code looks like so far:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 import * as fs from 'fs/promises';
 
@@ -115,8 +120,12 @@ await page.waitForLoadState('load');
 await page.waitForTimeout(10000);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 import * as fs from 'fs/promises';
 
@@ -144,8 +153,10 @@ await Promise.all([page.waitForNavigation(), page.click('.g a')]);
 await page.waitForTimeout(10000);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

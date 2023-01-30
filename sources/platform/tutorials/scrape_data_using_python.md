@@ -14,7 +14,7 @@ slug: /tutorials/scrape-data-using-python
 
 Web scraping is not limited to the JavaScript world. The Python ecosystem contains some pretty powerful scraping tools as well. One of those is [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), a library for parsing HTML and easy navigation or modification of a DOM tree.
 
-This tutorial shows you how to write a Python [actor](../actors/index.md) using [Pandas](https://pandas.pydata.org/).
+This tutorial shows you how to write a Python [actor](../actors/index.md) for scraping the weather forecast from [BBC Weather](https://www.bbc.com/weather). We also have an accompanying tutorial for [how to process the scraped data](./process_data_using_python.md) using [Pandas](https://pandas.pydata.org/).
 
 > In a rush? Skip this tutorial and get the [full code example](https://github.com/apify/apify-docs/tree/master/examples/python-data-scraper/).
 

@@ -5,6 +5,9 @@ sidebar_position: 2.4
 slug: /puppeteer-playwright/reading-intercepting-requests
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Reading & intercepting requests {#reading-intercepting-requests}
 
 **You can use DevTools, but did you know that you can do all the same stuff (plus more) programmatically? Read and intercept requests in Puppeteer/Playwright.**
@@ -17,8 +20,10 @@ In Playwright and Puppeteer, it is also possible to read (and even intercept) re
 
 During this lesson, we'll be using [Tiësto's following list](https://soundcloud.com/tiesto/following) on SoundCloud to demonstrate request/response reading and interception. Here's our basic setup for opening the page:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -30,8 +35,12 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -43,8 +52,10 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Reading requests {#reading-requests}
 
@@ -56,8 +67,10 @@ Upon visiting Tiësto's following page, we can see in the **Network** tab that a
 
 Let's go ahead and listen for this request in our code:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Listen for all requests
 page.on('request', (req) => {
     // If the URL doesn't include our keyword, ignore it
@@ -65,17 +78,23 @@ page.on('request', (req) => {
 
     console.log('Request for followers was made!')
 });
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
-// Listen for all requests
-page.on('request', (req) => {
-    // If the URL doesn't include our keyword, ignore it
-    if (!req.url().includes('followings')) return;
 
-    console.log('Request for followers was made!')
-});
-</marked-tab>
 ```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
+// Listen for all requests
+page.on('request', (req) => {
+    // If the URL doesn't include our keyword, ignore it
+    if (!req.url().includes('followings')) return;
+
+    console.log('Request for followers was made!')
+});
+
+```
+</TabItem>
+</Tabs>
 
 > Note that you should always define any request reading/interception code prior to calling the `page.goto()` function.
 
@@ -87,8 +106,10 @@ Request for followers was made!
 
 This request includes some useful query parameters, namely the `client_id`. Let's go ahead and grab these values from the request URL and print them to the console:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -110,8 +131,12 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -133,8 +158,10 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 After running this code, we can see this logged to the console:
 
@@ -155,8 +182,10 @@ Listening for and reading responses is very similar to reading requests. The onl
 
 This time, instead of grabbing the query parameters of the request URL, let's grab hold of the response body and print it to the console in JSON format:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Notice that the callback function is now async
 page.on('response', async (res) => {
     if (!res.request().url().includes('followings')) return;
@@ -169,22 +198,28 @@ page.on('response', async (res) => {
         console.error('Response wasn't JSON or failed to parse response.')
     }
 });
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
-// Notice that the callback function is now async
-page.on('response', async (res) => {
-    if (!res.request().url().includes('followings')) return;
 
-    // Grab the response body in JSON format
-    try {
-        const json = await res.json();
-        console.log(json);
-    } catch (err) {
-        console.error('Response wasn't JSON or failed to parse response.')
-    }
-});
-</marked-tab>
 ```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
+// Notice that the callback function is now async
+page.on('response', async (res) => {
+    if (!res.request().url().includes('followings')) return;
+
+    // Grab the response body in JSON format
+    try {
+        const json = await res.json();
+        console.log(json);
+    } catch (err) {
+        console.error('Response wasn't JSON or failed to parse response.')
+    }
+});
+
+```
+</TabItem>
+</Tabs>
 
 > Take notice of our usage of a `try...catch` block. This is because if the response is not JSON, the `res.json()` function will fail and throw an error, which we must handle to prevent any unexpected crashes.
 
@@ -210,8 +245,10 @@ const blockedExtensions = ['.png', '.css', '.jpg', '.jpeg', '.pdf', '.svg'];
 
 Then, we'll `abort()` all requests that end with any of these extensions.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -227,8 +264,12 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -251,8 +292,10 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > You can also use `request.resourceType()` to grab the resource type.
 
@@ -268,8 +311,10 @@ Something **very** important to note is that by using request interception, the 
 
 To block resources, it is better to use a CDP (Chrome DevTools Protocol) Session ([Playwright](https://playwright.dev/docs/api/class-cdpsession)/[Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v14.1.0&show=api-class-cdpsession)) to set the blocked URLs. Here is an implementation that achieves the same goal as our above example above; however, the browser's cache remains enabled.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Note, you can't use CDP session in other browsers!
 // Only in Chromium.
 import { chromium } from 'playwright';
@@ -288,8 +333,12 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -305,8 +354,10 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### Modifying the request {#modifyng-the-request}
 
@@ -314,8 +365,10 @@ There's much more to intercepting requests than just aborting them though. We ca
 
 Let's go ahead and intercept and modify the initial request we fire off with the `page.goto()` by making it go to [Mesto's following page](https://soundcloud.com/mestomusic) instead.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -331,8 +384,12 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -353,8 +410,10 @@ await page.goto('https://soundcloud.com/tiesto/following');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > Note that this **is not** a redirect, because Tiësto's page was never even visited. The request was changed before it was even fulfilled.
 

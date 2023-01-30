@@ -32,7 +32,7 @@ Each schedule can be associated with a maximum of 10 actors and 10 actor tasks.
 
 ## Setting up a new schedule
 
-Before setting up a new schedule, you should have the [actor](./actors/index.md) whose run you want to schedule prepared and tested.
+Before setting up a new schedule, you should have the [actor](./actors/index.md) or [task](./actors/tasks.md) whose run you want to schedule prepared and tested.
 
 If you are planning to schedule an actor run, you need to use the actor before you can schedule any runs. Navigate to the actor's page in [Apify Store](https://apify.com/store), click the **Try for free** button, then **Start** it with your preferred settings.
 
@@ -68,7 +68,7 @@ To add more actors or tasks, just repeat the process.
 
 Now, all you need to do is click **Save & activate** and let the scheduler take care of running your jobs on time.
 
-For integrations, you can also add a [webhook](https://docs.apify.com/webhooks) to your tasks, which will notify you (or perform an action of your choice) every time the task runs.
+For integrations, you can also add a [webhook](/platform/integrations/webhooks) to your tasks, which will notify you (or perform an action of your choice) every time the task runs.
 
 ### Via API
 
@@ -151,4 +151,4 @@ Additionally, you can use the following shortcut expressions:
 
 ## Sharing
 
-You can invite other Apify users to view or modify your schedules using the [access rights](./access_rights/index.md).
+You can invite other Apify users to view or modify your schedules using the [access rights](./access_rights/index.md) system. See the [full list of permissions](./access_rights/list_of_permissions.md).

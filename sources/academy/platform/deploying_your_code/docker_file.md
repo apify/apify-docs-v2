@@ -5,6 +5,9 @@ sidebar_position: 4
 slug: /deploying-your-code/docker-file
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Dockerfile {#dockerfile}
 
 **Understand how to write a Dockerfile (Docker image blueprint) for your project so that it can be run within a Docker container on the Apify platform.**
@@ -39,8 +42,10 @@ The rest of the Dockerfile is about copying the source code from the local files
 
 Here's the Dockerfile for our Node.js example project's actor:
 
-```marked-tabs
-<marked-tab header="Node.js Dockerfile" lang="Dockerfile">
+<Tabs groupId="main">
+<TabItem value="Node.js Dockerfile" label="Node.js Dockerfile">
+
+```Dockerfile
 FROM apify/actor-node:16
 
 # Second, copy just package.json and package-lock.json since they are the only files
@@ -62,8 +67,12 @@ RUN npm --quiet set progress=false \
 # Since we do this after NPM install, quick build will be really fast
 # for simple source file changes.
 COPY . ./
-</marked-tab>
-<marked-tab header="Python Dockerfile" lang="Dockerfile">
+
+```
+</TabItem>
+<TabItem value="Python Dockerfile" label="Python Dockerfile">
+
+```Dockerfile
 # First, specify the base Docker image.
 # You can also use any other image from Docker Hub.
 FROM apify/actor-python:3.9
@@ -93,15 +102,19 @@ COPY . ./
 # Specify how to launch the source code of your actor.
 # By default, the main.py file is run
 CMD python3 main.py
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Examples {#examples}
 
 The examples we just showed were for Node.js and Python, however, to drive home the fact that actors can be written in any language, here are some examples of some Dockerfiles for actors written in different programming languages:
 
-```marked-tabs
-<marked-tab header="GO actor Dockerfile" lang="Dockerfile">
+<Tabs groupId="main">
+<TabItem value="GO actor Dockerfile" label="GO actor Dockerfile">
+
+```Dockerfile
 FROM golang:1.17.1-alpine
 
 WORKDIR /app
@@ -111,8 +124,12 @@ RUN go mod download
 
 RUN go build -o /example-actor
 CMD ["/example-actor"]
-</marked-tab>
-<marked-tab header="Rust actor Dockerfile" lang="Dockerfile">
+
+```
+</TabItem>
+<TabItem value="Rust actor Dockerfile" label="Rust actor Dockerfile">
+
+```Dockerfile
 # Image with prebuilt Rust. We use the newest 1.* version
 # https://hub.docker.com/_/rust
 FROM rust:1
@@ -139,8 +156,12 @@ COPY . ./
 RUN cargo build --release
 
 CMD ["./target/release/actor-example"]
-</marked-tab>
-<marked-tab header="Julia actor Dockerfile" lang="Dockerfile">
+
+```
+</TabItem>
+<TabItem value="Julia actor Dockerfile" label="Julia actor Dockerfile">
+
+```Dockerfile
 FROM julia:1.7.1-alpine
 
 WORKDIR /app
@@ -149,8 +170,10 @@ COPY . .
 RUN julia install.jl
 
 CMD ["julia", "main.jl"]
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

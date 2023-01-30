@@ -21,7 +21,7 @@ An important thing to understand regarding inputs and outputs is that they are r
 
 ## A bit about storage {#about-storage}
 
-There are two different places you can read/write your inputs/outputs: to the [key-value store](https://docs.apify.com/storage/key-value-store), or to the [dataset](https://docs.apify.com/storage/dataset). They key-value store can be used to store any sort of unorganized/unrelated data in any formats, while the data pushed to a dataset typically resembles a table with columns (fields) and rows (items). Each actor's run is allocated both a default dataset and key-value store.
+There are two different places you can read/write your inputs/outputs: to the [key-value store](/platform/storage/key-value-store), or to the [dataset](/platform/storage/dataset). They key-value store can be used to store any sort of unorganized/unrelated data in any formats, while the data pushed to a dataset typically resembles a table with columns (fields) and rows (items). Each actor's run is allocated both a default dataset and key-value store.
 
 When running locally, these storages are accessible through the **storage** folder within your project's root directory, while on the platform they are accessible via Apify's API.
 

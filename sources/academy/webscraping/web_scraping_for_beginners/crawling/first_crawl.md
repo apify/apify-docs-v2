@@ -121,4 +121,4 @@ At the time of writing, none of the links have failed; however, in your crawling
 
 ## Next up {#next}
 
-In the [next lesson](./scraping_the_data.md) section and applying it to all of the product pages.
+In the [next lesson](./scraping_the_data.md), we will complete the scraper by using the data collection code from the [Basics of data collection](../data_collection/node_continued.md) section and applying it to all of the product pages.

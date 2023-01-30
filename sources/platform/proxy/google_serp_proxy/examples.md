@@ -3,6 +3,10 @@ title: Examples
 description: Learn how to connect to Google SERP proxies from your applications with Node.js (axios and got-scraping), Python 2 and 3 and PHP using code examples.
 slug: /proxy/google-serp-proxy/examples
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <!-- Watch out! This file is hard to read because our own "marked-tabs" language fences aren't syntax-highlighted -->
 
 # Connect to Google SERP proxies
@@ -17,7 +21,7 @@ See the [connection settings](../connection_settings.md) page for connection par
 
 ## Using the Apify SDK {#using-the-apify-sdk}
 
-If you are developing your own Apify [actor](../../actors/index.md). Alternatively, you can use the [got-scraping](https://github.com/apify/got-scraping) [NPM package](https://www.npmjs.com/package/got-scraping) by specifying proxy URL in the options.
+If you are developing your own Apify [actor](../../actors/index.md) using the [Apify SDK](https://docs-v2.apify.com/sdk-js) and [Crawlee](https://crawlee.dev/), the most efficient way to use Google SERP proxy is [CheerioCrawler](https://crawlee.dev/api/cheerio-crawler/class/CheerioCrawler). This is because Google SERP proxy [only returns a page's HTML](./index.md). Alternatively, you can use the [got-scraping](https://github.com/apify/got-scraping) [NPM package](https://www.npmjs.com/package/got-scraping) by specifying proxy URL in the options.
 
 Apify Proxy also works with [PuppeteerCrawler](https://crawlee.dev/api/puppeteer-crawler/class/PuppeteerCrawler), [launchPuppeteer()](https://crawlee.dev/api/puppeteer-crawler/function/launchPuppeteer), [PlaywrightCrawler](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler), [launchPlaywright()](https://crawlee.dev/api/playwright-crawler/function/launchPlaywright) and [JSDOMCrawler](https://crawlee.dev/api/jsdom-crawler/class/JSDOMCrawler). However, `CheerioCrawler` is simply the most efficient solution for this use case.
 
@@ -25,8 +29,10 @@ Apify Proxy also works with [PuppeteerCrawler](https://crawlee.dev/api/puppeteer
 
 Get a list of search results for the keyword **wikipedia** from the USA (`google.com`).
 
-```marked-tabs
-<marked-tab header="CheerioCrawler" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="CheerioCrawler" label="CheerioCrawler">
+
+```javascript
 import { Actor } from 'apify';
 import { CheerioCrawler } from 'crawlee';
 
@@ -47,10 +53,14 @@ const crawler = new CheerioCrawler({
 await crawler.run(['http://www.google.com/search?q=wikipedia']);
 
 await Actor.exit();
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="gotScraping()" lang="javascript">
+<TabItem value="gotScraping()" label="gotScraping()">
+
+```javascript
 import { Actor } from 'apify';
 import { gotScraping } from 'got-scraping';
 
@@ -69,16 +79,20 @@ const { body } = await gotScraping({
 console.log(body);
 
 await Actor.exit();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### Get a list of shopping results {#get-a-list-of-shopping-results}
 
 Get a list of shopping results for the query **Apple iPhone XS 64GB** from Great Britain (`google.co.uk`).
 
 
-```marked-tabs
-<marked-tab header="CheerioCrawler" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="CheerioCrawler" label="CheerioCrawler">
+
+```javascript
 import { Actor } from 'apify';
 import { CheerioCrawler } from 'crawlee';
 
@@ -100,9 +114,13 @@ const query = encodeURI('Apple iPhone XS 64GB');
 await crawler.run([`http://www.google.co.uk/search?q=${query}&tbm=shop`]);
 
 await Actor.exit();
-</marked-tab>
 
-<marked-tab header="gotScraping()" lang="javascript">
+```
+</TabItem>
+
+<TabItem value="gotScraping()" label="gotScraping()">
+
+```javascript
 import { Actor } from 'apify';
 import { gotScraping } from 'got-scraping';
 
@@ -122,8 +140,10 @@ const { body } = await gotScraping({
 console.log(body);
 
 await Actor.exit();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Using standard libraries and languages {#using-standard-libraries-and-languages}
 
@@ -143,8 +163,10 @@ Get the HTML of search results for the keyword **wikipedia** from the USA (**goo
 
 Select this option by setting the `username` parameter to `groups-GOOGLE_SERP`. Add the item you want to search to the `query` parameter.
 
-```marked-tabs
-<marked-tab header="Node.js (axios)" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js (axios)" label="Node.js (axios)">
+
+```javascript
 import axios from 'axios';
 
 const proxy = {
@@ -162,10 +184,14 @@ const params = { q: 'wikipedia' };
 const { data } = await axios.get(url, { proxy, params });
 
 console.log(data);
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="Python 3" lang="python">
+<TabItem value="Python 3" label="Python 3">
+
+```python
 import urllib.request as request
 import urllib.parse as parse
 
@@ -182,10 +208,14 @@ opener = request.build_opener(proxy_handler)
 
 query = parse.urlencode({ 'q': 'wikipedia' })
 print(opener.open(f"http://www.google.com/search?{query}").read())
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="Python 2" lang="python">
+<TabItem value="Python 2" label="Python 2">
+
+```python
 import six
 from six.moves.urllib import request, urlencode
 
@@ -206,10 +236,14 @@ url = (
     (query)
 )
 print(opener.open(url).read())
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="PHP" lang="php">
+<TabItem value="PHP" label="PHP">
+
+```php
 <?php
 $query = urlencode('wikipedia');
 $curl = curl_init('http://www.google.com/search?q=' . $query);
@@ -222,9 +256,13 @@ $response = curl_exec($curl);
 curl_close($curl);
 echo $response;
 ?>
-</marked-tab>
 
-<marked-tab header="PHP (Guzzle)" lang="php">
+```
+</TabItem>
+
+<TabItem value="PHP (Guzzle)" label="PHP (Guzzle)">
+
+```php
 <?php
 require 'vendor/autoload.php';
 
@@ -238,8 +276,10 @@ $response = $client->get("http://www.google.com/search", [
     'query' => ['q' => 'wikipedia']
 ]);
 echo $response->getBody();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### HTML from localized shopping results {#html-from-localized-shopping-results}
 
@@ -249,8 +289,10 @@ Select this option by setting the `username` parameter to `groups-GOOGLE_SERP`. 
 
 Set the domain (your country of choice) in the URL (in the `response` variable).
 
-```marked-tabs
-<marked-tab header="Node.js (axios)" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js (axios)" label="Node.js (axios)">
+
+```javascript
 import axios from 'axios';
 
 const proxy = {
@@ -268,10 +310,14 @@ const params = { q: 'Apple iPhone XS 64GB', tbm: 'shop' }
 const { data } = await axios.get(url, { proxy, params });
 
 console.log(data);
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="Python 3" lang="python">
+<TabItem value="Python 3" label="Python 3">
+
+```python
 import urllib.request as request
 import urllib.parse as parse
 
@@ -286,10 +332,14 @@ opener = request.build_opener(proxy_handler)
 
 query = parse.urlencode({ 'q': 'Apple iPhone XS 64GB', 'tbm': 'shop' })
 print(opener.open(f"http://www.google.co.uk/search?{query}").read())
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="Python 2" lang="python">
+<TabItem value="Python 2" label="Python 2">
+
+```python
 import six
 from six.moves.urllib import request, urlencode
 
@@ -310,10 +360,14 @@ url = (
     (query)
 )
 print(opener.open(url).read())
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="PHP" lang="php">
+<TabItem value="PHP" label="PHP">
+
+```php
 <?php
 $query = urlencode('Apple iPhone XS 64GB');
 $curl = curl_init('http://www.google.co.uk/search?tbm=shop&q=' . $query);
@@ -326,10 +380,14 @@ $response = curl_exec($curl);
 curl_close($curl);
 echo $response;
 ?>
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="PHP (Guzzle)" lang="php">
+<TabItem value="PHP (Guzzle)" label="PHP (Guzzle)">
+
+```php
 <?php
 require 'vendor/autoload.php';
 
@@ -346,5 +404,7 @@ $response = $client->get("http://www.google.co.uk/search", [
     ]
 ]);
 echo $response->getBody();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>

@@ -12,7 +12,7 @@ slug: /monitoring/monitor-multiple-tasks
 
 ---
 
-This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a multiple [tasks](../actors/tasks.md).
+This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for a multiple [tasks](../actors/tasks.md), [validating data](#validate-data) and setting up a data monitoring [dashboard](#set-up-data-visualization). Though the tutorial focuses on tasks, you can also use it to monitor [actors](../actors/index.md).
 
 ## Use case {#use-case}
 

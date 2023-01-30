@@ -20,7 +20,7 @@ You might have already noticed that we've been using the **RESIDENTIAL** proxy g
 ## Learning 🧠 {#learning}
 
 - Skim [this page](https://apify.com/proxy) for a general idea of Apify Proxy.
-- Give the [proxy documentation](https://docs.apify.com/proxy#our-proxies) a solid readover (feel free to skip most of the examples).
+- Give the [proxy documentation](/platform/proxy#our-proxies) a solid readover (feel free to skip most of the examples).
 - Read about our [proxy trial](https://help.apify.com/en/articles/2108625-free-trial-of-apify-proxy).
 - Check out [this](https://help.apify.com/en/articles/1961361-several-tips-on-how-to-bypass-website-anti-scraping-protections) article about bypassing anti-scraping measures.
 - Gain a solid understanding of the [SessionPool](https://crawlee.dev/api/core/class/SessionPool).

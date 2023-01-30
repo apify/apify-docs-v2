@@ -37,7 +37,7 @@ The most challenging websites to scrape are the ones that require a full set of 
 
 Another big one to mention is the **Cookie** header. We cover this in more detail within the [cookies](./http_cookies.md) lesson.
 
-You could use Chrome DevTools to inspect request headers, and [Insomnia](../tools/insomnia.md) to test how the website behaves with or without specific headers.
+You could use Chrome DevTools to inspect request headers, and [Insomnia](../tools/insomnia.md) or [Postman](../tools/postman.md) to test how the website behaves with or without specific headers.
 
 ## HTTP/1.1 vs HTTP/2 headers {#http1-vs-http2}
 

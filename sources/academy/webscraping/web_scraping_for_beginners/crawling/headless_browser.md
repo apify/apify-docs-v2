@@ -5,6 +5,9 @@ sidebar_position: 8
 slug: /web-scraping-for-beginners/crawling/headless-browser
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Headless browsers {#headless-browser}
 
 **Learn how to scrape the web with a headless browser using only a few lines of code. Chrome, Firefox, Safari, Edge - all are supported.**
@@ -102,17 +105,29 @@ We said that headless browsers didn't have a UI, but while scraping with the abo
 
 This is the programmer's preferred solution, because you don't have to change the source code to change the behavior. All you need to do is set the [`CRAWLEE_HEADLESS=1`](https://crawlee.dev/docs/guides/configuration#crawlee_headless) environment variable when running your scraper, and it will automatically run headless. For example like this:
 
-```marked-tabs
-<marked-tab header="MacOS/Linux" lang="shell">
+<Tabs groupId="main">
+<TabItem value="MacOS/Linux" label="MacOS/Linux">
+
+```shell
 CRAWLEE_HEADLESS=1 node crawlee.js
-</marked-tab>
-<marked-tab header="Windows CMD" lang="shell">
-set CRAWLEE_HEADLESS=1 && node crawlee.js
-</marked-tab>
-<marked-tab header="Windows Powershell" lang="shell">
-$env:CRAWLEE_HEADLESS=1; & node crawlee.js
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Windows CMD" label="Windows CMD">
+
+```shell
+set CRAWLEE_HEADLESS=1 && node crawlee.js
+
+```
+</TabItem>
+<TabItem value="Windows Powershell" label="Windows Powershell">
+
+```shell
+$env:CRAWLEE_HEADLESS=1; & node crawlee.js
+
+```
+</TabItem>
+</Tabs>
 
 ### Scraper code {#headless-code}
 

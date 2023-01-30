@@ -17,7 +17,7 @@ Paid actors are a new feature in [Apify Store](https://apify.com/store). They're
 
 Each paid actor has a **free trial,** followed by a flat monthly rental fee that is automatically charged **from your platform usage credits** in advance for the following month. The trial's length is always shown for each paid actor.
 
-For more information about how to monetize your actor, best practices and SEO and promotion tips and tricks, head over to the [Getting the most of your public actors on Apify Store](https://developers.apify.com/academy/apify-platform/get-most-of-actors) section of the Apify Developers Academy.
+For more information about how to monetize your actor, best practices and SEO and promotion tips and tricks, head over to the [Getting the most of your public actors on Apify Store](/academy/get-most-of-actors) section of the Apify Developers Academy.
 
 ![Paid actors free trial](./images/paid-actors-trial.png)
 
@@ -25,7 +25,7 @@ For more information about how to monetize your actor, best practices and SEO an
 
 ## Can I run paid actors via API or the Apify client?
 
-Yes, when you are renting a paid actor, you can run it using either our [API](/api/v2/) or [JavaScript](https://docs-v2.apify.com/client-js/) or [Python](https://docs-v2.apify.com/client-python/) clients as you would do with private or free public actors.
+Yes, when you are renting a paid actor, you can run it using either our [API](/api/v2) or [JavaScript](https://docs-v2.apify.com/client-js) or [Python](https://docs-v2.apify.com/client-python) clients as you would do with private or free public actors.
 
 ## Do I pay platform costs for running paid actors?
 
@@ -43,7 +43,7 @@ You always prepay the actor rental for the following month. The first payment ha
 
 ## How am I charged for actor rental?
 
-The rental fee for an actor is automatically subtracted from your platform usage credits, similarly to, e.g. [compute units](https://docs.apify.com/actors/running/compute-units). If you don't have enough credits prepaid, you will need to cover any overage in the next invoice.
+The rental fee for an actor is automatically subtracted from your platform usage credits, similarly to, e.g. [compute units](/platform/actors/running/compute-units). If you don't have enough credits prepaid, you will need to cover any overage in the next invoice.
 
 ## Will I be automatically charged at the end of the free trial?
 

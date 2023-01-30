@@ -5,6 +5,9 @@ sidebar_position: 3
 slug: /web-scraping-for-beginners/crawling/filtering-links
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Filtering links {#filtering-links}
 
 **When you collect links from a web page, you often end up with a lot of irrelevant URLs. Learn how to filter the links to only keep the ones you need.**
@@ -17,27 +20,43 @@ Web pages are full of links, but frankly, most of them are useless to us. There 
 
 In the previous lesson, we simply grabbed all the links from the HTML document.
 
-```marked-tabs
-<marked-tab header="DevTools" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="DevTools" label="DevTools">
+
+```javascript
 document.querySelectorAll('a');
-</marked-tab>
-<marked-tab header="Node.js with Cheerio" lang="javascript">
-$('a');
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Node.js with Cheerio" label="Node.js with Cheerio">
+
+```javascript
+$('a');
+
+```
+</TabItem>
+</Tabs>
 
 ### Attribute selector {#attribute-selector}
 
 That's not the only way to do it, however. Since we're interested in the `href` attributes, a first very reasonable filter is to exclusively target the `<a>` tags that have the `href` attribute (yes, anchor tags without the attribute can and do exist). You can do that by using the [CSS attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors).
 
-```marked-tabs
-<marked-tab header="DevTools" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="DevTools" label="DevTools">
+
+```javascript
 document.querySelectorAll('a[href]');
-</marked-tab>
-<marked-tab header="Node.js" lang="javascript">
-$('a[href]');
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
+$('a[href]');
+
+```
+</TabItem>
+</Tabs>
 
 Ensuring to always add the `[href]` part of the selector will save you from nasty bug hunts on certain pages.
 
@@ -45,14 +64,22 @@ We only want the product links on this page, so we can limit the number of resul
 
 ### Descendant selector {#descendant-selector}
 
-```marked-tabs
-<marked-tab header="DevTools" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="DevTools" label="DevTools">
+
+```javascript
 document.querySelectorAll('main.fit a[href*="/product/"]');
-</marked-tab>
-<marked-tab header="Node.js" lang="javascript">
-$('main.fit a[href*="/product/"]');
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
+$('main.fit a[href*="/product/"]');
+
+```
+</TabItem>
+</Tabs>
 
 We already know both the `main.fit` and `a[href*="/product/"]` selectors and how they work on their own, but their combination is new. It's called a [descendant selector](https://css-tricks.com/almanac/selectors/d/descendant/), and it selects all `<a href=".../product/...">` elements that are descendants of a `<main class="fit">` element. A descendant is any element that's nested somewhere inside another element. It does not have to be a direct child of the specified parent element.
 

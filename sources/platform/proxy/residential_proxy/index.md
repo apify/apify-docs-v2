@@ -56,7 +56,7 @@ Connecting to residential proxy works the same way as [datacenter proxy](../data
 
 ### How to set a proxy group {#how-to-set-a-proxy-group}
 
-When using [standard libraries and languages](../datacenter_proxy/examples.md) as `groups-RESIDENTIAL`.
+When using [standard libraries and languages](../datacenter_proxy/examples.md), specify the `groups` parameter in the [username]({{@link proxy/connection_settings.md#username-parameters}}) as `groups-RESIDENTIAL`.
 
 For example, your **proxy URL** when using the [got-scraping](https://www.npmjs.com/package/got-scraping) JavaScript library will look like this:
 
@@ -80,7 +80,7 @@ await Actor.exit();
 
 ### How to set a proxy country {#how-to-set-a-proxy-country}
 
-When using [standard libraries and languages](../datacenter_proxy/examples.md) as `country-COUNTRY-CODE`.
+When using [standard libraries and languages](../datacenter_proxy/examples.md), specify the `country` parameter in the [username]({{@link proxy/connection_settings.md#username-parameters}}) as `country-COUNTRY-CODE`.
 
 For example, your `username` parameter when using [Python 3](https://docs.python.org/3/) will look like this:
 
@@ -126,7 +126,7 @@ groups-RESIDENTIAL,session-my_session_1,country-US
 
 ## Session persistence {#session-persistence}
 
-When using residential proxy with the `session` [parameter](../index.md), a single IP address is assigned to the **session ID** provided after you make the first request.
+When using residential proxy with the `session` [parameter](../index.md) set in the [username]({{@link proxy/connection_settings.md#username-parameters}}), a single IP address is assigned to the **session ID** provided after you make the first request.
 
 **Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** [[More info](../index.md)]
 
@@ -137,4 +137,4 @@ If the proxy server becomes unresponsive or the session expires, a new IP addres
 > If you really need to persist the same session, you can try sending some data using that session (e.g. every 20 seconds) to keep it alive.<br/>
 > Providing the connection is not interrupted, this will let you keep the IP address for longer.
 
-To learn more about [sessions](../index.md).
+To learn more about [sessions](../index.md) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the proxy [overview page]({{@link proxy.md}}).

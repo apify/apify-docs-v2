@@ -5,13 +5,16 @@ sidebar_position: 2.5
 slug: /puppeteer-playwright/proxies
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Using proxies {#using-proxies}
 
 **Understand how to use proxies in your Puppeteer and Playwright requests, as well as a couple of the most common use cases for proxies.**
 
 ---
 
-[Proxies](../../anti_scraping/mitigation/proxies.md) restrictions. For example your favorite TV show might not be available on Netflix in your country, but it might be available for Vietnamese Netflix watchers.
+[Proxies](../../anti_scraping/mitigation/proxies.md) are a great way of appearing as if you are making requests from a different location. A common use case for proxies is to avoid [geolocation](../../anti_scraping/techniques/geolocation.md) restrictions. For example your favorite TV show might not be available on Netflix in your country, but it might be available for Vietnamese Netflix watchers.
 
 In this lesson, we'll be learning how to use proxies with Playwright and Puppeteer. This will be demonstrated with a Vietnamese proxy that we got by running [this](https://apify.com/mstephen190/proxy-scraper) proxy-scraping actor on the Apify platform.
 
@@ -21,8 +24,10 @@ First, let's add our familiar boilerplate code for visiting Google and also crea
 
 > Note that this proxy may no longer be working at the time of reading. If you don't have a proxy to use during this lesson, we recommend using Proxy Scraper for a list of free ones, or checking out [Apify proxy](https://apify.com/proxy)
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 // our proxy server
@@ -34,8 +39,12 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 // our proxy server
@@ -47,15 +56,19 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 For both Puppeteer and Playwright, the proxy server's URL should be passed into the options of the `launch()` function; however, it's done a bit differently depending on which library you're using.
 
 In Puppeteer, the server must be passed within the **--proxy-server** [Chromium command line argument](https://peter.sh/experiments/chromium-command-line-switches/), while in Playwright, it can be passed into the **proxy** option.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const proxy = '103.214.9.13:3128';
@@ -74,8 +87,12 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const proxy = '103.214.9.13:3128';
@@ -91,8 +108,10 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 And that's it! Now, when we visit Google, it's in Vietnamese. Depending on the country of your proxy, the language will vary.
 
@@ -110,8 +129,10 @@ my.proxy.com:3001
 
 One might automatically assume that this would be the solution:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // This code is wrong!
 import { chromium } from 'playwright';
 
@@ -126,8 +147,12 @@ const browser = await chromium.launch({
         
     },
 });
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 // This code is wrong!
 import puppeteer from 'puppeteer';
 
@@ -139,13 +164,17 @@ const browser = await puppeteer.launch({
     headless: false,
     args: [`--proxy-server=http://${username}:${password}@${proxy}`],
 });
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 However, authentication parameters need to be passed in separately in order to work. In Puppeteer, the username and password need to passed into thee `page.authenticate()` prior to any navigations being made, while in Playwright they just need to be passed into the **proxy** option object.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const proxy = 'my.proxy.com:3001';
@@ -161,8 +190,12 @@ const browser = await chromium.launch({
     },
 });
 // Proxy will now be authenticated
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const proxy = 'my.proxy.com:3001';
@@ -178,8 +211,10 @@ const page = await browser.newPage();
 
 await page.authenticate({ username, password });
 // Proxy will now be authenticated
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

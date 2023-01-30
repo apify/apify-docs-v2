@@ -29,4 +29,4 @@ At any point, we can collect URLs, data, or both. Crawling can be separate from 
 
 ## Next up {#next}
 
-First, let's make sure we all understand the foundations. In the [next lesson](./recap_collection_basics.md) section of the course.
+First, let's make sure we all understand the foundations. In the [next lesson](./recap_collection_basics.md) we will review the scraper code we already have from the [Basics of data collection](../data_collection/index.md) section of the course.

@@ -5,6 +5,9 @@ sidebar_position: 5
 slug: /getting-started/apify-client
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Apify client {#apify-client}
 
 **Interact with the Apify API in your code by using the apify-client package, which is available for both JavaScript and Python.**
@@ -31,16 +34,24 @@ pip install apify-client
 
 After installing the package, let's make a file named **client** and import the Apify client like so:
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 // client.js
 import { ApifyClient } from 'apify-client';
-</marked-tab>
-<marked-tab header="Python" lang="python">
+
+```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
 # client.py
 from apify_client import ApifyClient
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Running an actor {#running-an-actor}
 
@@ -48,37 +59,53 @@ In the last lesson, we ran the **adding-actor** and retrieved its dataset items.
 
 Before we can use the client though, we must create a new instance of the `ApifyClient` class and pass it our API token from the [**Integrations** page](https://console.apify.com/account?tab=integrations&asrc=developers_portal) on the Apify Console:
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 const client = new ApifyClient({
     token: 'YOUR_TOKEN',
 });
-</marked-tab>
-<marked-tab header="Python" lang="python">
-client = ApifyClient(token='YOUR_TOKEN')
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
+client = ApifyClient(token='YOUR_TOKEN')
+
+```
+</TabItem>
+</Tabs>
 
 > If you are planning on publishing your code to a public Github/Gitlab repository or anywhere else online, be sure to set your API token as en environment variable, and never hardcode it directly into your script.
 
-Now that we've got our instance, we can point to an actor using the [`client.actor()`](https://docs-v2.apify.com/client-js/api#apifyclient-actor) function, then call the actor with some input with the [`.call()`](https://docs-v2.apify.com/client-js/api#actorclient-call) function - the first parameter of which is the input for the actor.
+Now that we've got our instance, we can point to an actor using the [`client.actor()`](https://docs-v2.apify.com/client-js#apifyclient-actor) function, then call the actor with some input with the [`.call()`](https://docs-v2.apify.com/client-js#actorclient-call) function - the first parameter of which is the input for the actor.
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 const run = await client.actor('YOUR_USERNAME/adding-actor').call({
     num1: 4,
     num2: 2,
 });
-</marked-tab>
-<marked-tab header="Python" lang="python">
+
+```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
 run = client.actor('YOUR_USERNAME/adding-actor').call(run_input={
     'num1': 4,
     'num2': 2
 })
-</marked-tab>
-```
 
-> Learn more about the `.call()` function [here](https://docs-v2.apify.com/client-js/api#actorclient-call).
+```
+</TabItem>
+</Tabs>
+
+> Learn more about the `.call()` function [here](https://docs-v2.apify.com/client-js#actorclient-call).
 
 ## Collecting dataset items {#collecting-dataset-items}
 
@@ -88,36 +115,54 @@ Once an actor's run has completed, it will return a **run info** object that loo
 
 The `run` variable we created in the last section points to the **run info** object of the run we created with the `.call()` function, which means that through this variable, we can access the run's `defaultDatasetId`. This ID can then be passed into the `client.dataset()` function.
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 const dataset = client.dataset(run['defaultDatasetId'])
-</marked-tab>
-<marked-tab header="Python" lang="python">
-dataset = client.dataset(run['defaultDatasetId'])
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
+dataset = client.dataset(run['defaultDatasetId'])
+
+```
+</TabItem>
+</Tabs>
 
 Finally, we can collect the items in the dataset by using the **list items** function, then log them to the console.
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 const { items } = await dataset.listItems();
 
 console.log(items);
-</marked-tab>
-<marked-tab header="Python" lang="python">
+
+```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
 items = dataset.list_items().items
 
 print(items)
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > Notice that in the JavaScript example, we had to convert the `items` to a [`Buffer`](https://nodejs.org/api/buffer.html), then convert the Buffer to a string and parse it. This is because `dataset.downloadItems()` returns a buffer.
 
 The final code for running the actor and collecting its dataset items looks like this:
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 // client.js
 import { ApifyClient } from 'apify-client';
 
@@ -135,8 +180,12 @@ const dataset = client.dataset(run['defaultDatasetId'])
 const { items } = await dataset.listItems();
 
 console.log(items);
-</marked-tab>
-<marked-tab header="Python" lang="python">
+
+```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
 # client.py
 from apify_client import ApifyClient
 
@@ -152,30 +201,42 @@ dataset = client.dataset(run['defaultDatasetId'])
 items = dataset.list_items().items
 
 print(items)
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Updating an actor {#updating-actor}
 
 If you check the **Settings** tab within your **adding-actor**, you'll notice that the default memory being allocated to the actor is **2048 MB**. This is a bit overkill considering the fact that the actor is only adding two numbers together - **256 MB** would be much more reasonable. Also, we can safely say that the run should never take more than 20 seconds (even this is a generous number), and that the default of 3600 seconds is also overkill.
 
-Let's change these two actor settings via the Apify client using the [`actor.update()`](https://docs-v2.apify.com/client-js/api#actorclient-update) function. This function will call the **update actor** endpoint, which can take `defaultRunOptions` as an input property. You can find the shape of the `defaultRunOptions` in the [API documentation](/api/v2#/reference/actors/actor-object/update-actor). Perfect!
+Let's change these two actor settings via the Apify client using the [`actor.update()`](https://docs-v2.apify.com/client-js#actorclient-update) function. This function will call the **update actor** endpoint, which can take `defaultRunOptions` as an input property. You can find the shape of the `defaultRunOptions` in the [API documentation](/api/v2#/reference/actors/actor-object/update-actor). Perfect!
 
 First, we'll create a pointer to our actor, similar to as before (except this time, we won't be using `.call()` at the end):
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 const actor = client.actor('YOUR_USERNAME/adding-actor')
-</marked-tab>
-<marked-tab header="Python" lang="python">
-actor = client.actor('YOUR_USERNAME/adding-actor')
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
+actor = client.actor('YOUR_USERNAME/adding-actor')
+
+```
+</TabItem>
+</Tabs>
 
 Then, we'll just call the `.update()` method on the `actor` variable we created and pass in our new **default run options**:
 
-```marked-tabs
-<marked-tab header="Node.js" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Node.js" label="Node.js">
+
+```javascript
 await actor.update({
     defaultRunOptions: {
         build: 'latest',
@@ -183,11 +244,17 @@ await actor.update({
         timeoutSecs: 20,
     },
 });
-</marked-tab>
-<marked-tab header="Python" lang="python">
-actor.update(default_run_build='latest', default_run_memory_mbytes=256, default_run_timeout_secs=20)
-</marked-tab>
+
 ```
+</TabItem>
+<TabItem value="Python" label="Python">
+
+```python
+actor.update(default_run_build='latest', default_run_memory_mbytes=256, default_run_timeout_secs=20)
+
+```
+</TabItem>
+</Tabs>
 
 After running the code, go back to the **Settings** page of **adding-actor**. If your default options now look like this, then it worked!:
 
@@ -199,8 +266,8 @@ There is so much more you can do with the Apify client than just running actors,
 
 For a more in-depth understanding of the Apify API client, give these a quick lookover:
 
-- [API client for JavaScript](https://docs-v2.apify.com/client-js/)
-- [API client for Python](https://docs-v2.apify.com/client-python/)
+- [API client for JavaScript](https://docs-v2.apify.com/client-js)
+- [API client for Python](https://docs-v2.apify.com/client-python)
 
 ## Next up {#next}
 

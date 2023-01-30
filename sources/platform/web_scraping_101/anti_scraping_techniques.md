@@ -85,7 +85,7 @@ For example, requests from mobile devices are usually only routed through a hand
 
 To make it work, a single user session has to always be routed via the same IP address. A website can identify such user sessions based on cookies, authentication tokens or a browser HTTP signature/fingerprint.
 
-Our research into this was assisted by the [Crawlee](https://docs-v2.apify.com/sdk-js)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../actors/index.md), but it also works outside the Apify ecosystem.
+Our research into this was assisted by the [Crawlee](https://docs-v2.apify.com/sdk-js)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../actors/index.md) or [proxy](../proxy/index.md), but it also works outside the Apify ecosystem.
 
 ## Comparing ways of bypassing scraping protection {#comparing-ways-of-bypassing-scraping-protection}
 

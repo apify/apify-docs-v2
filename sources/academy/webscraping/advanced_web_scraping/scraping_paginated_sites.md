@@ -77,7 +77,7 @@ Some sites will allow you to construct non-overlapping ranges. For example, you 
 
 Non-overlapping ranges should remove the possibility of duplicate products (unless a [listing has multiple values](#can-a-listing-have-more-values)) and the lowest number of pages.
 
-If the website supports only overlapping ranges (e.g. **$0-$5**, **$5-10**), it is not a big problem. Only a small portion of the listings will be duplicates, and they can be removed using a [request queue](https://docs.apify.com/storage/request-queue).
+If the website supports only overlapping ranges (e.g. **$0-$5**, **$5-10**), it is not a big problem. Only a small portion of the listings will be duplicates, and they can be removed using a [request queue](/platform/storage/request-queue).
 
 #### Can a listing have more values? {#can-a-listing-have-more-values}
 
@@ -89,7 +89,7 @@ There is no easy way to get around this but the price range split works even wit
 
 In the easiest case, you can pass the range directly in the page's URL. For example, `<https://mysite.com/products?price=0-10>`. Sometimes, you will need to do some query composition because the price range might be encoded together with more information into a single parameter.
 
-Some sites don't have page URLs with filters and instead load the filtered products via [XHRs](https://docs.apify.com/web-scraping-101/web-scraping-techniques#xhrs). Those can be GET or POST requests with various **URL** and **payload** syntax.
+Some sites don't have page URLs with filters and instead load the filtered products via [XHRs](/platform/web-scraping-101/web-scraping-techniques#xhrs). Those can be GET or POST requests with various **URL** and **payload** syntax.
 
 The nice thing here is that if you get to understand how their internal API works, you can have it return more products per page or extract full product details just from this single request.
 

@@ -5,6 +5,9 @@ sidebar_position: 3
 slug: /puppeteer-playwright/page/page-methods
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Page methods {#page-methods}
 
 **Understand that the Page object has many different methods to offer, and learn how to use two of them to capture a page's title and take a screenshot.**
@@ -47,8 +50,10 @@ await page.screenshot({ path: 'screenshot.png' });
 
 Here's our final code which extracts the page's title, takes a screenshot and saves it to our project's folder as `screenshot.png`:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -76,8 +81,12 @@ console.log(title);
 await page.screenshot({ path: 'screenshot.png' });
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -106,8 +115,10 @@ console.log(title);
 await page.screenshot({ path: 'screenshot.png' });
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 When you run this code, you should see this logged to console:
 

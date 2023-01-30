@@ -12,7 +12,7 @@ slug: /monitoring/check-data-quality
 
 ---
 
-This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md).
+This example walks you through setting up [monitoring](https://apify.com/apify/monitoring) for an [actor](../actors/index.md) or [task](../actors/tasks.md).
 
 ## Use case {#use-case}
 
@@ -89,7 +89,7 @@ Finally, click the **Save & Run** button. It will create a monitoring configurat
 
 Following each of your `amazon-iphone-offers` tasks runs, the suite will process your results and report if any of the checks fail. You receive an email with a link to your **monitoring project dashboard**.
 
-Here, you can see the result statuses of your monitored tasks and filter them by time. You can also see each run's [key-value store](../storage/key_value_store.md) item charts.
+Here, you can see the result statuses of your monitored tasks and filter them by time. You can also see each run's [key-value store](../storage/key_value_store.md) records and [dataset](../storage/dataset.md) item charts.
 
 This is what your dashboard can look like after some time:
 

@@ -17,7 +17,7 @@ An event is represented by a **type** and related **data**. The type is a `strin
 
 ## [](#actor-run)Actor run
 
-Actor run events are triggered when an actor run gets created or transitions into a new state. Webhook can be defined for all runs of an [actor](../../actors/index.md) at its detail page. In that case, the webhook is invoked only for runs started for that task.
+Actor run events are triggered when an actor run gets created or transitions into a new state. Webhook can be defined for all runs of an [actor](../../actors/index.md) at its detail page or for a specific [actor task](../../actors/tasks.md) at its detail page. In that case, the webhook is invoked only for runs started for that task.
 
 ### Run event types
 
@@ -46,7 +46,7 @@ To fetch the results from the actor run, you can take the `actorRunId` event pro
 https://api.apify.com/v2/actor-runs/[ACTOR_RUN_ID]/dataset/items?token=[TOKEN]
 ```
 
-Note that apart from event data, actions also have the `resource` object available, which can provide more details about the object that triggered the event. Therefore, for example, for the `ACTOR.RUN.SUCCEEDED` event, the provided resource is info about the successful run, which contains the `defaultDatasetId` property that you can also use to fetch the dataset contents. For more information about the `resource` objects, see the [Webhooks Actions page](https://docs.apify.com/webhooks/actions#resource).
+Note that apart from event data, actions also have the `resource` object available, which can provide more details about the object that triggered the event. Therefore, for example, for the `ACTOR.RUN.SUCCEEDED` event, the provided resource is info about the successful run, which contains the `defaultDatasetId` property that you can also use to fetch the dataset contents. For more information about the `resource` objects, see the [Webhooks Actions page](/platform/integrations/webhooks/actions#resource).
 
 ## [](#actor-build)Actor build
 

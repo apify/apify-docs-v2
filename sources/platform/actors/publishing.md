@@ -11,7 +11,7 @@ slug: /actors/publishing
 
 ---
 
-Before you make your actor public, it is important to make sure your actor has good **Description** and **README** sections so that users can understand what your actor does, how to configure its inputs, and what kind of output it returns. In this lesson, we will briefly go over each of the fields you have to fill in before publishing your actor. For more detailed information about [SEO and promotion](https://developers.apify.com/academy/apify-platform/get-most-of-actors/seo-and-promotion) and [how to write a comprehensive README](https://developers.apify.com/academy/apify-platform/get-most-of-actors/actor-readme), check our guides at Apify Developer Academy.
+Before you make your actor public, it is important to make sure your actor has good **Description** and **README** sections so that users can understand what your actor does, how to configure its inputs, and what kind of output it returns. In this lesson, we will briefly go over each of the fields you have to fill in before publishing your actor. For more detailed information about [SEO and promotion](/academy/get-most-of-actors/seo-and-promotion) and [how to write a comprehensive README](/academy/get-most-of-actors/actor-readme), check our guides at Apify Developer Academy.
 
 You can find the Title and description configurations by going to **Apify Console** → **Actors** → **My Actors** → **your-actor** → **Settings → Publication**
 

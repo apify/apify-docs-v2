@@ -5,6 +5,9 @@ sidebar_position: 1
 slug: /puppeteer-playwright/common-use-cases/logging-into-a-website
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Logging into a website {#logging-into-a-website}
 
 **Understand the "login flow" - logging into a website, then maintaining a logged in status within different browser contexts for an efficient automation process.**
@@ -26,8 +29,10 @@ The full logging in process on Yahoo goes like this:
 
 When we lay out the steps like this in [pseudocode](https://en.wikipedia.org/wiki/Pseudocode), it makes it significantly easier to translate over into code. Here's the four steps above loop in JavaScript:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 // Launch a browser and open a page
@@ -55,8 +60,12 @@ await page.waitForLoadState('load');
 // Wait for 10 seconds so we can see that we have in fact
 // successfully logged in
 await page.waitForTimeout(10000)
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 // Launch a browser and open a page
@@ -80,8 +89,10 @@ await Promise.all([page.waitForNavigation(), page.click('button[name="verifyPass
 // Wait for 10 seconds so we can see that we have in fact
 // successfully logged in
 await page.waitForTimeout(10000)
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Great! If you're following along and you've replaced the placeholder credentials with your own, you should see that on the final navigated page, you're logged into your Yahoo account.
 
@@ -121,17 +132,25 @@ With this knowledge of cookies, it can be concluded that we can just pass the co
 
 First, we'll grab the cookies we generated:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Grab the cookies from the default browser context,
 // which was used to log in
 const cookies = await browser.contexts()[0].cookies();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 // Grab the cookies from the page used to log in
 const cookies = await page.cookies();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 Notice that in Playwright, cookies are tied to a **BrowserContext**, while in Puppeteer they are tied to a **Page**.
 
@@ -139,8 +158,10 @@ Notice that in Playwright, cookies are tied to a **BrowserContext**, while in Pu
 
 Remembering from the section above, we stored our cookies in a variable named **cookies**. These can now be directly passed into a new browser context like so:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Create a fresh non-persistent browser context
 const sendEmailContext = await browser.newContext();
 // Add the cookies from the previous one to this one so that
@@ -153,8 +174,12 @@ const page2 = await sendEmailContext.newPage();
 // go through the logging in process again!
 await page2.goto('https://mail.yahoo.com/');
 await page2.waitForTimeout(10000);
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 // Create a fresh non-persistent browser context
 const sendEmailContext = await browser.createIncognitoBrowserContext();
 // Create a new page on the new browser context and set its cookies
@@ -166,15 +191,19 @@ await page2.setCookie(...cookies);
 // go through the logging in process again!
 await page2.goto('https://mail.yahoo.com/');
 await page2.waitForTimeout(10000);
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ### Completing the flow {#completing-the-flow}
 
 Now that passing cookies around is out of the way, we can finally complete the goal at hand and send all three of these emails at once. This can be done by mapping through **emailsToSend**, creating an array of promises where each function creates a new browser context, adds the initial cookies, and sends the email.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 // Grab the cookies from the default browser context,
 // which was used to log in
 const cookies = await browser.contexts()[0].cookies();
@@ -212,8 +241,12 @@ const promises = emailsToSend.map(({ to, subject, body }) =>
 
 // Wait for all emails to be sent
 await Promise.all(promises);
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 // Create an array of promises, running the cookie passing
 // and email sending logic each time
 const promises = emailsToSend.map(({ to, subject, body }) =>
@@ -244,8 +277,10 @@ const promises = emailsToSend.map(({ to, subject, body }) =>
 
 // Wait for all emails to be sent
 await Promise.all(promises);
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Final code overview {#final-code}
 
@@ -258,8 +293,10 @@ To sum up what we've built during this lesson:
 
 Here's what the final code looks like:
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const emailsToSend = [
@@ -327,8 +364,12 @@ const promises = emailsToSend.map(({ to, subject, body }) =>
 await Promise.all(promises);
 
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const emailsToSend = [
@@ -391,8 +432,10 @@ const promises = emailsToSend.map(({ to, subject, body }) =>
 await Promise.all(promises);
 
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

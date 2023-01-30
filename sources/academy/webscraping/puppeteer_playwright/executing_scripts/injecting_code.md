@@ -5,6 +5,9 @@ sidebar_position: 1
 slug: /puppeteer-playwright/executing-scripts/injecting-code
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Injecting code {#injecting-code}
 
 **Learn how to inject scripts prior to a page's load (pre-injecting), as well as how to expose functions to be run at a later time on the page.**
@@ -21,8 +24,10 @@ Sometimes, you need your custom code to run before any other code is run on the 
 
 Luckily, Puppeteer and Playwright both have functions for this. In Puppeteer, we use  the [`page.evaluateOnNewDocument()`](https://puppeteer.github.io/puppeteer/docs/puppeteer.page.evaluateonnewdocument/) function, while in Playwright we use [`page.addInitScript()`](https://playwright.dev/docs/api/class-page#page-add-init-script). We'll use these functions to override the native `addEventListener` function, setting it to a function that does nothing. This will prevent event listeners from being added to elements.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -37,8 +42,12 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -53,8 +62,10 @@ await page.goto('https://google.com');
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 > Go ahead and run this code. Can you click the **I accept** button to accept Google's cookies policy?
 
@@ -68,8 +79,10 @@ const returnMessage = () => 'Apify academy!';
 
 We want to **expose** this function to our loaded page so that it can be later executed there, which can be done with [`page.exposeFunction()`](https://playwright.dev/docs/api/class-page#page-expose-function). This will make `returnMessage()` available when running scripts not only inside of `page.evaluate()`, but also directly from DevTools.
 
-```marked-tabs
-<marked-tab header="Playwright" lang="javascript">
+<Tabs groupId="main">
+<TabItem value="Playwright" label="Playwright">
+
+```javascript
 import { chromium } from 'playwright';
 
 const browser = await chromium.launch({ headless: false });
@@ -86,8 +99,12 @@ console.log(msg);
 
 await page.waitForTimeout(10000);
 await browser.close();
-</marked-tab>
-<marked-tab header="Puppeteer" lang="javascript">
+
+```
+</TabItem>
+<TabItem value="Puppeteer" label="Puppeteer">
+
+```javascript
 import puppeteer from 'puppeteer';
 
 const browser = await puppeteer.launch({ headless: false });
@@ -104,8 +121,10 @@ console.log(msg);
 
 await page.waitForTimeout(20000);
 await browser.close();
-</marked-tab>
+
 ```
+</TabItem>
+</Tabs>
 
 ## Next up {#next}
 

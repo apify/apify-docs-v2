@@ -10,7 +10,7 @@ slug: /proxy/residential-proxy/tips-and-tricks
 
 ---
 
-[Residential](./index.md) proxies and are priced differently (by number of IPs vs traffic used). Because of this, there are some important things to consider before using residential proxy in your solutions.
+[Residential](./index.md) proxies are less predictable than [datacenter](../datacenter_proxy/index.md) proxies and are priced differently (by number of IPs vs traffic used). Because of this, there are some important things to consider before using residential proxy in your solutions.
 
 ## Control traffic used by automated browsers {#control-traffic-used-by-automated-browsers}
 

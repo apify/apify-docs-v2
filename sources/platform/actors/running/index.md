@@ -6,6 +6,9 @@ sidebar_position: 7.1
 slug: /actors/running
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Running
 
 **Start an actor from the Apify Console or via API. Learn about actor lifecycles, how to specify settings and version, provide input and resurrect finished runs.**
@@ -16,7 +19,7 @@ You can start an Apify actor in a number of ways. One option is to start an acto
 
 ![Apify developer console](../images/actor-console.png)
 
-You can specify options such as [build](../development/builds.md) for your actor run.
+You can specify options such as [build](../development/builds.md), timeout, and [memory](./memory_and_cpu.md) for your actor run.
 
 <!-- Using an HTML table because it doesn't have a header - markdown doesn't allow tables with no headers -->
 <table>
@@ -45,11 +48,13 @@ An actor's input and its content type can be passed as a payload of the POST req
 Actors can also be invoked programmatically from other actors:
 
 - JavaScript: using the [`call()`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#call) function of [`Actor`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor) class provided by the [`apify`](https://docs-v2.apify.com/sdk-js/) NPM package.
-- Python: using the [`call()`](/client-python#actorclient-call) function provided by the [`apify-client`](https://docs-v2.apify.com/client-python/) Python package.
+- Python: using the [`call()`](https://docs-v2.apify.com/client-python#actorclient-call) function provided by the [`apify-client`](https://docs-v2.apify.com/client-python) Python package.
 
-```marked-tabs
+<Tabs groupId="main">
 
-<marked-tab header="NodeJS" lang="javascript">
+<TabItem value="NodeJS" label="NodeJS">
+
+```javascript
 import { Actor } from 'apify';
 
 await Actor.init();
@@ -60,17 +65,23 @@ const run = await Actor.call('apify/hello-world', {
 console.dir(run.output);
 // ...
 await Actor.exit();
-</marked-tab>
+
+```
+</TabItem>
 
 
-<marked-tab header="Python" lang="python">
+<TabItem value="Python" label="Python">
+
+```python
 
 run = apify_client.actor('apify/hello-world').call(run_input={ 'message': 'Hello!' })
 print(run['id'])
 
-</marked-tab>
 
 ```
+</TabItem>
+
+</Tabs>
 
 The newly started actor runs under the same user account as the initial actor and therefore all resources consumed are charged to the same user account. This allows more complex actors to be built using simpler actors built and owned by other users.
 
@@ -163,4 +174,4 @@ An actor run is deleted along with its default storages (key-value store, datase
 
 ## Sharing
 
-You can share your actor runs with other Apify users via the [access rights](../../access_rights/index.md).
+You can share your actor runs with other Apify users via the [access rights](../../access_rights/index.md) system. [See the full list of permissions](../../access_rights/list_of_permissions.md).

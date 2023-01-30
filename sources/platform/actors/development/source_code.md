@@ -18,7 +18,7 @@ If the actor's source code requires the use of multiple files/directories, then 
 
 The only required file for multi-file is **Dockerfile**, and all other files depend on your Dockerfile settings. By default, Apify's custom NodeJS Dockerfile is used, which requires a **main.js** file containing your source code and a **package.json** file containing package configurations for [NPM](https://www.npmjs.com/).
 
-See [Custom Dockerfile](./source_code.md) for more information about creating your own Dockerfile and using Apify's prepared base images.
+See [Custom Dockerfile](./source_code.md) and [base Docker images]({{@link actors/development/base_docker_images.md}}) for more information about creating your own Dockerfile and using Apify's prepared base images.
 
 ## [](#git-repository)Git repository
 
@@ -41,7 +41,7 @@ To obtain the key click at the **deployment key** link under the **Git URL** tex
 
 ## [](#zip-file)Zip file
 
-The source code for the actor can also be located in a Zip archive hosted on an external URL. This option enables integration with arbitrary source code or continuous integration systems. Similarly, as with the [Git repository](./source_code.md), the root file of your application must be named `main.js`.
+The source code for the actor can also be located in a Zip archive hosted on an external URL. This option enables integration with arbitrary source code or continuous integration systems. Similarly, as with the [Git repository](./source_code.md), the source code can consist of multiple files and directories, can contain a custom **Dockerfile** and the actor description is taken from **README.md**. If you don't use a [custom Dockerfile]({{@link actors/development/source_code.md#custom-dockerfile}}), the root file of your application must be named `main.js`.
 
 ## [](#github-gist)GitHub Gist
 
@@ -56,7 +56,7 @@ Then set the **Source Type** to **GitHub Gist** and paste the Gist URL as follow
 
 Note that the example actor is available in the Apify Store as [apify/example-github-gist](https://apify.com/apify/example-github-gist).
 
-Similarly, as with the [Git repository](./source_code.md), the root file of your application must be named `main.js`.
+Similarly, as with the [Git repository](./source_code.md), the source code can consist of multiple files and directories, it can contain a custom **Dockerfile** and the actor description is taken from **README.md**. If you don't use a [custom Dockerfile]({{@link actors/development/source_code.md#custom-dockerfile}}), the root file of your application must be named `main.js`.
 
 ## [](#custom-dockerfile)Custom Dockerfile
 
@@ -145,20 +145,20 @@ In order to enable active development, the actor can have multiple versions of t
 
 For example, the actor can have a production version **1.1**, a beta version **1.2** that contains new features but is still backwards compatible, and a development version **2.0** that contains breaking changes.
 
-The versions of the actors are built and run separately. For details, see [Build](./builds.md).
+The versions of the actors are built and run separately. For details, see [Build](./builds.md) and [Running](../running/index.md).
 
 ## [](#local-development)Local development
 
 [//]: # (TODO: It's pretty outdated, we should probably update the actor too)
 It is possible to develop actors locally on your computer and then only deploy them to the Apify cloud when they are ready. This is especially useful if you're using Git integration. See [Git repository](#git-repository) for more details. The boilerplate for creating an actor in a Git repository is available on [GitHub](https://github.com/apify/actor-quick-start).
 
-Unfortunately, not all features of the Apify platform can be emulated locally, therefore you might still need to let the [`apify`](https://docs.apify.com/api/apify-client-js/latest) NPM package use your API token in order to interact with the Apify platform. The simplest way to achieve that is by setting the `APIFY_TOKEN` environment variable on your local development machine.
+Unfortunately, not all features of the Apify platform can be emulated locally, therefore you might still need to let the [`apify`](https://docs-v2.apify.com/client-js/latest) NPM package use your API token in order to interact with the Apify platform. The simplest way to achieve that is by setting the `APIFY_TOKEN` environment variable on your local development machine.
 
 ## [](#input-schema)Input schema
 
 Actor source files may contain an input schema defining the input that actor accepts and the UI components used for input at Apify platform. Using input schema you can provide UI to actor users that is easy to use and also ensure that input of your actor is valid.
 
-For more information on this topic see [input schema documentation](https://docs.apify.com/actors/input-schema) on a separate page.
+For more information on this topic see [input schema documentation](/platform/actors/input-schema) on a separate page.
 
 ## [](#metamorph)Metamorph
 
