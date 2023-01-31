@@ -27,10 +27,10 @@ export default function FooterLinkItem({ item }) {
             className="footer__link-item"
             {...(href
                 ? {
-                    href: prependBaseUrlToHref ? normalizedHref : href
+                    href: prependBaseUrlToHref ? normalizedHref : href,
                 }
                 : {
-                    to: toUrl
+                    to: toUrl,
                 })}
             {...props}>
             {label}

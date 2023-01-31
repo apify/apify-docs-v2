@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import isInternalUrl from '@docusaurus/isInternalUrl';
+import isInternalUrl_ from '@docusaurus/isInternalUrl';
+import IconExternalLink from '@theme/Icon/ExternalLink';
 import { useLocation } from '@docusaurus/router';
 import { isRegexpStringMatch, useThemeConfig } from '@docusaurus/theme-common';
 import { usePluginData } from '@docusaurus/useGlobalData';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function NavbarNavLink({
     activeBasePath,
@@ -26,8 +28,15 @@ export default function NavbarNavLink({
     const toUrl = useBaseUrl(to);
     const activeBaseUrl = useBaseUrl(activeBasePath);
     const normalizedHref = useBaseUrl(href, { forcePrependBaseUrl: true });
-    // const isExternalLink = label && href && !isInternalUrl(href);
-    const isExternalLink = false;
+    const { siteConfig } = useDocusaurusContext();
+    const isInternalUrl = (url) => {
+        if (url.startsWith(siteConfig.url)) {
+            return true;
+        }
+        return isInternalUrl_(url);
+    };
+
+    const isExternalLink = label && href && !isInternalUrl(href);
     // Link content is set through html XOR label
     const linkContentProps = html
         ? { dangerouslySetInnerHTML: { __html: html } }

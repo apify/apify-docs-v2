@@ -245,8 +245,8 @@ html[data-theme="dark"] .navbar .navbar__link[href*=discord]:before {
     background-image: url('/img/discord-brand-dark.svg');
 }
 
-.navbar svg[class*=iconExternalLink],
-aside svg[class*=iconExternalLink] {
+.navbar .icon svg[class*=iconExternalLink],
+aside .icon svg[class*=iconExternalLink] {
     display: none;
 }
 
