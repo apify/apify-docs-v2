@@ -361,6 +361,10 @@ html.plugin-docs .theme-doc-markdown {
     line-height: 32px;
 }
 
+.tsd-panel .markdown li {
+    margin-top: var(--ifm-list-item-margin);
+}
+
 html.plugin-docs .theme-doc-markdown img {
     display: block;
     margin: 0 auto;
