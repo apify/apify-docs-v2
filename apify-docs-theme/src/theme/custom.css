@@ -361,6 +361,11 @@ html.plugin-docs .theme-doc-markdown {
     line-height: 32px;
 }
 
+html.plugin-docs .theme-doc-markdown img {
+    display: block;
+    margin: 0 auto;
+}
+
 html.plugin-docs .theme-doc-markdown h1 {
     font-weight: 600;
     font-size: 48px;
