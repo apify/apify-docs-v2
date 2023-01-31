@@ -361,7 +361,7 @@ html.plugin-docs .theme-doc-markdown {
     line-height: 32px;
 }
 
-.tsd-panel .markdown li {
+.markdown .tsd-panel li {
     margin-top: var(--ifm-list-item-margin);
 }
 
