@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { useLocation } from '@docusaurus/router';
 import { translate } from '@docusaurus/Translate';
 import IconHome from '@theme/Icon/Home';
 import styles from './styles.module.css';
@@ -8,7 +9,7 @@ import styles from './styles.module.css';
 export default function HomeBreadcrumbItem() {
     const baseUrl = useBaseUrl('/');
 
-    const currentPath = window.location.pathname.replace(`^${baseUrl}`, '');
+    const currentPath = useLocation().pathname.replace(`^${baseUrl}`, '');
     const homeHref = useBaseUrl(currentPath.split('/')[1]);
 
     return (
