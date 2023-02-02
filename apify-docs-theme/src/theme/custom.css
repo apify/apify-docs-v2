@@ -338,6 +338,14 @@ article .card h2 {
     float: right;
 }
 
+.menu__caret {
+    transform: scale(.7);
+}
+
+aside button[class*="collapseSidebarButton"] svg {
+    transform: scale(.7) rotate(180deg);
+}
+
 .table-of-contents__link {
     height: 20px;
 }
@@ -626,7 +634,7 @@ html[data-theme='dark'] .actionLink:hover::after {
     margin-left: 8px;
 }
 
-@media (max-width: 1660px) {
+@media (min-width: 997px) and (max-width: 1660px) {
     :root {
         --ifm-toc-padding-vertical: 0.25rem;
         --ifm-toc-padding-horizontal: 0.25rem;
