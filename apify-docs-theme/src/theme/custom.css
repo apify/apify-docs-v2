@@ -14,6 +14,9 @@ html[data-theme='dark'] {
     --ifm-heading-color: #f2f3fb;
     --ifm-navbar-link-color: #f2f3fb;
 
+    /* TODO set this conditionally to 123px when there is second level nav */
+    --ifm-navbar-height: 68px;
+
     --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
     --docsearch-text-color: #8d92af;
 
@@ -657,4 +660,16 @@ html[data-theme='dark'] .actionLink:hover::after {
         font-size: 16px;
         line-height: 28px;
     }
+}
+
+aside li.section-header > div > .menu__link {
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+aside li.section-header > .menu__list {
+    padding-left: 0;
 }

@@ -8,7 +8,6 @@ const themeConfig = ({
         },
     },
     navbar: {
-        hideOnScroll: true,
         title: 'Apify Docs',
         logo: {
             src: 'img/apify_sdk.svg',
