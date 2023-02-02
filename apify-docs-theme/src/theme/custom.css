@@ -294,6 +294,31 @@ header.hero div[class^=heroButtons] {
     justify-content: inherit;
 }
 
+article {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.markdown blockquote {
+    --ifm-alert-background-color: var(--ifm-color-info-contrast-background);
+    --ifm-alert-background-color-highlight: rgba(84,199,236,.15);
+    --ifm-alert-foreground-color: var(--ifm-color-info-contrast-foreground);
+    --ifm-alert-border-color: var(--ifm-color-info-dark);
+    --ifm-code-background: var(--ifm-alert-background-color-highlight);
+    --ifm-link-color: var(--ifm-alert-foreground-color);
+    --ifm-link-hover-color: var(--ifm-alert-foreground-color);
+    --ifm-link-decoration: underline;
+    --ifm-tabs-color: var(--ifm-alert-foreground-color);
+    --ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+    --ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+    background-color: var(--ifm-alert-background-color);
+    border: var(--ifm-alert-border-width) solid var(--ifm-alert-border-color);
+    border-left-width: var(--ifm-alert-border-left-width);
+    border-radius: var(--ifm-alert-border-radius);
+    box-shadow: var(--ifm-alert-shadow);
+    padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+
 article .card h2 {
     margin-top: 0;
 }
@@ -412,8 +437,11 @@ html.plugin-docs .theme-doc-markdown h3 {
 .theme-doc-sidebar-menu .menu__link,
 .theme-doc-toc-desktop .table-of-contents .toc-highlight {
     height: auto;
-    color: #6f7490;
     background: none;
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
 }
 
 .theme-doc-sidebar-menu .menu__link:hover {
@@ -494,10 +522,6 @@ div[class*="searchBox"] {
 
 .menu__link.navbar__item {
     padding: 4px 8px;
-}
-
-.menu__list-item {
-    min-height: 33px;
 }
 
 .menu__link, .menu__list-item > .navbar__item {
@@ -600,4 +624,29 @@ html[data-theme='dark'] .actionLink:hover::after {
 .actionLink:hover::after {
     background-image: url('/img/arrow-right-primary.svg');
     margin-left: 8px;
+}
+
+@media (max-width: 1660px) {
+    :root {
+        --ifm-toc-padding-vertical: 0.25rem;
+        --ifm-toc-padding-horizontal: 0.25rem;
+    }
+
+    .navbar__item, .menu__link, .navbar__link {
+        padding: 2px 8px;
+    }
+
+    .theme-doc-sidebar-menu .menu__link,
+    .theme-doc-toc-desktop .table-of-contents .toc-highlight {
+        font-size: .8rem;
+    }
+
+    .theme-doc-toc-desktop {
+        margin-left: -15px;
+    }
+
+    html.plugin-docs .theme-doc-markdown {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
