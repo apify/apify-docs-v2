@@ -437,8 +437,8 @@ html.plugin-docs .theme-doc-markdown h3 {
 }
 
 .theme-doc-toc-desktop .table-of-contents {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .navbar-sidebar .menu__link.icon {
