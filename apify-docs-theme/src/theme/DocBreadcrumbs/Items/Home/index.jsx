@@ -9,8 +9,8 @@ import styles from './styles.module.css';
 export default function HomeBreadcrumbItem() {
     const baseUrl = useBaseUrl('/');
 
-    const currentPath = useLocation().pathname.replace(`^${baseUrl}`, '');
-    const homeHref = useBaseUrl(currentPath.split('/')[1]);
+    const currentPath = useLocation().pathname.replace(new RegExp(`^${baseUrl}`), '');
+    const homeHref = useBaseUrl(currentPath.split('/')[0]);
 
     return (
         <li className="breadcrumbs__item">
