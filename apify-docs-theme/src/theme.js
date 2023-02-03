@@ -43,9 +43,7 @@ async function copyChangelogFromReleases(paths, repo) {
     });
 
     paths.forEach((p) => {
-        fs.writeFile(`${p}/changelog.md`, markdown, (err) => {
-            if (err) throw err;
-        });
+        fs.writeFileSync(`${p}/changelog.md`, markdown);
     });
 }
 
