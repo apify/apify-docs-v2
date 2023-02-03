@@ -58,7 +58,7 @@ export default function DocItemLayout({ children }) {
                             repo="apify/apify-docs"
                             repoId="MDEwOlJlcG9zaXRvcnkxOTk0Njc5ODk="
                             category="Comments"
-                            data-category-id="DIC_kwDOC-Oj1c4CT-aW"
+                            categoryId="DIC_kwDOC-Oj1c4CT-aW"
                             mapping="pathname"
                             reactionsEnabled="1"
                             emitMetadata="0"
