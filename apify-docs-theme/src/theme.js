@@ -39,11 +39,12 @@ async function copyChangelogFromReleases(paths, repo) {
         markdown += release.tag_name && a[i + 1]?.tag_name
             ? `## [${release.name}](https://github.com/${repo}/compare/${a[i + 1].tag_name}...${release.tag_name})\n`
             : `## ${release.name}\n`;
-        markdown += `${release.body.replaceAll(/(^#|\n#)/g, '##')}\n`;
+        markdown += `${release.body.replaceAll(/(^##|\n##)/g, '###')}\n`;
     });
 
     paths.forEach((p) => {
         fs.writeFileSync(`${p}/changelog.md`, markdown);
+        updateChangelog(`${p}/changelog.md`);
     });
 }
 
@@ -83,6 +84,12 @@ function theme(
                         : []
                     ),
                 ];
+
+                for (const p of pathsToCopyChangelog) {
+                    // the changelog page has to exist for the sidebar to work - async loadContent() is (apparently) not awaited for by sidebar
+                    if (fs.existsSync(path.join(p, 'changelog.md'))) continue;
+                    fs.writeFileSync(`${p}/changelog.md`, 'Changelog placeholder. Please wait...');
+                }
 
                 if (options.changelogFromRoot) {
                     copyChangelogFromRoot(pathsToCopyChangelog);
