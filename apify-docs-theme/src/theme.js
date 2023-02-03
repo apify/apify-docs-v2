@@ -25,7 +25,9 @@ function updateChangelog(changelogPath) {
     const changelog = fs.readFileSync(changelogPath, 'utf-8');
     const updated = `---
 title: Changelog
+sidebar_label: Changelog
 ---
+
 ${changelog.replaceAll(/\n#[^#]/g, '\n## ')}`;
     fs.writeFileSync(changelogPath, updated, 'utf-8');
 }
@@ -35,6 +37,8 @@ async function copyChangelogFromReleases(paths, repo) {
     const releases = response.data;
 
     let markdown = '';
+    if (!Array.isArray(releases) || releases.length === 0) return;
+
     releases.forEach((release, i, a) => {
         markdown += release.tag_name && a[i + 1]?.tag_name
             ? `## [${release.name}](https://github.com/${repo}/compare/${a[i + 1].tag_name}...${release.tag_name})\n`
@@ -88,7 +92,13 @@ function theme(
                 for (const p of pathsToCopyChangelog) {
                     // the changelog page has to exist for the sidebar to work - async loadContent() is (apparently) not awaited for by sidebar
                     if (fs.existsSync(path.join(p, 'changelog.md'))) continue;
-                    fs.writeFileSync(`${p}/changelog.md`, 'Changelog placeholder. Please wait...');
+                    fs.writeFileSync(`${p}/changelog.md`, `---
+title: Changelog
+sidebar_label: Changelog
+---
+It seems that the changelog is not available. 
+This either means that your Docusaurus setup is misconfigured, or that your GitHub repository contains no releases yet.
+`);
                 }
 
                 if (options.changelogFromRoot) {
