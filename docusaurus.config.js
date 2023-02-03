@@ -75,6 +75,8 @@ module.exports = {
                 docs: {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
+                    // TODO change once the repo is migrated
+                    editUrl: 'https://github.com/apify/apify-docs-v2/edit/master/',
                     path: './sources/platform',
                     routeBasePath: 'platform',
                     sidebarPath: require.resolve('./sources/platform/sidebars.js'),
@@ -93,6 +95,8 @@ module.exports = {
                 rehypePlugins: [externalLinkProcessor],
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
+                // TODO change once the repo is migrated
+                editUrl: 'https://github.com/apify/apify-docs-v2/edit/master/',
                 sidebarPath: require.resolve('./sources/academy/sidebars.js'),
             },
         ],
