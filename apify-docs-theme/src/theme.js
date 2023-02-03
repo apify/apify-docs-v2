@@ -39,9 +39,9 @@ async function copyChangelogFromReleases(paths, repo) {
     let markdown = '';
     if (!Array.isArray(releases) || releases.length === 0) return;
 
-    releases.forEach((release, i, a) => {
-        markdown += release.tag_name && a[i + 1]?.tag_name
-            ? `## [${release.name}](https://github.com/${repo}/compare/${a[i + 1].tag_name}...${release.tag_name})\n`
+    releases.forEach((release) => {
+        markdown += release.tag_name
+            ? `## [${release.name}](https://github.com/${repo}/releases/tag/${release.tag_name})\n`
             : `## ${release.name}\n`;
         markdown += `${release.body.replaceAll(/(^##|\n##)/g, '###')}\n`;
     });
