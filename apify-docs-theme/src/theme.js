@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const axios = require('axios');
 
 function findPathInParent(endPath) {
     let parentPath = __dirname;
@@ -29,6 +30,36 @@ ${changelog.replaceAll(/\n#[^#]/g, '\n## ')}`;
     fs.writeFileSync(changelogPath, updated, 'utf-8');
 }
 
+async function copyChangelogFromReleases(paths, repo) {
+    const response = await axios.get(`https://api.github.com/repos/${repo}/releases`);
+    const releases = response.data;
+
+    let markdown = '';
+    releases.forEach((release, i, a) => {
+        markdown += release.tag_name && a[i + 1]?.tag_name
+            ? `## [${release.name}](https://github.com/${repo}/compare/${a[i + 1].tag_name}...${release.tag_name})\n`
+            : `## ${release.name}\n`;
+        markdown += `${release.body.replaceAll(/(^#|\n#)/g, '##')}\n`;
+    });
+
+    paths.forEach((p) => {
+        fs.writeFile(`${p}/changelog.md`, markdown, (err) => {
+            if (err) throw err;
+        });
+    });
+}
+
+function copyChangelogFromRoot(paths) {
+    const changelogPath = findPathInParentOrThrow('CHANGELOG.md');
+
+    for (const docsPath of paths) {
+        if (fs.existsSync(path.join(docsPath, 'changelog.md')) && fs.statSync(
+            path.join(docsPath, 'changelog.md')).mtime >= fs.statSync(changelogPath).mtime) continue;
+        fs.copyFileSync(changelogPath, path.join(docsPath, 'changelog.md'));
+        updateChangelog(path.join(docsPath, 'changelog.md'));
+    }
+}
+
 function theme(
     context,
     options,
@@ -46,9 +77,7 @@ function theme(
         },
         async loadContent() {
             try {
-                const changelogPath = findPathInParentOrThrow('CHANGELOG.md');
                 const versioned = findPathInParent('website/versioned_docs');
-
                 const pathsToCopyChangelog = [
                     findPathInParentOrThrow('docs'),
                     ...(versioned
@@ -57,12 +86,10 @@ function theme(
                     ),
                 ];
 
-                for (const docsPath of pathsToCopyChangelog) {
-                    if (fs.existsSync(path.join(docsPath, 'changelog.md')) && fs.statSync(
-                        path.join(docsPath, 'changelog.md')).mtime >= fs.statSync(changelogPath).mtime) continue;
-                    fs.copyFileSync(changelogPath, path.join(docsPath, 'changelog.md'));
-                    console.log(`copied ${changelogPath} to ${path.join(docsPath, 'changelog.md')}`);
-                    updateChangelog(path.join(docsPath, 'changelog.md'));
+                if (options.changelogFromRoot) {
+                    copyChangelogFromRoot(pathsToCopyChangelog);
+                } else {
+                    await copyChangelogFromReleases(pathsToCopyChangelog, `${context.siteConfig.organizationName}/${context.siteConfig.projectName}`);
                 }
             } catch (e) {
                 console.warn(`Changelog page could not be initialized: ${e.message}`);
