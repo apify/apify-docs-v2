@@ -667,7 +667,16 @@ aside li.section-header > div > .menu__link {
     opacity: 0.8;
     font-size: 1em;
     font-weight: 700;
-    margin: 5px 0;
+    margin: 0;
+}
+
+aside li.section-header.menu__list-item {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+aside li.section-header.menu__list-item:nth-child(2) {
+    margin-top: 5px;
 }
 
 aside li.section-header > .menu__list {
