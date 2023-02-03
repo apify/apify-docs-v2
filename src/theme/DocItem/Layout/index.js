@@ -55,10 +55,10 @@ export default function DocItemLayout({ children }) {
                     <div className={styles.giscus}>
                         <Giscus
                             id="giscus-comments"
-                            repo="apify/crawlee"
-                            repoId="MDEwOlJlcG9zaXRvcnk2NjY3MDgxOQ="
+                            repo="apify/apify-docs"
+                            repoId="MDEwOlJlcG9zaXRvcnkxOTk0Njc5ODk="
                             category="Comments"
-                            categoryId="DIC_kwDOA_lQ484CQufN"
+                            data-category-id="DIC_kwDOC-Oj1c4CT-aW"
                             mapping="pathname"
                             reactionsEnabled="1"
                             emitMetadata="0"
