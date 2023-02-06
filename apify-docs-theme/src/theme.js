@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
+const { updateChangelog } = require('./markdown');
 
 function findPathInParent(endPath) {
     let parentPath = __dirname;
@@ -21,17 +22,6 @@ function findPathInParentOrThrow(endPath) {
     return filePath;
 }
 
-function updateChangelog(changelogPath) {
-    const changelog = fs.readFileSync(changelogPath, 'utf-8');
-    const updated = `---
-title: Changelog
-sidebar_label: Changelog
----
-
-${changelog.replaceAll(/\n#[^#]/g, '\n## ')}`;
-    fs.writeFileSync(changelogPath, updated, 'utf-8');
-}
-
 async function copyChangelogFromReleases(paths, repo) {
     const response = await axios.get(`https://api.github.com/repos/${repo}/releases`);
     const releases = response.data;
@@ -47,8 +37,7 @@ async function copyChangelogFromReleases(paths, repo) {
     });
 
     paths.forEach((p) => {
-        fs.writeFileSync(`${p}/changelog.md`, markdown);
-        updateChangelog(`${p}/changelog.md`);
+        fs.writeFileSync(`${p}/changelog.md`, updateChangelog(markdown));
     });
 }
 
@@ -58,8 +47,8 @@ function copyChangelogFromRoot(paths) {
     for (const docsPath of paths) {
         if (fs.existsSync(path.join(docsPath, 'changelog.md')) && fs.statSync(
             path.join(docsPath, 'changelog.md')).mtime >= fs.statSync(changelogPath).mtime) continue;
-        fs.copyFileSync(changelogPath, path.join(docsPath, 'changelog.md'));
-        updateChangelog(path.join(docsPath, 'changelog.md'));
+        const changelog = fs.readFileSync(changelogPath, 'utf-8');
+        fs.writeFileSync(`${docsPath}/changelog.md`, updateChangelog(changelog));
     }
 }
 
