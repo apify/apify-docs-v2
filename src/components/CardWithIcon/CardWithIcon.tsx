@@ -2,6 +2,7 @@ import React from "react";
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from "./styles.module.css";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 interface CardWithIconProps {
     icon: React.ReactNode;
@@ -12,8 +13,9 @@ interface CardWithIconProps {
 }
 
 export default function CardWithIcon({ icon, title, description, to, width }: CardWithIconProps) {
+    const { siteConfig } = useDocusaurusContext();
     return (
-        <Link to={to} className={clsx(styles.card)} style={{ width }}>
+        <Link to={new URL(to, siteConfig.url).href} className={clsx(styles.card)} style={{ width }}>
             <div className={styles.cardContent}>
                 <div className={styles.cardIcon}>{icon}</div>
                 <h3>{title}</h3>
