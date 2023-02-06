@@ -10,6 +10,7 @@ function addHeader(changelog, header = 'Changelog') {
     return `---
 title: ${header}
 sidebar_label: ${header}
+toc_max_heading_level: 2
 ---
 ${changelog}`;
 }
