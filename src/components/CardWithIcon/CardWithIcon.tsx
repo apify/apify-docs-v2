@@ -14,13 +14,27 @@ interface CardWithIconProps {
 
 export default function CardWithIcon({ icon, title, description, to, width }: CardWithIconProps) {
     const { siteConfig } = useDocusaurusContext();
+    const external = to.startsWith('http');
+
+    if (external) {
+        return (
+          <Link to={new URL(to, siteConfig.url).href} className={clsx(styles.card)} style={{ width }}>
+              <div className={styles.cardContent}>
+                  <div className={styles.cardIcon}>{icon}</div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+              </div>
+          </Link>
+        );
+    }
+
     return (
-        <Link to={new URL(to, siteConfig.url).href} className={clsx(styles.card)} style={{ width }}>
+        <a href={new URL(to, siteConfig.url).href} className={clsx(styles.card)} style={{ width }}>
             <div className={styles.cardContent}>
                 <div className={styles.cardIcon}>{icon}</div>
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div>
-        </Link>
+        </a>
     );
 }

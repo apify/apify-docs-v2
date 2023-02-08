@@ -37,25 +37,25 @@ export default function Home() {
                 Find the solution to your task here or use the search box above.
                 </p>}
             />
-            <Section heading="Learn">
+            <Section heading="Academy">
                 <div className={styles.cardsWrapper}>
                     <CardWithIcon
                         icon={<LearnIcon />}
-                        title="Web scraping academy"
-                        description="Go from novice to expert web scraper developer with our free web scraping and automation courses."
+                        title="Web scraping course"
+                        description="This course is a comprehensive and practical web scraping course that will take you from an absolute beginner to an expert scraper developer. It's free and uses only open-source tools."
                         to="/academy/web-scraping-for-beginners"
                         width="calc(50% - 12px)"
                     />
                     <CardWithIcon
                         icon={<BookCodeIcon />}
-                        title="Platform academy"
-                        description="Learn all about the Apify platform and its tools to improve your overall development experience."
+                        title="Apify Platform course"
+                        description="Our Apify platform course will teach you how to master the Apify platform and become a professional Apify developer. You will learn how to deploy your code as an Apify actor and effectively use all the platform's features."
                         to="/academy/apify-platform"
                         width="calc(50% - 12px)"
                     />
                 </div>
             </Section>
-            <Section heading="Docs">
+            <Section heading="Documentation">
                 <div className={styles.cardsWrapper}>
                     <CardWithIcon
                         icon={<BookIcon />}
@@ -73,39 +73,43 @@ export default function Home() {
                     />
                 </div>
             </Section>
-            <Section heading="Build">
+            <Section heading="Build on Apify">
                 <div className={styles.cardsWrapper} style={{ marginBottom: "24px" }}>
                     <CardWithIcon
                         icon={<RectangleJavaScriptIcon />}
                         title="SDK for JavaScript"
-                        description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
-                        to="/sdk-js/"
+                        description="A toolkit for building actors on Apify Platform in JavaScript"
+                        to="/sdk/js/"
                         width="calc(50% - 12px)"
                     />
-                     <CardWithIcon
-                        icon={<CliIcon />}
-                        title="Apify CLI"
-                        description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
-                        to="/cli"
+                    <CardWithIcon
+                        icon={<RectangleJavaScriptIcon />}
+                        title="SDK for Python (beta)"
+                        description="A toolkit for building actors on Apify Platform in Python"
+                        to="/sdk/python/"
                         width="calc(50% - 12px)"
                     />
-                </div>
-                <div className={styles.cardsWrapper}>
                     <CardWithIcon
                         icon={<FileJavaScriptIcon />}
                         title="API Client for JavaScript"
                         description="The official library to access the Apify API from your JavaScript applications."
-                        to="/client-js"
+                        to="/api/client/js"
                         width="calc(50% - 12px)"
                     />
                     <CardWithIcon
                         icon={<FilePythonIcon />}
                         title="API Client for Python"
                         description="The official library to access the Apify API from your Python applications."
-                        to="/client-python"
+                        to="/api/client/python"
                         width="calc(50% - 12px)"
                     />
-                    
+                    <CardWithIcon
+                      icon={<CliIcon />}
+                      title="Apify CLI"
+                      description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
+                      to="/cli"
+                      width="calc(50% - 12px)"
+                    />
                 </div>
             </Section>
             <Section heading="Contribute">
