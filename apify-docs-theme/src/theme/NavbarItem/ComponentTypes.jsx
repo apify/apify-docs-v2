@@ -54,7 +54,7 @@ function ApiNavbarItem(ctx) {
                 exact
                 {...ctx}
                 label={ctx.label}
-                to={`api/${ctx.to}`}
+                to={`reference/${ctx.to}`}
             />
         );
     }
@@ -71,7 +71,7 @@ function ApiNavbarItem(ctx) {
                 exact
                 {...ctx}
                 label={ctx.label}
-                to={`docs/${version.version === 'current' ? 'next' : version.version}/api/${ctx.to}`}
+                to={`docs/${version.version === 'current' ? 'next' : version.version}/reference/${ctx.to}`}
             />
         );
     }
@@ -81,7 +81,7 @@ function ApiNavbarItem(ctx) {
             exact
             {...ctx}
             label={ctx.label}
-            to={`api/${version.version === 'current' ? 'next' : version.version}/${ctx.to}`}
+            to={`reference/${version.version === 'current' ? 'next' : version.version}/${ctx.to}`}
         />
     );
 }
