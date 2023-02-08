@@ -47,13 +47,13 @@ const themeConfig = ({
                     },
                     {
                         label: 'Client for JavaScript',
-                        href: `${absoluteUrl}/client-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/api/client/js/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'Client for Python',
-                        href: `${absoluteUrl}/client-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/api/client/python/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
@@ -67,13 +67,13 @@ const themeConfig = ({
                 items: [
                     {
                         label: 'SDK for JavaScript',
-                        href: `${absoluteUrl}/sdk-js/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/sdk/js/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },
                     {
                         label: 'SDK for Python',
-                        href: `${absoluteUrl}/sdk-python/`, // we need a trailing slash here, we'd get redirected there anyway
+                        href: `${absoluteUrl}/sdk/python/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
                     },

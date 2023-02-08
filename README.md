@@ -88,16 +88,16 @@ server {
   location / {
     proxy_pass http://localhost:3000;
   }
-  location /client-js {
+  location /api/client/js {
     proxy_pass http://localhost:3001;
   }
-  location /client-python {
+  location /api/client/python {
     proxy_pass http://localhost:3002;
   }
-  location /sdk-js {
+  location /sdk/js {
     proxy_pass http://localhost:3003;
   }
-  location /sdk-python {
+  location /sdk/python {
     proxy_pass http://localhost:3004;
   }
   location /cli {
@@ -123,16 +123,16 @@ server {
   location / {
     proxy_pass https://apify.github.io/apify-docs-v2/;
   }
-  location /client-js {
+  location /api/client/js {
     proxy_pass https://apify.github.io/apify-client-js/;
   }
-  location /client-python {
+  location /api/client/python {
     proxy_pass https://apify.github.io/apify-client-python/;
   }
-  location /sdk-js {
+  location /sdk/js {
     proxy_pass https://apify.github.io/apify-sdk-js-v2/;
   }
-  location /sdk-python {
+  location /sdk/python {
     proxy_pass https://apify.github.io/apify-sdk-python/;
   }
   location /cli {
