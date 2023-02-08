@@ -233,7 +233,7 @@ const themeConfig = ({
             height: '60px',
         },
     },
-    // TODO
+    // we will reuse the SDK algolia app
     algolia: {
         appId: 'N8EOCSBQGH',
         apiKey: 'b43e67a96ed18c7f63f5fd965906a96d', // search only (public) API key

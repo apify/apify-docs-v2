@@ -68,7 +68,7 @@ export default function Home() {
                         icon={<FileCodeIcon />}
                         title="API reference"
                         description="Get programmatic access to the Apify Platform with the Apify API."
-                        to="/api/v2"
+                        to="/api/v2/"
                         width="calc(50% - 12px)"
                     />
                 </div>
@@ -93,21 +93,21 @@ export default function Home() {
                         icon={<FileJavaScriptIcon />}
                         title="API Client for JavaScript"
                         description="The official library to access the Apify API from your JavaScript applications."
-                        to="/api/client/js"
+                        to="/api/client/js/"
                         width="calc(50% - 12px)"
                     />
                     <CardWithIcon
                         icon={<FilePythonIcon />}
                         title="API Client for Python"
                         description="The official library to access the Apify API from your Python applications."
-                        to="/api/client/python"
+                        to="/api/client/python/"
                         width="calc(50% - 12px)"
                     />
                     <CardWithIcon
                       icon={<CliIcon />}
                       title="Apify CLI"
                       description="Create actors from your computer's CLI. Run them locally or deploy them to the Apify platform."
-                      to="/cli"
+                      to="/cli/"
                       width="calc(50% - 12px)"
                     />
                 </div>
