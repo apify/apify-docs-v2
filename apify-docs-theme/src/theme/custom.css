@@ -293,11 +293,6 @@ header.hero div[class^=heroButtons] {
     justify-content: inherit;
 }
 
-article {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
 .markdown blockquote {
     --ifm-alert-background-color: var(--ifm-color-info-contrast-background);
     --ifm-alert-background-color-highlight: rgba(84,199,236,.15);
