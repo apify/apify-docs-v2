@@ -33,7 +33,7 @@ async function copyChangelogFromReleases(paths, repo) {
         markdown += release.tag_name
             ? `## [${release.name}](https://github.com/${repo}/releases/tag/${release.tag_name})\n`
             : `## ${release.name}\n`;
-        markdown += `${release.body.replaceAll(/(^##|\n##)/g, '###')}\n`;
+        markdown += `${release.body.replaceAll(/(^#|\n#)/g, '###')}\n`;
     });
 
     paths.forEach((p) => {
