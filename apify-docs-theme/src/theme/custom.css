@@ -673,3 +673,21 @@ aside li.section-header.menu__list-item:nth-child(2) {
 aside li.section-header > .menu__list {
     padding-left: 0;
 }
+
+.beta-chip {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    content: 'beta';
+    background: #ddd;
+    font-size: 80%;
+    line-height: 10px;
+    padding: 3px;
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+}
+
+html[data-theme='dark'] .beta-chip {
+    background: #333;
+}

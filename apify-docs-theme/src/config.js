@@ -72,7 +72,7 @@ const themeConfig = ({
                         rel: 'dofollow',
                     },
                     {
-                        label: 'SDK for Python',
+                        html: 'SDK for Python <span class="beta-chip">beta</span>',
                         href: `${absoluteUrl}/sdk/python/`, // we need a trailing slash here, we'd get redirected there anyway
                         target: '_self',
                         rel: 'dofollow',
