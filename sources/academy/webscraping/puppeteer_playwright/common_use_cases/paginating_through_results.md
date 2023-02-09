@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-If you're trying to [collect data](../executing_scripts/collecting_data.md) on a website that has millions, thousands, or even just hundreds of results, it is very likely that they are paginating their results to reduce strain on their backend as well as on the users loading and rendering the content.
+If you're trying to [collect data](../executing_scripts/extracting_data.md) on a website that has millions, thousands, or even just hundreds of results, it is very likely that they are paginating their results to reduce strain on their backend as well as on the users loading and rendering the content.
 
 ![Amazon pagination](https://apify-docs.s3.amazonaws.com/master/docs/assets/tutorials/images/pagination.webp)
 
@@ -111,7 +111,7 @@ When we run this code, here's what we see:
 4
 ```
 
-And since we're already on the first page, we'll go ahead and scrape the repos from it. However, since we are going to reuse this logic on the other pages as well, let's create a function that will handle the data collection and reliably return a nice array of results:
+And since we're already on the first page, we'll go ahead and scrape the repos from it. However, since we are going to reuse this logic on the other pages as well, let's create a function that will handle the data extraction and reliably return a nice array of results:
 
 <Tabs groupId="main">
 <TabItem value="Playwright" label="Playwright">
@@ -496,7 +496,7 @@ while (products.length < 75) {
     // Allow the products 1 second to load
     await page.waitForTimeout(1000);
 
-    // Data collection login will go here
+    // Data extraction login will go here
 
     const innerHeight = await page.evaluate(() => window.innerHeight);
 
@@ -521,7 +521,7 @@ while (products.length < 75) {
     // Allow the products 1 second to load
     await page.waitForTimeout(1000);
 
-    // Data collection login will go here
+    // Data extraction login will go here
 
     const innerHeight = await page.evaluate(() => window.innerHeight);
 
@@ -541,9 +541,9 @@ Now, the `while` loop will exit out if we've reached the bottom of the page.
 
 > Generally, you'd want to create a utility function that handles this scrolling logic instead of putting all of the code directly into the while loop.
 
-### Collecting data {#collecting-data}
+### Extracting data {#extracting-data}
 
-Within the loop, we can grab hold of the total number of items on the page. To avoid collecting and pushing duplicate items to the **products** array, we can use the `.slice()` method to cut out the items we've already scraped.
+Within the loop, we can grab hold of the total number of items on the page. To avoid extracting and pushing duplicate items to the **products** array, we can use the `.slice()` method to cut out the items we've already scraped.
 
 ```js
 const $ = load(await page.content());

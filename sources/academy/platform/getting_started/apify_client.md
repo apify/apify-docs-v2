@@ -107,7 +107,7 @@ run = client.actor('YOUR_USERNAME/adding-actor').call(run_input={
 
 > Learn more about the `.call()` function [here](https://docs-v2.apify.com/client-js#actorclient-call).
 
-## Collecting dataset items {#collecting-dataset-items}
+## Downloading dataset items {#downloading-dataset-items}
 
 Once an actor's run has completed, it will return a **run info** object that looks something like this:
 
@@ -132,7 +132,7 @@ dataset = client.dataset(run['defaultDatasetId'])
 </TabItem>
 </Tabs>
 
-Finally, we can collect the items in the dataset by using the **list items** function, then log them to the console.
+Finally, we can download the items in the dataset by using the **list items** function, then log them to the console.
 
 <Tabs groupId="main">
 <TabItem value="Node.js" label="Node.js">
@@ -157,7 +157,7 @@ print(items)
 
 > Notice that in the JavaScript example, we had to convert the `items` to a [`Buffer`](https://nodejs.org/api/buffer.html), then convert the Buffer to a string and parse it. This is because `dataset.downloadItems()` returns a buffer.
 
-The final code for running the actor and collecting its dataset items looks like this:
+The final code for running the actor and fetching its dataset items looks like this:
 
 <Tabs groupId="main">
 <TabItem value="Node.js" label="Node.js">
@@ -262,7 +262,7 @@ After running the code, go back to the **Settings** page of **adding-actor**. If
 
 ## Overview {#overview}
 
-There is so much more you can do with the Apify client than just running actors, updating actors, and collecting dataset items. The purpose of this lesson was just to get you comfortable with using the client in your own projects, as it is the absolute best developer tool for integrating the Apify platform with an external system.
+There is so much more you can do with the Apify client than just running actors, updating actors, and downloading dataset items. The purpose of this lesson was just to get you comfortable using the client in your own projects, as it is the absolute best developer tool for integrating the Apify platform with an external system.
 
 For a more in-depth understanding of the Apify API client, give these a quick lookover:
 

@@ -14,7 +14,6 @@ The main actor config should live in the `.actor/actor.json` file in the actor's
 
 For example, the `.actor/actor.json` file can look this:
 
-
 ```json
 {
   "actorSpecification": 1, // always 1
@@ -47,6 +46,3 @@ You can embed your [input schema](/actors/development/input-schema#specification
 
 **`storages.dataset` field**\
 You can define the schema of the items in your dataset under the `storages.dataset` field. This can be either an embedded object or a path to a JSON schema file. [Read more](/actors/development/output-schema#specification-version-1) about actor output schema.
-
-
-
