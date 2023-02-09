@@ -63,7 +63,9 @@ last content sync: 12.1.2023 ~11:00 ([first not included PR](https://github.com/
 Currently, there are 3 separate projects outside of this repo, having `docs-v2` branch:
 
 - apify-client-js
+- apify-client-python
 - apify-sdk-js
+- apify-sdk-python
 - apify-cli
 
 Clone those, checkout the `docs-v2` branch first. Then we can start the docusaurus instances in them.
@@ -75,7 +77,7 @@ Clone those, checkout the `docs-v2` branch first. Then we can start the docusaur
 | apify-client-python | docs   | 3002 |
 | apify-sdk-js-v2     | docs   | 3003 |
 | apify-sdk-python    | docs   | 3004 |
-| apify-cli           | docs   | 3005 |
+| apify-cli           | master | 3005 |
 
 > To run docusaurus on a specific port, use `npm start -- --port XXXX`.
 
