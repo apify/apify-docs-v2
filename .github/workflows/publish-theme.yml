@@ -105,7 +105,7 @@ jobs:
                     - repo: 'apify/apify-cli'
                       branch: 'docs-v2'
                     - repo: 'apify/apify-client-js'
-                      branch: 'docs-v2'
+                      branch: 'master'
                     - repo: 'apify/apify-client-python'
                       branch: 'docs-v2'
 

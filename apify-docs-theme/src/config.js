@@ -1,4 +1,4 @@
-const absoluteUrl = process.env.LOCAL ? 'http://docs-v2.apify.loc' : 'https://docs-v2.apify.com';
+const absoluteUrl = process.env.LOCAL ? 'http://docs.apify.loc' : 'https://docs.apify.com';
 
 const themeConfig = ({
     docs: {

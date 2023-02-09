@@ -14,7 +14,7 @@ last content sync: 12.1.2023 ~11:00 ([first not included PR](https://github.com/
 - some pages need to be manually updated:
   - sidebars might need adjustments
   - some pages should be removed/redirected (e.g. the dev tools like client or SDK are now part of the docs but on different links, before it was just embedded readme)
-  - meta description should be sometimes rendered as part of content, we should fix this manually, the tag in frontmatter should stay as the meta description only (e.g. https://docs-v2.apify.com/platform/actors/development/output-schema)
+  - meta description should be sometimes rendered as part of content, we should fix this manually, the tag in frontmatter should stay as the meta description only (e.g. https://docs.apify.com/platform/actors/development/output-schema)
 
 ### RFC
 
@@ -68,14 +68,14 @@ Currently, there are 3 separate projects outside of this repo, having `docs-v2` 
 
 Clone those, checkout the `docs-v2` branch first. Then we can start the docusaurus instances in them.
 
-| repo                | branch  | port |
-|---------------------|---------|------|
-| apify-docs-v2       | master  | 3000 |
-| apify-client-js     | docs-v2 | 3001 |
-| apify-client-python | docs-v2 | 3002 |
-| apify-sdk-js-v2     | docs-v2 | 3003 |
-| apify-sdk-python    | docs-v2 | 3004 |
-| apify-cli           | docs-v2 | 3005 |
+| repo                | branch | port |
+|---------------------|--------|------|
+| apify-docs          | master | 3000 |
+| apify-client-js     | master | 3001 |
+| apify-client-python | docs   | 3002 |
+| apify-sdk-js-v2     | docs   | 3003 |
+| apify-sdk-python    | docs   | 3004 |
+| apify-cli           | docs   | 3005 |
 
 > To run docusaurus on a specific port, use `npm start -- --port XXXX`.
 
@@ -84,7 +84,7 @@ To route them, you will need nginx server with following config:
 ```nginx
 server {
   listen       80;
-  server_name  docs-v2.apify.loc;
+  server_name  docs.apify.loc;
   location / {
     proxy_pass http://localhost:3000;
   }
@@ -106,10 +106,10 @@ server {
 }
 ```
 
-And add a record to `/etc/hosts` to map the docs-v2.apify.loc hostname to localhost:
+And add a record to `/etc/hosts` to map the docs.apify.loc hostname to localhost:
 
 ```
-127.0.0.1 docs-v2.apify.loc
+127.0.0.1 docs.apify.loc
 ```
 
 ### Deployment
@@ -119,9 +119,9 @@ Current nginx deployment config:
 ```nginx
 server {
   listen       80;
-  server_name  docs-v2.apify.com;
+  server_name  docs.apify.com;
   location / {
-    proxy_pass https://apify.github.io/apify-docs-v2/;
+    proxy_pass https://apify.github.io/apify-docs/;
   }
   location /api/client/js {
     proxy_pass https://apify.github.io/apify-client-js/;
