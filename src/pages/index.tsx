@@ -20,6 +20,7 @@ import FileJavaScriptIcon from './img/file-javascript.svg';
 import FilePythonIcon from './img/file-python.svg';
 import CliIcon from './img/cli.svg';
 import RectangleJavaScriptIcon from './img/rectangle-javascript.svg';
+import RectanglePythonIcon from './img/rectangle-python.svg';
 
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
@@ -83,7 +84,7 @@ export default function Home() {
                         width="calc(50% - 12px)"
                     />
                     <CardWithIcon
-                        icon={<RectangleJavaScriptIcon />}
+                        icon={<RectanglePythonIcon />}
                         title="SDK for Python (beta)"
                         description="A toolkit for building actors on Apify Platform in Python"
                         to="/sdk/python/"
