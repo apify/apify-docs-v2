@@ -4,10 +4,6 @@ import fs from 'fs-extra';
 import { globby } from 'globby';
 import { request } from 'undici';
 
-// TODO
-//   - sidebar in SDK
-//   - no index in SDK
-
 const rootPath = dirname(fileURLToPath(import.meta.url)) + '/../';
 const sources = ['academy', 'platform'];
 const links = {};
@@ -206,6 +202,8 @@ await fs.move('sources/academy/node_js', 'sources/academy/tutorials-new/node_js'
 await fs.move('sources/academy/node_js.md', 'sources/academy/tutorials-new/node_js.md');
 await fs.move('sources/academy/python', 'sources/academy/tutorials-new/python');
 await fs.move('sources/academy/python.md', 'sources/academy/tutorials-new/python.md');
+await fs.move('sources/academy/php', 'sources/academy/tutorials-new/php');
+await fs.move('sources/academy/php.md', 'sources/academy/tutorials-new/php.md');
 await fs.move('sources/academy/tutorials-new', 'sources/academy/tutorials');
 
 await fs.mkdirp('sources/academy/platform');
@@ -227,6 +225,8 @@ await fs.move('sources/academy/puppeteer_playwright', 'sources/academy/webscrapi
 await fs.move('sources/academy/puppeteer_playwright.md', 'sources/academy/webscraping/puppeteer_playwright.md');
 await fs.move('sources/academy/api_scraping', 'sources/academy/webscraping/api_scraping');
 await fs.move('sources/academy/api_scraping.md', 'sources/academy/webscraping/api_scraping.md');
+await fs.move('sources/academy/anti_scraping', 'sources/academy/webscraping/anti_scraping');
+await fs.move('sources/academy/anti_scraping.md', 'sources/academy/webscraping/anti_scraping.md');
 await fs.move('sources/academy/switching_to_typescript', 'sources/academy/webscraping/switching_to_typescript');
 await fs.move('sources/academy/switching_to_typescript.md', 'sources/academy/webscraping/switching_to_typescript.md');
 await fs.move('sources/academy/advanced_web_scraping', 'sources/academy/webscraping/advanced_web_scraping');

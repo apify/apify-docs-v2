@@ -24,7 +24,7 @@ If you don't have time to read about the theory behind anti-scraping protections
 - Use high-quality proxies. [Residential proxies](/platform/proxy/residential-proxy) are the least blocked. There are many providers out there like Apify, BrightData, Oxylabs, NetNut, etc.
 - Set **real-user-like HTTP settings** and **browser fingerprints**. [Crawlee](https://crawlee.dev/) uses statistically generated realistic HTTP headers and browser fingerprints by default for all of its crawlers.
 - Use a modern browser to pass bot capture challenges. We recommend [Playwright with Firefox](https://crawlee.dev/docs/examples/playwright-crawler-firefox) because it is not that common for scraping. You can also play with [non-headless mode](https://crawlee.dev/api/playwright-crawler/interface/PlaywrightCrawlerOptions#headless) and adjust other [fingerprint settings](https://crawlee.dev/api/browser-pool/interface/FingerprintGeneratorOptions).
-- Consider extracting data from **[private APIs](../webscraping/api_scraping/index.md)** or **mobile app APIs**. They are usually much less protected.
+- Consider extracting data from **[private APIs](../api_scraping/index.md)** or **mobile app APIs**. They are usually much less protected.
 
 
 ## First of all, why do websites want to block bots? {#why-block-bots}
@@ -91,7 +91,7 @@ This is the most straightforward and standard protection, which is mainly implem
 
 ### Header checking
 
-This type of bot identification is based on the given fact that humans are accessing web pages through browsers, which have specific [header](../glossary/concepts/http_headers.md) sets which they send along with every request. The most commonly known header that helps to detect bots is the `user-agent` header, which holds a value that identifies which browser is being used, and what version it's running. Though `user-agent` is the most commonly used header for the **Header checking** method, other headers are sometimes used as well. The evaluation is often also run based on the header consistency, and includes a known combination of browser headers.
+This type of bot identification is based on the given fact that humans are accessing web pages through browsers, which have specific [header](../../glossary/concepts/http_headers.md) sets which they send along with every request. The most commonly known header that helps to detect bots is the `user-agent` header, which holds a value that identifies which browser is being used, and what version it's running. Though `user-agent` is the most commonly used header for the **Header checking** method, other headers are sometimes used as well. The evaluation is often also run based on the header consistency, and includes a known combination of browser headers.
 
 ### URL analysis
 
@@ -101,7 +101,7 @@ Solely based on the way how the bots operate. It comperes data-rich pages visits
 
 By definition, this is not an anti-scraping method, but it can heavily affect the reliability of a scraper. If your target website drastically changes its CSS selectors, and your scraper is heavily reliant on selectors, it could break. In principle, websites using this method change their HTML structure or CSS selectors randomly and frequently, making the parsing of the data harder, and requiring more maintenance of the bot.
 
-One of the best ways of avoiding the possible breaking of your scraper due to website structure changes is to limit your reliance on data from HTML elements as much as possible (see [API Scraping](../webscraping/api_scraping/index.md) and [JavaScript objects within HTML](../tutorials/node_js/js_in_html.md))
+One of the best ways of avoiding the possible breaking of your scraper due to website structure changes is to limit your reliance on data from HTML elements as much as possible (see [API Scraping](../api_scraping/index.md) and [JavaScript objects within HTML](../../tutorials/node_js/js_in_html.md))
 
 ### IP session consistency
 

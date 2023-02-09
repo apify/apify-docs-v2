@@ -31,7 +31,7 @@ The Crawlee library factors away and manages the hard parts of the scraping/auto
 - Request concurrency
 - Queueing requests
 - Data storage
-- Using and rotating [proxies](../../../anti_scraping/mitigation/proxies.md)
+- Using and rotating [proxies](../../anti_scraping/mitigation/proxies.md)
 - Puppeteer/Playwright setup overhead
 - Plus much more!
 

@@ -19,7 +19,7 @@ This quick lesson covers the absolute basics by discussing some of the most comm
 
 It is often tricky to see the full scope of what can go wrong. We assume once the code is set up correctly, it will keep working. Unfortunately, that is rarely true in the realm of web scraping and automation.
 
-Websites change, they introduce new [anti-scraping technologies](../../anti_scraping/index.md), programming tools change and, in addition, people make mistakes.
+Websites change, they introduce new [anti-scraping technologies](../../webscraping/anti_scraping/index.md), programming tools change and, in addition, people make mistakes.
 
 Here are the most common reasons your working solution may break.
 
@@ -28,7 +28,7 @@ Here are the most common reasons your working solution may break.
 - A page starts to block you (recognizes you as a bot).
 - The website [loads its data later dynamically](./dealing_with_dynamic_pages.md), so the code works only sometimes, if you are slow or lucky enough.
 - You made a mistake when updating your code.
-- Your [proxies](../../anti_scraping/mitigation/proxies.md) aren't working.
+- Your [proxies](../../webscraping/anti_scraping/mitigation/proxies.md) aren't working.
 - You have upgraded your [dependencies](https://www.quora.com/What-is-a-dependency-in-coding) (other software that your software relies upon), and the new versions no longer work (this is harder to debug).
 
 ## Diagnosing/analyzing the issue {#issue-analysis}
