@@ -233,15 +233,15 @@ const themeConfig = ({
             height: '60px',
         },
     },
-    // we will reuse the SDK algolia app
-    algolia: {
-        appId: 'N8EOCSBQGH',
-        apiKey: 'b43e67a96ed18c7f63f5fd965906a96d', // search only (public) API key
-        indexName: 'apify_sdk',
-        algoliaOptions: {
-            facetFilters: ['version:VERSION'],
-        },
-    },
+    // TODO!
+    // algolia: {
+    //     appId: 'N8EOCSBQGH',
+    //     apiKey: 'b43e67a96ed18c7f63f5fd965906a96d', // search only (public) API key
+    //     indexName: 'apify_sdk',
+    //     algoliaOptions: {
+    //         facetFilters: ['version:VERSION'],
+    //     },
+    // },
 });
 
 module.exports = {
