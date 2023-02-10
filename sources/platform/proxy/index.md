@@ -59,11 +59,11 @@ Depending on whether you use a [browser](https://apify.com/apify/web-scraper) or
 
 Sessions allow you to use the same IP address for multiple connections.
 
-To set a new session, pass the [`session`](./connection_settings.md) parameter in your [username]({{@link proxy/connection_settings.md#username-parameters}}) field when connecting to a proxy. This will serve as the session's ID and an IP address will be assigned to it. To [use that IP address in other requests]({{@link proxy/datacenter_proxy/examples.md#multiple-requests-with-the-same-ip-address}}), pass that same session ID in the username field.
+To set a new session, pass the [`session`](./connection_settings.md) parameter in your [username](./proxy/connection_settings.md#username-parameters) field when connecting to a proxy. This will serve as the session's ID and an IP address will be assigned to it. To [use that IP address in other requests](./datacenter_proxy/examples.md#multiple-requests-with-the-same-ip-address), pass that same session ID in the username field.
 
 The created session will store information such as cookies and can be used to generate [browser fingerprints](https://pixelprivacy.com/resources/browser-fingerprinting/). You can also assign custom user data such as authorization tokens and specific headers.
 
-Sessions are available for [datacenter](./datacenter_proxy/index.md) and [residential]({{@link proxy/residential_proxy.md#session-persistence}}) proxies.
+Sessions are available for [datacenter](./datacenter_proxy/index.md) and [residential](./residential_proxy.md#session-persistence) proxies.
 
 **This parameter is optional**. By default, each proxied request is assigned a randomly picked least used IP address.
 
@@ -73,7 +73,7 @@ You can persist your sessions (use the same IP address) by setting the `session`
 
 **Session IDs represent IP addresses. Therefore, you can manage the IP addresses you use by managing sessions.** In cases where you need to keep the same session (e.g. when you need to log in to a website), it is best to keep the same proxy. By assigning an IP address to a **session ID**, you can use that IP for every request you make.
 
-For datacenter proxies, a session persists for **26 hours** ([more info](./datacenter_proxy/index.md)). For residential proxies, it persists for **1 minute** ([more info]({{@link proxy/residential_proxy.md#session-persistence}})). Using a session resets its expiry timer.
+For datacenter proxies, a session persists for **26 hours** ([more info](./datacenter_proxy/index.md)). For residential proxies, it persists for **1 minute** ([more info](./residential_proxy.md#session-persistence)). Using a session resets its expiry timer.
 
 Google SERP proxies do not support sessions.
 

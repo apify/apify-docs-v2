@@ -56,7 +56,7 @@ import pandas
 
 ### Scraping the data
 
-Next, we need to run the weather scraping actor and access its results. We do that through the [Apify API Client for Python]({{@link apify_client_python.md}}), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
+Next, we need to run the weather scraping actor and access its results. We do that through the [Apify API Client for Python](/api/client/python/), which greatly simplifies working with the Apify platform and allows you to use its functions without having to call the Apify API directly.
 
 First, we initialize an `ApifyClient` instance. All the necessary arguments are automatically provided to the actor process as environment variables accessible in Python through the `os.environ` mapping. We need to run the actor from the previous tutorial, which we have named `bbc-weather-scraper`, and wait for it to finish. So, we create a sub-client for working with that actor and run the actor through it. We then check whether the actor run has succeeded. If so, we create a client for working with its default dataset.
 

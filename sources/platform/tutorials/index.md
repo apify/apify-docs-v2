@@ -16,7 +16,7 @@ This section contains everything you need to get you up and running with Apify, 
 
 ## The basics
 
-[Quick start](./quick_start.md) will show you how to [run existing actors](./quick_start.md) and [create your first Apify actor]({{@link tutorials/quick_start.md#create-an-actor}}).
+[Quick start](./quick_start.md) will show you how to [run existing actors](./quick_start.md) and [create your first Apify actor](./quick_start.md#create-an-actor).
 
 [Set up your first web scraping job](./apify_scrapers/getting_started.md) with a step-by-step guide.
 

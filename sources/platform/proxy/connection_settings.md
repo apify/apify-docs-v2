@@ -80,7 +80,7 @@ The table below describes the available parameters.
 
 If you want to specify one parameter and not the others, just provide that parameter and omit the others. To use the default behavior (not specifying either `groups`, `session`, or `country`), set the username to **auto**. **auto** serves as a placeholder because the username can't be empty.
 
-To learn more about [sessions](./index.md) and [IP address rotation]({{@link proxy.md#ip-address-rotation}}), see the [proxy overview page]({{@link proxy.md}}).
+To learn more about [sessions](./index.md#sessions) and [IP address rotation](./index.md#ip-address-rotation), see the [proxy overview page](./index.md).
 
 ## Code examples
 

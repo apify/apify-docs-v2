@@ -4,8 +4,8 @@ description: Learn how to connect the Apify platform with your projects. You can
 menuWeight: 11
 category: platform
 paths:
-    - integrations
     - tutorials/integrations
+    - integrations
 ---
 
 # Integrations

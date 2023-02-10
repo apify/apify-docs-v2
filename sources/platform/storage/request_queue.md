@@ -25,7 +25,7 @@ There are five ways to access your request queues:
 
 * [Apify Console](https://console.apify.com/storage?tab=requestQueues) - provides an easy-to-understand interface [[details](#apify-console)].
 * [Apify SDK](https://docs.apify.com/sdk/js/docs/guides/request-storage#request-queue) - when building your own Apify actor [[details](#apify-sdk)].
-* [JavaScript API client](apify-client-js#requestqueueclient) - to access your request queues from any Node.js application [[details](#javascript-api-client)].
+* [JavaScript API client](/api/client/js#requestqueueclient) - to access your request queues from any Node.js application [[details](#javascript-api-client)].
 * [Python API client](apify-client-python#requestqueueclient) - to access your request queues from any Python application [[details](#python-api-client)].
 * [Apify API](/api/v2#/reference/request-queues) - for accessing your request queues programmatically [[details](#apify-api)].
 
@@ -39,7 +39,7 @@ Only named request queues are displayed by default. Select the **Include unnamed
 
 To view a request queue, click on its **Queue ID**.
 Under the **Settings** tab, you can update the queue's name (and, in turn, its
-[retention period](./index.md)) and [access rights]({{@link access_rights.md}}).
+[retention period](./index.md)) and [access rights](../access_rights/index.md).
 Click on the `API` button to view and test a queue's [API endpoints](/api/v2#/reference/request-queues).
 
 ![Request queues detail](./images/request-queue-detail.png)
@@ -124,7 +124,7 @@ See the [SDK documentation](https://docs.apify.com/sdk/js/docs/guides/request-st
 
 ### JavaScript API client {#javascript-api-client}
 
-Apify's [JavaScript API client](/apify-client-js#requestqueueclient) (`apify-client`) allows you to access your request queues from any Node.js application, whether it is running on the Apify platform or elsewhere.
+Apify's [JavaScript API client](/api/client/js#requestqueueclient) (`apify-client`) allows you to access your request queues from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
 After importing and initiating the client, you can save each request queue to a variable for easier access.
 
@@ -132,13 +132,13 @@ After importing and initiating the client, you can save each request queue to a 
 const myQueueClient = apifyClient.requestQueue('jane-doe/my-request-queue');
 ```
 
-You can then use that variable to [access the request queue's items and manage it](/apify-client-js#requestqueueclient).
+You can then use that variable to [access the request queue's items and manage it](/api/client/js#requestqueueclient).
 
-See the [JavaScript API client documentation](/apify-client-js#requestqueueclient) for [help with setup](/apify-client-js#quick-start) and more details.
+See the [JavaScript API client documentation](/api/client/js#requestqueueclient) for [help with setup](/api/client/js#quick-start) and more details.
 
 ### Python API client {#python-api-client}
 
-Apify's [Python API client](/apify-client-python) (`apify-client`) allows you to access your request queues from any Python application, whether it is running on the Apify platform or elsewhere.
+Apify's [Python API client](/api/client/python) (`apify-client`) allows you to access your request queues from any Python application, whether it is running on the Apify platform or elsewhere.
 
 After importing and initiating the client, you can save each request queue to a variable for easier access.
 
@@ -146,15 +146,15 @@ After importing and initiating the client, you can save each request queue to a 
 my_queue_client = apify_client.request_queue('jane-doe/my-request-queue')
 ```
 
-You can then use that variable to [access the request queue's items and manage it](/apify-client-python#requestqueueclient).
+You can then use that variable to [access the request queue's items and manage it](/api/client/python#requestqueueclient).
 
-See the [Python API client documentation](/apify-client-python#requestqueueclient) for [help with setup](/apify-client-python#quick-start) and more details.
+See the [Python API client documentation](/api/client/python#requestqueueclient) for [help with setup](/api/client/python#quick-start) and more details.
 
 ### Apify API {#apify-api}
 
 The [Apify API](/api/v2#/reference/request-queues) allows you to access your request queues programmatically using [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
 
-If you are accessing your datasets using the **username~store-name** [store ID format](./index.md), you will need to use your [secret API token]({{@link integrations.md#api-token}}). You can find the token (and your user ID) on the [Integrations](https://console.apify.com/account#/integrations) page of your Apify account.
+If you are accessing your datasets using the **username~store-name** [store ID format](./index.md), you will need to use your [secret API token](../integrations/index.md#api-token). You can find the token (and your user ID) on the [Integrations](https://console.apify.com/account#/integrations) page of your Apify account.
 
 > When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](#introduction/authentication)).
 
@@ -229,13 +229,13 @@ To access a request queue from another run using the Apify SDK, open it using th
 const otherQueue = await Actor.openRequestQueue('old-queue');
 ```
 
-In the [JavaScript API client](/apify-client-js), you can access a request queue using [its client](/apify-client-js#requestqueueclient). Once you've opened the request queue, you can use it in your crawler or add new requests like you would do with a queue from your current run.
+In the [JavaScript API client](/api/client/js), you can access a request queue using [its client](/api/client/js#requestqueueclient). Once you've opened the request queue, you can use it in your crawler or add new requests like you would do with a queue from your current run.
 
 ```js
 const otherQueueClient = apifyClient.requestQueue('jane-doe/old-queue');
 ```
 
-Likewise, in the [Python API client](/apify-client-python), you can access a request queue using [its client](/apify-client-python#requestqueueclient).
+Likewise, in the [Python API client](/api/client/python), you can access a request queue using [its client](/api/client/python#requestqueueclient).
 
 ```python
 other_queue_client = apify_client.request_queue('jane-doe/old-queue')

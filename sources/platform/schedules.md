@@ -20,8 +20,8 @@ You can set up and manage schedules from
 [Apify Console](https://console.apify.com/schedules)
 and via [API](/api/v2#/reference/schedules)
 (also with the
-[JavaScript]({{@link apify_client_js.md#scheduleclient}}) and
-[Python]({{@link apify_client_python.md#apifyclient-schedule}})
+[JavaScript](/api/client/js/reference/class/ScheduleClient) and
+[Python](/api/client/python/reference/class/ScheduleClient)
 API clients).
 When scheduling a new actor or task run, you can override its input settings using a JSON object similarly to when invoking a schedule using the [Apify API](/api/v2#/reference/schedules/).
 

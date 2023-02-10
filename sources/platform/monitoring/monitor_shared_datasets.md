@@ -17,7 +17,7 @@ This example walks you through setting up [monitoring](https://apify.com/apify/m
 
 ## Use case {#use-case}
 
-You have two or more [actors](../actors/index.md) or [tasks](../actors/tasks.md) that scrape the same type of data from multiple websites and [push the data](../storage/dataset.md) to one [named dataset]({{@link storage.md#named-and-unnamed-storages}}).
+You have two or more [actors](../actors/index.md) or [tasks](../actors/tasks.md) that scrape the same type of data from multiple websites and [push the data](../storage/dataset.md) to one [named dataset](../storage/index.md#named-and-unnamed-storages).
 
 You need:
 

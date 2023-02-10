@@ -31,7 +31,7 @@ While writing your actor’s description you also have the option to write an SE
 
 The next step is to include a **README** detailing the actor’s features, reasons to scrape the targeted website, and an explanation about how to use the actor.
 
-Keep in mind that the actor’s README is generated from your README.md file, and you can apply the same [SEO principles]({{ apify_platform/publishing_actors_on_apify_store/seo_and_promotion.md}})! described in the previous lesson to your README.
+Keep in mind that the actor’s README is generated from your README.md file, and you can apply the same [SEO principles](/academy/get-most-of-actors/seo-and-promotion) described in the previous lesson to your README.
 
 To save some time when writing an actor’s README, you can use the template below as a starting point:
 
