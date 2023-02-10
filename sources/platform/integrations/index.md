@@ -3,7 +3,7 @@ title: Integrations
 description: Learn how to connect the Apify platform with your projects. You can use our tools in cloud services like Zapier, Make (formerly Integromat), Keboola, and more.
 sidebar_position: 11
 category: platform
-slug: /tutorials/integrations
+slug: /integrations
 ---
 
 # Integrations
