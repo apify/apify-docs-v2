@@ -691,3 +691,7 @@ aside li.section-header > .menu__list {
 html[data-theme='dark'] .beta-chip {
     background: #333;
 }
+
+a.tsd-anchor[href^="https://undefined"] {
+    display: none;
+}
