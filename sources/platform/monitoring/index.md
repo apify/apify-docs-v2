@@ -71,7 +71,7 @@ To make any changes to an existing configuration, choose the **Update configurat
 
 ### Add the monitoring suite to your account {#add-the-monitoring-suite-to-your-account}
 
-On the monitoring suite's [page]((https://apify.com/apify/monitoring)) in [Apify Store](https://apify.com/store), click the **Try for free** button. This will take you to the [Apify Console](https://console.apify.com), add the suite to your [list of actors](https://console.apify.com/actors) and create a new [task](../actors/tasks.md).
+On the monitoring suite's [page](https://apify.com/apify/monitoring) in [Apify Store](https://apify.com/store), click the **Try for free** button. This will take you to the [Apify Console](https://console.apify.com), add the suite to your [list of actors](https://console.apify.com/actors) and create a new [task](../actors/tasks.md).
 
 ![Monitoring actor in Apify Store](./images/monitoring-in-store.png)
 
