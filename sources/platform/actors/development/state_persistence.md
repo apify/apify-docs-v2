@@ -12,7 +12,7 @@ slug: /actors/development/state-persistence
 
 Long-running [actor](../index.md) jobs may need to migrate from one server to another. Unless you save your job's progress, it will be lost during the migration. The actor will re-start from scratch on the new server, which can be costly.
 
-To avoid this, long-running actors should save (persist) their state periodically and listen for [migration events](https://docs-v2.apify.com/sdk-js/api/apify/class/PlatformEventManager). On start, these actors should [check for persisted state](#code-examples), so they can continue where they left off.
+To avoid this, long-running actors should save (persist) their state periodically and listen for [migration events](https://docs.apify.com/sdk-js/api/apify/class/PlatformEventManager). On start, these actors should [check for persisted state](#code-examples), so they can continue where they left off.
 
 For short-running actors, the chance of a restart and the cost of repeated runs are low, so restarts can be ignored.
 
@@ -38,11 +38,11 @@ Unless instructed to save its output or state to a [storage](../../storage/index
 
 ## [](#how-to-persist-state)How to persist state
 
-The [Apify SDK](https://docs-v2.apify.com/sdk-js) persists its state automatically, using the `migrating` and `persistState` [events](https://docs-v2.apify.com/sdk-js/api/apify/class/PlatformEventManager). `persistState` notifies SDK components to persist their state at regular intervals in case a migration happens. The `migrating` event is emitted just before a migration.
+The [Apify SDK](https://docs.apify.com/sdk-js) persists its state automatically, using the `migrating` and `persistState` [events](https://docs.apify.com/sdk-js/api/apify/class/PlatformEventManager). `persistState` notifies SDK components to persist their state at regular intervals in case a migration happens. The `migrating` event is emitted just before a migration.
 
 ### [](#code-examples)Code examples
 
-To persist state manually, you can use the [`Actor.on`](https://docs-v2.apify.com/sdk-js/api/apify/class/Actor#on) method in the Apify SDK.
+To persist state manually, you can use the [`Actor.on`](https://docs.apify.com/sdk-js/api/apify/class/Actor#on) method in the Apify SDK.
 
 ```js
 import { Actor } from 'apify';
