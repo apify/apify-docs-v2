@@ -42,7 +42,7 @@
         },
         {
             "cardItem": "Run an actor and retrieve data via API",
-            "href": "/platform/tutorials/integrations/run-actor-and-retrieve-data-via-api"
+            "href": "/platform/integrations/run-actor-and-retrieve-data-via-api"
         },
         {
             "cardItem": "Log into a website",
@@ -50,7 +50,7 @@
         },
         {
             "cardItem": "Integrations",
-            "href": "/platform/tutorials/integrations"
+            "href": "/platform/integrations"
         },
         {
             "cardItem": "Use Apify from PHP",
@@ -115,7 +115,7 @@
         },
         {
             "cardItem": "Integrate with the Apify platform",
-            "href": "/platform/tutorials/integrations"
+            "href": "/platform/integrations"
         },
         {
             "cardItem": "Manage data",
