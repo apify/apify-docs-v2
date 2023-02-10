@@ -84,5 +84,5 @@ So, if you use the session at least once a day, it will never expire, with two p
 
 If the session is discarded due to the reasons above, it is assigned a new IP address.
 
-To learn more about [sessions](../index.md#sessions) and [IP address rotation](../proxy.md#ip-address-rotation), see the [proxy overview page](../index.md).
+To learn more about [sessions](../index.md#sessions) and [IP address rotation](../index.md#ip-address-rotation), see the [proxy overview page](../index.md).
 

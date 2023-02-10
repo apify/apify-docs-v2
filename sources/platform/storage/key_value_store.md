@@ -113,7 +113,7 @@ await Actor.setValue(
 await Actor.exit();
 ```
 
-The `Actor.getInput()` method is not only a shortcut to `Actor.getValue('INPUT')` - it is also compatible with `Actor.metamorph()` [[docs](/platform/actors/source-code#metamorph)]. This is because a metamorphed actor run's input is stored in the **INPUT-METAMORPH-1** key instead of **INPUT**, which hosts the original input.
+The `Actor.getInput()` method is not only a shortcut to `Actor.getValue('INPUT')` - it is also compatible with `Actor.metamorph()` [[docs](../actors/development/source-code.md#metamorph)]. This is because a metamorphed actor run's input is stored in the **INPUT-METAMORPH-1** key instead of **INPUT**, which hosts the original input.
 
 See the [SDK documentation](https://docs.apify.com/sdk/js/docs/guides/result-storage#key-value-store) and the `KeyValueStore` class's [API reference](https://docs.apify.com/sdk/js/api/apify/class/KeyValueStore) for details on managing your key-value stores with the Apify SDK.
 
@@ -149,7 +149,7 @@ See the [Python API client documentation](/api/client/python#keyvaluestoreclient
 
 The [Apify API](/api/v2#/reference/key-value-stores) allows you to access your key-value stores programmatically using [HTTP requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and easily share your crawling results.
 
-If you are accessing your datasets using the **username~store-name** [store ID format](./index.md), you will need to use your [secret API token](../integrations.md#api-token). You can find the token (and your user ID) on the [Integrations](https://console.apify.com/account#/integrations) page of your Apify account.
+If you are accessing your datasets using the **username~store-name** [store ID format](./index.md), you will need to use your [secret API token](../integrations/index.md#api-token). You can find the token (and your user ID) on the [Integrations](https://console.apify.com/account#/integrations) page of your Apify account.
 
 > When providing your API authentication token, we recommend using the request's `Authorization` header, rather than the URL. ([More info](#introduction/authentication)).
 

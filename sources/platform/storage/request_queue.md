@@ -26,7 +26,7 @@ There are five ways to access your request queues:
 * [Apify Console](https://console.apify.com/storage?tab=requestQueues) - provides an easy-to-understand interface [[details](#apify-console)].
 * [Apify SDK](https://docs.apify.com/sdk/js/docs/guides/request-storage#request-queue) - when building your own Apify actor [[details](#apify-sdk)].
 * [JavaScript API client](/api/client/js#requestqueueclient) - to access your request queues from any Node.js application [[details](#javascript-api-client)].
-* [Python API client](apify-client-python#requestqueueclient) - to access your request queues from any Python application [[details](#python-api-client)].
+* [Python API client](/api/client/python#requestqueueclient) - to access your request queues from any Python application [[details](#python-api-client)].
 * [Apify API](/api/v2#/reference/request-queues) - for accessing your request queues programmatically [[details](#apify-api)].
 
 ### Apify Console {#apify-console}

@@ -94,7 +94,7 @@ To access your storages from Apify Console, go to the [**Storage** section](http
 
 You can edit your stores' names by clicking their caption (ID or name) on their detail page.
 
-Under the **Settings** tab of their detail page, you can grant [access rights](/access-rights) to other Apify users.
+Under the **Settings** tab of their detail page, you can grant [access rights](../access_rights/index.md) to other Apify users.
 
 You can quickly share your storages' contents and details by sharing the URLs you find under the **API** tab in a store's detail page.
 
@@ -176,7 +176,7 @@ Then, head over to the **Storage** menu, select the appropriate tab, and tick th
 
 To name your storage via API, get its ID from the run that generated it using the [Get run](/api/v2#/reference/actor-runs/run-object-and-its-storages/get-run) endpoint. You can then give it a new name using the **Update \[storage\]** endpoint. For example, [Update dataset](/api/v2#/reference/datasets/dataset/update-dataset).
 
-The [Apify SDK](sdk.apify.com), [Crawlee](https://crawlee.dev/), the [JavaScript](/api/client/js/) and [Python](/api/client/python/) clients have their own ways of naming storages - check their docs for details.
+The [Apify SDK](/sdk/js), [Crawlee](https://crawlee.dev/), the [JavaScript](/api/client/js/) and [Python](/api/client/python/) clients have their own ways of naming storages - check their docs for details.
 
 
 ## Named and unnamed storages {#named-and-unnamed-storages}

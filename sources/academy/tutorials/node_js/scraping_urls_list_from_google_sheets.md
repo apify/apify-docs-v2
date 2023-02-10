@@ -19,4 +19,4 @@ IMPORTANT: Make sure anyone with the link can view the document. Otherwise, the 
 
 ![Link sharing](./images/anyone-with-link.png)
 
-[See more details](/platform/tutorials/crawl-urls-from-google-sheets-document) in our documentation.
+[See more details](/platform/tutorials/crawl-urls-from-a-google-sheet) in our documentation.

@@ -42,7 +42,7 @@ If you specify the path to your Docker file under the `dockerfile` field, this f
 If you specify the path to your README file under the `readme` field, the README at this path will be used on the platform. If not specified, README at `.actor/README.md` or `README.md` will be used, in this order of preference.
 
 **`input` field**\
-You can embed your [input schema](/actors/development/input-schema#specification-version-1) object directly in `actor.json` under the `input` field. Alternatively, you can provide a path to a custom input schema. If not provided, the input schema at `.actor/INPUT_SCHEMA.json` or `INPUT_SCHEMA.json` is used, in this order of preference.
+You can embed your [input schema](../input_schema.md#specification-version-1) object directly in `actor.json` under the `input` field. Alternatively, you can provide a path to a custom input schema. If not provided, the input schema at `.actor/INPUT_SCHEMA.json` or `INPUT_SCHEMA.json` is used, in this order of preference.
 
 **`storages.dataset` field**\
-You can define the schema of the items in your dataset under the `storages.dataset` field. This can be either an embedded object or a path to a JSON schema file. [Read more](/actors/development/output-schema#specification-version-1) about actor output schema.
+You can define the schema of the items in your dataset under the `storages.dataset` field. This can be either an embedded object or a path to a JSON schema file. [Read more](../output-schema.md#specification-version-1) about actor output schema.

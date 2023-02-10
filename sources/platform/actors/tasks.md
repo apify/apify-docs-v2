@@ -41,7 +41,7 @@ To make a task easier to identify, you can give it a name, title, and descriptio
 
 ### Settings
 
-Under the **Settings** tab of their detail page, you can grant [access rights](/access-rights) to other Apify users.
+Under the **Settings** tab of their detail page, you can grant [access rights](../access_rights/index.md) to other Apify users.
 
 ## Run
 
