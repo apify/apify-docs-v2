@@ -9,6 +9,14 @@ const sources = ['academy', 'platform'];
 const links = {};
 const redirects = [];
 
+function pathToSlug(path) {
+    if (path.trim().endsWith('index')) {
+        return '/';
+    } else {
+        return '/' + path.replace('- ', '').trim();
+    }
+}
+
 async function transformFrontmatter(lines, paths, output) {
     let line;
 
@@ -60,16 +68,20 @@ async function transformFrontmatter(lines, paths, output) {
     return slug;
 }
 
-const BASE_URL = 'https://docs-v2.apify.com';
+const BASE_URL = 'https://docs.apify.com';
 
 const newRepl = [
     [
         'https://sdk.apify.com', // sdk-js
-        `${BASE_URL}/sdk-js`,
+        `${BASE_URL}/sdk/js`,
     ],
     [
-        'https://docs.apify.com(/api)?/apify-', // client-js, client-python
-        `${BASE_URL}/`,
+        'https://docs.apify.com/apify-client-python',
+        `${BASE_URL}/api/client/python`,
+    ],
+    [
+        'https://docs.apify.com/apify-client-js',
+        `${BASE_URL}/api/client/js`,
     ],
     [
         'https://docs.apify.com(/api)?/cli', // cli
@@ -286,11 +298,14 @@ for (const source of sources) {
             output.push(await transformLine(line, parentFolder));
         }
 
-        let slug = await transformFrontmatter(frontmatter, paths, output);
+        let slug = await transformFrontmatter(frontmatter, [...paths], output);
 
         if (slug) {
             if (source === 'platform') {
-                redirects.push(`  rewrite ^${slug}$ /${source}${slug} permanent;`);
+                for (const path of paths) {
+                    const slugOfPath = pathToSlug(path);
+                    redirects.push(`  rewrite ^${slugOfPath}$ /platform${slug} permanent;`);
+                }
             }
 
             slug = links[path] = `/${source}${slug}`;
