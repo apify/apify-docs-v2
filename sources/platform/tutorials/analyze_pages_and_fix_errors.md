@@ -94,7 +94,7 @@ Read more information about logging and error handling in our public wiki about 
 
 ### Saving snapshots {#saving-snapshots}
 
-By snapshots, we mean **screenshots** if you use a [browser + Puppeteer/Playwright](https://docs.apify.com/sdk-js/docs/examples/capture-screenshot) and **HTML** saved into a [key-value store](../storage/key_value_store.md) that you can easily display in your browser. Snapshots are useful throughout your code but especially important in error handling.
+By snapshots, we mean **screenshots** if you use a [browser + Puppeteer/Playwright](https://docs.apify.com/sdk/js/docs/examples/capture-screenshot) and **HTML** saved into a [key-value store](../storage/key_value_store.md) that you can easily display in your browser. Snapshots are useful throughout your code but especially important in error handling.
 
 Note that an error can happen only in a few pages out of a thousand and look completely random. There is not much you can do other than save and analyze a snapshot.
 
@@ -112,7 +112,7 @@ Snapshots can tell you if:
 
 In Apify scrapers (**Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)), **Cheerio Scraper** ([apify/cheerio-scraper](https://apify.com/apify/cheerio-scraper)), **Playwright Scraper** ([apify/playwright-scraper](https://apify.com/apify/playwright-scraper))) and **Puppeteer Scraper** ([apify/puppeteer-scraper](https://apify.com/apify/puppeteer-scraper))), you can use their built-in `context.saveSnapshot()` function. Once called, it saves a screenshot and HTML into the run's **key-value store**.
 
-When **building your own actors** with [Puppeteer](https://pptr.dev) or the [Apify SDK](https://docs.apify.com/sdk-js) and [Crawlee](https://crawlee.dev/) packages, you can use the powerful [`puppeteerUtils.saveSnapshot()`](https://crawlee.dev/api/puppeteer-crawler/namespace/puppeteerUtils#saveSnapshot) function. It allows you to name the screenshot, so you can identify it later.
+When **building your own actors** with [Puppeteer](https://pptr.dev) or the [Apify SDK](https://docs.apify.com/sdk/js) and [Crawlee](https://crawlee.dev/) packages, you can use the powerful [`puppeteerUtils.saveSnapshot()`](https://crawlee.dev/api/puppeteer-crawler/namespace/puppeteerUtils#saveSnapshot) function. It allows you to name the screenshot, so you can identify it later.
 
 [Cheerio](https://cheerio.js.org)-based actors do not have a helper function because they allow taking snapshots with a single line of code. Just save the HTML with the correct content type.
 

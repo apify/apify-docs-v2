@@ -31,7 +31,7 @@ Or, if the solution you need is beyond your skillset or schedule, you can always
 
 ## Building actors
 
-Building your own actors requires some experience with coding. If you're ready, get started with the [Apify SDK](https://docs.apify.com/sdk-js/) and [Crawlee](https://crawlee.dev/docs/quick-start).
+Building your own actors requires some experience with coding. If you're ready, get started with the [Apify SDK](https://docs.apify.com/sdk/js/) and [Crawlee](https://crawlee.dev/docs/quick-start).
 
 "But wait, I don't speak JavaScript", we hear you say. Worry not! While we currently only have an SDK for JavaScript, your actor can be in any programming language. If you use Python, you can now [scrape data with Beautiful Soup](./scrape_data_using_python.md)
 and [parse the results with Pandas](./process_data_using_python.md) on the Apify platform. Prefer PHP? Cool! Here's how you can [use Apify in your PHP projects](./use_apify_from_php.md).

@@ -38,7 +38,7 @@ When crawling a website, a web scraping bot will typically send many more reques
 
 We found that two ways are used to work around rate limiting. One method is to limit how many pages on a single site are scraped concurrently, with delays possibly even being intentionally introduced (after reaching the original limit). The other method is to use proxy servers and rotate IP addresses after a certain number of requests.
 
-Apify actors are designed to reduce the workload on websites being scraped. To lower the concurrency when using the [Apify SDK](https://docs.apify.com/sdk-js/) and [Crawlee](https://crawlee.dev/api/basic-crawler/interface/BasicCrawlerOptions#maxConcurrency), just pass the `maxConcurrency` option to your crawler's setup. If you use actors from [Apify Store](https://apify.com/store), you can usually set the maximum concurrency in the actor's input.
+Apify actors are designed to reduce the workload on websites being scraped. To lower the concurrency when using the [Apify SDK](https://docs.apify.com/sdk/js/) and [Crawlee](https://crawlee.dev/api/basic-crawler/interface/BasicCrawlerOptions#maxConcurrency), just pass the `maxConcurrency` option to your crawler's setup. If you use actors from [Apify Store](https://apify.com/store), you can usually set the maximum concurrency in the actor's input.
 
 ## HTTP request analysis {#http-request-analysis}
 
@@ -85,7 +85,7 @@ For example, requests from mobile devices are usually only routed through a hand
 
 To make it work, a single user session has to always be routed via the same IP address. A website can identify such user sessions based on cookies, authentication tokens or a browser HTTP signature/fingerprint.
 
-Our research into this was assisted by the [Crawlee](https://docs.apify.com/sdk-js)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../actors/index.md) or [proxy](../proxy/index.md), but it also works outside the Apify ecosystem.
+Our research into this was assisted by the [Crawlee](https://docs.apify.com/sdk/js)'s [`SessionPool`](https://crawlee.dev/api/core/class/SessionPool) class. This can be added to other Apify tools such as [actors](../actors/index.md) or [proxy](../proxy/index.md), but it also works outside the Apify ecosystem.
 
 ## Comparing ways of bypassing scraping protection {#comparing-ways-of-bypassing-scraping-protection}
 
