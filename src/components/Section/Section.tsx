@@ -1,11 +1,12 @@
-import React from "react";
-import styles from "./styles.module.css";
+import React from 'react';
+import styles from './styles.module.css';
 
 interface SectionProps {
     heading?: string;
+    children: React.ReactNode | string;
 }
 
-const Section: React.FC<SectionProps> = ({ heading, children }) => {
+export default function Section({ heading, children }: SectionProps) {
     return (
         <section className={styles.section}>
             <div className="container">
@@ -15,5 +16,3 @@ const Section: React.FC<SectionProps> = ({ heading, children }) => {
         </section>
     );
 }
-
-export default Section;
