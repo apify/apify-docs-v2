@@ -13,7 +13,7 @@ One of the main defense mechanisms websites use to ensure they are not scraped b
 
 ---
 
-Setting proxy rotation in [BasicCrawler](https://www.apify.com/docs/sdk/apify-runtime-js/latest#BasicCrawler) is pretty simple. When using plain HTTP requests (like with the popular '[request-promise](https://www.npmjs.com/package/request-promise)' npm package), a fresh proxy is set up on each request.
+Setting proxy rotation in [BasicCrawler](https://crawlee.dev/api/basic-crawler/class/BasicCrawler) is pretty simple. When using plain HTTP requests (like with the popular '[request-promise](https://www.npmjs.com/package/request-promise)' npm package), a fresh proxy is set up on each request.
 
 ```js
 const Apify = require('apify')

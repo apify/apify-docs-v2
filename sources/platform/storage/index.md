@@ -34,7 +34,7 @@ The easiest way to access your datasets is via [Apify Console](https://console.a
 
 To manage your datasets, you can use the
 [Apify SDK](https://docs.apify.com/sdk/js/api/apify/class/Dataset),
-[JavaScript API client](/api/client/js#datasetclient),
+[JavaScript API client](/api/client/js/reference/class/DatasetClient),
 [Python API client](/api/client/python#datasetclient),
 or the [Apify API](/api/v2#/reference/datasets).
 
@@ -51,8 +51,8 @@ The easiest way to access your key-value stores is via
 
 To manage your key-value stores, you can use the
 [Apify SDK](https://docs.apify.com/sdk/js/api/apify/class/KeyValueStore),
-[JavaScript API client](/api/client/js#keyvaluestoreclient),
-[Python API client](/api/client/python#keyvaluestoreclient),
+[JavaScript API client](/api/client/js/reference/class/KeyValueStoreClient),
+[Python API client](/api/client/python/reference/class/KeyValueStoreClient),
 or the [Apify API](/api/v2#/reference/key-value-stores).
 
 [See the key-value store documentation](./key_value_store.md) for details.
@@ -68,8 +68,8 @@ The easiest way to access your request queues is via
 
 To manage your request queues, you can use the
 [Apify SDK](https://docs.apify.com/sdk/js/api/apify/class/RequestQueue),
-[JavaScript API client](/api/client/js#requestqueueclient),
-[Python API client](/api/client/python#requestqueueclient),
+[JavaScript API client](/api/client/js/reference/class/RequestQueueClient),
+[Python API client](/api/client/python/reference/class/RequestQueueClient),
 or the [Apify API](/api/v2#/reference/request-queues).
 
 [See the request queue documentation](./request_queue.md) for details.
@@ -115,13 +115,13 @@ See [Crawlee documentation](https://crawlee.dev/docs/quick-start) for setup inst
 
 Apify's [JavaScript API client](/api/client/js) (`apify-client`) allows you to access your datasets from any Node.js application, whether it is running on the Apify platform or elsewhere.
 
-See the [client's documentation](/api/client/js#quick-start) for help with setup.
+See the [client's documentation](/api/client/js/docs) for help with setup.
 
 ### Python API client {#python-api-client}
 
 Apify's [Python API client](/api/client/python) (`apify-client`) allows you to access your datasets from any Python application, whether it is running on the Apify platform or elsewhere.
 
-See the [client's documentation](/api/client/python#quick-start) for help with setup.
+See the [client's documentation](/api/client/python/docs/quick-start) for help with setup.
 
 ### Apify API {#apify-api}
 
@@ -214,12 +214,12 @@ Named storages are only removed when you request it. You can delete storages in 
   [Key-value store](https://docs.apify.com/sdk/js/api/apify/class/KeyValueStore#drop),
   or [Request queue](https://docs.apify.com/sdk/js/api/apify/class/RequestQueue#drop) class.
 * [JavaScript API client](/api/client/js) - using the `.delete()` method in the
-[dataset](/api/client/js#datasetclient),
-[key-value store](/api/client/js#keyvaluestoreclient),
-or [request queue](/api/client/js#requestqueueclient) clients.
+[dataset](/api/client/js/reference/class/DatasetClient),
+[key-value store](/api/client/js/reference/class/KeyValueStoreClient),
+or [request queue](/api/client/js/reference/class/RequestQueueClient) clients.
 * [Python API client](/api/client/python) - using the `.delete()` method in the
 [dataset](/api/client/python#datasetclient),
-[key-value store](/api/client/python#keyvaluestoreclient),
-or [request queue](/api/client/python#requestqueueclient) clients.
+[key-value store](/api/client/python/reference/class/KeyValueStoreClient),
+or [request queue](/api/client/python/reference/class/RequestQueueClient) clients.
 * [API](/api/v2#/reference/key-value-stores/store-object/delete-store) using the - **Delete [store]** endpoint, where **[store]** is the type of storage you want to delete.
 
