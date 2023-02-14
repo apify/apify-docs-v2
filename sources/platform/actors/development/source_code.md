@@ -22,6 +22,8 @@ See [Custom Dockerfile](./source_code.md) and [base Docker images](./base_docker
 
 ## [](#git-repository)Git repository
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NEzT_p_RE1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 If the actor's source code is hosted externally in a Git repository, it can consist of multiple files and directories, use its own **Dockerfile** to control the build process (see [Custom Dockerfile](./source_code.md) for details) and have a user description in store fetched from the **README.md** file. The location of the repository is specified by the **Git URL** setting, which can be an **https**, **git** or **ssh** URL.
 
 [//]: # (TODO: It's pretty outdated, we should probably update the actor too)
@@ -105,7 +107,9 @@ By default, all Apify base Docker images with the Apify SDK and Crawlee start yo
 *This means that by default the system expects the source code to be in the **main.js** file.* If you want to override this behavior, use a custom **package.json** and/or **Dockerfile**.
 
 
-## [](#github-integration)GitHub integration
+## [](#github-integration) Automatic builds from GitHub
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2I3DM8Nvu1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 If the source code of an actor is hosted in a [Git repository](#git-repository), it is possible to set up integration so that on every push to the Git repository the actor is automatically rebuilt. For that, you only need to set up a webhook in your Git source control system that will invoke the [Build actor](/api/v2/#/reference/actors/build-collection/build-actor) API endpoint on every push to Git repository.
 
