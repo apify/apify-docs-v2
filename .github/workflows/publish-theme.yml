@@ -73,8 +73,9 @@ jobs:
                 PACKAGE_NAME=$(jq -r .name <(echo $PACKAGE_JSON));
                 PACKAGE_VER=$(jq -r .version <(echo $PACKAGE_JSON));
                 for i in $(seq 1 10); do
-                    npm show $PACKAGE_NAME@$PACKAGE_VER &> /dev/null;
-                    if [[ $? -ne 0 ]]; then
+                    EXIT_CODE=0;
+                    npm show $PACKAGE_NAME@$PACKAGE_VER || EXIT_CODE=1;
+                    if [[ $EXIT_CODE -eq 1 ]]; then
                         echo "The new package version ($PACKAGE_VER) is not yet available, waiting 30 seconds...";
                         sleep 30;
                         continue;
