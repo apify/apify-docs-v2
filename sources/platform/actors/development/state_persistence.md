@@ -42,7 +42,7 @@ The [Apify SDK](https://docs.apify.com/sdk/js) persists its state automatically,
 
 ### [](#code-examples)Code examples
 
-To persist state manually, you can use the [`Actor.on`](https://docs.apify.com/sdk/js/api/apify/class/Actor#on) method in the Apify SDK.
+To persist state manually, you can use the [`Actor.on`](/sdk/js/reference/class/Actor#on) method in the Apify SDK.
 
 ```js
 import { Actor } from 'apify';

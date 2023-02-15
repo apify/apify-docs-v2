@@ -80,7 +80,7 @@ client = ApifyClient(token='YOUR_TOKEN')
 
 > If you are planning on publishing your code to a public Github/Gitlab repository or anywhere else online, be sure to set your API token as en environment variable, and never hardcode it directly into your script.
 
-Now that we've got our instance, we can point to an actor using the [`client.actor()`](https://docs.apify.com/api/client/js#apifyclient-actor) function, then call the actor with some input with the [`.call()`](https://docs.apify.com/api/client/js#actorclient-call) function - the first parameter of which is the input for the actor.
+Now that we've got our instance, we can point to an actor using the [`client.actor()`](/api/client/js/reference/class/ApifyClient#actor) function, then call the actor with some input with the [`.call()`](/api/client/js/reference/class/ApifyClient#actor) function - the first parameter of which is the input for the actor.
 
 <Tabs groupId="main">
 <TabItem value="Node.js" label="Node.js">
@@ -105,7 +105,7 @@ run = client.actor('YOUR_USERNAME/adding-actor').call(run_input={
 </TabItem>
 </Tabs>
 
-> Learn more about the `.call()` function [here](https://docs.apify.com/api/client/js#actorclient-call).
+> Learn more about the `.call()` function [here](/api/client/js/reference/class/ApifyClient#actor).
 
 ## Downloading dataset items {#downloading-dataset-items}
 
@@ -210,7 +210,7 @@ print(items)
 
 If you check the **Settings** tab within your **adding-actor**, you'll notice that the default memory being allocated to the actor is **2048 MB**. This is a bit overkill considering the fact that the actor is only adding two numbers together - **256 MB** would be much more reasonable. Also, we can safely say that the run should never take more than 20 seconds (even this is a generous number), and that the default of 3600 seconds is also overkill.
 
-Let's change these two actor settings via the Apify client using the [`actor.update()`](https://docs.apify.com/api/client/js#actorclient-update) function. This function will call the **update actor** endpoint, which can take `defaultRunOptions` as an input property. You can find the shape of the `defaultRunOptions` in the [API documentation](/api/v2#/reference/actors/actor-object/update-actor). Perfect!
+Let's change these two actor settings via the Apify client using the [`actor.update()`](/api/client/js/reference/class/ActorClient#update) function. This function will call the **update actor** endpoint, which can take `defaultRunOptions` as an input property. You can find the shape of the `defaultRunOptions` in the [API documentation](/api/v2#/reference/actors/actor-object/update-actor). Perfect!
 
 First, we'll create a pointer to our actor, similar to as before (except this time, we won't be using `.call()` at the end):
 
