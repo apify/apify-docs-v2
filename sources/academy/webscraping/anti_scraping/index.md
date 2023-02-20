@@ -25,7 +25,20 @@ If you don't have time to read about the theory behind anti-scraping protections
 - Set **real-user-like HTTP settings** and **browser fingerprints**. [Crawlee](https://crawlee.dev/) uses statistically generated realistic HTTP headers and browser fingerprints by default for all of its crawlers.
 - Use a modern browser to pass bot capture challenges. We recommend [Playwright with Firefox](https://crawlee.dev/docs/examples/playwright-crawler-firefox) because it is not that common for scraping. You can also play with [non-headless mode](https://crawlee.dev/api/playwright-crawler/interface/PlaywrightCrawlerOptions#headless) and adjust other [fingerprint settings](https://crawlee.dev/api/browser-pool/interface/FingerprintGeneratorOptions).
 - Consider extracting data from **[private APIs](../api_scraping/index.md)** or **mobile app APIs**. They are usually much less protected.
+- Increase the number of request retries significantly to at least 10 with [`maxRequestRetries: 10`](https://crawlee.dev/api/basic-crawler/interface/BasicCrawlerOptions#maxRequestRetries). Rotate sessions after every error with [`maxErrorScore: 1`](https://crawlee.dev/api/core/interface/SessionOptions#maxErrorScore)
 
+In the vast majority of cases, this configuration should lead to success. Success doesn't mean that all requests will go through unblocked, that is not realistic. Some IP addresses and fingerprint combinations will still be blocked but the automatic retry system takes care of that. If you can get at least 10% of your requests through, you can still scrape the whole website with enough retries. The default [SessionPool](https://crawlee.dev/api/core/class/SessionPool) configuration will preserve the working sessions and eventually the success rate will increase.
+
+If the above tips didn't help, you can try to fiddle with the following:
+- Try different browsers. Crawlee & Playwright support Chromium, Firefox and WebKit out of the box. You can also try the [Brave browser](https://brave.com) which [can be configured for Playwright](https://blog.apify.com/unlocking-the-potential-of-brave-and-playwright-for-browser-automation).
+- Don't use browsers at all. Sometimes the anti-scraping protections are extremely sensitive to browser behavior but will allow plain HTTP requests (with the right headers) just fine. Don't forget to match the specific [HTTP headers](/academy/glossary/http_headers.md) for each request.
+- Decrease concurrency. Slower scraping means you can blend in better with the rest of the traffic.
+- Add human-like behavior. Don't traverse the website like a bot (paginating quickly from 1 to 100). Instead, visit various types of pages, add time randomizations and you can even introduce some mouse movements and clicks.
+- Try Puppeteer with the [puppeteer-extra-plugin-stealth](https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth) plugin. Generally, Crawlee's default configuration should have stronger bypassing but some features might land first in the stealth plugin.
+- Find different sources of the data. The data might be rendered to the HTML but you could also find it in JavaScript (inlined in the HTML or in files) or in the API responses. Especially the APIs are often much less protected (if you use the right headers).
+- Reverse engineer the JavaScript challenges that run on the page so you can figure out how the bypass them. This is a very advanced topic that you can read about online. We plan to introduce more content about this.
+
+Keep in mind that there is no silver bullet solution. There are many anti-scraping systems and each of them behaves differently depending the website's configuration. That is why "trying a few things" usually leads to success. You will find more details about these tricks in the [mitigation](./mitigation) section below.
 
 ## First of all, why do websites want to block bots? {#why-block-bots}
 
