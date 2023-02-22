@@ -530,6 +530,13 @@ div[class*="searchBox"] {
     display: flex;
 }
 
+.theme-doc-sidebar-item-category .menu__list-item-collapsible,
+.theme-doc-sidebar-item-link {
+    display: flex;
+    align-items: center;
+}
+
+
 @media (min-width: 480px) {
     .navbar__logo {
         display: initial;
