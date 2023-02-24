@@ -17,8 +17,8 @@ slug: /integrations/make
 
 To use the Apify integration on Make, you will need:
 
-- An [Apify account](https://console.apify.com/).
-- A Make account (and a [scenario](https://www.make.com/en/help/scenarios/creating-a-scenario)).
+-   An [Apify account](https://console.apify.com/).
+-   A Make account (and a [scenario](https://www.make.com/en/help/scenarios/creating-a-scenario)).
 
 ## Step 1: Add the Apify module to your Make scenario
 
@@ -48,54 +48,54 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Triggers when a selected actor run is finished.
 
-<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"/></br>
+<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
 
-| Input | Description |
-| :--- | :--- |
+| Input        | Description                                                            |
+| :----------- | :--------------------------------------------------------------------- |
 | Webhook name | Enter the desired name for the webhook. E.g. Finished Web Scraper Run. |
-| Connection | [Create an Apify connection](#connect-apify-to-make). |
-| Actor | Select the Actor you want to monitor for finished runs. |  
+| Connection   | [Create an Apify connection](#connect-apify-to-make).                  |
+| Actor        | Select the Actor you want to monitor for finished runs.                |
 
-<br>
+<br/>
 
 ### Watch Task Runs
->
->Triggers when a selected task run is finished.
 
-| Input | Description |
-| :--- | :--- |
+> Triggers when a selected task run is finished.
+
+| Input        | Description                                                            |
+| :----------- | :--------------------------------------------------------------------- |
 | Webhook name | Enter the desired name for the webhook. E.g. Finished Web Scraper Run. |
-| Connection | [Create an Apify connection](#connect-apify-to-make). |
-| Actor | Select the Actor you want to monitor for finished runs. |
+| Connection   | [Create an Apify connection](#connect-apify-to-make).                  |
+| Actor        | Select the Actor you want to monitor for finished runs.                |
 
 ## Actions
 
 ### Run a task
 
->Runs a selected actor task.
+> Runs a selected actor task.
 
-<img src="./images/apify-make-run-task.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
+<img src="./images/apify-make-run-task.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
 
-| Input | Description |
-| :--- | :--- |
-| Task | Select or map the task you want to run. |
-| Run synchronously | Make will wait until the task run is finished. Beware that the maximum timeout for the run is 120 seconds. |
+| Input                | Description                                                                                                                                              |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Task                 | Select or map the task you want to run.                                                                                                                  |
+| Run synchronously    | Make will wait until the task run is finished. Beware that the maximum timeout for the run is 120 seconds.                                               |
 | Input JSON overrides | Here you can enter a JSON object to override the task input configuration. Only the provided fields will be overridden, the rest will be left unchanged. |
 
 ### Run an actor
 
->Runs a selected actor.
+> Runs a selected actor.
 
-<img src="./images/apify-make-run-actor.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
+<img src="./images/apify-make-run-actor.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
 
-| Input | Description |
-| :--- | :--- |
-| Actor | Select or map the ID of the actor you want to run. |
-| Run synchronously | Make will wait until the task run is finished. Beware that the maximum timeout for the run is 120 seconds. |
-| Input JSON overrides | Here you can enter a JSON object to override the task input configuration. Only the provided fields will be overridden, the rest will be left unchanged. |
-| Build | Specify the actor build to run. It can be either a build tag or build number. By default, the run uses the build specified in the default run configuration for the actor (typically 'latest'). |
-| Timeout | Enter the timeout for the run in seconds. By default, the run uses a timeout specified in the default run configuration for the actor. |
-| Memory | Select or enter memory limit for the run, in megabytes. By default, the run uses a memory limit specified in the default run configuration for the actor. |
+| Input                | Description                                                                                                                                                                                     |
+| :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor                | Select or map the ID of the actor you want to run.                                                                                                                                              |
+| Run synchronously    | Make will wait until the task run is finished. Beware that the maximum timeout for the run is 120 seconds.                                                                                      |
+| Input JSON overrides | Here you can enter a JSON object to override the task input configuration. Only the provided fields will be overridden, the rest will be left unchanged.                                        |
+| Build                | Specify the actor build to run. It can be either a build tag or build number. By default, the run uses the build specified in the default run configuration for the actor (typically 'latest'). |
+| Timeout              | Enter the timeout for the run in seconds. By default, the run uses a timeout specified in the default run configuration for the actor.                                                          |
+| Memory               | Select or enter memory limit for the run, in megabytes. By default, the run uses a memory limit specified in the default run configuration for the actor.                                       |
 
 ## Searches
 
@@ -103,15 +103,15 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Retrieves items from a [dataset](https://docs.apify.com/platform/storage/dataset).
 
-<img src="./images/apify-make-dataset.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
+<img src="./images/apify-make-dataset.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
 
-| Input | Description |
-| :--- | :--- |
-| Connection | [Create an Apify connection](#connect-apify-to-make). |
-| Dataset ID | Enter the ID of the dataset you want to retrieve items from. |
-| Data transformation | **Clean** - it returns only non-empty items and skips hidden fields (fields starting with the # character).</br>**Simplified** - it formats items to emulate simplified results provided by the Legacy Apify Crawler product. |
-| Format | Select the format of the dataset items. |
-| Limit | Set the maximum number of items Make will return during one execution cycle. |
-| Offset | Enter the number of items to skip. |
+| Input               | Description                                                                                                                                                                                                                   |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Connection          | [Create an Apify connection](#connect-apify-to-make).                                                                                                                                                                         |
+| Dataset ID          | Enter the ID of the dataset you want to retrieve items from.                                                                                                                                                                  |
+| Data transformation | **Clean** - it returns only non-empty items and skips hidden fields (fields starting with the # character).<br/>**Simplified** - it formats items to emulate simplified results provided by the Legacy Apify Crawler product. |
+| Format              | Select the format of the dataset items.                                                                                                                                                                                       |
+| Limit               | Set the maximum number of items Make will return during one execution cycle.                                                                                                                                                  |
+| Offset              | Enter the number of items to skip.                                                                                                                                                                                            |
 
 If you have any questions or need help, feel free to reach out to us on our [developer community on Discord](https://discord.com/invite/jyEM2PRvMU).
