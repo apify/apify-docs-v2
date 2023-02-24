@@ -48,7 +48,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Triggers when a selected actor run is finished.
 
-<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
+<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"/></br>
 
 | Input | Description |
 | :--- | :--- |
