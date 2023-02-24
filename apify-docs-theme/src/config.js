@@ -87,7 +87,7 @@ const themeConfig = ({
                 rel: 'dofollow',
             },
             {
-                label: 'Open Source',
+                label: 'Open source',
                 type: 'dropdown',
                 position: 'left',
                 className: 'navbar__item',
@@ -106,7 +106,7 @@ const themeConfig = ({
                         href: 'https://github.com/apify/fingerprint-suite',
                     },
                     {
-                        label: 'See our GitHub',
+                        label: 'See Apify on GitHub',
                         href: 'https://github.com/apify',
                     },
                 ],
@@ -114,7 +114,7 @@ const themeConfig = ({
             {
                 href: 'https://github.com/apify',
                 label: 'GitHub',
-                title: 'See our GitHub',
+                title: 'See Apify on GitHub',
                 position: 'right',
                 className: 'icon',
             },
