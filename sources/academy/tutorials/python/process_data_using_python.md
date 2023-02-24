@@ -1,9 +1,10 @@
 ---
 title: Process scraped data with Python
 description: Learn how to process the resulting data of a web scraper in Python using the Pandas library, and how to visualize the processed data using Matplotlib.
-sidebar_position: 3.94
-slug: /tutorials/process-data-using-python
+sidebar_position: 2
+slug: /python/process-data-using-python
 ---
+
 <!-- Beware when changing the menu weight - this article should always be after the 'Scrape data using Python' article -->
 
 # How to process data in Python using Pandas
@@ -130,9 +131,9 @@ print(f'Result is available at {os.environ["APIFY_API_PUBLIC_BASE_URL"]}'
 
 And that's it! Now you can save the changes in the editor, and then click **Build and run** at the bottom of the page. The actor will get built, the built actor image will get saved for future re-use, and then it will be executed. You can follow the progress of the actor build and the actor run in the **Last build** and **Last run** tabs, respectively, in the developer console in the actor source view. Once the actor finishes running, it will output the URL where you can access the plot we created in its log.
 
-![Building and running the BBC Weather Parser actor](./images/bbc-weather-parser-source.png)
+![Building and running the BBC Weather Parser actor](./images/bbc-weather-parser-source.webp)
 
 Looking at the results, Honolulu seems like the right choice now, don't you think? 🙂
 
-![Weather prediction plot created by the BBC Weather Parser actor](./images/bbc-weather-prediction.png)
+![Weather prediction plot created by the BBC Weather Parser actor](./images/bbc-weather-prediction.webp)
 
