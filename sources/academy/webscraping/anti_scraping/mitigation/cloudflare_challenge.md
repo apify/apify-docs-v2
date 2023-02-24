@@ -28,4 +28,8 @@ const crawler = new PlaywrightCrawler({
 
 It's important to note that by removing default blocked status code handling, you should also add custom session retire logic on blocked pages to reduce retries. Additionally, you should add waiting logic to start the automation logic only after the Cloudflare challenge is solved and the page is redirected. This can be accomplished by waiting for a common selector that is available on all pages, such as a header logo.
 
+In some cases, the browser may not pass the check and you may be presented with a captcha, indicating that your IP address has been graylisted. To fix this, you'll need to solve the captcha to improve your IP address's reputation. There are various captcha-solving services available, such as [AntiCaptcha](https://anti-captcha.com/) or [AnyCaptcha](https://anycaptcha.com/), that you can use for this purpose. For more info check the section about [Captchas](../techniques/captchas.md).
+
+![Cloudflare captcha](https://images.ctfassets.net/slt3lc6tev37/6sN2VXiUaJpjxqVfTbZEJd/9a4e13cbf08ce29797167c133c534e1f/image1.png)
+
 In summary, while Cloudflare's browser challenge is designed to protect websites from automated scraping, it can be bypassed by ensuring a consistent browser fingerprint and customizing your scraping strategy. Crawlee offers out-of-the-box support for generating consistent fingerprints, but you may need to adjust your crawler configuration to handle Cloudflare's response. By following these tips, you can successfully navigate Cloudflare's browser challenge and continue scraping the data you need.
