@@ -48,7 +48,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Triggers when a selected actor run is finished.
 
-<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"><br>
+<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
 
 | Input | Description |
 | :--- | :--- |
@@ -74,7 +74,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 >Runs a selected actor task.
 
-<img src="./images/apify-make-run-task.png"  width="50%" height="100%" style="display:block;margin:auto"><br>
+<img src="./images/apify-make-run-task.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
 
 | Input | Description |
 | :--- | :--- |
@@ -86,7 +86,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 >Runs a selected actor.
 
-<img src="./images/apify-make-run-actor.png"  width="50%" height="100%" style="display:block;margin:auto"><br>
+<img src="./images/apify-make-run-actor.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
 
 | Input | Description |
 | :--- | :--- |
@@ -103,13 +103,13 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Retrieves items from a [dataset](https://docs.apify.com/platform/storage/dataset).
 
-<img src="./images/apify-make-dataset.png"  width="50%" height="100%" style="display:block;margin:auto"><br>
+<img src="./images/apify-make-dataset.png"  width="50%" height="100%" style="display:block;margin:auto"></br>
 
 | Input | Description |
 | :--- | :--- |
 | Connection | [Create an Apify connection](#connect-apify-to-make). |
 | Dataset ID | Enter the ID of the dataset you want to retrieve items from. |
-| Data transformation | **Clean** - it returns only non-empty items and skips hidden fields (fields starting with the # character).<br>**Simplified** - it formats items to emulate simplified results provided by the Legacy Apify Crawler product. |
+| Data transformation | **Clean** - it returns only non-empty items and skips hidden fields (fields starting with the # character).</br>**Simplified** - it formats items to emulate simplified results provided by the Legacy Apify Crawler product. |
 | Format | Select the format of the dataset items. |
 | Limit | Set the maximum number of items Make will return during one execution cycle. |
 | Offset | Enter the number of items to skip. |
