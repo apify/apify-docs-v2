@@ -89,7 +89,7 @@ There is no easy way to get around this but the price range split works even wit
 
 In the easiest case, you can pass the range directly in the page's URL. For example, `<https://mysite.com/products?price=0-10>`. Sometimes, you will need to do some query composition because the price range might be encoded together with more information into a single parameter.
 
-Some sites don't have page URLs with filters and instead load the filtered products via [XHRs](/platform/web-scraping-101/web-scraping-techniques#xhrs). Those can be GET or POST requests with various **URL** and **payload** syntax.
+Some sites don't have page URLs with filters and instead load the filtered products via [XHRs](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest). Those can be GET or POST requests with various **URL** and **payload** syntax.
 
 The nice thing here is that if you get to understand how their internal API works, you can have it return more products per page or extract full product details just from this single request.
 
@@ -283,6 +283,6 @@ await crawler.addRequests(requestsToEnqueue);
 
 ## Summary {#summary}
 
-And that's it. We have an elegant and simple solution for a complicated problem. In a real project, you would want to make this a bit more robust, [use logs](./analyze_pages_and_fix_errors.md), and save analytics data. This will let you know what filters you went through and how many products each of them had.
+And that's it. We have an elegant and simple solution for a complicated problem. In a real project, you would want to make this a bit more robust, [use logs](/academy/node-js/analyzing-pages-and-fixing-errors), and save analytics data. This will let you know what filters you went through and how many products each of them had.
 
 Check out the [full code example](https://github.com/metalwarrior665/apify-utils/tree/master/examples/crawler-with-filters).

@@ -40,7 +40,7 @@ If you're interested in publishing your actors for others to use, check our [bui
 
 ## Advanced use cases
 
-Check out our other tutorials that cover more specific and advanced scenarios such as [scraping dynamic content](./scraping_dynamic_content.md), [integrating](../integrations/index.md) your projects with Apify, [using your actors via API](./run_actor_and_retrieve_data_via_api.md), or setting up [monitoring](../monitoring/index.md) for your projects.
+Check out our other tutorials that cover more specific and advanced scenarios such as [scraping dynamic content](/academy/puppeteer-playwright/page/waiting), [integrating](../integrations/index.md) your projects with Apify, [using your actors via API](./run_actor_and_retrieve_data_via_api.md), or setting up [monitoring](../monitoring/index.md) for your projects.
 
 ## Finally
 

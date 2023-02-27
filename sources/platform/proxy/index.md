@@ -12,7 +12,7 @@ slug: /proxy
 
 ---
 
-[Apify Proxy](https://apify.com/proxy) allows you to change your IP address when web scraping to reduce the chance of being [blocked](../web_scraping_101/anti_scraping_techniques.md) because of your geographical location.
+[Apify Proxy](https://apify.com/proxy) allows you to change your IP address when web scraping to reduce the chance of being [blocked](/academy/anti-scraping/techniques) because of your geographical location.
 
 You can use proxies in your [actors](../actors/index.md) or any other application that supports HTTP proxies. Apify Proxy monitors the health of your IP pool and intelligently [rotates addresses](#ip-address-rotation) to prevent IP address-based blocking.
 
@@ -53,7 +53,7 @@ Depending on whether you use a [browser](https://apify.com/apify/web-scraper) or
 
 **You can use [sessions](#sessions) to manage how you rotate and [persist](#session-persistence) IP addresses.**
 
-[Click here](../web_scraping_101/anti_scraping_techniques.md) to learn more about IP address rotation and our findings on how blocking works.
+[Click here](/academy/anti-scraping/techniques) to learn more about IP address rotation and our findings on how blocking works.
 
 ## Sessions {#sessions}
 

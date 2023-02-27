@@ -70,4 +70,4 @@ const previousCrawlingState = await Actor.getValue('my-crawling-state') || {};
 await Actor.exit();
 ```
 
-To improve your actor's performance, you can also [cache repeated page data](../../tutorials/cache_data_to_improve_performance.md).
+To improve your actor's performance, you can also [cache repeated page data](/academy/expert-scraping-with-apify/saving-useful-stats).

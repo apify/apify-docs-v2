@@ -13,7 +13,7 @@ slug: /tutorials/log-in-by-transferring-cookies
 
 To crawl websites that require a login, you can transfer cookies from your web browser directly into [Apify actors](../actors/index.md) such as **Web Scraper** ([apify/web-scraper](https://apify.com/apify/web-scraper)), **Puppeteer Scraper** ([apify/puppeteer-scraper](https://apify.com/apify/puppeteer-scraper)) and **Instagram Scraper** ([jaroslavhejlek/instagram-scraper](https://apify.com/jaroslavhejlek/instagram-scraper)).
 
-This is the quickest and simplest solution, however there are others that may be more reliable. For example, you can also [fill in the login form directly in the code](./log_into_a_website_using_puppeteer.md).
+This is the quickest and simplest solution, however there are others that may be more reliable. For example, you can also [fill in the login form directly in the code](/academy/puppeteer-playwright/common-use-cases/logging-into-a-website).
 
 ## Install a cookie editor {#install-a-cookie-editor}
 
@@ -33,4 +33,4 @@ The **Initial cookies** field is in the **Proxy and browser configuration** tab 
 
 ![Web scraper input tab](./images/web-scraper-input.png)
 
-And that's it! When you run the scraper, it will start already logged-in. Note that if the cookies are short-lived, this might not work, and you will need to [implement login in your code](./log_into_a_website_using_puppeteer.md).
+And that's it! When you run the scraper, it will start already logged-in. Note that if the cookies are short-lived, this might not work, and you will need to [implement login in your code](/academy/puppeteer-playwright/common-use-cases/logging-into-a-website).

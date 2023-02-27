@@ -32,7 +32,7 @@
         },
         {
             "cardItem": "What is web scraping?",
-            "href": "/platform/web-scraping-101"
+            "href": "/academy/web-scraping-for-beginners"
         }
     ],
     "Guides": [
@@ -46,7 +46,7 @@
         },
         {
             "cardItem": "Log into a website",
-            "href": "/platform/tutorials/log-into-a-website-using-puppeteer"
+            "href": "/academy/puppeteer-playwright/common-use-cases/logging-into-a-website"
         },
         {
             "cardItem": "Integrations",
@@ -58,7 +58,7 @@
         },
         {
             "cardItem": "Automate repetitive tasks",
-            "href": "/platform/robotic-process-automation"
+            "href": "/academy/concepts/robotic-process-automation"
         },
         {
             "cardItem": "Process data in Python with Pandas",
@@ -93,11 +93,11 @@
         },
         {
             "cardItem": "Analyze page content before scraping",
-            "href": "/platform/web-scraping-101/web-scraping-techniques"
+            "href": "/academy/concepts"
         },
         {
             "cardItem": "Analyze pages and fix errors",
-            "href": "/platform/tutorials/analyze-pages-and-fix-errors"
+            "href": "/academy/node-js/analyzing-pages-and-fixing-errors"
         },
         {
             "cardItem": "Scrape data in Python with Beautiful Soup",
@@ -137,7 +137,7 @@
         },
         {
             "cardItem": "Bypass anti-scraping techniques",
-            "href": "/platform/web-scraping-101/anti-scraping-techniques"
+            "href": "/academy/anti-scraping/techniques"
         },
         {
             "cardItem": "Use a proxy in your browser",
