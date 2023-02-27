@@ -4,7 +4,7 @@ menuTitle: Puppeteer Scraper
 description: Learn how to scrape a website using Apify's Puppeteer Scraper. Build an actor's page function, extract information from a web page and download your data.
 externalSourceUrl: https://raw.githubusercontent.com/apifytech/actor-scraper/master/docs/build/puppeteer-scraper-tutorial.md
 sidebar_position: 4
-slug: /tutorials/apify-scrapers/puppeteer-scraper
+slug: /apify-scrapers/puppeteer-scraper
 ---
 
 [//]: # (TODO: Should be updated)
