@@ -2,7 +2,7 @@
 title: Apify scrapers
 description: Discover Apify's ready-made web scraping and automation tools. Compare Web Scraper, Cheerio Scraper and Puppeteer Scraper to decide which is right for you.
 sidebar_position: 3.2
-slug: /tutorials/apify-scrapers
+slug: /apify-scrapers
 ---
 
 # Scraping with Apify
