@@ -48,16 +48,13 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Triggers when a selected actor run is finished.
 
-<img src="./images/apify-make-trigger.png" width="50%" />
-<br />
+<img src={require("./images/apify-make-trigger.png").default} width="50%" />
 
 | Input        | Description                                                            |
 | :----------- | :--------------------------------------------------------------------- |
 | Webhook name | Enter the desired name for the webhook. E.g. Finished Web Scraper Run. |
 | Connection   | [Create an Apify connection](#connect-apify-to-make).                  |
 | Actor        | Select the Actor you want to monitor for finished runs.                |
-
-<br />
 
 ### Watch Task Runs
 
@@ -75,9 +72,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Runs a selected actor task.
 
-<img src="./images/apify-make-run-task.png" width="50%" />
-
-<br />
+<img src={require("./images/apify-make-run-task.png").default} width="50%" />
 
 | Input                | Description                                                                                                                                              |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,9 +84,8 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Runs a selected actor.
 
-<img src="./images/apify-make-run-actor.png" width="50%" />
+<img src={require("./images/apify-make-run-actor.png").default} width="50%" />
 
-<br />
 
 | Input                | Description                                                                                                                                                                                     |
 | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,9 +102,8 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Retrieves items from a [dataset](https://docs.apify.com/platform/storage/dataset).
 
-<img src="./images/apify-make-dataset.png" width="50%" />
+<img src={require("./images/apify-make-dataset.png").default} width="50%" />
 
-<br />
 
 | Input               | Description                                                                                                                                                                                                                   |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
