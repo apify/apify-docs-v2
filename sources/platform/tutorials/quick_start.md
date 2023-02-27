@@ -127,6 +127,6 @@ For more information, see the [Git repository](../actors/development/source_code
 ## What's next?
 
 * Try some other actors from [Apify Store](https://apify.com/store).
-* Learn to use our main scrapers: [Web Scraper](./apify_scrapers/web_scraper.md), [Cheerio Scraper](./apify_scrapers/cheerio_scraper.md), and [Puppeteer Scraper](./apify_scrapers/puppeteer_scraper.md).
+* Learn to use our main scrapers: [Web Scraper](/academy/apify-scrapers/web-scraper), [Cheerio Scraper](/academy/apify-scrapers/cheerio-scraper), and [Puppeteer Scraper](/academy/apify-scrapers/puppeteer-scraper).
 * Learn more about using actors and the Apify platform: [tasks](../actors/tasks.md), [storages](../storage/index.md), and [proxies](../proxy/index.md).
 * Set up the [`apify`](https://docs.apify.com/sdk/js/docs/guides/getting-started) and [`crawlee`](https://crawlee.dev/docs/quick-start) packages on your computer, and build your own actors with the Apify SDK and Crawlee.
