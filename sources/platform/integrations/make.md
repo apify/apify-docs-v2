@@ -17,8 +17,8 @@ slug: /integrations/make
 
 To use the Apify integration on Make, you will need:
 
--   An [Apify account](https://console.apify.com/).
--   A Make account (and a [scenario](https://www.make.com/en/help/scenarios/creating-a-scenario)).
+- An [Apify account](https://console.apify.com/).
+- A Make account (and a [scenario](https://www.make.com/en/help/scenarios/creating-a-scenario)).
 
 ## Step 1: Add the Apify module to your Make scenario
 
@@ -48,7 +48,8 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Triggers when a selected actor run is finished.
 
-<img src="./images/apify-make-trigger.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
+<img src="./images/apify-make-trigger.png" width="50%" />
+<br />
 
 | Input        | Description                                                            |
 | :----------- | :--------------------------------------------------------------------- |
@@ -56,7 +57,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 | Connection   | [Create an Apify connection](#connect-apify-to-make).                  |
 | Actor        | Select the Actor you want to monitor for finished runs.                |
 
-<br/>
+<br />
 
 ### Watch Task Runs
 
@@ -74,7 +75,9 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Runs a selected actor task.
 
-<img src="./images/apify-make-run-task.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
+<img src="./images/apify-make-run-task.png" width="50%" />
+
+<br />
 
 | Input                | Description                                                                                                                                              |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -86,7 +89,9 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Runs a selected actor.
 
-<img src="./images/apify-make-run-actor.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
+<img src="./images/apify-make-run-actor.png" width="50%" />
+
+<br />
 
 | Input                | Description                                                                                                                                                                                     |
 | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -103,7 +108,9 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 > Retrieves items from a [dataset](https://docs.apify.com/platform/storage/dataset).
 
-<img src="./images/apify-make-dataset.png"  width="50%" height="100%" style="display:block;margin:auto"/><br/>
+<img src="./images/apify-make-dataset.png" width="50%" />
+
+<br />
 
 | Input               | Description                                                                                                                                                                                                                   |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
