@@ -100,7 +100,7 @@ Congratulations! You have successfully connected the Apify app and can now use i
 
 ### Get Dataset Items
 
-> Retrieves items from a [dataset](https://docs.apify.com/platform/storage/dataset).
+> Retrieves items from a [dataset](/platform/storage/dataset).
 
 <img src={require("./images/apify-make-dataset.png").default} width="50%" />
 
